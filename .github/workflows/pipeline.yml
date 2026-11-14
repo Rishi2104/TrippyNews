@@ -1,0 +1,67 @@
+name: NewsCheck Automated Pipeline
+
+on:
+  schedule:
+    # Run every 60 minutes
+    - cron: '0 * * * *'
+  workflow_dispatch:
+
+# Prevent concurrent pipeline executions (SQLite single-writer safety)
+concurrency:
+  group: newscheck-pipeline
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  run-pipeline:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install .
+
+      - name: Run NewsCheck Pipeline
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          newscheck run --json-logs
+
+      - name: Setup Pages
+        if: success()
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages Artifact
+        if: success()
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'public'
+
+      - name: Deploy to GitHub Pages
+        if: success()
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      - name: Commit Updated Database
+        if: success()
+        run: |
+          git config --global user.name "newscheck-bot"
+          git config --global user.email "bot@newscheck.local"
+          git add newscheck.db
+          git diff --quiet && git diff --staged --quiet || git commit -m "chore: persist automated run database [skip ci]"
+          git push

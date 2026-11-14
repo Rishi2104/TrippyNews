@@ -1,0 +1,28 @@
+# Python virtual environment
+.venv/
+venv/
+ENV/
+
+# Python byte code & cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Testing & Linting caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Environment secrets
+.env
+
+# Staging directories
+*_staging/
+*_backup/
+
+# OS artifacts
+Thumbs.db
+desktop.ini
+.DS_Store

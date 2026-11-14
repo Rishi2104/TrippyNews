@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}Methodology & Integrity Standards — {{ site_title }}{% endblock %}
+
+{% block content %}
+<div class="story-card">
+  <h2>Methodology & Transparency Policy</h2>
+  <p><strong>NewsCheck</strong> is a fully automated news corroboration pipeline. It operates without human curation, editor bias, or manual publishing approvals.</p>
+
+  <h3>1. Independence & Wire Deduplication</h3>
+  <p>Wire services (PTI, ANI, Reuters, AP, AFP) are syndicated across hundreds of outlets. <strong>Ten outlets republishing the exact same wire story count as ONE confirmation, not ten.</strong> Our pipeline detects syndication credits and text shingles to collapse syndicated reprints into single canonical events.</p>
+
+  <h3>2. Corroboration Scoring Formula</h3>
+  <p>The corroboration score is computed mathematically:</p>
+  <ul>
+    <li><strong>Tier 1 Sources (Wire services, government press bureaus):</strong> 3.0 points</li>
+    <li><strong>Tier 2 Sources (Major reputable national publications):</strong> 2.0 points</li>
+    <li><strong>Tier 3 Sources (Other whitelisted publications):</strong> 1.0 point</li>
+    <li><strong>Primary / Official Source Bonus:</strong> +2.0 points if verified primary source reported the event</li>
+    <li><strong>Conflict Penalty:</strong> Score is reduced when contradictory figures or assertions are detected</li>
+  </ul>
+
+  <h3>3. Labels</h3>
+  <ul>
+    <li><strong style="color: #15803d;">Strongly Corroborated:</strong> 4+ independent sources including Tier 1, no significant contradictions.</li>
+    <li><strong style="color: #0369a1;">Corroborated:</strong> 3+ independent sources in consensus.</li>
+    <li><strong style="color: #a16207;">Limited Corroboration:</strong> Few sources or unresolved conflicts between reporting outlets.</li>
+    <li><strong style="color: #475569;">Unconfirmed:</strong> Fewer than 3 independent sources. No generated narrative is published.</li>
+  </ul>
+
+  <h3>4. Sensitive Topic Policy</h3>
+  <p>When reporting on crimes naming private individuals, health or medical claims, suicide, minors, communal violence, or active armed conflicts, <strong>NewsCheck suppresses all generated narrative</strong>. Only a verbatim claim comparison table and direct source links are displayed.</p>
+
+  <h3>5. Source Whitelist</h3>
+  <p>All feeds are vetted and whitelisted in <code>sources.yaml</code>. Unvetted third-party domains are discarded during ingestion.</p>
+</div>
+{% endblock %}

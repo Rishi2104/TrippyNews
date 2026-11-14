@@ -1,0 +1,2 @@
+[console_scripts]
+newscheck = newscheck.cli:app

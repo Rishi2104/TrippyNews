@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section>
+  <div style="margin-bottom: 24px;">
+    <h2 style="font-size: 1.5rem; margin-bottom: 4px;">Top Corroborated Stories</h2>
+    <p style="color: var(--text-muted); margin: 0;">Updated every hour. Ranked by independent source count and source reliability tiers.</p>
+  </div>
+
+  {% if not stories %}
+  <div class="story-card">
+    <p>No stories currently meet minimum clustering thresholds for this run.</p>
+  </div>
+  {% endif %}
+
+  {% for item in stories %}
+  <article class="story-card">
+    <div class="meta-row">
+      <span class="badge {% if 'Strongly' in item.story.corroboration_label.value %}badge-strongly{% elif 'Limited' in item.story.corroboration_label.value %}badge-limited{% elif 'Unconfirmed' in item.story.corroboration_label.value %}badge-unconfirmed{% else %}badge-corroborated{% endif %}">
+        {{ item.story.corroboration_label.value }}
+      </span>
+      {% if item.story.is_developing %}
+      <span class="badge badge-developing">Developing</span>
+      {% endif %}
+      <span>Corroborated by {{ item.independent_source_count }} independent sources</span>
+      <span>•</span>
+      <span>Score: {{ item.story.corroboration_score }}</span>
+    </div>
+
+    <h2><a href="story_{{ item.story.id }}.html" class="headline-link">{{ item.story.headline }}</a></h2>
+
+    {% if item.story.summary %}
+    <p style="margin: 12px 0;">{{ item.story.summary }}</p>
+    {% else %}
+    <p style="font-style: italic; color: var(--text-muted); margin: 12px 0;">
+      {% if item.story.is_sensitive %}
+      [Narrative omitted per sensitive topic safety gate. Review claims and sources directly below.]
+      {% else %}
+      [Summary constrained to claim table due to strict NLI entailment gate.]
+      {% endif %}
+    </p>
+    {% endif %}
+
+    <div class="sources-list">
+      <strong>Sources:</strong>
+      {% for src in item.sources %}
+      <a href="{{ src.url }}" target="_blank" rel="noopener noreferrer">{{ src.name }} ({{ src.domain }})</a>{% if not loop.last %}, {% endif %}
+      {% endfor %}
+    </div>
+  </article>
+  {% endfor %}
+</section>
+{% endblock %}

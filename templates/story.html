@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+
+{% block title %}{{ story.headline }} — {{ site_title }}{% endblock %}
+
+{% block content %}
+<article class="story-card">
+  <div class="meta-row">
+    <span class="badge {% if 'Strongly' in story.corroboration_label.value %}badge-strongly{% elif 'Limited' in story.corroboration_label.value %}badge-limited{% elif 'Unconfirmed' in story.corroboration_label.value %}badge-unconfirmed{% else %}badge-corroborated{% endif %}">
+      {{ story.corroboration_label.value }}
+    </span>
+    {% if story.is_developing %}
+    <span class="badge badge-developing">Developing</span>
+    {% endif %}
+    <span>Corroborated by {{ independent_source_count }} independent sources</span>
+    <span>•</span>
+    <span>Published: {{ story.published_at.strftime('%Y-%m-%d %H:%M UTC') }}</span>
+  </div>
+
+  <h1 style="margin: 16px 0 20px 0; font-size: 1.75rem;">{{ story.headline }}</h1>
+
+  {% if story.summary %}
+  <div style="font-size: 1.05rem; line-height: 1.7; margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid var(--border-color);">
+    <p>{{ story.summary }}</p>
+  </div>
+  {% endif %}
+
+  <!-- Confirmed / Agreed Claims -->
+  <h3 style="color: #15803d; margin-top: 24px;">Confirmed by 2+ Independent Sources</h3>
+  {% if agreed_claims %}
+    {% for claim in agreed_claims %}
+    <div class="claim-box">
+      <strong>Fact:</strong> {{ claim.claim_text }}<br>
+      <small style="color: var(--text-muted);">Source evidence: “{{ claim.source_sentence }}”</small>
+    </div>
+    {% endfor %}
+  {% else %}
+    <p style="color: var(--text-muted); font-size: 0.9rem;">No multi-source confirmed claims found for this story.</p>
+  {% endif %}
+
+  <!-- Disputed / Contradictory Claims -->
+  {% if disputed_claims %}
+  <h3 style="color: var(--dispute); margin-top: 28px;">Disputed / Differing Claims</h3>
+  {% for claim in disputed_claims %}
+  <div class="claim-box disputed">
+    <strong>Contradiction detected:</strong> {{ claim.claim_text }}<br>
+    <small style="color: #7f1d1d;">Claim passage: “{{ claim.source_sentence }}”</small>
+  </div>
+  {% endfor %}
+  {% endif %}
+
+  <!-- Single Source Claims -->
+  {% if single_source_claims %}
+  <h3 style="color: #475569; margin-top: 28px;">Single-Source / Uncorroborated Details</h3>
+  {% for claim in single_source_claims %}
+  <div class="claim-box" style="border-left-color: #cbd5e1;">
+    {{ claim.claim_text }}<br>
+    <small style="color: var(--text-muted);">Evidence: “{{ claim.source_sentence }}”</small>
+  </div>
+  {% endfor %}
+  {% endif %}
+
+  <!-- Source Links & Transparency Table -->
+  <div class="sources-list" style="margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border-color);">
+    <h3>All Contributing Sources ({{ articles|length }})</h3>
+    <ul>
+      {% for art in articles %}
+      <li style="margin-bottom: 8px;">
+        <a href="{{ art.url }}" target="_blank" rel="noopener noreferrer"><strong>{{ art.title }}</strong></a> —
+        <span>Source ID: {{ art.source_id }}</span>
+        {% if art.wire_origin %}<span class="badge" style="background:#e0e7ff; color:#3730a3; margin-left: 6px;">Wire: {{ art.wire_origin }}</span>{% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  {% if changelog %}
+  <div class="changelog-box">
+    <h4>Update Log</h4>
+    <ul>
+      {% for entry in changelog %}
+      <li><strong>{{ entry.changed_at }}</strong>: {{ entry.field_changed }} updated. {{ entry.reason or '' }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+</article>
+{% endblock %}

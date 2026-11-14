@@ -1,0 +1,180 @@
+:root {
+  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --bg-color: #f8fafc;
+  --card-bg: #ffffff;
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  --border-color: #e2e8f0;
+  --primary: #0284c7;
+  --primary-hover: #0369a1;
+  --badge-green: #15803d;
+  --badge-green-bg: #dcfce7;
+  --badge-blue: #0369a1;
+  --badge-blue-bg: #e0f2fe;
+  --badge-yellow: #a16207;
+  --badge-yellow-bg: #fef9c3;
+  --badge-gray: #475569;
+  --badge-gray-bg: #f1f5f9;
+  --dispute: #b91c1c;
+  --dispute-bg: #fee2e2;
+}
+
+body {
+  font-family: var(--font-family);
+  background: var(--bg-color);
+  color: var(--text-main);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+header {
+  border-bottom: 1px solid var(--border-color);
+  background: var(--card-bg);
+  padding: 16px 0;
+}
+
+header .nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0 0;
+}
+
+header .nav-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+header .nav-links a:hover {
+  color: var(--primary);
+}
+
+.disclosure-banner {
+  background: #fffbeb;
+  border: 1px solid #fef08a;
+  color: #854d0e;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.story-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.story-card h2 {
+  margin: 0 0 10px 0;
+  font-size: 1.25rem;
+}
+
+.story-card a.headline-link {
+  color: var(--text-main);
+  text-decoration: none;
+}
+
+.story-card a.headline-link:hover {
+  color: var(--primary);
+}
+
+.badge {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.badge-strongly {
+  background: var(--badge-green-bg);
+  color: var(--badge-green);
+}
+
+.badge-corroborated {
+  background: var(--badge-blue-bg);
+  color: var(--badge-blue);
+}
+
+.badge-limited {
+  background: var(--badge-yellow-bg);
+  color: var(--badge-yellow);
+}
+
+.badge-unconfirmed {
+  background: var(--badge-gray-bg);
+  color: var(--badge-gray);
+}
+
+.badge-developing {
+  background: #fdf2f8;
+  color: #be185d;
+}
+
+.meta-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 12px;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.claim-box {
+  background: #f8fafc;
+  border-left: 3px solid var(--primary);
+  padding: 10px 14px;
+  margin: 8px 0;
+  border-radius: 0 4px 4px 0;
+  font-size: 0.925rem;
+}
+
+.claim-box.disputed {
+  border-left-color: var(--dispute);
+  background: var(--dispute-bg);
+}
+
+.sources-list {
+  margin-top: 16px;
+  font-size: 0.875rem;
+}
+
+.sources-list a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.changelog-box {
+  background: #f1f5f9;
+  border-radius: 6px;
+  padding: 12px;
+  margin-top: 20px;
+  font-size: 0.85rem;
+}
+
+footer {
+  border-top: 1px solid var(--border-color);
+  padding: 24px 0;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  margin-top: 40px;
+}

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Test News Feed</title>
+    <link>https://example-news.com</link>
+    <description>A test RSS feed for NewsCheck</description>
+    <item>
+      <title>Major earthquake strikes coastal region, rescue operations underway</title>
+      <link>https://example-news.com/earthquake-coastal-region</link>
+      <description>A 6.5-magnitude earthquake struck the coastal region early morning. Rescue teams deployed.</description>
+      <pubDate>Fri, 01 Nov 2026 06:00:00 GMT</pubDate>
+      <author>Staff Reporter</author>
+    </item>
+    <item>
+      <title>Government announces new education policy reforms</title>
+      <link>https://example-news.com/education-policy-reforms</link>
+      <description>The ministry announced sweeping reforms to the national education framework.</description>
+      <pubDate>Fri, 01 Nov 2026 08:30:00 GMT</pubDate>
+      <author>PTI</author>
+    </item>
+    <item>
+      <title>Stock markets rally on positive economic data</title>
+      <link>https://example-news.com/stock-markets-rally</link>
+      <description>BSE Sensex gained 500 points following release of GDP growth figures.</description>
+      <pubDate>Fri, 01 Nov 2026 10:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Cricket team wins series decider in thrilling finish</title>
+      <link>https://example-news.com/cricket-series-win</link>
+      <description>India clinched the series with a last-ball victory in the deciding match.</description>
+      <pubDate>Fri, 01 Nov 2026 14:00:00 GMT</pubDate>
+      <author>Sports Desk</author>
+    </item>
+    <item>
+      <title>Monsoon expected to arrive early this year, says weather bureau</title>
+      <link>https://example-news.com/monsoon-early-arrival</link>
+      <description>The weather bureau announced that monsoon onset could be 5 days earlier than usual.</description>
+      <pubDate>Fri, 01 Nov 2026 16:00:00 GMT</pubDate>
+    </item>
+  </channel>
+</rss>

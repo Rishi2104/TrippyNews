@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Methodology & Integrity Standards — NewsCheck</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div style="display: flex; justify-content: space-between; align-items: baseline;">
+        <h1 style="margin: 0; font-size: 1.5rem;"><a href="index.html" style="text-decoration: none; color: inherit;">NewsCheck</a></h1>
+        <span style="font-size: 0.85rem; color: #64748b;">Independent Corroboration Pipeline</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Top 10 Stories</a></li>
+        <li><a href="methodology.html">Methodology</a></li>
+        <li><a href="corrections.html">Corrections & Changelog</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="disclosure-banner">
+      <span><strong>Automated report.</strong> May contain errors. Corroboration levels are computed mathematically from source diversity and agreement.</span>
+      <a href="mailto:corrections@newscheck.example.com?subject=NewsCheck%20Error%20Report" style="color: inherit; text-decoration: underline;">Report an error</a>
+    </div>
+
+    
+<div class="story-card">
+  <h2>Methodology & Transparency Policy</h2>
+  <p><strong>NewsCheck</strong> is a fully automated news corroboration pipeline. It operates without human curation, editor bias, or manual publishing approvals.</p>
+
+  <h3>1. Independence & Wire Deduplication</h3>
+  <p>Wire services (PTI, ANI, Reuters, AP, AFP) are syndicated across hundreds of outlets. <strong>Ten outlets republishing the exact same wire story count as ONE confirmation, not ten.</strong> Our pipeline detects syndication credits and text shingles to collapse syndicated reprints into single canonical events.</p>
+
+  <h3>2. Corroboration Scoring Formula</h3>
+  <p>The corroboration score is computed mathematically:</p>
+  <ul>
+    <li><strong>Tier 1 Sources (Wire services, government press bureaus):</strong> 3.0 points</li>
+    <li><strong>Tier 2 Sources (Major reputable national publications):</strong> 2.0 points</li>
+    <li><strong>Tier 3 Sources (Other whitelisted publications):</strong> 1.0 point</li>
+    <li><strong>Primary / Official Source Bonus:</strong> +2.0 points if verified primary source reported the event</li>
+    <li><strong>Conflict Penalty:</strong> Score is reduced when contradictory figures or assertions are detected</li>
+  </ul>
+
+  <h3>3. Labels</h3>
+  <ul>
+    <li><strong style="color: #15803d;">Strongly Corroborated:</strong> 4+ independent sources including Tier 1, no significant contradictions.</li>
+    <li><strong style="color: #0369a1;">Corroborated:</strong> 3+ independent sources in consensus.</li>
+    <li><strong style="color: #a16207;">Limited Corroboration:</strong> Few sources or unresolved conflicts between reporting outlets.</li>
+    <li><strong style="color: #475569;">Unconfirmed:</strong> Fewer than 3 independent sources. No generated narrative is published.</li>
+  </ul>
+
+  <h3>4. Sensitive Topic Policy</h3>
+  <p>When reporting on crimes naming private individuals, health or medical claims, suicide, minors, communal violence, or active armed conflicts, <strong>NewsCheck suppresses all generated narrative</strong>. Only a verbatim claim comparison table and direct source links are displayed.</p>
+
+  <h3>5. Source Whitelist</h3>
+  <p>All feeds are vetted and whitelisted in <code>sources.yaml</code>. Unvetted third-party domains are discarded during ingestion.</p>
+</div>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Automated news corroboration — what sources agree and differ on.</p>
+      <p>Published transparently with no manual intervention. Never claims absolute truth; reports corroboration metrics only.</p>
+    </div>
+  </footer>
+</body>
+</html>

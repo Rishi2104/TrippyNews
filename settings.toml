@@ -1,0 +1,64 @@
+# NewsCheck pipeline configuration.
+# Environment variables prefixed NEWSCHECK_ override any value here.
+# Example: NEWSCHECK_STORIES_PER_RUN=5
+
+[pipeline]
+stories_per_run = 10
+min_sources_to_publish = 3
+min_sources_for_valid_run = 15
+max_story_age_hours = 48
+developing_threshold_hours = 2
+
+[ingest]
+request_timeout_seconds = 10
+max_retries = 1
+retry_backoff_seconds = 2.0
+user_agent = "NewsCheck/0.1 (automated news aggregator; +https://github.com/newscheck/newscheck)"
+max_articles_per_feed = 25
+rate_limit_per_domain_seconds = 1.0
+feeds_file = "sources.yaml"
+
+[extract]
+max_content_length = 50000
+hash_algorithm = "sha256"
+
+[dedup]
+minhash_threshold = 0.55
+minhash_num_perm = 128
+minhash_shingle_size = 5
+
+[cluster]
+embedding_model = "paraphrase-multilingual-MiniLM-L12-v2"
+min_cluster_size = 3
+min_samples = 2
+cluster_selection_epsilon = 0.0
+metric = "euclidean"
+
+[scoring]
+tier1_weight = 3.0
+tier2_weight = 2.0
+tier3_weight = 1.0
+conflict_penalty = 0.3
+primary_source_bonus = 2.0
+recency_decay_hours = 6.0
+
+[generation]
+llm_provider = "none"   # "ollama" | "gemini" | "none"
+ollama_model = "llama3.1:8b"
+ollama_base_url = "http://localhost:11434"
+gemini_model = "gemini-2.0-flash"
+max_summary_sentences = 5
+max_quote_words = 15
+
+[safety]
+min_entailment_score = 0.7
+
+[build]
+output_dir = "public"
+site_title = "NewsCheck"
+site_description = "Automated news corroboration — what sources agree and differ on."
+site_url = "https://newscheck.github.io/newscheck"
+
+[alerting]
+enabled = false
+method = "telegram"   # "telegram" | "email"

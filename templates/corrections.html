@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Corrections & Public Changelog — {{ site_title }}{% endblock %}
+
+{% block content %}
+<div class="story-card">
+  <h2>Corrections & Automated Changelog</h2>
+  <p>NewsCheck maintains an immutable, timestamped audit log of every update made to published stories when new source reporting is ingested.</p>
+
+  <h3>Report an Error</h3>
+  <p>To report a factual discrepancy, broken link, or misattributed claim, please email: <a href="mailto:corrections@newscheck.example.com">corrections@newscheck.example.com</a>.</p>
+
+  <h3>Recent Updates</h3>
+  {% if changelogs %}
+  <ul>
+    {% for ch in changelogs %}
+    <li style="margin-bottom: 12px;">
+      <strong>{{ ch.changed_at }}</strong> — Story #{{ ch.story_id }}:
+      <em>{{ ch.field_changed }}</em> changed.
+      {% if ch.reason %}<br><small style="color: var(--text-muted);">Reason: {{ ch.reason }}</small>{% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <p style="color: var(--text-muted);">No corrections or updates recorded yet.</p>
+  {% endif %}
+</div>
+{% endblock %}

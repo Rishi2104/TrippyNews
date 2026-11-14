@@ -1,0 +1,74 @@
+[build-system]
+requires = ["setuptools>=68.0", "setuptools-scm>=8.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "newscheck"
+version = "0.1.0"
+description = "Automated news corroboration system"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+readme = "README.md"
+dependencies = [
+    "feedparser>=6.0.11,<7",
+    "trafilatura>=1.12.0,<2",
+    "sentence-transformers>=3.0.0,<4",
+    "scikit-learn>=1.5.0,<2",
+    "datasketch>=1.6.0,<2",
+    "structlog>=24.1.0,<26",
+    "typer>=0.12.0,<1",
+    "pydantic>=2.7.0,<3",
+    "pyyaml>=6.0,<7",
+    "numpy>=1.26.0,<3",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0,<9",
+    "pytest-cov>=5.0,<6",
+    "ruff>=0.5.0,<1",
+    "mypy>=1.10,<2",
+    "types-pyyaml>=6.0,<7",
+]
+
+[project.scripts]
+newscheck = "newscheck.cli:app"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 120
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "W", "UP", "B", "SIM"]
+ignore = ["UP007", "B008", "E501"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["newscheck"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+warn_return_any = true
+warn_unused_configs = true
+plugins = ["pydantic.mypy"]
+
+[[tool.mypy.overrides]]
+module = [
+    "feedparser.*",
+    "trafilatura.*",
+    "datasketch.*",
+    "sentence_transformers.*",
+    "sklearn.*",
+]
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-v --tb=short"
+markers = [
+    "slow: marks tests that download models or hit the network",
+]

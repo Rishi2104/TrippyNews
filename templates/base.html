@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}{{ site_title }}{% endblock %}</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div style="display: flex; justify-content: space-between; align-items: baseline;">
+        <h1 style="margin: 0; font-size: 1.5rem;"><a href="index.html" style="text-decoration: none; color: inherit;">{{ site_title }}</a></h1>
+        <span style="font-size: 0.85rem; color: #64748b;">Independent Corroboration Pipeline</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Top 10 Stories</a></li>
+        <li><a href="methodology.html">Methodology</a></li>
+        <li><a href="corrections.html">Corrections & Changelog</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="disclosure-banner">
+      <span><strong>Automated report.</strong> May contain errors. Corroboration levels are computed mathematically from source diversity and agreement.</span>
+      <a href="mailto:corrections@newscheck.example.com?subject=NewsCheck%20Error%20Report" style="color: inherit; text-decoration: underline;">Report an error</a>
+    </div>
+
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>{{ site_description }}</p>
+      <p>Published transparently with no manual intervention. Never claims absolute truth; reports corroboration metrics only.</p>
+    </div>
+  </footer>
+</body>
+</html>
