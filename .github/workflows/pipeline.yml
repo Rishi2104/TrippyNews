@@ -42,26 +42,24 @@ jobs:
         run: |
           newscheck run --json-logs
 
-      - name: Setup Pages
-        if: success()
-        uses: actions/configure-pages@v5
-
-      - name: Upload Pages Artifact
-        if: success()
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: 'public'
-
-      - name: Deploy to GitHub Pages
-        if: success()
-        id: deployment
-        uses: actions/deploy-pages@v4
-
       - name: Commit Updated Database
-        if: success()
         run: |
           git config --global user.name "newscheck-bot"
           git config --global user.email "bot@newscheck.local"
           git add newscheck.db
           git diff --quiet && git diff --staged --quiet || git commit -m "chore: persist automated run database [skip ci]"
           git push
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
+      - name: Upload Pages Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'public'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
