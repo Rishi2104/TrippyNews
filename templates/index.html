@@ -2,41 +2,51 @@
 
 {% block content %}
 <section>
-  <div style="margin-bottom: 24px;">
-    <h2 style="font-size: 1.5rem; margin-bottom: 4px;">Top Corroborated Stories</h2>
-    <p style="color: var(--text-muted); margin: 0;">Updated every hour. Ranked by independent source count and source reliability tiers.</p>
+  <div class="section-header">
+    <div>
+      <h2>Top Corroborated Stories</h2>
+      <p>Ranked by independent source count &amp; source reliability tier.</p>
+    </div>
+    <div class="section-header-right">
+      Updated every 2 hours<br>
+      {{ stories|length }} stories this run
+    </div>
   </div>
 
   {% if not stories %}
-  <div class="story-card">
+  <div class="story-card empty-state">
     <p>No stories currently meet minimum clustering thresholds for this run.</p>
   </div>
   {% endif %}
 
   {% for item in stories %}
-  <article class="story-card">
+  {% set label = item.story.corroboration_label.value %}
+  {% if 'Strongly' in label %}{% set level = 'strongly' %}
+  {% elif 'Limited' in label %}{% set level = 'limited' %}
+  {% elif 'Unconfirmed' in label %}{% set level = 'unconfirmed' %}
+  {% else %}{% set level = 'corroborated' %}{% endif %}
+
+  <article class="story-card level-{{ level }}">
     <div class="meta-row">
-      <span class="badge {% if 'Strongly' in item.story.corroboration_label.value %}badge-strongly{% elif 'Limited' in item.story.corroboration_label.value %}badge-limited{% elif 'Unconfirmed' in item.story.corroboration_label.value %}badge-unconfirmed{% else %}badge-corroborated{% endif %}">
-        {{ item.story.corroboration_label.value }}
-      </span>
+      <span class="badge badge-{{ level }}">{{ label }}</span>
       {% if item.story.is_developing %}
       <span class="badge badge-developing">Developing</span>
       {% endif %}
-      <span>Corroborated by {{ item.independent_source_count }} independent sources</span>
-      <span>•</span>
-      <span>Score: {{ item.story.corroboration_score }}</span>
+      <span class="source-count">{{ item.independent_source_count }} independent sources</span>
+      <span class="sep">•</span>
+      <span class="score-pill">Score: {{ item.story.corroboration_score }}</span>
     </div>
 
     <h2><a href="story_{{ item.story.id }}.html" class="headline-link">{{ item.story.headline }}</a></h2>
 
     {% if item.story.summary %}
-    <p style="margin: 12px 0;">{{ item.story.summary }}</p>
+    <p class="story-summary">{{ item.story.summary }}</p>
     {% else %}
-    <p style="font-style: italic; color: var(--text-muted); margin: 12px 0;">
+    <p class="story-summary-omitted">
       {% if item.story.is_sensitive %}
-      [Narrative omitted per sensitive topic safety gate. Review claims and sources directly below.]
+      [Narrative omitted — sensitive topic safety gate active. Review claims and sources on the story page.]
       {% else %}
-      [Summary constrained to claim table due to strict NLI entailment gate.]
+      [Summary constrained to claim table — strict NLI entailment gate applied. <a href="story_{{ item.story.id }}.html">View claims &rarr;</a>]
       {% endif %}
     </p>
     {% endif %}
@@ -44,7 +54,7 @@
     <div class="sources-list">
       <strong>Sources:</strong>
       {% for src in item.sources %}
-      <a href="{{ src.url }}" target="_blank" rel="noopener noreferrer">{{ src.name }} ({{ src.domain }})</a>{% if not loop.last %}, {% endif %}
+      <a href="{{ src.url }}" target="_blank" rel="noopener noreferrer">{{ src.name }}</a>{% if not loop.last %}, {% endif %}
       {% endfor %}
     </div>
   </article>

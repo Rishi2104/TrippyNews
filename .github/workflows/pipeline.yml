@@ -2,8 +2,8 @@ name: NewsCheck Automated Pipeline
 
 on:
   schedule:
-    # Run every 60 minutes
-    - cron: '0 * * * *'
+    # Run every 2 hours (~1080 min/month, within free tier)
+    - cron: '0 */2 * * *'
   workflow_dispatch:
 
 # Prevent concurrent pipeline executions (SQLite single-writer safety)
