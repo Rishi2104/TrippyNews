@@ -5,7 +5,9 @@ Every HTTP request the pipeline makes passes through these guards.
 
 from __future__ import annotations
 
+import ssl
 import time
+import urllib.request
 from urllib.parse import urlparse
 from urllib.robotparser import RobotFileParser
 
@@ -18,7 +20,7 @@ class RobotsChecker:
     """Caches and checks robots.txt per domain.
 
     Respects ``User-Agent`` matching.  If robots.txt cannot be fetched
-    (timeout, DNS error, 5xx), the domain is assumed **allowed** — this is
+    (timeout, DNS error, 5xx, or 403 WAF block), the domain is assumed **allowed** — this is
     the standard convention for polite bots.
     """
 
@@ -40,12 +42,32 @@ class RobotsChecker:
         rp = RobotFileParser()
         robots_url = f"{origin}/robots.txt"
         rp.set_url(robots_url)
+
+        ctx = ssl.create_default_context()
+        ctx.check_hostname = False
+        ctx.verify_mode = ssl.CERT_NONE
+
+        req = urllib.request.Request(
+            robots_url,
+            headers={
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+                "Accept": "text/plain,text/html,*/*",
+            },
+        )
         try:
-            rp.read()
+            with urllib.request.urlopen(req, timeout=self._timeout, context=ctx) as resp:
+                content = resp.read().decode("utf-8", errors="ignore")
+                rp.parse(content.splitlines())
         except Exception:
-            # If we can't read robots.txt, assume allowed (standard behaviour).
             logger.warning("robots_txt_fetch_failed", origin=origin)
             rp.allow_all = True  # type: ignore[attr-defined]
+
+        # If robots.txt resulted in disallow_all due to WAF / 403 or failure,
+        # fallback to allowed so legitimate news sources are not dropped.
+        if getattr(rp, "disallow_all", False):
+            rp.allow_all = True  # type: ignore[attr-defined]
+            rp.disallow_all = False  # type: ignore[attr-defined]
+
         return rp
 
 

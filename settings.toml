@@ -3,10 +3,10 @@
 # Example: NEWSCHECK_STORIES_PER_RUN=5
 
 [pipeline]
-stories_per_run = 10
+stories_per_run = 100
 min_sources_to_publish = 3
-min_sources_for_valid_run = 15
-max_story_age_hours = 48
+min_sources_for_valid_run = 8
+max_story_age_hours = 72
 developing_threshold_hours = 2
 
 [ingest]

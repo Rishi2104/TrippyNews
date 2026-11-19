@@ -4,27 +4,51 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Methodology & Integrity Standards — NewsCheck</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Automated news corroboration — what sources agree and differ on.">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="NewsCheck">
+  <meta property="og:title" content="NewsCheck">
+  <meta property="og:description" content="Automated news corroboration — what sources agree and differ on.">
+
+  <!-- Favicon (simple emoji favicon via SVG data URI) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⬡</text></svg>">
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
     <div class="container">
-      <div style="display: flex; justify-content: space-between; align-items: baseline;">
-        <h1 style="margin: 0; font-size: 1.5rem;"><a href="index.html" style="text-decoration: none; color: inherit;">NewsCheck</a></h1>
-        <span style="font-size: 0.85rem; color: #64748b;">Independent Corroboration Pipeline</span>
+      <div class="header-inner">
+        <div class="site-brand">
+          <h1 class="site-title">
+            <a href="index.html">NewsCheck</a>
+          </h1>
+          <span class="site-tagline">Independent Corroboration Pipeline</span>
+        </div>
+        <div class="header-live">
+          <span class="live-dot"></span>
+          Auto-updated every 2 hours
+        </div>
       </div>
-      <ul class="nav-links">
-        <li><a href="index.html">Top 10 Stories</a></li>
-        <li><a href="methodology.html">Methodology</a></li>
-        <li><a href="corrections.html">Corrections & Changelog</a></li>
-      </ul>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Top Stories</a></li>
+          <li><a href="methodology.html">Methodology</a></li>
+          <li><a href="corrections.html">Corrections &amp; Changelog</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
   <main class="container">
     <div class="disclosure-banner">
-      <span><strong>Automated report.</strong> May contain errors. Corroboration levels are computed mathematically from source diversity and agreement.</span>
-      <a href="mailto:corrections@newscheck.example.com?subject=NewsCheck%20Error%20Report" style="color: inherit; text-decoration: underline;">Report an error</a>
+      <span><strong>Automated report.</strong> May contain errors. Corroboration levels are computed mathematically from source diversity and agreement — not by human editors.</span>
+      <a href="mailto:corrections@newscheck.example.com?subject=TrippyNews%20Error%20Report">Report an error &rarr;</a>
     </div>
 
     
@@ -65,7 +89,8 @@
   <footer>
     <div class="container">
       <p>Automated news corroboration — what sources agree and differ on.</p>
-      <p>Published transparently with no manual intervention. Never claims absolute truth; reports corroboration metrics only.</p>
+      <div class="footer-divider"></div>
+      <p>Published transparently with no manual intervention. Never claims absolute truth &mdash; reports corroboration metrics only.</p>
     </div>
   </footer>
 </body>

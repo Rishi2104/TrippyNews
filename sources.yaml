@@ -1,49 +1,61 @@
 # NewsCheck curated source list.
 #
 # tier:
-#   1 – Wire service, government press bureau, or primary/official source
-#   2 – Major reputable national outlet
+#   1 – Wire service, government press bureau, or premier primary/regional broadcaster
+#   2 – Major reputable national & international outlet
 #   3 – Other whitelisted outlet
 #
-# IMPORTANT: Verify each feed_url is live before first production run.
-# The pipeline gracefully skips feeds that fail (logs a warning, continues).
 # Add or remove sources here — no code changes required.
 
 sources:
 
-  # ── Tier 1: Wire services & official sources ─────────────────────────
-  - name: "Press Information Bureau"
-    domain: "pib.gov.in"
-    feed_url: "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=3"
-    language: "en"
-    country: "IN"
-    tier: 1
-
-  - name: "Reuters – India"
-    domain: "reuters.com"
-    feed_url: "https://www.reuters.com/rssFeed/INTopNews"
+  # ── Tier 1: Premier International & Asian Primary Broadcasters ───────
+  - name: "BBC News – World"
+    domain: "bbc.com"
+    feed_url: "https://feeds.bbci.co.uk/news/world/rss.xml"
     language: "en"
     country: "INTL"
     tier: 1
 
-  - name: "AP News"
-    domain: "apnews.com"
-    feed_url: "https://apnews.com/index.rss"
+  - name: "BBC News – Asia"
+    domain: "bbc.com"
+    feed_url: "https://feeds.bbci.co.uk/news/world/asia/rss.xml"
     language: "en"
     country: "INTL"
     tier: 1
 
-  - name: "ANI News"
-    domain: "aninews.in"
-    feed_url: "https://aninews.in/rss/category/national-news.xml"
+  - name: "BBC News – India"
+    domain: "bbc.com"
+    feed_url: "https://feeds.bbci.co.uk/news/world/asia/india/rss.xml"
     language: "en"
-    country: "IN"
+    country: "INTL"
     tier: 1
 
-  # ── Tier 2: Major national outlets ───────────────────────────────────
-  - name: "NDTV"
-    domain: "ndtv.com"
-    feed_url: "https://feeds.feedburner.com/ndtvnews-top-stories"
+  - name: "CNA – Asia"
+    domain: "channelnewsasia.com"
+    feed_url: "https://www.channelnewsasia.com/api/v1/rss-outbound-feed?_format=xml"
+    language: "en"
+    country: "INTL"
+    tier: 1
+
+  - name: "The Straits Times – Asia"
+    domain: "straitstimes.com"
+    feed_url: "https://www.straitstimes.com/news/asia/rss.xml"
+    language: "en"
+    country: "INTL"
+    tier: 1
+
+  - name: "SCMP – Asia"
+    domain: "scmp.com"
+    feed_url: "https://www.scmp.com/rss/91/feed"
+    language: "en"
+    country: "INTL"
+    tier: 1
+
+  # ── Tier 2: Major National & International Outlets ───────────────────
+  - name: "The Hindu – International"
+    domain: "thehindu.com"
+    feed_url: "https://www.thehindu.com/news/international/feeder/default.rss"
     language: "en"
     country: "IN"
     tier: 2
@@ -55,9 +67,23 @@ sources:
     country: "IN"
     tier: 2
 
+  - name: "Indian Express – World"
+    domain: "indianexpress.com"
+    feed_url: "https://indianexpress.com/section/world/feed/"
+    language: "en"
+    country: "IN"
+    tier: 2
+
   - name: "Indian Express"
     domain: "indianexpress.com"
     feed_url: "https://indianexpress.com/feed/"
+    language: "en"
+    country: "IN"
+    tier: 2
+
+  - name: "Hindustan Times – World"
+    domain: "hindustantimes.com"
+    feed_url: "https://www.hindustantimes.com/feeds/rss/world-news/rssfeed.xml"
     language: "en"
     country: "IN"
     tier: 2
@@ -69,6 +95,13 @@ sources:
     country: "IN"
     tier: 2
 
+  - name: "Times of India – World"
+    domain: "timesofindia.indiatimes.com"
+    feed_url: "https://timesofindia.indiatimes.com/rssfeeds/296589292.cms"
+    language: "en"
+    country: "IN"
+    tier: 2
+
   - name: "Times of India"
     domain: "timesofindia.indiatimes.com"
     feed_url: "https://timesofindia.indiatimes.com/rssfeedstopstories.cms"
@@ -76,9 +109,16 @@ sources:
     country: "IN"
     tier: 2
 
-  - name: "Mint"
-    domain: "livemint.com"
-    feed_url: "https://www.livemint.com/rss/news"
+  - name: "NDTV – World"
+    domain: "ndtv.com"
+    feed_url: "https://feeds.feedburner.com/ndtvnews-world-news"
+    language: "en"
+    country: "IN"
+    tier: 2
+
+  - name: "NDTV"
+    domain: "ndtv.com"
+    feed_url: "https://feeds.feedburner.com/ndtvnews-top-stories"
     language: "en"
     country: "IN"
     tier: 2
@@ -86,6 +126,13 @@ sources:
   - name: "India Today"
     domain: "indiatoday.in"
     feed_url: "https://www.indiatoday.in/rss/home"
+    language: "en"
+    country: "IN"
+    tier: 2
+
+  - name: "News18 – World"
+    domain: "news18.com"
+    feed_url: "https://www.news18.com/rss/world.xml"
     language: "en"
     country: "IN"
     tier: 2
@@ -104,6 +151,13 @@ sources:
     country: "IN"
     tier: 2
 
+  - name: "Mint"
+    domain: "livemint.com"
+    feed_url: "https://www.livemint.com/rss/news"
+    language: "en"
+    country: "IN"
+    tier: 2
+
   - name: "Business Standard"
     domain: "business-standard.com"
     feed_url: "https://www.business-standard.com/rss/home_page_top_stories.rss"
@@ -111,98 +165,28 @@ sources:
     country: "IN"
     tier: 2
 
-  - name: "Deccan Herald"
-    domain: "deccanherald.com"
-    feed_url: "https://www.deccanherald.com/rss/india.rss"
-    language: "en"
-    country: "IN"
-    tier: 2
-
-  - name: "BBC News – India"
-    domain: "bbc.com"
-    feed_url: "https://feeds.bbci.co.uk/news/world/asia/india/rss.xml"
+  - name: "SCMP – World"
+    domain: "scmp.com"
+    feed_url: "https://www.scmp.com/rss/4/feed"
     language: "en"
     country: "INTL"
     tier: 2
 
-  # ── Tier 3: Other whitelisted outlets ────────────────────────────────
-  - name: "Scroll.in"
-    domain: "scroll.in"
-    feed_url: "https://scroll.in/rss/feed"
+  - name: "The Straits Times – World"
+    domain: "straitstimes.com"
+    feed_url: "https://www.straitstimes.com/news/world/rss.xml"
     language: "en"
-    country: "IN"
-    tier: 3
+    country: "INTL"
+    tier: 2
 
-  - name: "The Wire"
-    domain: "thewire.in"
-    feed_url: "https://thewire.in/feed"
+  - name: "Al Jazeera – World"
+    domain: "aljazeera.com"
+    feed_url: "https://www.aljazeera.com/xml/rss/all.xml"
     language: "en"
-    country: "IN"
-    tier: 3
+    country: "INTL"
+    tier: 2
 
-  - name: "ThePrint"
-    domain: "theprint.in"
-    feed_url: "https://theprint.in/feed/"
-    language: "en"
-    country: "IN"
-    tier: 3
-
-  - name: "The Quint"
-    domain: "thequint.com"
-    feed_url: "https://www.thequint.com/quintlab/rss-feeds/the-quint-top-stories.xml"
-    language: "en"
-    country: "IN"
-    tier: 3
-
-  - name: "Firstpost"
-    domain: "firstpost.com"
-    feed_url: "https://www.firstpost.com/rss/india.xml"
-    language: "en"
-    country: "IN"
-    tier: 3
-
-  - name: "The Telegraph India"
-    domain: "telegraphindia.com"
-    feed_url: "https://www.telegraphindia.com/rss"
-    language: "en"
-    country: "IN"
-    tier: 3
-
-  - name: "Deccan Chronicle"
-    domain: "deccanchronicle.com"
-    feed_url: "https://www.deccanchronicle.com/rss_feed/"
-    language: "en"
-    country: "IN"
-    tier: 3
-
-  - name: "DNA India"
-    domain: "dnaindia.com"
-    feed_url: "https://www.dnaindia.com/feeds/india.xml"
-    language: "en"
-    country: "IN"
-    tier: 3
-
-  - name: "Free Press Journal"
-    domain: "freepressjournal.in"
-    feed_url: "https://www.freepressjournal.in/rss"
-    language: "en"
-    country: "IN"
-    tier: 3
-
-  - name: "The Statesman"
-    domain: "thestatesman.com"
-    feed_url: "https://www.thestatesman.com/feed"
-    language: "en"
-    country: "IN"
-    tier: 3
-
-  - name: "The Pioneer"
-    domain: "dailypioneer.com"
-    feed_url: "https://www.dailypioneer.com/rss/india.xml"
-    language: "en"
-    country: "IN"
-    tier: 3
-
+  # ── Tier 3: Other Whitelisted Outlets ────────────────────────────────
   - name: "Moneycontrol"
     domain: "moneycontrol.com"
     feed_url: "https://www.moneycontrol.com/rss/latestnews.xml"
@@ -210,16 +194,16 @@ sources:
     country: "IN"
     tier: 3
 
-  - name: "The Indian Express – Cities"
-    domain: "indianexpress.com"
-    feed_url: "https://indianexpress.com/section/cities/feed/"
+  - name: "The Quint"
+    domain: "thequint.com"
+    feed_url: "https://www.thequint.com/stories.rss"
     language: "en"
     country: "IN"
     tier: 3
 
-  - name: "NDTV – World"
-    domain: "ndtv.com"
-    feed_url: "https://feeds.feedburner.com/ndtvnews-world-news"
+  - name: "Deccan Chronicle"
+    domain: "deccanchronicle.com"
+    feed_url: "https://www.deccanchronicle.com/rss_feed/"
     language: "en"
     country: "IN"
     tier: 3

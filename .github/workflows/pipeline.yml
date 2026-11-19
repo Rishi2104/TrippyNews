@@ -22,6 +22,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Set up Python 3.12
         uses: actions/setup-python@v5
@@ -42,13 +44,12 @@ jobs:
         run: |
           newscheck run --json-logs
 
-      - name: Commit Updated Database
+      - name: Commit Updated Database and Public Site
         run: |
           git config --global user.name "newscheck-bot"
           git config --global user.email "bot@newscheck.local"
-          git add newscheck.db
-          git diff --quiet && git diff --staged --quiet || git commit -m "chore: persist automated run database [skip ci]"
-          git push
+          git add newscheck.db public/
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: persist automated run database and public site [skip ci]" && git push origin main)
 
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3

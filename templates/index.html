@@ -4,12 +4,16 @@
 <section>
   <div class="section-header">
     <div>
-      <h2>Top Corroborated Stories</h2>
-      <p>Ranked by independent source count &amp; source reliability tier.</p>
+      <h2>Latest Corroborated Stories</h2>
+      <p>Ranked by recency &amp; independent corroboration metrics.</p>
     </div>
     <div class="section-header-right">
       Updated every 2 hours<br>
+      {% if total_stories is defined and total_stories > 0 %}
+      Showing {{ start_index }}–{{ end_index }} of {{ total_stories }} stories (Page {{ current_page }} of {{ total_pages }})
+      {% else %}
       {{ stories|length }} stories this run
+      {% endif %}
     </div>
   </div>
 
@@ -35,6 +39,10 @@
       <span class="source-count">{{ item.independent_source_count }} independent sources</span>
       <span class="sep">•</span>
       <span class="score-pill">Score: {{ item.story.corroboration_score }}</span>
+      {% if item.story.published_at %}
+      <span class="sep">•</span>
+      <span class="story-date">{{ item.story.published_at.strftime('%d %b %Y, %H:%M UTC') }}</span>
+      {% endif %}
     </div>
 
     <h2><a href="story_{{ item.story.id }}.html" class="headline-link">{{ item.story.headline }}</a></h2>
@@ -59,5 +67,33 @@
     </div>
   </article>
   {% endfor %}
+
+  {% if total_pages is defined and total_pages > 1 %}
+  <nav class="pagination" aria-label="Stories pagination">
+    <div class="pagination-inner">
+      {% if has_prev %}
+      <a href="{{ prev_url }}" class="page-btn prev-btn">&laquo; Previous</a>
+      {% else %}
+      <span class="page-btn prev-btn disabled">&laquo; Previous</span>
+      {% endif %}
+
+      <div class="page-numbers">
+        {% for p in page_numbers %}
+          {% if p.is_current %}
+          <span class="page-num current" aria-current="page">{{ p.number }}</span>
+          {% else %}
+          <a href="{{ p.url }}" class="page-num">{{ p.number }}</a>
+          {% endif %}
+        {% endfor %}
+      </div>
+
+      {% if has_next %}
+      <a href="{{ next_url }}" class="page-btn next-btn">Next &raquo;</a>
+      {% else %}
+      <span class="page-btn next-btn disabled">Next &raquo;</span>
+      {% endif %}
+    </div>
+  </nav>
+  {% endif %}
 </section>
 {% endblock %}

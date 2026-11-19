@@ -6,6 +6,10 @@
 {% block og_description %}{{ story.summary[:200] if story.summary else 'Corroborated by ' ~ independent_source_count ~ ' independent sources.' }}{% endblock %}
 
 {% block content %}
+<div class="back-nav">
+  <a href="index.html" class="back-link">&larr; Back to all stories</a>
+</div>
+
 {% set label = story.corroboration_label.value %}
 {% if 'Strongly' in label %}{% set level = 'strongly' %}
 {% elif 'Limited' in label %}{% set level = 'limited' %}

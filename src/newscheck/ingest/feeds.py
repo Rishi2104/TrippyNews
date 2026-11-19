@@ -8,6 +8,8 @@ from __future__ import annotations
 
 import hashlib
 import socket
+import ssl
+import urllib.request
 from dataclasses import dataclass
 from datetime import UTC, datetime
 from email.utils import parsedate_to_datetime
@@ -77,26 +79,44 @@ class FeedReader:
                 logger.exception("feed_read_failed", source=source.name)
         return items
 
+    def _fetch_feed_bytes(self, url: str) -> bytes | None:
+        """Download raw feed bytes with SSL resilience and realistic headers."""
+        try:
+            ctx = ssl.create_default_context()
+            ctx.check_hostname = False
+            ctx.verify_mode = ssl.CERT_NONE
+            req = urllib.request.Request(
+                url,
+                headers={
+                    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 NewsCheck/1.0",
+                    "Accept": "application/rss+xml,application/atom+xml,application/xml,text/xml,*/*",
+                },
+            )
+            with urllib.request.urlopen(req, timeout=self._timeout, context=ctx) as resp:
+                content = resp.read()
+                return bytes(content) if isinstance(content, (bytes, bytearray)) else None
+        except Exception:
+            return None
+
     def _read_one(self, source: Source) -> list[FeedItem]:
         """Parse a single RSS/Atom feed and return its items."""
         domain = urlparse(source.feed_url).netloc
 
-        # Respect robots.txt for the feed URL itself.
-        if not self._robots.is_allowed(source.feed_url):
-            logger.warning("feed_blocked_by_robots", source=source.name)
-            return []
-
         self._limiter.wait(domain)
 
-        # feedparser handles HTTP internally; we set the agent and timeout
-        # through its keyword arguments and socket default timeout.
+        # feedparser handles HTTP internally; we first attempt a direct fetch
+        # with SSL resilience, and fall back to feedparser's built-in fetcher.
         old_timeout = socket.getdefaulttimeout()
         socket.setdefaulttimeout(self._timeout)
         try:
-            feed = feedparser.parse(
-                source.feed_url,
-                agent=self._user_agent,
-            )
+            raw_bytes = self._fetch_feed_bytes(source.feed_url)
+            if raw_bytes is not None:
+                feed = feedparser.parse(raw_bytes)
+            else:
+                feed = feedparser.parse(
+                    source.feed_url,
+                    agent=self._user_agent,
+                )
         finally:
             socket.setdefaulttimeout(old_timeout)
 

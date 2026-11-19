@@ -651,6 +651,100 @@ footer a:hover { text-decoration: underline; }
 .mt-0 { margin-top: 0; }
 .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
 
+/* ---------- Back Navigation ---------- */
+.back-nav {
+  margin-bottom: 16px;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--primary-dark);
+  text-decoration: none;
+  padding: 6px 12px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm, 6px);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.15s ease;
+}
+
+.back-link:hover {
+  background: #f1f5f9;
+  border-color: var(--primary);
+  text-decoration: none;
+}
+
+/* ---------- Pagination ---------- */
+.pagination {
+  margin: 36px 0 24px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.pagination-inner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.page-numbers {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.page-btn, .page-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 13px;
+  border-radius: var(--radius-sm, 6px);
+  border: 1px solid var(--border);
+  background: var(--card-bg);
+  color: var(--text-main);
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.15s ease;
+  min-width: 36px;
+  box-shadow: var(--shadow-sm);
+}
+
+.page-btn:hover:not(.disabled), .page-num:hover:not(.current) {
+  border-color: var(--primary);
+  color: var(--primary-dark);
+  background: #f8fafc;
+  transform: translateY(-1px);
+  text-decoration: none;
+}
+
+.page-btn.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+  background: #f1f5f9;
+}
+
+.page-num.current {
+  background: var(--primary-dark);
+  color: #ffffff;
+  border-color: var(--primary-dark);
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(3, 105, 161, 0.35);
+}
+
+.story-date {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
 /* ---------- Responsive ---------- */
 @media (max-width: 640px) {
   .header-inner { flex-direction: column; align-items: flex-start; }

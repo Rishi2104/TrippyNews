@@ -64,17 +64,57 @@ class SiteGenerator:
                     if item.is_file():
                         shutil.copy2(item, staging_dir / item.name)
 
-            # 2. Fetch published stories
-            stories_data = self._load_stories_data(conn)
+            # 2. Fetch published stories (latest on top, up to 100)
+            stories_data = self._load_stories_data(conn, limit=100)
 
-            # 3. Render index.html
-            self._render_page(
-                "index.html",
-                staging_dir / "index.html",
-                stories=stories_data,
-                site_title=self._cfg.site_title,
-                site_description=self._cfg.site_description,
-            )
+            # 3. Render paginated index pages (10 stories per page)
+            page_size = 10
+            total_stories = len(stories_data)
+            total_pages = max(1, (total_stories + page_size - 1) // page_size)
+
+            for page_num in range(1, total_pages + 1):
+                start = (page_num - 1) * page_size
+                end = min(start + page_size, total_stories)
+                page_stories = stories_data[start:end]
+
+                has_prev = page_num > 1
+                prev_url = "index.html" if page_num == 2 else f"page_{page_num - 1}.html"
+                has_next = page_num < total_pages
+                next_url = f"page_{page_num + 1}.html"
+
+                page_numbers = [
+                    {
+                        "number": i,
+                        "url": "index.html" if i == 1 else f"page_{i}.html",
+                        "is_current": (i == page_num),
+                    }
+                    for i in range(1, total_pages + 1)
+                ]
+
+                # Render index.html (and page_1.html alias) for page 1, or page_X.html
+                dest_files = (
+                    [staging_dir / "index.html", staging_dir / "page_1.html"]
+                    if page_num == 1
+                    else [staging_dir / f"page_{page_num}.html"]
+                )
+                for dest_path in dest_files:
+                    self._render_page(
+                        "index.html",
+                        dest_path,
+                        stories=page_stories,
+                        current_page=page_num,
+                        total_pages=total_pages,
+                        total_stories=total_stories,
+                        start_index=start + 1 if total_stories > 0 else 0,
+                        end_index=end,
+                        has_prev=has_prev,
+                        has_next=has_next,
+                        prev_url=prev_url,
+                        next_url=next_url,
+                        page_numbers=page_numbers,
+                        site_title=self._cfg.site_title,
+                        site_description=self._cfg.site_description,
+                    )
 
             # 4. Render story details pages
             for s_data in stories_data:
@@ -137,14 +177,18 @@ class SiteGenerator:
         html = template.render(**context)
         dest_path.write_text(html, encoding="utf-8")
 
-    def _load_stories_data(self, conn: sqlite3.Connection) -> list[dict[str, Any]]:
-        """Load stories with associated claims, articles, and changelogs."""
+    def _load_stories_data(self, conn: sqlite3.Connection, limit: int = 100) -> list[dict[str, Any]]:
+        """Load stories with associated claims, articles, and changelogs.
+
+        Ordered by published_at DESC (latest on top), then by corroboration_score DESC.
+        """
         rows = conn.execute(
             """
             SELECT * FROM stories
-            ORDER BY corroboration_score DESC
-            LIMIT 10
-            """
+            ORDER BY published_at DESC, corroboration_score DESC
+            LIMIT ?
+            """,
+            (limit,),
         ).fetchall()
 
         results: list[dict[str, Any]] = []

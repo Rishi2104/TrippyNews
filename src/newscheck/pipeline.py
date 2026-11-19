@@ -377,7 +377,7 @@ def _execute(
             corroboration_label=score_breakdown.label,
             is_sensitive=is_sensitive,
             is_developing=score_breakdown.is_developing,
-            published_at=datetime.now(UTC),
+            published_at=newest_pub or datetime.now(UTC),
         )
         audited_story = safety_auditor.audit_story(
             story,
