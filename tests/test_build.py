@@ -142,15 +142,19 @@ class TestSiteGenerator:
         # Story 1 is oldest, should not be on page 1
         assert "Headline Story Number 1<" not in p1_text
 
-        # Verify pagination links exist
+        # Verify infinite scroll auto-pagination links and assets exist
+        assert (out_dir / "infinite-scroll.js").exists()
+        assert "infinite-scroll" in p1_text
         assert "page_2.html" in p1_text
-        assert "page_3.html" in p1_text
-        assert "Page 1 of 3" in p1_text
 
-        # Verify page 3 has oldest story (Story 1)
+        # Verify page 2 auto-pagination points to page 3
+        p2_text = (out_dir / "page_2.html").read_text(encoding="utf-8")
+        assert "page_3.html" in p2_text
+
+        # Verify page 3 has oldest story (Story 1) and end-of-feed notice
         p3_text = (out_dir / "page_3.html").read_text(encoding="utf-8")
         assert "Headline Story Number 1" in p3_text
-        assert "Page 3 of 3" in p3_text
+        assert "feed-end-notice" in p3_text
 
 
 class TestAlerting:

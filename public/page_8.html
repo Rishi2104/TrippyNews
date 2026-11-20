@@ -61,13 +61,14 @@
     <div class="section-header-right">
       Updated every 1 hour<br>
       
-      Showing 71–80 of 100 stories (Page 8 of 10)
+      <span id="stories-count-display">Showing 71–80 of 100 stories</span>
       
     </div>
   </div>
 
   
 
+  <div id="stories-feed" class="stories-feed">
   
   
   
@@ -542,65 +543,28 @@
     </div>
   </article>
   
+  </div>
 
   
-  <nav class="pagination" aria-label="Stories pagination">
-    <div class="pagination-inner">
-      
-      <a href="page_7.html" class="page-btn prev-btn">&laquo; Previous</a>
-      
-
-      <div class="page-numbers">
-        
-          
-          <a href="index.html" class="page-num">1</a>
-          
-        
-          
-          <a href="page_2.html" class="page-num">2</a>
-          
-        
-          
-          <a href="page_3.html" class="page-num">3</a>
-          
-        
-          
-          <a href="page_4.html" class="page-num">4</a>
-          
-        
-          
-          <a href="page_5.html" class="page-num">5</a>
-          
-        
-          
-          <a href="page_6.html" class="page-num">6</a>
-          
-        
-          
-          <a href="page_7.html" class="page-num">7</a>
-          
-        
-          
-          <span class="page-num current" aria-current="page">8</span>
-          
-        
-          
-          <a href="page_9.html" class="page-num">9</a>
-          
-        
-          
-          <a href="page_10.html" class="page-num">10</a>
-          
-        
-      </div>
-
-      
-      <a href="page_9.html" class="page-btn next-btn">Next &raquo;</a>
-      
+  <div id="infinite-scroll-sentinel" class="infinite-scroll-sentinel"
+       data-next-url="page_9.html"
+       data-current-page="8"
+       data-total-pages="10"
+       data-total-stories="100">
+    <div class="scroll-status-box" id="scroll-status">
+      <span class="spinner"></span>
+      <span class="scroll-status-text">Loading more stories...</span>
     </div>
-  </nav>
+    <noscript>
+      <div class="noscript-pagination">
+        <a href="page_9.html" class="page-btn">Next page &raquo;</a>
+      </div>
+    </noscript>
+  </div>
   
 </section>
+
+<script src="infinite-scroll.js"></script>
 
   </main>
 

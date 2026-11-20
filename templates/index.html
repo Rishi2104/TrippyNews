@@ -10,7 +10,7 @@
     <div class="section-header-right">
       Updated every 1 hour<br>
       {% if total_stories is defined and total_stories > 0 %}
-      Showing {{ start_index }}–{{ end_index }} of {{ total_stories }} stories (Page {{ current_page }} of {{ total_pages }})
+      <span id="stories-count-display">Showing {{ start_index }}–{{ end_index }} of {{ total_stories }} stories</span>
       {% else %}
       {{ stories|length }} stories this run
       {% endif %}
@@ -23,6 +23,7 @@
   </div>
   {% endif %}
 
+  <div id="stories-feed" class="stories-feed">
   {% for item in stories %}
   {% set label = item.story.corroboration_label.value %}
   {% if 'Strongly' in label %}{% set level = 'strongly' %}
@@ -67,33 +68,30 @@
     </div>
   </article>
   {% endfor %}
+  </div>
 
-  {% if total_pages is defined and total_pages > 1 %}
-  <nav class="pagination" aria-label="Stories pagination">
-    <div class="pagination-inner">
-      {% if has_prev %}
-      <a href="{{ prev_url }}" class="page-btn prev-btn">&laquo; Previous</a>
-      {% else %}
-      <span class="page-btn prev-btn disabled">&laquo; Previous</span>
-      {% endif %}
-
-      <div class="page-numbers">
-        {% for p in page_numbers %}
-          {% if p.is_current %}
-          <span class="page-num current" aria-current="page">{{ p.number }}</span>
-          {% else %}
-          <a href="{{ p.url }}" class="page-num">{{ p.number }}</a>
-          {% endif %}
-        {% endfor %}
-      </div>
-
-      {% if has_next %}
-      <a href="{{ next_url }}" class="page-btn next-btn">Next &raquo;</a>
-      {% else %}
-      <span class="page-btn next-btn disabled">Next &raquo;</span>
-      {% endif %}
+  {% if has_next %}
+  <div id="infinite-scroll-sentinel" class="infinite-scroll-sentinel"
+       data-next-url="{{ next_url }}"
+       data-current-page="{{ current_page }}"
+       data-total-pages="{{ total_pages }}"
+       data-total-stories="{{ total_stories }}">
+    <div class="scroll-status-box" id="scroll-status">
+      <span class="spinner"></span>
+      <span class="scroll-status-text">Loading more stories...</span>
     </div>
-  </nav>
+    <noscript>
+      <div class="noscript-pagination">
+        <a href="{{ next_url }}" class="page-btn">Next page &raquo;</a>
+      </div>
+    </noscript>
+  </div>
+  {% else %}
+  <div class="feed-end-notice">
+    <span>✓ You're all caught up • All {{ total_stories }} stories loaded</span>
+  </div>
   {% endif %}
 </section>
+
+<script src="infinite-scroll.js"></script>
 {% endblock %}
