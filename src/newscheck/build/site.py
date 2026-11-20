@@ -10,7 +10,7 @@ from __future__ import annotations
 
 import shutil
 import sqlite3
-from datetime import datetime
+from datetime import UTC, datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
 
@@ -41,6 +41,15 @@ class SiteGenerator:
         self._env = Environment(
             loader=FileSystemLoader(str(self._templates_dir)),
             autoescape=True,
+        )
+        # Register IST timezone filter for templates
+        ist_tz = timezone(timedelta(hours=5, minutes=30))
+        self._env.filters["to_ist"] = lambda dt: (
+            dt.replace(tzinfo=UTC).astimezone(ist_tz)
+            if dt and dt.tzinfo is None
+            else dt.astimezone(ist_tz)
+            if dt
+            else dt
         )
 
     def build_site(self, conn: sqlite3.Connection, *, staging_dir: Path | None = None) -> Path:

@@ -41,7 +41,7 @@
       <span class="score-pill">Score: {{ item.story.corroboration_score }}</span>
       {% if item.story.published_at %}
       <span class="sep">•</span>
-      <span class="story-date">{{ item.story.published_at.strftime('%d %b %Y, %H:%M UTC') }}</span>
+      <span class="story-date">{{ (item.story.published_at|to_ist).strftime('%d %b %Y, %H:%M IST') }}</span>
       {% endif %}
     </div>
 
