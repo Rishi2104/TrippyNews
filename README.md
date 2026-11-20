@@ -16,7 +16,7 @@ The system strictly adheres to the principle: **Never claim a story is "true" or
        ↓
   3. Deduplicate (MinHash LSH + wire-service syndication detection: PTI, ANI, Reuters, AP, AFP)
        ↓
-  4. Cluster & Rank (Multilingual SBERT + HDBSCAN, tier-weighted scoring, top 10 selection)
+  4. Cluster & Rank (Multilingual SBERT + HDBSCAN, tier-weighted scoring, top 100 selection with pagination)
        ↓
   5. Claim Extraction (Verbatim source-sentence anchoring via Ollama / Gemini / Rule-based)
        ↓
@@ -103,11 +103,11 @@ mypy src
 ## 5. Automated Production Deployment
 
 The project includes a ready-to-run GitHub Actions workflow (`.github/workflows/pipeline.yml`):
-- Runs every **60 minutes** on a cron schedule.
+- Runs every **1 hour** (`cron: '0 * * * *'`) to fetch the latest global and domestic reports.
 - Uses **concurrency locks** to guarantee single-writer SQLite safety.
-- Builds the static site atomically into `public/`.
+- Builds the static site atomically into `public/` (with IST timestamps and visitor analytics).
 - Deploys automatically to **GitHub Pages**.
-- Commits updated run metadata back to the repository.
+- Commits updated database and static site files back to the repository.
 
 ---
 
