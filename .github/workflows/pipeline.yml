@@ -5,6 +5,9 @@ on:
     # Run every 1 hour
     - cron: '0 * * * *'
   workflow_dispatch:
+  push:
+    branches:
+      - main
 
 # Prevent concurrent pipeline executions (SQLite single-writer safety)
 concurrency:
