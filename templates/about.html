@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}About & Operator Information — {{ site_title }}{% endblock %}
+
+{% block content %}
+<div class="story-card prose">
+  <h2>About {{ site_title }}</h2>
+  <p><strong>{{ site_title }}</strong> is an automated, open-source news corroboration and clustering system. Its goal is to analyze reporting diversity across national and international press outlets, identify confirmed facts, highlight contradictory claims, and calculate transparent corroboration metrics without human editorial bias.</p>
+
+  <h3>Our Mission</h3>
+  <p>Modern news feeds often amplify single uncorroborated reports, syndicated wire reprints, and sensational headlines. {{ site_title }} provides readers with an automated, independent view of the news landscape by evaluating <em>how many distinct, independent newsrooms</em> corroborate an event and separating consensus facts from single-source claims.</p>
+
+  <h3>How the Pipeline Works</h3>
+  <ol>
+    <li><strong>Vetted RSS Ingestion:</strong> Ingests publicly available RSS news feeds from transparently cataloged sources listed in our source directory.</li>
+    <li><strong>Robots.txt &amp; Polite Crawling:</strong> Every request strictly honors standard <code>robots.txt</code> protocols (RFC 9309) and rate-limit delays before fetching feeds or articles.</li>
+    <li><strong>Clustering &amp; Deduplication:</strong> Groups incoming articles discussing the same underlying real-world event and removes syndicated wire duplicates so that multiple republications of the same wire story are never counted as independent consensus.</li>
+    <li><strong>Claim Extraction &amp; Cross-Checking:</strong> Extracts factual assertions and evaluates agreement or contradiction across different outlets.</li>
+    <li><strong>Mathematical Corroboration Scoring:</strong> Computes a deterministic corroboration score and categorical label using our published formula.</li>
+    <li><strong>Own-Words Synthesis:</strong> Produces a neutral, original factual summary based exclusively on corroborated claims. Raw publisher text is never republished.</li>
+  </ol>
+
+  <h3>Crawler Identity &amp; Respect Policy</h3>
+  <p>Our automated feed reader identifies itself honestly on every HTTP request using the following standard User-Agent:</p>
+  <pre style="background: var(--bg-color); padding: 12px; border-radius: var(--radius-sm); font-size: 0.85rem; overflow-x: auto;"><code>NewsCheckBot/1.0 (+https://rishi2104.github.io/TrippyNews/about.html; {{ contact_email }})</code></pre>
+  <p>We do not spoof browser User-Agents, bypass security or access controls, or circumvent robots.txt. If a publisher server returns HTTP 403 or 429, our pipeline immediately backs off and ceases requests to that origin.</p>
+
+  <h3>Operator &amp; Contact</h3>
+  <p>{{ site_title }} is maintained as an open-source public service software project. For technical inquiries, bug reports, or takedown requests, contact the operator directly at:</p>
+  <p><strong>Email:</strong> <a href="mailto:{{ contact_email }}">{{ contact_email }}</a></p>
+</div>
+{% endblock %}

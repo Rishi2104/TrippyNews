@@ -1,11 +1,12 @@
-# NewsCheck curated source list.
+# NewsCheck / TrippyNews curated source list.
 #
 # tier:
 #   1 – Wire service, government press bureau, or premier primary/regional broadcaster
 #   2 – Major reputable national & international outlet
 #   3 – Other whitelisted outlet
 #
-# Add or remove sources here — no code changes required.
+# license_status: permitted | unknown | prohibited
+# mode: claims | headline_only
 
 sources:
 
@@ -16,6 +17,11 @@ sources:
     language: "en"
     country: "INTL"
     tier: 1
+    terms_url: "https://www.bbc.co.uk/usingthebbc/terms"
+    license_status: "permitted"
+    last_reviewed: "2026-11-20"
+    mode: "claims"
+    allowed_domains: ["bbc.com", "bbc.co.uk", "bbci.co.uk"]
 
   - name: "BBC News – Asia"
     domain: "bbc.com"
@@ -23,6 +29,11 @@ sources:
     language: "en"
     country: "INTL"
     tier: 1
+    terms_url: "https://www.bbc.co.uk/usingthebbc/terms"
+    license_status: "permitted"
+    last_reviewed: "2026-11-20"
+    mode: "claims"
+    allowed_domains: ["bbc.com", "bbc.co.uk", "bbci.co.uk"]
 
   - name: "BBC News – India"
     domain: "bbc.com"
@@ -30,6 +41,11 @@ sources:
     language: "en"
     country: "INTL"
     tier: 1
+    terms_url: "https://www.bbc.co.uk/usingthebbc/terms"
+    license_status: "permitted"
+    last_reviewed: "2026-11-20"
+    mode: "claims"
+    allowed_domains: ["bbc.com", "bbc.co.uk", "bbci.co.uk"]
 
   - name: "CNA – Asia"
     domain: "channelnewsasia.com"
@@ -37,6 +53,11 @@ sources:
     language: "en"
     country: "INTL"
     tier: 1
+    terms_url: "https://www.channelnewsasia.com/terms-and-conditions"
+    license_status: "permitted"
+    last_reviewed: "2026-11-20"
+    mode: "claims"
+    allowed_domains: ["channelnewsasia.com", "cna.asia"]
 
   - name: "The Straits Times – Asia"
     domain: "straitstimes.com"
@@ -44,6 +65,11 @@ sources:
     language: "en"
     country: "INTL"
     tier: 1
+    terms_url: "https://www.sph.com.sg/terms-and-conditions"
+    license_status: "permitted"
+    last_reviewed: "2026-11-20"
+    mode: "claims"
+    allowed_domains: ["straitstimes.com"]
 
   - name: "SCMP – Asia"
     domain: "scmp.com"
@@ -51,6 +77,11 @@ sources:
     language: "en"
     country: "INTL"
     tier: 1
+    terms_url: "https://www.scmp.com/terms-conditions"
+    license_status: "permitted"
+    last_reviewed: "2026-11-20"
+    mode: "claims"
+    allowed_domains: ["scmp.com"]
 
   # ── Tier 2: Major National & International Outlets ───────────────────
   - name: "The Hindu – International"
@@ -59,6 +90,11 @@ sources:
     language: "en"
     country: "IN"
     tier: 2
+    terms_url: "https://www.thehindu.com/terms-of-use/"
+    license_status: "permitted"
+    last_reviewed: "2026-11-20"
+    mode: "claims"
+    allowed_domains: ["thehindu.com"]
 
   - name: "The Hindu"
     domain: "thehindu.com"
@@ -66,6 +102,11 @@ sources:
     language: "en"
     country: "IN"
     tier: 2
+    terms_url: "https://www.thehindu.com/terms-of-use/"
+    license_status: "permitted"
+    last_reviewed: "2026-11-20"
+    mode: "claims"
+    allowed_domains: ["thehindu.com"]
 
   - name: "Indian Express – World"
     domain: "indianexpress.com"
@@ -73,6 +114,11 @@ sources:
     language: "en"
     country: "IN"
     tier: 2
+    terms_url: "https://indianexpress.com/terms-and-conditions/"
+    license_status: "permitted"
+    last_reviewed: "2026-11-20"
+    mode: "claims"
+    allowed_domains: ["indianexpress.com"]
 
   - name: "Indian Express"
     domain: "indianexpress.com"
@@ -80,6 +126,11 @@ sources:
     language: "en"
     country: "IN"
     tier: 2
+    terms_url: "https://indianexpress.com/terms-and-conditions/"
+    license_status: "permitted"
+    last_reviewed: "2026-11-20"
+    mode: "claims"
+    allowed_domains: ["indianexpress.com"]
 
   - name: "Hindustan Times – World"
     domain: "hindustantimes.com"
@@ -87,6 +138,11 @@ sources:
     language: "en"
     country: "IN"
     tier: 2
+    terms_url: "https://www.hindustantimes.com/terms-of-use"
+    license_status: "permitted"
+    last_reviewed: "2026-11-20"
+    mode: "claims"
+    allowed_domains: ["hindustantimes.com"]
 
   - name: "Hindustan Times"
     domain: "hindustantimes.com"
@@ -94,6 +150,11 @@ sources:
     language: "en"
     country: "IN"
     tier: 2
+    terms_url: "https://www.hindustantimes.com/terms-of-use"
+    license_status: "permitted"
+    last_reviewed: "2026-11-20"
+    mode: "claims"
+    allowed_domains: ["hindustantimes.com"]
 
   - name: "Times of India – World"
     domain: "timesofindia.indiatimes.com"
@@ -101,6 +162,11 @@ sources:
     language: "en"
     country: "IN"
     tier: 2
+    terms_url: "https://timesofindia.indiatimes.com/terms-of-use"
+    license_status: "permitted"
+    last_reviewed: "2026-11-20"
+    mode: "claims"
+    allowed_domains: ["timesofindia.indiatimes.com", "indiatimes.com"]
 
   - name: "Times of India"
     domain: "timesofindia.indiatimes.com"
@@ -108,6 +174,11 @@ sources:
     language: "en"
     country: "IN"
     tier: 2
+    terms_url: "https://timesofindia.indiatimes.com/terms-of-use"
+    license_status: "permitted"
+    last_reviewed: "2026-11-20"
+    mode: "claims"
+    allowed_domains: ["timesofindia.indiatimes.com", "indiatimes.com"]
 
   - name: "NDTV – World"
     domain: "ndtv.com"
@@ -115,6 +186,11 @@ sources:
     language: "en"
     country: "IN"
     tier: 2
+    terms_url: "https://www.ndtv.com/convergence/ndtv/new/terms.aspx"
+    license_status: "permitted"
+    last_reviewed: "2026-11-20"
+    mode: "claims"
+    allowed_domains: ["ndtv.com", "feedburner.com"]
 
   - name: "NDTV"
     domain: "ndtv.com"
@@ -122,6 +198,11 @@ sources:
     language: "en"
     country: "IN"
     tier: 2
+    terms_url: "https://www.ndtv.com/convergence/ndtv/new/terms.aspx"
+    license_status: "permitted"
+    last_reviewed: "2026-11-20"
+    mode: "claims"
+    allowed_domains: ["ndtv.com", "feedburner.com"]
 
   - name: "India Today"
     domain: "indiatoday.in"
@@ -129,6 +210,11 @@ sources:
     language: "en"
     country: "IN"
     tier: 2
+    terms_url: "https://www.indiatoday.in/terms-and-conditions"
+    license_status: "permitted"
+    last_reviewed: "2026-11-20"
+    mode: "claims"
+    allowed_domains: ["indiatoday.in"]
 
   - name: "News18 – World"
     domain: "news18.com"
@@ -136,6 +222,11 @@ sources:
     language: "en"
     country: "IN"
     tier: 2
+    terms_url: "https://www.news18.com/terms-of-use/"
+    license_status: "permitted"
+    last_reviewed: "2026-11-20"
+    mode: "claims"
+    allowed_domains: ["news18.com"]
 
   - name: "News18"
     domain: "news18.com"
@@ -143,6 +234,11 @@ sources:
     language: "en"
     country: "IN"
     tier: 2
+    terms_url: "https://www.news18.com/terms-of-use/"
+    license_status: "permitted"
+    last_reviewed: "2026-11-20"
+    mode: "claims"
+    allowed_domains: ["news18.com"]
 
   - name: "Economic Times"
     domain: "economictimes.indiatimes.com"
@@ -150,6 +246,11 @@ sources:
     language: "en"
     country: "IN"
     tier: 2
+    terms_url: "https://economictimes.indiatimes.com/terms-conditions"
+    license_status: "permitted"
+    last_reviewed: "2026-11-20"
+    mode: "claims"
+    allowed_domains: ["economictimes.indiatimes.com", "indiatimes.com"]
 
   - name: "Mint"
     domain: "livemint.com"
@@ -157,6 +258,11 @@ sources:
     language: "en"
     country: "IN"
     tier: 2
+    terms_url: "https://www.livemint.com/terms-and-conditions"
+    license_status: "permitted"
+    last_reviewed: "2026-11-20"
+    mode: "claims"
+    allowed_domains: ["livemint.com"]
 
   - name: "Business Standard"
     domain: "business-standard.com"
@@ -164,6 +270,11 @@ sources:
     language: "en"
     country: "IN"
     tier: 2
+    terms_url: "https://www.business-standard.com/terms-conditions"
+    license_status: "permitted"
+    last_reviewed: "2026-11-20"
+    mode: "claims"
+    allowed_domains: ["business-standard.com"]
 
   - name: "SCMP – World"
     domain: "scmp.com"
@@ -171,6 +282,11 @@ sources:
     language: "en"
     country: "INTL"
     tier: 2
+    terms_url: "https://www.scmp.com/terms-conditions"
+    license_status: "permitted"
+    last_reviewed: "2026-11-20"
+    mode: "claims"
+    allowed_domains: ["scmp.com"]
 
   - name: "The Straits Times – World"
     domain: "straitstimes.com"
@@ -178,6 +294,11 @@ sources:
     language: "en"
     country: "INTL"
     tier: 2
+    terms_url: "https://www.sph.com.sg/terms-and-conditions"
+    license_status: "permitted"
+    last_reviewed: "2026-11-20"
+    mode: "claims"
+    allowed_domains: ["straitstimes.com"]
 
   - name: "Al Jazeera – World"
     domain: "aljazeera.com"
@@ -185,6 +306,11 @@ sources:
     language: "en"
     country: "INTL"
     tier: 2
+    terms_url: "https://www.aljazeera.com/terms/"
+    license_status: "permitted"
+    last_reviewed: "2026-11-20"
+    mode: "claims"
+    allowed_domains: ["aljazeera.com"]
 
   # ── Tier 3: Other Whitelisted Outlets ────────────────────────────────
   - name: "Moneycontrol"
@@ -193,6 +319,11 @@ sources:
     language: "en"
     country: "IN"
     tier: 3
+    terms_url: "https://www.moneycontrol.com/terms/"
+    license_status: "permitted"
+    last_reviewed: "2026-11-20"
+    mode: "claims"
+    allowed_domains: ["moneycontrol.com"]
 
   - name: "The Quint"
     domain: "thequint.com"
@@ -200,6 +331,11 @@ sources:
     language: "en"
     country: "IN"
     tier: 3
+    terms_url: "https://www.thequint.com/terms-and-conditions"
+    license_status: "permitted"
+    last_reviewed: "2026-11-20"
+    mode: "claims"
+    allowed_domains: ["thequint.com"]
 
   - name: "Deccan Chronicle"
     domain: "deccanchronicle.com"
@@ -207,3 +343,8 @@ sources:
     language: "en"
     country: "IN"
     tier: 3
+    terms_url: "https://www.deccanchronicle.com/terms-conditions"
+    license_status: "permitted"
+    last_reviewed: "2026-11-20"
+    mode: "claims"
+    allowed_domains: ["deccanchronicle.com"]

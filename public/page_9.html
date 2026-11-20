@@ -3,20 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NewsCheck</title>
+  <title>TrippyNews</title>
 
   <!-- SEO -->
   <meta name="description" content="Automated news corroboration — what sources agree and differ on.">
   <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://rishi2104.github.io/TrippyNews/">
 
   <!-- Open Graph / Social -->
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="NewsCheck">
-  <meta property="og:title" content="NewsCheck">
+  <meta property="og:site_name" content="TrippyNews">
+  <meta property="og:title" content="TrippyNews">
   <meta property="og:description" content="Automated news corroboration — what sources agree and differ on.">
+  <meta property="og:url" content="https://rishi2104.github.io/TrippyNews/">
+  <meta property="og:image" content="https://rishi2104.github.io/TrippyNews/favicon.svg">
 
-  <!-- Favicon (simple emoji favicon via SVG data URI) -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⬡</text></svg>">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="TrippyNews">
+  <meta name="twitter:description" content="Automated news corroboration — what sources agree and differ on.">
+
+  <!-- Favicon (percent-encoded SVG data URI) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Ctext%20y='.9em'%20font-size='90'%3E%E2%AC%A1%3C/text%3E%3C/svg%3E">
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -25,14 +33,16 @@
     <div class="container">
       <div class="header-inner">
         <div class="site-brand">
-          <h1 class="site-title">
-            <a href="index.html">NewsCheck</a>
-          </h1>
-          <span class="site-tagline">Independent Corroboration Pipeline</span>
+          
+          <div class="site-title">
+            <a href="index.html">TrippyNews</a>
+          </div>
+          
+          <span class="site-tagline">Automated News Corroboration Pipeline</span>
         </div>
         <div class="header-live">
           <span class="live-dot"></span>
-          Auto-updated every 1 hour
+          Last updated: <time datetime="2026-11-20T10:03:53.313679+00:00" class="local-time">20 Nov 2026, 15:33 IST</time>
         </div>
       </div>
       <nav>
@@ -40,6 +50,7 @@
           <li><a href="index.html">Top Stories</a></li>
           <li><a href="methodology.html">Methodology</a></li>
           <li><a href="corrections.html">Corrections &amp; Changelog</a></li>
+          <li><a href="about.html">About</a></li>
         </ul>
       </nav>
     </div>
@@ -47,8 +58,8 @@
 
   <main class="container">
     <div class="disclosure-banner">
-      <span><strong>Automated report.</strong> May contain errors. Corroboration levels are computed mathematically from source diversity and agreement — not by human editors.</span>
-      <a href="mailto:corrections@newscheck.example.com?subject=TrippyNews%20Error%20Report">Report an error &rarr;</a>
+      <span><strong>Automated report.</strong> Corroboration levels are computed mathematically from source diversity and agreement &mdash; not by human editors. Never claims absolute truth.</span>
+      <a href="mailto:contact@trippynews.org?subject=TrippyNews%20Inquiry%20or%20Error%20Report">Report an error &rarr;</a>
     </div>
 
     
@@ -59,7 +70,6 @@
       <p>Ranked by recency &amp; independent corroboration metrics.</p>
     </div>
     <div class="section-header-right">
-      Updated every 1 hour<br>
       
       <span id="stories-count-display">Showing 81–90 of 100 stories</span>
       
@@ -79,258 +89,48 @@
       
       <span class="source-count">3 independent sources</span>
       <span class="sep">•</span>
-      <span class="score-pill">Score: 4.96</span>
+      <span class="score-pill">Score: 5.72</span>
       
       <span class="sep">•</span>
-      <span class="story-date">20 Nov 2026, 08:05 IST</span>
+      <time datetime="2026-11-19T17:36:45+00:00" class="story-date local-time">19 Nov 2026, 23:06 IST</time>
       
     </div>
 
-    <h2><a href="story_308.html" class="headline-link">BMC starts demolition of building linked to Dawood Ibrahim in Mumbai</a></h2>
+    <h2><a href="story_185.html" class="headline-link">Irdai chief flags consumer data grab before insurance price discovery</a></h2>
 
     
-    <p class="story-summary-omitted">
+    <div class="story-summary-omitted">
       
-      [Summary constrained to claim table — strict NLI entailment gate applied. <a href="story_308.html">View claims &rarr;</a>]
+      <div class="empty-state-notice entailment-notice">
+        <span class="notice-badge">&#9432; Constrained to Verified Facts</span>
+        <p>AI narrative synthesis suppressed to prevent hallucination because reporting lacks sufficient multi-source consensus. View individual source claims on the story page.</p>
+        <a href="story_185.html" class="view-claims-btn">View claims &rarr;</a>
+      </div>
       
-    </p>
+    </div>
     
 
+    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
     <div class="sources-list">
       <strong>Sources:</strong>
       
-      <a href="https://www.hindustantimes.com/india-news/bmc-begins-demolition-of-dilapidated-mumbai-building-where-dawood-ibrahim-once-lived-with-family-101795072357052.html" target="_blank" rel="noopener noreferrer">Hindustan Times</a>, 
+      <span class="source-item-chip">
+        <a href="https://timesofindia.indiatimes.com/technology/tech-news/after-asking-employees-to-use-ai-pwc-now-wants-85000-of-them-to-not-trust-ai-blindly-the-companys-hr-head-says-we-will-continue-to-assess-our-people-against-/articleshow/135888983.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="After asking employees to use AI, why PwC now wants 85,000 of them to not trust AI">After asking employees to use AI, why PwC now wants 85,000 of them to not trust AI</a>
+        <span class="badge badge-outlet">Times of India</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://www.dnaindia.com/india/report-dawood-property-demolition-bombay-hc-puts-brakes-on-ibrahim-linked-property-demolition-in-bhendi-bazar-3224349" target="_blank" rel="noopener noreferrer">DNA India</a>, 
+      <span class="source-item-chip">
+        <a href="https://economictimes.indiatimes.com/industry/banking/finance/insure/irdai-flags-ai-risks-as-85-of-insurers-adopt-technology/articleshow/135979635.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="IRDAI flags AI risks amid insurers&#39; tech adoption">IRDAI flags AI risks amid insurers&#39; tech adoption</a>
+        <span class="badge badge-outlet">Economic Times</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://www.thehindu.com/news/cities/mumbai/bmc-starts-demolition-of-building-linked-to-dawood-ibrahim-in-mumbai/article71719043.ece" target="_blank" rel="noopener noreferrer">The Hindu</a>
-      
-    </div>
-  </article>
-  
-  
-  
-  
-
-  <article class="story-card level-limited">
-    <div class="meta-row">
-      <span class="badge badge-limited">Limited corroboration</span>
-      
-      <span class="source-count">3 independent sources</span>
-      <span class="sep">•</span>
-      <span class="score-pill">Score: 4.48</span>
-      
-      <span class="sep">•</span>
-      <span class="story-date">20 Nov 2026, 08:05 IST</span>
-      
-    </div>
-
-    <h2><a href="story_436.html" class="headline-link">BMC starts demolition of building linked to Dawood Ibrahim in Mumbai</a></h2>
-
-    
-    <p class="story-summary-omitted">
-      
-      [Summary constrained to claim table — strict NLI entailment gate applied. <a href="story_436.html">View claims &rarr;</a>]
-      
-    </p>
-    
-
-    <div class="sources-list">
-      <strong>Sources:</strong>
-      
-      <a href="https://www.hindustantimes.com/india-news/bmc-begins-demolition-of-dilapidated-mumbai-building-where-dawood-ibrahim-once-lived-with-family-101795072357052.html" target="_blank" rel="noopener noreferrer">Hindustan Times</a>, 
-      
-      <a href="https://www.dnaindia.com/india/report-dawood-property-demolition-bombay-hc-puts-brakes-on-ibrahim-linked-property-demolition-in-bhendi-bazar-3224349" target="_blank" rel="noopener noreferrer">DNA India</a>, 
-      
-      <a href="https://www.thehindu.com/news/cities/mumbai/bmc-starts-demolition-of-building-linked-to-dawood-ibrahim-in-mumbai/article71719043.ece" target="_blank" rel="noopener noreferrer">The Hindu</a>
-      
-    </div>
-  </article>
-  
-  
-  
-
-  <article class="story-card level-corroborated">
-    <div class="meta-row">
-      <span class="badge badge-corroborated">Corroborated</span>
-      
-      <span class="source-count">6 independent sources</span>
-      <span class="sep">•</span>
-      <span class="score-pill">Score: 10.01</span>
-      
-      <span class="sep">•</span>
-      <span class="story-date">20 Nov 2026, 08:03 IST</span>
-      
-    </div>
-
-    <h2><a href="story_262.html" class="headline-link">Jerusalem Daily: Israel launches ground offensive in Gaza</a></h2>
-
-    
-    <p class="story-summary-omitted">
-      
-      [Narrative omitted — sensitive topic safety gate active. Review claims and sources on the story page.]
-      
-    </p>
-    
-
-    <div class="sources-list">
-      <strong>Sources:</strong>
-      
-      <a href="https://www.ndtv.com/world-news/israel-uploaded-3-5-million-photos-to-amazon-cloud-to-track-palestinians-report-12337352" target="_blank" rel="noopener noreferrer">NDTV</a>, 
-      
-      <a href="https://timesofindia.indiatimes.com/sports/football/top-stories/ugly-scenes-against-india-palestine-player-thows-kicks-makes-alleged-racist-gesture-watch/articleshow/135925500.cms" target="_blank" rel="noopener noreferrer">Times of India</a>, 
-      
-      <a href="https://economictimes.indiatimes.com/news/defence/india-signs-rs-1976-crore-deal-with-israel-to-upgrade-navys-barak-missile-systems/articleshow/135963546.cms" target="_blank" rel="noopener noreferrer">Economic Times</a>, 
-      
-      <a href="https://www.ndtv.com/world-news/israel-launches-ground-operation-in-hamas-controlled-central-gaza-12346692" target="_blank" rel="noopener noreferrer">NDTV</a>, 
-      
-      <a href="https://www.aljazeera.com/news/2026/11/19/save-the-children-gazas-children-face-unmatched-dangers?traffic_source=rss" target="_blank" rel="noopener noreferrer">Al Jazeera – World</a>, 
-      
-      <a href="https://www.aljazeera.com/video/newsfeed/2026/11/19/families-flee-gazas-bureij-camp-as-israel-launches-new-offensive?traffic_source=rss" target="_blank" rel="noopener noreferrer">Al Jazeera – World</a>, 
-      
-      <a href="https://www.aljazeera.com/news/2026/11/19/palestinians-in-gaza-face-new-displacement-after-israeli-army-operation?traffic_source=rss" target="_blank" rel="noopener noreferrer">Al Jazeera – World</a>, 
-      
-      <a href="https://www.aljazeera.com/news/2026/11/19/iraq-reaches-compromise-with-kataib-hezbollah-over-armed-group-stronghold?traffic_source=rss" target="_blank" rel="noopener noreferrer">Al Jazeera – World</a>, 
-      
-      <a href="https://www.aljazeera.com/opinions/2026/11/19/a-geography-of-hearts-turkiye-and-lebanon-building-the-levant-together?traffic_source=rss" target="_blank" rel="noopener noreferrer">Al Jazeera – World</a>, 
-      
-      <a href="https://www.aljazeera.com/video/al-jazeera-originals/2026/11/19/gaza-syndrome-israels-soldiers-haunted-by-genocide-cost-of-war?traffic_source=rss" target="_blank" rel="noopener noreferrer">Al Jazeera – World</a>, 
-      
-      <a href="https://www.thequint.com/hindi/webqoof/birmingham-palestine-freedom-slogans-video-shared-with-false-claims" target="_blank" rel="noopener noreferrer">The Quint</a>, 
-      
-      <a href="https://www.straitstimes.com/world/middle-east/nearly-a-quarter-of-worlds-children-live-in-conflict-zone-charity" target="_blank" rel="noopener noreferrer">The Straits Times – World</a>, 
-      
-      <a href="https://www.aljazeera.com/video/newsfeed/2026/11/19/jerusalem-daily-israel-launches-ground-offensive-in-gaza-2?traffic_source=rss" target="_blank" rel="noopener noreferrer">Al Jazeera – World</a>
-      
-    </div>
-  </article>
-  
-  
-  
-  
-
-  <article class="story-card level-limited">
-    <div class="meta-row">
-      <span class="badge badge-limited">Limited corroboration</span>
-      
-      <span class="source-count">6 independent sources</span>
-      <span class="sep">•</span>
-      <span class="score-pill">Score: 2.28</span>
-      
-      <span class="sep">•</span>
-      <span class="story-date">20 Nov 2026, 07:58 IST</span>
-      
-    </div>
-
-    <h2><a href="story_263.html" class="headline-link">Ten killed in Pakistan as bus crashes into gas tanker</a></h2>
-
-    
-    <p class="story-summary">INDIA
-In a tragic accident near Gular Bazar in Uttarakhand&#39;s Tehri Garhwal district, six people were killed, and around 20 were injured after a bus plunged into a deep gorge. In a tragic bus accident in Uttarakhand&#39;s Tehri Garhwal district near Gular Bazar, at least eight people were killed and 26 others injured after a passenger bus fell into a gorge on Tuesday morning, November 17. According to the police, nearly 35 people were travelling in the bus when the accident took place. The injured were rushed to the hospital via ambulances. 8 Killed, Nearly 20 Injured As Bus Plunges Into Ravine In Uttarakhand&#39;s Tehri Garhwal
-Eight people were killed and around 20 injured after a bus carrying 30-35 passengers fell into a 100-metre ravine near Gular Bazar in Uttarakhand&#39;s Tehri Garhwal.</p>
-    
-
-    <div class="sources-list">
-      <strong>Sources:</strong>
-      
-      <a href="https://www.hindustantimes.com/india-news/death-toll-injured-as-bus-plunges-into-100m-gorge-in-uttarakhands-tehri-101794887812716.html" target="_blank" rel="noopener noreferrer">Hindustan Times</a>, 
-      
-      <a href="https://www.hindustantimes.com/india-news/vehicle-falls-into-deep-gorge-on-banswada-mohankhal-road-in-uttarakhands-rudraprayag-death-toll-injured-101794885243290.html" target="_blank" rel="noopener noreferrer">Hindustan Times</a>, 
-      
-      <a href="https://timesofindia.indiatimes.com/city/dehradun/bus-plunges-into-100-metre-deep-gorge-in-uttarakhand-20-passengers-rescued/articleshow/135907146.cms" target="_blank" rel="noopener noreferrer">Times of India</a>, 
-      
-      <a href="https://www.indiatoday.in/cities/other-cities/story/uttarakhand-bus-accident-eight-killed-rishikesh-badrinath-highway-3040402-2026-11-17?utm_source=rss" target="_blank" rel="noopener noreferrer">India Today</a>, 
-      
-      <a href="https://www.news18.com/india/uttarakhand-bus-accident-death-toll-bus-plunges-into-ravine-tehri-garhwal-gular-bazar-10428338.html" target="_blank" rel="noopener noreferrer">News18</a>, 
-      
-      <a href="https://www.dnaindia.com/india/report-uttarakhand-bus-tragedy-8-killed-as-bus-plunges-into-ravine-near-gular-in-tehri-garhwal-3224175" target="_blank" rel="noopener noreferrer">DNA India</a>, 
-      
-      <a href="https://www.hindustantimes.com/india-news/up-two-pilgrims-killed-27-injured-after-tourist-bus-rams-into-truck-in-kanpur-101795077245154.html" target="_blank" rel="noopener noreferrer">Hindustan Times</a>, 
-      
-      <a href="https://www.hindustantimes.com/india-news/delhi-2-killed-6-injured-as-fortuner-collides-with-auto-rickshaw-near-kashmere-gate-101795075622845.html" target="_blank" rel="noopener noreferrer">Hindustan Times</a>, 
-      
-      <a href="https://www.news18.com/videos/breaking-news/tamil-nadu-kodaikanal-horror-wedding-guests-minibus-falls-into-100-foot-gorge-news18-10433329.html" target="_blank" rel="noopener noreferrer">News18</a>, 
-      
-      <a href="https://www.aljazeera.com/video/newsfeed/2026/11/19/ten-killed-in-pakistan-as-bus-crashes-into-gas-tanker?traffic_source=rss" target="_blank" rel="noopener noreferrer">Al Jazeera – World</a>
-      
-    </div>
-  </article>
-  
-  
-  
-  
-
-  <article class="story-card level-unconfirmed">
-    <div class="meta-row">
-      <span class="badge badge-unconfirmed">Unconfirmed</span>
-      
-      <span class="source-count">2 independent sources</span>
-      <span class="sep">•</span>
-      <span class="score-pill">Score: 3.96</span>
-      
-      <span class="sep">•</span>
-      <span class="story-date">20 Nov 2026, 07:58 IST</span>
-      
-    </div>
-
-    <h2><a href="story_319.html" class="headline-link">Antimicrobial makers may need Centre’s nod before seeking licences</a></h2>
-
-    
-    <p class="story-summary-omitted">
-      
-      [Summary constrained to claim table — strict NLI entailment gate applied. <a href="story_319.html">View claims &rarr;</a>]
-      
-    </p>
-    
-
-    <div class="sources-list">
-      <strong>Sources:</strong>
-      
-      <a href="https://www.hindustantimes.com/india-news/centre-proposes-separate-licensing-framework-for-wholesale-trade-of-bulk-drugs-101795076146063.html" target="_blank" rel="noopener noreferrer">Hindustan Times</a>, 
-      
-      <a href="https://www.livemint.com/news/india/blood-centres-external-quality-checks-fail-face-testing-curbs-drugs-rules-1945-11794995236870.html" target="_blank" rel="noopener noreferrer">Mint</a>, 
-      
-      <a href="https://www.hindustantimes.com/india-news/antimicrobial-makers-may-need-centre-s-nod-before-seeking-licences-101795115953664.html" target="_blank" rel="noopener noreferrer">Hindustan Times</a>
-      
-    </div>
-  </article>
-  
-  
-  
-
-  <article class="story-card level-corroborated">
-    <div class="meta-row">
-      <span class="badge badge-corroborated">Corroborated</span>
-      
-      <span class="badge badge-developing">Developing</span>
-      
-      <span class="source-count">3 independent sources</span>
-      <span class="sep">•</span>
-      <span class="score-pill">Score: 8.91</span>
-      
-      <span class="sep">•</span>
-      <span class="story-date">20 Nov 2026, 07:58 IST</span>
-      
-    </div>
-
-    <h2><a href="story_274.html" class="headline-link">ग्वालियर के दूरसंचार विनिर्माण क्षेत्र को मिली गति, 25 कंपनियों को आशय पत्र वितरित</a></h2>
-
-    
-    <p class="story-summary-omitted">
-      
-      [Summary constrained to claim table — strict NLI entailment gate applied. <a href="story_274.html">View claims &rarr;</a>]
-      
-    </p>
-    
-
-    <div class="sources-list">
-      <strong>Sources:</strong>
-      
-      <a href="https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2338677" target="_blank" rel="noopener noreferrer">Press Information Bureau</a>, 
-      
-      <a href="https://www.hindustantimes.com/india-news/twentyfive-cos-get-nod-to-set-up-units-in-gwalior-telecom-zone-101795115772864.html" target="_blank" rel="noopener noreferrer">Hindustan Times</a>, 
-      
-      <a href="https://www.business-standard.com/markets/news/newly-listed-companies-add-32-trillion-to-bse-market-cap-in-2026-126111901455_1.html" target="_blank" rel="noopener noreferrer">Business Standard</a>
+      <span class="source-item-chip">
+        <a href="https://www.business-standard.com/finance/insurance/irdai-chief-flags-insurers-seeking-personal-data-before-premium-quotes-126111901333_1.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Irdai chief flags consumer data grab before insurance price discovery">Irdai chief flags consumer data grab before insurance price discovery</a>
+        <span class="badge badge-outlet">Business Standard</span>
+        
+      </span>
       
     </div>
   </article>
@@ -344,31 +144,40 @@ Eight people were killed and around 20 injured after a bus carrying 30-35 passen
       
       <span class="source-count">3 independent sources</span>
       <span class="sep">•</span>
-      <span class="score-pill">Score: 8.05</span>
+      <span class="score-pill">Score: 5.32</span>
       
       <span class="sep">•</span>
-      <span class="story-date">20 Nov 2026, 07:58 IST</span>
+      <time datetime="2026-11-19T19:33:25+00:00" class="story-date local-time">20 Nov 2026, 01:03 IST</time>
       
     </div>
 
-    <h2><a href="story_386.html" class="headline-link">ग्वालियर के दूरसंचार विनिर्माण क्षेत्र को मिली गति, 25 कंपनियों को आशय पत्र वितरित</a></h2>
+    <h2><a href="story_177.html" class="headline-link">What the ICJ genocide ruling means for the Rohingya people</a></h2>
 
     
-    <p class="story-summary-omitted">
-      
-      [Summary constrained to claim table — strict NLI entailment gate applied. <a href="story_386.html">View claims &rarr;</a>]
-      
-    </p>
+    <p class="story-summary">The International Court of Justice (ICJ) has ruled that Myanmar committed genocide against the predominantly Muslim Rohingya minority in 2017. The International Court of Justice (ICJ), the United Nations&#39; top court, on Thursday held Myanmar responsible for committing genocide against the Rohingya community in northern Rakhine State during the military&#39;s 2017 &#34;clearance operations&#34;.</p>
     
 
+    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
     <div class="sources-list">
       <strong>Sources:</strong>
       
-      <a href="https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2338677" target="_blank" rel="noopener noreferrer">Press Information Bureau</a>, 
+      <span class="source-item-chip">
+        <a href="https://www.hindustantimes.com/india-news/ht-evening-brief-nov-19-cyclone-akvan-to-make-landfall-tomorrow-putin-trump-xi-issue-peace-declaration-myanmar-ruled-guilty-of-rohingya-genocide-101795089587126.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="HT Evening Brief Nov 19: Cyclone Akvan to make landfall tomorrow; Putin-Trump-Xi issue peace declaration; Myanmar ruled guilty of Rohingya genocide">HT Evening Brief Nov 19: Cyclone Akvan to make landfall tomorrow; Putin-Trump-Xi issue peace declaration; Myanmar ruled guilty of Rohingya genocide</a>
+        <span class="badge badge-outlet">Hindustan Times</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://www.hindustantimes.com/india-news/twentyfive-cos-get-nod-to-set-up-units-in-gwalior-telecom-zone-101795115772864.html" target="_blank" rel="noopener noreferrer">Hindustan Times</a>, 
+      <span class="source-item-chip">
+        <a href="https://www.livemint.com/news/world/icj-holds-myanmar-accountable-for-rohingya-genocide-orders-compensation-and-safe-return-11795110415214.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="ICJ holds Myanmar accountable for Rohingya genocide, orders compensation and safe return">ICJ holds Myanmar accountable for Rohingya genocide, orders compensation and safe return</a>
+        <span class="badge badge-outlet">Mint</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://www.business-standard.com/markets/news/newly-listed-companies-add-32-trillion-to-bse-market-cap-in-2026-126111901455_1.html" target="_blank" rel="noopener noreferrer">Business Standard</a>
+      <span class="source-item-chip">
+        <a href="https://www.aljazeera.com/gallery/2026/11/19/photos-genocide-ruling-spotlights-2017-rohingya-crisis-human-toll?traffic_source=rss" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Photos: Genocide ruling spotlights human toll of 2017 Rohingya crisis">Photos: Genocide ruling spotlights human toll of 2017 Rohingya crisis</a>
+        <span class="badge badge-outlet">Al Jazeera – World</span>
+        
+      </span>
       
     </div>
   </article>
@@ -382,31 +191,48 @@ Eight people were killed and around 20 injured after a bus carrying 30-35 passen
       
       <span class="source-count">3 independent sources</span>
       <span class="sep">•</span>
-      <span class="score-pill">Score: 8.04</span>
+      <span class="score-pill">Score: 5.27</span>
       
       <span class="sep">•</span>
-      <span class="story-date">20 Nov 2026, 07:55 IST</span>
+      <time datetime="2026-11-19T19:02:07+00:00" class="story-date local-time">20 Nov 2026, 00:32 IST</time>
       
     </div>
 
-    <h2><a href="story_387.html" class="headline-link">श्री सर्बानंद सोनोवाल ने वाणिज्यिक जहाजों पर हुए हमलों की निंदा की; जोखिम भरे समुद्री इलाकों से गुजरने वाले भारतीय नाविकों के लिए समुद्री सुरक्षा और कड़ी करने के निर्देश दिए</a></h2>
+    <h2><a href="story_181.html" class="headline-link">Canada puts Goldy Brar at No 1 on most-wanted list, announces $250,000 bounty</a></h2>
 
     
-    <p class="story-summary-omitted">
+    <div class="story-summary-omitted">
       
-      [Summary constrained to claim table — strict NLI entailment gate applied. <a href="story_387.html">View claims &rarr;</a>]
+      <div class="empty-state-notice entailment-notice">
+        <span class="notice-badge">&#9432; Constrained to Verified Facts</span>
+        <p>AI narrative synthesis suppressed to prevent hallucination because reporting lacks sufficient multi-source consensus. View individual source claims on the story page.</p>
+        <a href="story_181.html" class="view-claims-btn">View claims &rarr;</a>
+      </div>
       
-    </p>
+    </div>
     
 
+    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
     <div class="sources-list">
       <strong>Sources:</strong>
       
-      <a href="https://www.hindustantimes.com/india-news/pm-modi-calls-for-initiative-on-seafarers-safety-at-east-asia-summit-amid-maritime-threats-101794917673326.html" target="_blank" rel="noopener noreferrer">Hindustan Times</a>, 
+      <span class="source-item-chip">
+        <a href="https://www.ndtv.com/world-news/gangster-goldy-brar-on-top-of-canada-most-wanted-list-faces-250-000-bounty-12351522" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Gangster Goldy Brar On Top Of Canada&#39;s Most-Wanted List, Faces $250,000 Bounty">Gangster Goldy Brar On Top Of Canada&#39;s Most-Wanted List, Faces $250,000 Bounty</a>
+        <span class="badge badge-outlet">NDTV</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://www.ndtv.com/india-news/seafarers-safety-high-priority-for-government-says-hardeep-puri-12352178" target="_blank" rel="noopener noreferrer">NDTV</a>, 
+      <span class="source-item-chip">
+        <a href="https://timesofindia.indiatimes.com/world/rest-of-world/canada-announces-250000-reward-for-goldy-brar-names-him-countrys-most-wanted-fugitive/articleshow/136001120.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Canada announces $250k reward for Goldy Brar, names him country&#39;s most-wanted fugitive">Canada announces $250k reward for Goldy Brar, names him country&#39;s most-wanted fugitive</a>
+        <span class="badge badge-outlet">Times of India</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2338856" target="_blank" rel="noopener noreferrer">Press Information Bureau</a>
+      <span class="source-item-chip">
+        <a href="https://www.indiatoday.in/world/story/after-us-canada-announces-cad-25-lakh-bounty-on-goldy-brar-puts-him-at-no-1-on-most-wanted-list-3042736-2026-11-19?utm_source=rss" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Canada puts Goldy Brar at No 1 on most-wanted list, announces $250,000 bounty">Canada puts Goldy Brar at No 1 on most-wanted list, announces $250,000 bounty</a>
+        <span class="badge badge-outlet">India Today</span>
+        
+      </span>
       
     </div>
   </article>
@@ -418,37 +244,50 @@ Eight people were killed and around 20 injured after a bus carrying 30-35 passen
     <div class="meta-row">
       <span class="badge badge-corroborated">Corroborated</span>
       
-      <span class="badge badge-developing">Developing</span>
-      
-      <span class="source-count">5 independent sources</span>
+      <span class="source-count">3 independent sources</span>
       <span class="sep">•</span>
-      <span class="score-pill">Score: 7.91</span>
+      <span class="score-pill">Score: 5.60</span>
       
       <span class="sep">•</span>
-      <span class="story-date">20 Nov 2026, 07:54 IST</span>
+      <time datetime="2026-11-19T16:23:40+00:00" class="story-date local-time">19 Nov 2026, 21:53 IST</time>
       
     </div>
 
-    <h2><a href="story_285.html" class="headline-link">D-Company Linked Gangster, Accused In Youth’s Murder Outside Delhi Minister’s Office, Killed In Encounter</a></h2>
+    <h2><a href="story_190.html" class="headline-link">India, US build a chain of trust as natural partners in a volatile world: Goyal</a></h2>
 
     
-    <p class="story-summary">INDIA
-Gangster Naseem Durrani, allegedly linked to Dawood Ibrahim&#39;s D-Company and accused in the murder of Sameer near Kapil Mishra&#39;s office, was killed in a joint Delhi Police and Noida STF encounter in Bulandshahr. Gangster Naseem Durrani, accused of murdering a 26-year-old man in northeast Delhi earlier this week, was killed in an encounter with a joint team of the Delhi Police and Noida Special Task Force (STF) in Uttar Pradesh&#39;s Bulandshahr, officials said. Bulandshahr Encounter: Gangster Naseem Durrani Killed
-Durrani was allegedly involved in the murder of a youth, Sameer, who was shot dead outside Kapil Mishra&#39;s office two days ago. Acting on the inputs, a joint team of the Delhi Police and Noida STF launched an operation to apprehend him. Gangster Naseem Durrani, allegedly involved in the murder of a young man in Delhi and reportedly linked to the underworld’s D-Company, was killed in an encounter with a joint team of the Delhi Police, Uttar Pradesh Special Task Force (STF) and Bulandshahr Police in Uttar Pradesh on Friday.</p>
+    <div class="story-summary-omitted">
+      
+      <div class="empty-state-notice entailment-notice">
+        <span class="notice-badge">&#9432; Constrained to Verified Facts</span>
+        <p>AI narrative synthesis suppressed to prevent hallucination because reporting lacks sufficient multi-source consensus. View individual source claims on the story page.</p>
+        <a href="story_190.html" class="view-claims-btn">View claims &rarr;</a>
+      </div>
+      
+    </div>
     
 
+    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
     <div class="sources-list">
       <strong>Sources:</strong>
       
-      <a href="https://www.ndtv.com/india-news/naseem-durrani-dawood-ibrahims-aide-and-d-company-gangster-who-fired-at-delhi-minister-kapil-mishras-office-killed-in-encounter-12352098" target="_blank" rel="noopener noreferrer">NDTV</a>, 
+      <span class="source-item-chip">
+        <a href="https://www.hindustantimes.com/india-news/india-is-essential-interlocutor-in-resolving-conflicts-italy-s-deputy-prime-minister-antonio-tajani-101794913291919.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="India is essential interlocutor in resolving conflicts: Italy’s deputy prime minister Antonio Tajani">India is essential interlocutor in resolving conflicts: Italy’s deputy prime minister Antonio Tajani</a>
+        <span class="badge badge-outlet">Hindustan Times</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://timesofindia.indiatimes.com/city/delhi/gangster-naseem-durrani-involved-in-plot-to-kill-chhota-rajan-shot-dead-in-encounter/articleshow/136009481.cms" target="_blank" rel="noopener noreferrer">Times of India</a>, 
+      <span class="source-item-chip">
+        <a href="https://economictimes.indiatimes.com/news/economy/foreign-trade/india-has-advantage-as-a-trusted-trading-partner-comm-secy-says-on-track-to-hit-1-trillion-exports-target/articleshow/135960095.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="&#39;India has advantage as a &#34;trusted&#34; trading partner&#39;">&#39;India has advantage as a &#34;trusted&#34; trading partner&#39;</a>
+        <span class="badge badge-outlet">Economic Times</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://www.news18.com/india/d-company-linked-gangster-accused-in-youths-murder-outside-delhi-ministers-office-killed-in-encounter-ws-l-10433296.html" target="_blank" rel="noopener noreferrer">News18</a>, 
-      
-      <a href="https://www.deccanchronicle.com/nation/joint-delhi-police-noida-stf-team-eliminates-gangster-naseem-durrani-in-bulandshahr-2006120" target="_blank" rel="noopener noreferrer">Deccan Chronicle</a>, 
-      
-      <a href="https://www.dnaindia.com/india/report-naseem-durrani-gangster-linked-to-dawood-ibrahim-s-d-company-killed-in-police-encounter-in-up-3224367" target="_blank" rel="noopener noreferrer">DNA India</a>
+      <span class="source-item-chip">
+        <a href="https://www.livemint.com/news/india/india-us-build-a-chain-of-trust-as-natural-partners-in-a-volatile-world-goyal-11795094815436.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="India, US build a chain of trust as natural partners in a volatile world: Goyal">India, US build a chain of trust as natural partners in a volatile world: Goyal</a>
+        <span class="badge badge-outlet">Mint</span>
+        
+      </span>
       
     </div>
   </article>
@@ -462,39 +301,347 @@ Durrani was allegedly involved in the murder of a youth, Sameer, who was shot de
       
       <span class="source-count">5 independent sources</span>
       <span class="sep">•</span>
-      <span class="score-pill">Score: 9.0</span>
+      <span class="score-pill">Score: 5.46</span>
       
       <span class="sep">•</span>
-      <span class="story-date">20 Nov 2026, 07:54 IST</span>
+      <time datetime="2026-11-19T16:44:03+00:00" class="story-date local-time">19 Nov 2026, 22:14 IST</time>
       
     </div>
 
-    <h2><a href="story_268.html" class="headline-link">Noel, Chandra visit Air India’s HQ in Gurugram, review performance</a></h2>
+    <h2><a href="story_283.html" class="headline-link">Sam Altman asked if Jensen Huang should return; says: I wish Jensen the best</a></h2>
 
     
-    <p class="story-summary-omitted">
-      
-      [Summary constrained to claim table — strict NLI entailment gate applied. <a href="story_268.html">View claims &rarr;</a>]
-      
-    </p>
+    <p class="story-summary">Nvidia co-founder Jensen Huang said on Tuesday he would be “honoured” to return as CEO if the board backed his reinstatement, saying employees, investors and business partners had urged him to come back. Earlier, Jensen Huang said that he would come back to lead the chipmaker if the board invited him.</p>
     
 
+    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
     <div class="sources-list">
       <strong>Sources:</strong>
       
-      <a href="https://timesofindia.indiatimes.com/business/india-business/tata-sons-facing-back-door-takeover-warns-jimmy-tata/articleshow/135905376.cms" target="_blank" rel="noopener noreferrer">Times of India</a>, 
+      <span class="source-item-chip">
+        <a href="https://www.ndtv.com/world-news/jensen-huang-alice-huang-affair-news-nvidia-board-not-considering-jensen-huangs-return-as-ceo-despite-us-president-donald-trump-support-report-12336284" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Nvidia Not Considering Jensen Huang&#39;s Return Despite Trump Support: Report">Nvidia Not Considering Jensen Huang&#39;s Return Despite Trump Support: Report</a>
+        <span class="badge badge-outlet">NDTV</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://economictimes.indiatimes.com/news/company/corporate-trends/rbi-tells-tata-sons-to-comply-with-listing-requirement-says-no-exemption-from-upper-layer-nbfc-norms/articleshow/135894889.cms" target="_blank" rel="noopener noreferrer">Economic Times</a>, 
+      <span class="source-item-chip">
+        <a href="https://economictimes.indiatimes.com/news/international/business/nvidia-board-not-considering-jensen-huangs-return-as-ceo-focuses-on-probe-report/articleshow/135898734.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Nvidia board not considering Huang&#39;s return as CEO">Nvidia board not considering Huang&#39;s return as CEO</a>
+        <span class="badge badge-outlet">Economic Times</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://www.news18.com/explainers/why-jimmy-tata-is-accusing-half-brother-noel-of-backdoor-takeover-at-tata-sons-ws-klrt-10429605.html" target="_blank" rel="noopener noreferrer">News18</a>, 
+      <span class="source-item-chip">
+        <a href="https://www.indiatoday.in/technology/talking-points/story/why-did-jensen-huang-lose-nvidia-he-flew-too-close-to-sun-aka-us-govt-affairs-3040758-2026-11-17?utm_source=rss" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Why did Jensen Huang lose Nvidia? He flew too close to sun aka US govt affairs">Why did Jensen Huang lose Nvidia? He flew too close to sun aka US govt affairs</a>
+        <span class="badge badge-outlet">India Today</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://economictimes.indiatimes.com/news/company/corporate-trends/darius-khambata-hits-back-at-venu-srinivasan-vijay-singh-says-control-of-tata-sons-by-trusts-essence-of-tata-model/articleshow/135933469.cms" target="_blank" rel="noopener noreferrer">Economic Times</a>, 
+      <span class="source-item-chip">
+        <a href="https://timesofindia.indiatimes.com/business/international-business/board-has-no-plans-to-reinstate-him-as-ceo-nvidia-chairman-rules-out-jensen-huangs-return/articleshow/135943448.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Nvidia chairman Harvey Jones rules out former CEO Jensen Huang&#39;s return">Nvidia chairman Harvey Jones rules out former CEO Jensen Huang&#39;s return</a>
+        <span class="badge badge-outlet">Times of India</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://economictimes.indiatimes.com/industry/transportation/airlines-/-aviation/tata-sons-reviews-air-india-performance-amidst-financial-struggles-ahead-of-key-board-meeting/articleshow/135992406.cms" target="_blank" rel="noopener noreferrer">Economic Times</a>, 
+      <span class="source-item-chip">
+        <a href="https://www.dnaindia.com/india/report-jensen-huang-breaks-silence-on-nvidia-exit-hints-at-return-owns-mistake-completely-3224230" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Jensen Huang breaks silence on Nvidia exit, hints at return: &#39;Owns mistake completely&#39;">Jensen Huang breaks silence on Nvidia exit, hints at return: &#39;Owns mistake completely&#39;</a>
+        <span class="badge badge-outlet">DNA India</span>
+        
+      </span>
       
-      <a href="https://www.business-standard.com/companies/news/tata-trusts-board-meet-on-november-20-tata-sons-listing-not-on-agenda-126111901507_1.html" target="_blank" rel="noopener noreferrer">Business Standard</a>, 
+    </div>
+  </article>
+  
+  
+  
+
+  <article class="story-card level-corroborated">
+    <div class="meta-row">
+      <span class="badge badge-corroborated">Corroborated</span>
       
-      <a href="https://www.hindustantimes.com/india-news/noel-chandra-visit-air-india-s-hq-in-gurugram-review-performance-101795115293497.html" target="_blank" rel="noopener noreferrer">Hindustan Times</a>
+      <span class="source-count">4 independent sources</span>
+      <span class="sep">•</span>
+      <span class="score-pill">Score: 5.50</span>
+      
+      <span class="sep">•</span>
+      <time datetime="2026-11-19T16:20:15+00:00" class="story-date local-time">19 Nov 2026, 21:50 IST</time>
+      
+    </div>
+
+    <h2><a href="story_306.html" class="headline-link">Mexico’s Sheinbaum hopes to seal trade deal in next meeting with Trump</a></h2>
+
+    
+    <div class="story-summary-omitted">
+      
+      <div class="empty-state-notice entailment-notice">
+        <span class="notice-badge">&#9432; Constrained to Verified Facts</span>
+        <p>AI narrative synthesis suppressed to prevent hallucination because reporting lacks sufficient multi-source consensus. View individual source claims on the story page.</p>
+        <a href="story_306.html" class="view-claims-btn">View claims &rarr;</a>
+      </div>
+      
+    </div>
+    
+
+    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
+    <div class="sources-list">
+      <strong>Sources:</strong>
+      
+      <span class="source-item-chip">
+        <a href="https://www.dnaindia.com/india/report-india-us-trade-deal-nears-final-stage-but-why-is-signing-still-delayed-here-s-what-we-know-3224275" target="_blank" rel="noopener noreferrer" class="source-title-link" title="India-US trade deal nears final stage, but why is signing still delayed? Here&#39;s what we know">India-US trade deal nears final stage, but why is signing still delayed? Here&#39;s what we know</a>
+        <span class="badge badge-outlet">DNA India</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://timesofindia.indiatimes.com/business/india-business/trade-deal-to-be-signed-after-us-ready-with-tariff-structure/articleshow/135974075.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Trade deal to be signed after US tariff plan: Commerce secy">Trade deal to be signed after US tariff plan: Commerce secy</a>
+        <span class="badge badge-outlet">Times of India</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.hindustantimes.com/india-news/india-expects-to-finalise-trade-deals-with-eu-us-in-coming-months-says-piyush-goyal-101795102512239.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="India expects to finalise trade deals with EU, US in coming months, says Piyush Goyal">India expects to finalise trade deals with EU, US in coming months, says Piyush Goyal</a>
+        <span class="badge badge-outlet">Hindustan Times</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.straitstimes.com/world/mexicos-sheinbaum-hopes-to-seal-trade-deal-in-next-meeting-with-trump" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Mexico’s Sheinbaum hopes to seal trade deal in next meeting with Trump">Mexico’s Sheinbaum hopes to seal trade deal in next meeting with Trump</a>
+        <span class="badge badge-outlet">The Straits Times – World</span>
+        
+      </span>
+      
+    </div>
+  </article>
+  
+  
+  
+
+  <article class="story-card level-corroborated">
+    <div class="meta-row">
+      <span class="badge badge-corroborated">Corroborated</span>
+      
+      <span class="source-count">5 independent sources</span>
+      <span class="sep">•</span>
+      <span class="score-pill">Score: 6.28</span>
+      
+      <span class="sep">•</span>
+      <time datetime="2026-11-19T10:08:04.867873+00:00" class="story-date local-time">19 Nov 2026, 15:38 IST</time>
+      
+    </div>
+
+    <h2><a href="story_149.html" class="headline-link">‘Tiger is back’: Sons welcome Azam Khan outside jail, hint at his UP election plans</a></h2>
+
+    
+    <div class="story-summary-omitted">
+      
+      <div class="empty-state-notice entailment-notice">
+        <span class="notice-badge">&#9432; Constrained to Verified Facts</span>
+        <p>AI narrative synthesis suppressed to prevent hallucination because reporting lacks sufficient multi-source consensus. View individual source claims on the story page.</p>
+        <a href="story_149.html" class="view-claims-btn">View claims &rarr;</a>
+      </div>
+      
+    </div>
+    
+
+    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
+    <div class="sources-list">
+      <strong>Sources:</strong>
+      
+      <span class="source-item-chip">
+        <a href="https://timesofindia.indiatimes.com/india/sc-upholds-stay-on-azam-khans-conviction-offers-son-wife-relief/articleshow/135940416.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="SC upholds stay on Azam Khan&#39;s conviction; offers son, wife relief">SC upholds stay on Azam Khan&#39;s conviction; offers son, wife relief</a>
+        <span class="badge badge-outlet">Times of India</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.indiatoday.in/india/law-news/story/azam-khan-interim-bail-allahabad-high-court-questions-ed-arrest-3041163-2026-11-18?utm_source=rss" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Allahabad High Court flags ED&#39;s arrest procedure, grants interim bail to Azam Khan">Allahabad High Court flags ED&#39;s arrest procedure, grants interim bail to Azam Khan</a>
+        <span class="badge badge-outlet">India Today</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.news18.com/india/ed-to-move-supreme-court-against-allahabad-hc-bail-order-to-azam-khan-in-money-laundering-case-ws-l-10429911.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="ED To Move Supreme Court Against Allahabad HC Bail Order To Azam Khan In Money Laundering Case">ED To Move Supreme Court Against Allahabad HC Bail Order To Azam Khan In Money Laundering Case</a>
+        <span class="badge badge-outlet">News18</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.hindustantimes.com/india-news/heavens-wont-fall-supreme-court-refuses-to-stall-azam-khans-release-from-prison-in-money-laundering-case-101794982913647.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="&#39;Heavens won&#39;t fall&#39;: Supreme Court refuses to stall Azam Khan&#39;s release from prison in money laundering case">&#39;Heavens won&#39;t fall&#39;: Supreme Court refuses to stall Azam Khan&#39;s release from prison in money laundering case</a>
+        <span class="badge badge-outlet">Hindustan Times</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.dnaindia.com/india/report-azam-khan-gets-interim-bail-in-ed-case-says-chunav-nahi-hoga-inquilab-hoga-3224291" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Azam Khan gets interim bail in ED case; says &#39;Chunav nahi hoga, inquilab hoga&#39;">Azam Khan gets interim bail in ED case; says &#39;Chunav nahi hoga, inquilab hoga&#39;</a>
+        <span class="badge badge-outlet">DNA India</span>
+        
+      </span>
+      
+    </div>
+  </article>
+  
+  
+  
+
+  <article class="story-card level-corroborated">
+    <div class="meta-row">
+      <span class="badge badge-corroborated">Corroborated</span>
+      
+      <span class="source-count">5 independent sources</span>
+      <span class="sep">•</span>
+      <span class="score-pill">Score: 7.56</span>
+      
+      <span class="sep">•</span>
+      <time datetime="2026-11-19T00:10:12.025106+00:00" class="story-date local-time">19 Nov 2026, 05:40 IST</time>
+      
+    </div>
+
+    <h2><a href="story_134.html" class="headline-link">US intelligence chief rules out cyberattack as flight grounding, tech outages fuel scrutiny of Trump post midterm polls</a></h2>
+
+    
+    <div class="story-summary-omitted">
+      
+      <div class="empty-state-notice entailment-notice">
+        <span class="notice-badge">&#9432; Constrained to Verified Facts</span>
+        <p>AI narrative synthesis suppressed to prevent hallucination because reporting lacks sufficient multi-source consensus. View individual source claims on the story page.</p>
+        <a href="story_134.html" class="view-claims-btn">View claims &rarr;</a>
+      </div>
+      
+    </div>
+    
+
+    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
+    <div class="sources-list">
+      <strong>Sources:</strong>
+      
+      <span class="source-item-chip">
+        <a href="https://timesofindia.indiatimes.com/technology/tech-news/microsoft-and-us-banks-outage-homeland-security-secretary-blames-superintelligence-for-disruptions-urges-americans-to/articleshow/135929758.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="DHS secretary blames ‘superintelligence’ for Microsoft and US banks’ outage">DHS secretary blames ‘superintelligence’ for Microsoft and US banks’ outage</a>
+        <span class="badge badge-outlet">Times of India</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.ndtv.com/world-news/apple-services-including-icloud-and-app-store-down-for-thousands-of-users-12340975" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Apple Services, Including iCloud And App Store, Down For Thousands Of Users">Apple Services, Including iCloud And App Store, Down For Thousands Of Users</a>
+        <span class="badge badge-outlet">NDTV</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.livemint.com/news/us-news/us-electronic-spy-agency-suffers-classified-network-outage-11794941399379.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="US Electronic Spy Agency Suffers Classified Network Outage">US Electronic Spy Agency Suffers Classified Network Outage</a>
+        <span class="badge badge-outlet">Mint</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.indiatoday.in/technology/story/users-report-problems-accessing-apple-pay-icloud-app-store-and-apple-support-3041144-2026-11-17?utm_source=rss" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Apple outage, NSA network failure add to growing list of US tech disruptions">Apple outage, NSA network failure add to growing list of US tech disruptions</a>
+        <span class="badge badge-outlet">India Today</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://economictimes.indiatimes.com/news/international/world-news/nsa-net-down-cyberattack-fears-emerge-as-us-national-security-agency-faces-network-outage-during-trumps-asia-trip/articleshow/135933260.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="America&#39;s spy agency NSA goes dark">America&#39;s spy agency NSA goes dark</a>
+        <span class="badge badge-outlet">Economic Times</span>
+        
+      </span>
+      
+    </div>
+  </article>
+  
+  
+  
+
+  <article class="story-card level-corroborated">
+    <div class="meta-row">
+      <span class="badge badge-corroborated">Corroborated</span>
+      
+      <span class="source-count">3 independent sources</span>
+      <span class="sep">•</span>
+      <span class="score-pill">Score: 5.35</span>
+      
+      <span class="sep">•</span>
+      <time datetime="2026-11-19T16:43:21+00:00" class="story-date local-time">19 Nov 2026, 22:13 IST</time>
+      
+    </div>
+
+    <h2><a href="story_188.html" class="headline-link">Supreme Court brings up Delhi pollution as father seeks son&#39;s visit from Singapore: &#39;Let AQI go down a little&#39;</a></h2>
+
+    
+    <p class="story-summary">The father had accused his estranged wife of taking their children to Singapore in breach of the court&#39;s visitation orders, Bar and Bench reported. The father accused his estranged wife of taking their children to Singapore against the court’s visitation order. The father had alleged that his estranged wife took their children to Singapore in violation of court-ordered visitation rights, Bar and Bench reported.</p>
+    
+
+    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
+    <div class="sources-list">
+      <strong>Sources:</strong>
+      
+      <span class="source-item-chip">
+        <a href="https://www.hindustantimes.com/india-news/hc-allows-2-sr-citizens-in-us-uk-to-testify-virtually-amid-delhi-pollution-concerns-101794977701091.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="HC allows 2 sr citizens in US, UK to testify virtually amid Delhi pollution concerns">HC allows 2 sr citizens in US, UK to testify virtually amid Delhi pollution concerns</a>
+        <span class="badge badge-outlet">Hindustan Times</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.news18.com/india/wait-for-aqi-to-improve-scs-advice-to-father-planning-to-bring-son-to-delhi-from-singapore-10431503.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="‘Wait For AQI To Improve’: SC&#39;s Advice To Father Planning To Bring Son To Delhi From Singapore">‘Wait For AQI To Improve’: SC&#39;s Advice To Father Planning To Bring Son To Delhi From Singapore</a>
+        <span class="badge badge-outlet">News18</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.livemint.com/news/india/supreme-court-brings-up-delhi-pollution-as-father-seeks-sons-visit-from-singapore-let-aqi-go-down-a-little-11795104964135.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Supreme Court brings up Delhi pollution as father seeks son&#39;s visit from Singapore: &#39;Let AQI go down a little&#39;">Supreme Court brings up Delhi pollution as father seeks son&#39;s visit from Singapore: &#39;Let AQI go down a little&#39;</a>
+        <span class="badge badge-outlet">Mint</span>
+        
+      </span>
+      
+    </div>
+  </article>
+  
+  
+  
+
+  <article class="story-card level-corroborated">
+    <div class="meta-row">
+      <span class="badge badge-corroborated">Corroborated</span>
+      
+      <span class="source-count">4 independent sources</span>
+      <span class="sep">•</span>
+      <span class="score-pill">Score: 7.46</span>
+      
+      <span class="sep">•</span>
+      <time datetime="2026-11-19T00:10:12.089465+00:00" class="story-date local-time">19 Nov 2026, 05:40 IST</time>
+      
+    </div>
+
+    <h2><a href="story_137.html" class="headline-link">William and Kate meet PM Modi as they wrap up India tour</a></h2>
+
+    
+    <p class="story-summary">The meeting marked the culmination of their engagements in the country, which included the 2026 Earthshot Prize awards ceremony in Mumbai. The royal couple&#39;s visit included the 2026 Earthshot Prize awards ceremony in Mumbai on Tuesday.</p>
+    
+
+    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
+    <div class="sources-list">
+      <strong>Sources:</strong>
+      
+      <span class="source-item-chip">
+        <a href="https://www.hindustantimes.com/india-news/prince-william-kate-meet-pm-modi-in-delhi-on-final-day-of-india-visit-101795013178375.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Prince William, Kate meet PM Modi in Delhi on final day of India visit">Prince William, Kate meet PM Modi in Delhi on final day of India visit</a>
+        <span class="badge badge-outlet">Hindustan Times</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://timesofindia.indiatimes.com/india/prince-william-kate-middleton-meet-pm-modi-in-delhi-as-three-day-india-visit-concludes/articleshow/135966803.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Prince William, Kate Middleton meet PM Modi in Delhi">Prince William, Kate Middleton meet PM Modi in Delhi</a>
+        <span class="badge badge-outlet">Times of India</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.indiatoday.in/india/story/prince-william-and-kate-middleton-meet-pm-modi-in-delhi-on-final-day-of-their-3-day-india-visit-3041778-2026-11-18?utm_source=rss" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Prince William, Kate Middleton meet PM Modi on final day of India visit">Prince William, Kate Middleton meet PM Modi on final day of India visit</a>
+        <span class="badge badge-outlet">India Today</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.bbc.co.uk/news/articles/cq62ped2ypy4o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" class="source-title-link" title="William and Kate meet PM Modi as they wrap up India tour">William and Kate meet PM Modi as they wrap up India tour</a>
+        <span class="badge badge-outlet">BBC News – India</span>
+        
+      </span>
       
     </div>
   </article>
@@ -507,15 +654,15 @@ Durrani was allegedly involved in the murder of a youth, Sameer, who was shot de
        data-current-page="9"
        data-total-pages="10"
        data-total-stories="100">
-    <div class="scroll-status-box" id="scroll-status">
+    <!-- Hidden by default; unhidden by JavaScript when active (T4) -->
+    <div class="scroll-status-box" id="scroll-status" style="display: none;">
       <span class="spinner"></span>
       <span class="scroll-status-text">Loading more stories...</span>
     </div>
-    <noscript>
-      <div class="noscript-pagination">
-        <a href="page_10.html" class="page-btn">Next page &raquo;</a>
-      </div>
-    </noscript>
+    <!-- Visible next-page link for users without JS or if JS fails (T4) -->
+    <div class="pagination-fallback" id="pagination-fallback">
+      <a href="page_10.html" class="page-btn">Next page &raquo;</a>
+    </div>
   </div>
   
 </section>
@@ -527,14 +674,42 @@ Durrani was allegedly involved in the murder of a youth, Sameer, who was shot de
   <footer>
     <div class="container">
       <p>Automated news corroboration — what sources agree and differ on.</p>
+      <div class="footer-nav" style="margin: 12px 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; font-size: 0.85rem;">
+        <a href="about.html">About</a>
+        <a href="methodology.html">Methodology</a>
+        <a href="corrections.html">Corrections</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="takedown.html">Copyright &amp; Takedown</a>
+        <a href="sources_policy.html">How We Use Sources</a>
+      </div>
       <div class="footer-divider"></div>
-      <p>Published transparently with no manual intervention. Never claims absolute truth &mdash; reports corroboration metrics only.</p>
+      <p style="font-size: 0.78rem; color: #94a3b8; max-width: 760px; margin: 8px auto 0;">
+        <strong>Trademark &amp; Non-Affiliation Disclaimer:</strong> All publication names, outlet titles, and publisher trademarks referenced herein are the property of their respective owners. TrippyNews is an independent news corroboration project with no commercial affiliation, sponsorship, or endorsement from any cited news organization. No publisher logos are displayed.
+      </p>
+      <p style="margin-top: 6px; font-size: 0.78rem; color: #64748b;">Contact: <a href="mailto:contact@trippynews.org">contact@trippynews.org</a> &bull; Response within 48h for takedowns.</p>
     </div>
   </footer>
 
-  <!-- GoatCounter — free, privacy-friendly visitor analytics (no cookies) -->
-  <!-- Sign up at https://www.goatcounter.com to get your site code, -->
-  <!-- then replace YOURCODE below with your chosen subdomain.       -->
+  <!-- Local time formatting for readers -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('time.local-time[datetime]').forEach(function(el) {
+        var dt = el.getAttribute('datetime');
+        if (!dt) return;
+        try {
+          var d = new Date(dt);
+          if (!isNaN(d.getTime())) {
+            var dateStr = d.toLocaleDateString(undefined, { day: 'numeric', month: 'short', year: 'numeric' });
+            var timeStr = d.toLocaleTimeString(undefined, { hour: '2-digit', minute: '2-digit' });
+            el.textContent = dateStr + ', ' + timeStr;
+          }
+        } catch(e) {}
+      });
+    });
+  </script>
+
+  <!-- GoatCounter — privacy-friendly visitor analytics (no cookies) -->
   <script data-goatcounter="https://trippynews.goatcounter.com/count"
           async src="//gc.zgo.at/count.js"></script>
 </body>

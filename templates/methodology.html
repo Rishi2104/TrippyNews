@@ -1,37 +1,57 @@
 {% extends "base.html" %}
 
-{% block title %}Methodology & Integrity Standards — {{ site_title }}{% endblock %}
+{% block title %}Methodology &amp; Integrity Standards — {{ site_title }}{% endblock %}
 
 {% block content %}
-<div class="story-card">
-  <h2>Methodology & Transparency Policy</h2>
-  <p><strong>NewsCheck</strong> is a fully automated news corroboration pipeline. It operates without human curation, editor bias, or manual publishing approvals.</p>
+<div class="story-card prose">
+  <h2>Methodology &amp; Transparency Policy</h2>
+  <p><strong>{{ site_title }}</strong> is a fully automated, algorithmic news corroboration pipeline. It operates without manual editorial curation, political slant, or subjective ranking. Every metric and label displayed on this website is computed mathematically from source diversity, independent reporting tiers, and semantic consensus.</p>
 
-  <h3>1. Independence & Wire Deduplication</h3>
-  <p>Wire services (PTI, ANI, Reuters, AP, AFP) are syndicated across hundreds of outlets. <strong>Ten outlets republishing the exact same wire story count as ONE confirmation, not ten.</strong> Our pipeline detects syndication credits and text shingles to collapse syndicated reprints into single canonical events.</p>
+  <h3>1. Independence &amp; Wire Deduplication</h3>
+  <p>Wire agencies (such as Press Trust of India, ANI, Reuters, Associated Press, AFP) syndicate their reporting across hundreds of partner newspapers and broadcasters. <strong>Ten outlets syndicating the exact same wire story count as ONE confirmation, not ten.</strong></p>
+  <p>Our pipeline analyzes syndication credits, wire markers, and n-gram shingles across articles. All syndicated copies are clustered and mapped to their primary wire origin. A story is only considered corroborated when multiple <em>independent newsrooms</em> independently verify the reporting.</p>
 
-  <h3>2. Corroboration Scoring Formula</h3>
-  <p>The corroboration score is computed mathematically:</p>
+  <h3>2. Scoring Formula &amp; Mathematical Metrics</h3>
+  <p>Every story cluster is scored using a calibrated mathematical formula defined by our pipeline constants:</p>
   <ul>
-    <li><strong>Tier 1 Sources (Wire services, government press bureaus):</strong> 3.0 points</li>
-    <li><strong>Tier 2 Sources (Major reputable national publications):</strong> 2.0 points</li>
-    <li><strong>Tier 3 Sources (Other whitelisted publications):</strong> 1.0 point</li>
-    <li><strong>Primary / Official Source Bonus:</strong> +2.0 points if verified primary source reported the event</li>
-    <li><strong>Conflict Penalty:</strong> Score is reduced when contradictory figures or assertions are detected</li>
+    <li><strong>Tier 1 Sources (Wire Services &amp; Official Bureaus):</strong> {{ scoring_constants.tier1_weight }} points per independent outlet.</li>
+    <li><strong>Tier 2 Sources (Major National &amp; International Newsrooms):</strong> {{ scoring_constants.tier2_weight }} points per independent outlet.</li>
+    <li><strong>Tier 3 Sources (Specialized &amp; Regional Outlets):</strong> {{ scoring_constants.tier3_weight }} point per independent outlet.</li>
+    <li><strong>Primary / Official Source Bonus:</strong> +{{ scoring_constants.primary_source_bonus }} points if verified by a Tier 1 wire or official press bureau.</li>
+    <li><strong>Conflict Penalty:</strong> -{{ scoring_constants.conflict_penalty }} points for each unresolved factual contradiction detected between reporting outlets.</li>
+    <li><strong>Recency Factor:</strong> A continuous decay function applies over time (with a half-decay window of {{ scoring_constants.recency_decay_hours }} hours), ensuring recent developing reporting is prioritized.</li>
+  </ul>
+  <p>The final corroboration score is computed as:</p>
+  <pre style="background: var(--bg-color); padding: 12px; border-radius: var(--radius-sm); font-size: 0.85rem; overflow-x: auto;"><code>Score = max(0.0, (Base Tier Points + Primary Bonus - Dispute Penalty) × Recency Factor)</code></pre>
+  <p>This continuous recency scaling explains fractional corroboration scores (such as 3.98, 5.98, 7.03, 7.88, 10.92) as stories mature over hours while maintaining their underlying source strength.</p>
+
+  <h3>3. Corroboration Labels &amp; Strict Thresholds</h3>
+  <ul>
+    <li><strong style="color: #15803d;">Strongly Corroborated:</strong> Requires at least <strong>{{ scoring_constants.strongly_min_sources }}+ independent sources</strong>, a corroboration score of &ge; {{ scoring_constants.strongly_min_score }}, inclusion of at least one Tier 1 wire or official source, and zero major contradictions.</li>
+    <li><strong style="color: #0369a1;">Corroborated:</strong> Requires at least <strong>{{ scoring_constants.corroborated_min_sources }}+ independent sources</strong>, a score of &ge; {{ scoring_constants.corroborated_min_score }}, and consistent factual reporting across outlets.</li>
+    <li><strong style="color: #a16207;">Limited Corroboration:</strong> Stories with 1–2 sources or with significant unresolved factual disputes between reporting outlets.</li>
+    <li><strong style="color: #475569;">Unconfirmed:</strong> Fewer than {{ scoring_constants.corroborated_min_sources }} independent sources. AI narrative synthesis is strictly suppressed.</li>
   </ul>
 
-  <h3>3. Labels</h3>
+  <h3>4. AI Narrative Gate &amp; Hallucination Prevention</h3>
+  <p>To eliminate AI hallucinations, {{ site_title }} does not allow an LLM to freely invent narrative text. A natural language summary is synthesized ONLY when all of the following conditions are met:</p>
+  <ol>
+    <li>The story is corroborated by at least <strong>{{ scoring_constants.min_sources_for_narrative }} independent sources</strong>.</li>
+    <li>At least <strong>{{ scoring_constants.min_entailed_sentences_for_narrative }} distinct factual claims</strong> are corroborated across multiple independent outlets.</li>
+    <li>The synthesized summary strictly entails the headline and key named entities. If entailment fails, the summary is suppressed.</li>
+    <li>The topic is not flagged as sensitive under our Defamation &amp; Legal Safeguard policy.</li>
+  </ol>
+  <p>If any condition is not met, the narrative summary is omitted, and the story page displays the structured claim comparison table directly.</p>
+
+  <h3>5. Defamation &amp; Legal Safeguards</h3>
+  <p>For reporting that involves court proceedings, ongoing trials, allegations against named private individuals, or crimes, our pipeline activates a strict <strong>Claims-Only Defamation Guard</strong>. In this mode:</p>
   <ul>
-    <li><strong style="color: #15803d;">Strongly Corroborated:</strong> 4+ independent sources including Tier 1, no significant contradictions.</li>
-    <li><strong style="color: #0369a1;">Corroborated:</strong> 3+ independent sources in consensus.</li>
-    <li><strong style="color: #a16207;">Limited Corroboration:</strong> Few sources or unresolved conflicts between reporting outlets.</li>
-    <li><strong style="color: #475569;">Unconfirmed:</strong> Fewer than 3 independent sources. No generated narrative is published.</li>
+    <li>Narrative generation is entirely disabled.</li>
+    <li>Every factual assertion is explicitly attributed with <code>Per &lt;outlet&gt;:</code> prefixes.</li>
+    <li>Conflicting claims or differing statements from legal parties are displayed side-by-side with both outlets named.</li>
   </ul>
 
-  <h3>4. Sensitive Topic Policy</h3>
-  <p>When reporting on crimes naming private individuals, health or medical claims, suicide, minors, communal violence, or active armed conflicts, <strong>NewsCheck suppresses all generated narrative</strong>. Only a verbatim claim comparison table and direct source links are displayed.</p>
-
-  <h3>5. Source Whitelist</h3>
-  <p>All feeds are vetted and whitelisted in <code>sources.yaml</code>. Unvetted third-party domains are discarded during ingestion.</p>
+  <h3>6. Vetted Ingestion &amp; Domain Whitelisting</h3>
+  <p>All feeds are whitelisted in <code>sources.yaml</code>. During feed fetching, article URLs are strictly checked against per-source <code>allowed_domains</code>. Unvetted third-party domains, redirect loops, and tracking parameters (such as <code>utm_*</code> and <code>traffic_source</code>) are stripped or discarded.</p>
 </div>
 {% endblock %}

@@ -3,20 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NewsCheck</title>
+  <title>TrippyNews</title>
 
   <!-- SEO -->
   <meta name="description" content="Automated news corroboration — what sources agree and differ on.">
   <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://rishi2104.github.io/TrippyNews/">
 
   <!-- Open Graph / Social -->
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="NewsCheck">
-  <meta property="og:title" content="NewsCheck">
+  <meta property="og:site_name" content="TrippyNews">
+  <meta property="og:title" content="TrippyNews">
   <meta property="og:description" content="Automated news corroboration — what sources agree and differ on.">
+  <meta property="og:url" content="https://rishi2104.github.io/TrippyNews/">
+  <meta property="og:image" content="https://rishi2104.github.io/TrippyNews/favicon.svg">
 
-  <!-- Favicon (simple emoji favicon via SVG data URI) -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⬡</text></svg>">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="TrippyNews">
+  <meta name="twitter:description" content="Automated news corroboration — what sources agree and differ on.">
+
+  <!-- Favicon (percent-encoded SVG data URI) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Ctext%20y='.9em'%20font-size='90'%3E%E2%AC%A1%3C/text%3E%3C/svg%3E">
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -25,14 +33,16 @@
     <div class="container">
       <div class="header-inner">
         <div class="site-brand">
-          <h1 class="site-title">
-            <a href="index.html">NewsCheck</a>
-          </h1>
-          <span class="site-tagline">Independent Corroboration Pipeline</span>
+          
+          <div class="site-title">
+            <a href="index.html">TrippyNews</a>
+          </div>
+          
+          <span class="site-tagline">Automated News Corroboration Pipeline</span>
         </div>
         <div class="header-live">
           <span class="live-dot"></span>
-          Auto-updated every 1 hour
+          Last updated: <time datetime="2026-11-20T10:03:53.313679+00:00" class="local-time">20 Nov 2026, 15:33 IST</time>
         </div>
       </div>
       <nav>
@@ -40,6 +50,7 @@
           <li><a href="index.html">Top Stories</a></li>
           <li><a href="methodology.html">Methodology</a></li>
           <li><a href="corrections.html">Corrections &amp; Changelog</a></li>
+          <li><a href="about.html">About</a></li>
         </ul>
       </nav>
     </div>
@@ -47,8 +58,8 @@
 
   <main class="container">
     <div class="disclosure-banner">
-      <span><strong>Automated report.</strong> May contain errors. Corroboration levels are computed mathematically from source diversity and agreement — not by human editors.</span>
-      <a href="mailto:corrections@newscheck.example.com?subject=TrippyNews%20Error%20Report">Report an error &rarr;</a>
+      <span><strong>Automated report.</strong> Corroboration levels are computed mathematically from source diversity and agreement &mdash; not by human editors. Never claims absolute truth.</span>
+      <a href="mailto:contact@trippynews.org?subject=TrippyNews%20Inquiry%20or%20Error%20Report">Report an error &rarr;</a>
     </div>
 
     
@@ -59,7 +70,6 @@
       <p>Ranked by recency &amp; independent corroboration metrics.</p>
     </div>
     <div class="section-header-right">
-      Updated every 1 hour<br>
       
       <span id="stories-count-display">Showing 51–60 of 100 stories</span>
       
@@ -79,33 +89,48 @@
       
       <span class="source-count">3 independent sources</span>
       <span class="sep">•</span>
-      <span class="score-pill">Score: 5.66</span>
+      <span class="score-pill">Score: 5.97</span>
       
       <span class="sep">•</span>
-      <span class="story-date">20 Nov 2026, 10:53 IST</span>
+      <time datetime="2026-11-20T02:45:29+00:00" class="story-date local-time">20 Nov 2026, 08:15 IST</time>
       
     </div>
 
-    <h2><a href="story_426.html" class="headline-link">UP Polls 2027: Akhilesh Forms Seat-Sharing Panel, Congress Demands Respectable Share | News18</a></h2>
+    <h2><a href="story_292.html" class="headline-link">Bengal Blueprint? Amit Shah To Spend 7 Days A Month In UP As BJP Gears Up For 2027 Polls | Exclusive</a></h2>
 
     
-    <p class="story-summary-omitted">
+    <div class="story-summary-omitted">
       
-      [Summary constrained to claim table — strict NLI entailment gate applied. <a href="story_426.html">View claims &rarr;</a>]
+      <div class="empty-state-notice entailment-notice">
+        <span class="notice-badge">&#9432; Constrained to Verified Facts</span>
+        <p>AI narrative synthesis suppressed to prevent hallucination because reporting lacks sufficient multi-source consensus. View individual source claims on the story page.</p>
+        <a href="story_292.html" class="view-claims-btn">View claims &rarr;</a>
+      </div>
       
-    </p>
+    </div>
     
 
+    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
     <div class="sources-list">
       <strong>Sources:</strong>
       
-      <a href="https://www.indiatoday.in/india-today-insight/story/is-congress-samajwadi-party-tie-up-181-seats-too-apart-uttar-pradesh-assembly-election-2026-3040975-2026-11-17?utm_source=rss" target="_blank" rel="noopener noreferrer">India Today</a>, 
+      <span class="source-item-chip">
+        <a href="https://www.livemint.com/news/trends/who-is-rajiv-anchal-man-behind-keralas-jatayu-centre-amid-ramayana-tourism-boom-how-to-reach-ticket-prices-11794905822788.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Who is Rajiv Anchal? Man behind Kerala&#39;s Jatayu Centre amid ‘Ramayana’ tourism boom — How to reach, ticket prices &amp;amp; more">Who is Rajiv Anchal? Man behind Kerala&#39;s Jatayu Centre amid ‘Ramayana’ tourism boom — How to reach, ticket prices &amp;amp; more</a>
+        <span class="badge badge-outlet">Mint</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://www.hindustantimes.com/india-news/sp-alliance-must-be-respectful-azad-owaisi-alliance-doesn-t-pose-a-threat-up-congress-in-charge-ahead-of-2027-polls-101795097235674.html" target="_blank" rel="noopener noreferrer">Hindustan Times</a>, 
+      <span class="source-item-chip">
+        <a href="https://timesofindia.indiatimes.com/life-style/travel/news/bengaluru-to-goa-in-13-hours-new-bengaluru-mangaluru-madgaon-vande-bharat-express-to-connect-coastal-destinations-check-route-timings-and-stops/articleshow/135949975.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Bengaluru to Goa in 13 hours: New Vande Bharat via Mangaluru, stops and timings">Bengaluru to Goa in 13 hours: New Vande Bharat via Mangaluru, stops and timings</a>
+        <span class="badge badge-outlet">Times of India</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://www.hindustantimes.com/india-news/congress-wants-respectful-alliance-with-samajwadi-party-in-uttar-pradesh-says-rajendra-pal-gautam-101795093931466.html" target="_blank" rel="noopener noreferrer">Hindustan Times</a>, 
-      
-      <a href="https://www.news18.com/videos/breaking-news/up-polls-2027-akhilesh-forms-seat-sharing-panel-congress-demands-respectable-share-news18-10433572.html" target="_blank" rel="noopener noreferrer">News18</a>
+      <span class="source-item-chip">
+        <a href="https://www.news18.com/india/bengal-blueprint-amit-shah-to-spend-7-days-a-month-in-up-as-bjp-gears-up-for-2027-polls-exclusive-ws-l-10433283.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Bengal Blueprint? Amit Shah To Spend 7 Days A Month In UP As BJP Gears Up For 2027 Polls | Exclusive">Bengal Blueprint? Amit Shah To Spend 7 Days A Month In UP As BJP Gears Up For 2027 Polls | Exclusive</a>
+        <span class="badge badge-outlet">News18</span>
+        
+      </span>
       
     </div>
   </article>
@@ -119,41 +144,231 @@
       
       <span class="source-count">4 independent sources</span>
       <span class="sep">•</span>
-      <span class="score-pill">Score: 6.56</span>
+      <span class="score-pill">Score: 7.14</span>
       
       <span class="sep">•</span>
-      <span class="story-date">20 Nov 2026, 10:31 IST</span>
+      <time datetime="2026-11-19T20:35:14+00:00" class="story-date local-time">20 Nov 2026, 02:05 IST</time>
       
     </div>
 
-    <h2><a href="story_402.html" class="headline-link">Gaza Civil Defence struggles to rescue lives as vehicles break down</a></h2>
+    <h2><a href="story_284.html" class="headline-link">How vaccine fears fuelled a major measles comeback in the US</a></h2>
 
     
-    <p class="story-summary-omitted">
+    <div class="story-summary-omitted">
       
-      [Narrative omitted — sensitive topic safety gate active. Review claims and sources on the story page.]
+      <div class="empty-state-notice entailment-notice">
+        <span class="notice-badge">&#9432; Constrained to Verified Facts</span>
+        <p>AI narrative synthesis suppressed to prevent hallucination because reporting lacks sufficient multi-source consensus. View individual source claims on the story page.</p>
+        <a href="story_284.html" class="view-claims-btn">View claims &rarr;</a>
+      </div>
       
-    </p>
+    </div>
     
 
+    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
     <div class="sources-list">
       <strong>Sources:</strong>
       
-      <a href="https://timesofindia.indiatimes.com/sports/football/top-stories/ugly-scenes-against-india-palestine-player-thows-kicks-makes-alleged-racist-gesture-watch/articleshow/135925500.cms" target="_blank" rel="noopener noreferrer">Times of India</a>, 
+      <span class="source-item-chip">
+        <a href="https://www.indiatoday.in/world/us-news/story/us-measles-outbreak-falling-mmr-vaccination-rates-end-elimination-status-itspc-3040832-2026-11-17?utm_source=rss" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Measles, once eliminated, is raging across the US again. What went wrong?">Measles, once eliminated, is raging across the US again. What went wrong?</a>
+        <span class="badge badge-outlet">India Today</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://www.aljazeera.com/news/2026/11/19/save-the-children-gazas-children-face-unmatched-dangers?traffic_source=rss" target="_blank" rel="noopener noreferrer">Al Jazeera – World</a>, 
+      <span class="source-item-chip">
+        <a href="https://timesofindia.indiatimes.com/world/us/breaking-bad-is-the-united-states-falling-apart/articleshow/135932673.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Breaking Bad: Is the United States falling apart?">Breaking Bad: Is the United States falling apart?</a>
+        <span class="badge badge-outlet">Times of India</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://www.aljazeera.com/video/newsfeed/2026/11/19/families-flee-gazas-bureij-camp-as-israel-launches-new-offensive?traffic_source=rss" target="_blank" rel="noopener noreferrer">Al Jazeera – World</a>, 
+      <span class="source-item-chip">
+        <a href="https://www.ndtv.com/world-news/us-loses-measles-free-status-with-over-5-400-cases-reported-this-year-12341766" target="_blank" rel="noopener noreferrer" class="source-title-link" title="US Loses Measles-Free Status With Over 5,400 Cases Reported This Year">US Loses Measles-Free Status With Over 5,400 Cases Reported This Year</a>
+        <span class="badge badge-outlet">NDTV</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://www.aljazeera.com/news/2026/11/19/palestinians-in-gaza-face-new-displacement-after-israeli-army-operation?traffic_source=rss" target="_blank" rel="noopener noreferrer">Al Jazeera – World</a>, 
+      <span class="source-item-chip">
+        <a href="https://www.aljazeera.com/video/newsfeed/2026/11/19/how-vaccine-fears-fuelled-a-major-measles-comeback-in-the-us?traffic_source=rss" target="_blank" rel="noopener noreferrer" class="source-title-link" title="How vaccine fears fuelled a major measles comeback in the US">How vaccine fears fuelled a major measles comeback in the US</a>
+        <span class="badge badge-outlet">Al Jazeera – World</span>
+        
+      </span>
       
-      <a href="https://www.aljazeera.com/video/al-jazeera-originals/2026/11/19/gaza-syndrome-israels-soldiers-haunted-by-genocide-cost-of-war?traffic_source=rss" target="_blank" rel="noopener noreferrer">Al Jazeera – World</a>, 
+    </div>
+  </article>
+  
+  
+  
+  
+
+  <article class="story-card level-strongly">
+    <div class="meta-row">
+      <span class="badge badge-strongly">Strongly corroborated</span>
       
-      <a href="https://www.thequint.com/hindi/webqoof/birmingham-palestine-freedom-slogans-video-shared-with-false-claims" target="_blank" rel="noopener noreferrer">The Quint</a>, 
+      <span class="source-count">6 independent sources</span>
+      <span class="sep">•</span>
+      <span class="score-pill">Score: 9.39</span>
       
-      <a href="https://www.straitstimes.com/world/middle-east/nearly-a-quarter-of-worlds-children-live-in-conflict-zone-charity" target="_blank" rel="noopener noreferrer">The Straits Times – World</a>, 
+      <span class="sep">•</span>
+      <time datetime="2026-11-19T08:36:28+00:00" class="story-date local-time">19 Nov 2026, 14:06 IST</time>
       
-      <a href="https://www.aljazeera.com/news/2026/11/20/gaza-civil-defence-struggles-to-rescue-lives-as-vehicles-fall-into-disrepair?traffic_source=rss" target="_blank" rel="noopener noreferrer">Al Jazeera – World</a>
+    </div>
+
+    <h2><a href="story_161.html" class="headline-link">India&#39;s religious make-up - what a new Pew study says about Hindus and Muslims</a></h2>
+
+    
+    <p class="story-summary">Islam set to become world&#39;s largest religion by 2035, Hindu share projected to decline: Report
+Pew projects Islam will surpass Christianity as the world&#39;s largest religion by 2035. Islam is expected to overtake Christianity as the world’s largest religion by 2035, according to projections by the Pew Research Center. A new global religious demographic study by the Pew Research Center projects that Islam could overtake Christianity to become the world&#39;s largest religion by 2035, as the Muslim population continues to expand at a faster pace. Islam is expected to surpass Christianity as the world&#39;s largest religion by 2035.</p>
+    
+
+    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
+    <div class="sources-list">
+      <strong>Sources:</strong>
+      
+      <span class="source-item-chip">
+        <a href="https://www.news18.com/world/asim-munir-pm-sharif-top-influential-muslim-list-after-mecca-pact-only-one-indian-make-it-to-the-list-10429180.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Asim Munir, PM Sharif Top Influential Muslim List After Mecca Pact; Only One Indian Make It To The List">Asim Munir, PM Sharif Top Influential Muslim List After Mecca Pact; Only One Indian Make It To The List</a>
+        <span class="badge badge-outlet">News18</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://timesofindia.indiatimes.com/india/hindu-population-growth-to-fall-behind-other-religions-in-india-globally-pew-study/articleshow/135966828.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Hindu population growth to fall behind other religions in next few decades: Report">Hindu population growth to fall behind other religions in next few decades: Report</a>
+        <span class="badge badge-outlet">Times of India</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.ndtv.com/world-news/muslims-set-to-become-worlds-largest-religion-by-2035-12346356" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Islam Set To Become World&#39;s Largest Religion By 2035: Report">Islam Set To Become World&#39;s Largest Religion By 2035: Report</a>
+        <span class="badge badge-outlet">NDTV</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.livemint.com/news/world/islam-projected-to-overtake-christianity-as-worlds-largest-religion-by-2035-says-study-heres-what-it-revealed-11795024171643.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Islam projected to overtake Christianity as world&#39;s largest religion by 2035, says study – here&#39;s what it revealed">Islam projected to overtake Christianity as world&#39;s largest religion by 2035, says study – here&#39;s what it revealed</a>
+        <span class="badge badge-outlet">Mint</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.indiatoday.in/world/story/islam-population-overtake-christianity-largest-religion-2035-pew-ptag-3041810-2026-11-18?utm_source=rss" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Islam set to become world&#39;s largest religion by 2035, Hindu share projected to decline">Islam set to become world&#39;s largest religion by 2035, Hindu share projected to decline</a>
+        <span class="badge badge-outlet">India Today</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.bbc.co.uk/news/articles/cqd01epyrz1do?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" class="source-title-link" title="India&#39;s religious make-up - what a new Pew study says about Hindus and Muslims">India&#39;s religious make-up - what a new Pew study says about Hindus and Muslims</a>
+        <span class="badge badge-outlet">BBC News – India</span>
+        
+      </span>
+      
+    </div>
+  </article>
+  
+  
+  
+
+  <article class="story-card level-corroborated">
+    <div class="meta-row">
+      <span class="badge badge-corroborated">Corroborated</span>
+      
+      <span class="source-count">3 independent sources</span>
+      <span class="sep">•</span>
+      <span class="score-pill">Score: 5.96</span>
+      
+      <span class="sep">•</span>
+      <time datetime="2026-11-20T02:39:39+00:00" class="story-date local-time">20 Nov 2026, 08:09 IST</time>
+      
+    </div>
+
+    <h2><a href="story_293.html" class="headline-link">Hello, Earth! Nasa&#39;s Voyager 1 phones home from beyond 16 billion miles</a></h2>
+
+    
+    <div class="story-summary-omitted">
+      
+      <div class="empty-state-notice entailment-notice">
+        <span class="notice-badge">&#9432; Constrained to Verified Facts</span>
+        <p>AI narrative synthesis suppressed to prevent hallucination because reporting lacks sufficient multi-source consensus. View individual source claims on the story page.</p>
+        <a href="story_293.html" class="view-claims-btn">View claims &rarr;</a>
+      </div>
+      
+    </div>
+    
+
+    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
+    <div class="sources-list">
+      <strong>Sources:</strong>
+      
+      <span class="source-item-chip">
+        <a href="https://www.ndtv.com/science/nasa-sent-a-message-to-aliens-on-voyager-1-heres-what-it-says-12342837" target="_blank" rel="noopener noreferrer" class="source-title-link" title="NASA Sent A Message To Aliens On Voyager 1. Here&#39;s What It Says">NASA Sent A Message To Aliens On Voyager 1. Here&#39;s What It Says</a>
+        <span class="badge badge-outlet">NDTV</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://indianexpress.com/article/opinion/editorials/nasa-voyager-1-one-light-day-from-earth-10970480/" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Beyond Earth, from Voyager 1, a lesson in humility">Beyond Earth, from Voyager 1, a lesson in humility</a>
+        <span class="badge badge-outlet">Indian Express</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://timesofindia.indiatimes.com/science/hello-earth-nasas-voyager-1-phones-home-from-beyond-16-billion-miles/articleshow/136010371.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Hello, Earth! Nasa&#39;s Voyager 1 phones home from beyond 16 billion miles">Hello, Earth! Nasa&#39;s Voyager 1 phones home from beyond 16 billion miles</a>
+        <span class="badge badge-outlet">Times of India</span>
+        
+      </span>
+      
+    </div>
+  </article>
+  
+  
+  
+
+  <article class="story-card level-corroborated">
+    <div class="meta-row">
+      <span class="badge badge-corroborated">Corroborated</span>
+      
+      <span class="source-count">3 independent sources</span>
+      <span class="sep">•</span>
+      <span class="score-pill">Score: 5.95</span>
+      
+      <span class="sep">•</span>
+      <time datetime="2026-11-20T02:37:17+00:00" class="story-date local-time">20 Nov 2026, 08:07 IST</time>
+      
+    </div>
+
+    <h2><a href="story_294.html" class="headline-link">Share Market Today: This Non-Energy Company Is Betting Big On India&#39;s Solar Boom. Should You Buy</a></h2>
+
+    
+    <div class="story-summary-omitted">
+      
+      <div class="empty-state-notice entailment-notice">
+        <span class="notice-badge">&#9432; Constrained to Verified Facts</span>
+        <p>AI narrative synthesis suppressed to prevent hallucination because reporting lacks sufficient multi-source consensus. View individual source claims on the story page.</p>
+        <a href="story_294.html" class="view-claims-btn">View claims &rarr;</a>
+      </div>
+      
+    </div>
+    
+
+    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
+    <div class="sources-list">
+      <strong>Sources:</strong>
+      
+      <span class="source-item-chip">
+        <a href="https://www.livemint.com/news/mnre-commerce-ministry-industry-concerns-china-export-curbs-solar-technology-11795080620551.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="China’s proposed tech curbs put India’s solar manufacturing ambitions at risk">China’s proposed tech curbs put India’s solar manufacturing ambitions at risk</a>
+        <span class="badge badge-outlet">Mint</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.indiatoday.in/india-today-insight/story/how-china-linked-parts-in-indian-military-drone-tenders-raise-alarm-3042568-2026-11-19?utm_source=rss" target="_blank" rel="noopener noreferrer" class="source-title-link" title="How China-linked parts in Indian military drone tenders raise alarm">How China-linked parts in Indian military drone tenders raise alarm</a>
+        <span class="badge badge-outlet">India Today</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.ndtv.com/business-news/share-market-today-this-non-energy-company-is-betting-big-on-indias-solar-boom-should-you-buy-12352103" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Share Market Today: This Non-Energy Company Is Betting Big On India&#39;s Solar Boom. Should You Buy">Share Market Today: This Non-Energy Company Is Betting Big On India&#39;s Solar Boom. Should You Buy</a>
+        <span class="badge badge-outlet">NDTV</span>
+        
+      </span>
       
     </div>
   </article>
@@ -167,43 +382,54 @@
       
       <span class="source-count">4 independent sources</span>
       <span class="sep">•</span>
-      <span class="score-pill">Score: 7.49</span>
+      <span class="score-pill">Score: 7.43</span>
       
       <span class="sep">•</span>
-      <span class="story-date">20 Nov 2026, 10:30 IST</span>
+      <time datetime="2026-11-19T18:21:35+00:00" class="story-date local-time">19 Nov 2026, 23:51 IST</time>
       
     </div>
 
-    <h2><a href="story_394.html" class="headline-link">Contaminated petrol leaves Yemeni drivers struggling to make ends meet</a></h2>
+    <h2><a href="story_169.html" class="headline-link">Tata Trusts board meet on November 20; Tata Sons listing not on agenda</a></h2>
 
     
-    <p class="story-summary-omitted">
+    <div class="story-summary-omitted">
       
-      [Summary constrained to claim table — strict NLI entailment gate applied. <a href="story_394.html">View claims &rarr;</a>]
+      <div class="empty-state-notice entailment-notice">
+        <span class="notice-badge">&#9432; Constrained to Verified Facts</span>
+        <p>AI narrative synthesis suppressed to prevent hallucination because reporting lacks sufficient multi-source consensus. View individual source claims on the story page.</p>
+        <a href="story_169.html" class="view-claims-btn">View claims &rarr;</a>
+      </div>
       
-    </p>
+    </div>
     
 
+    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
     <div class="sources-list">
       <strong>Sources:</strong>
       
-      <a href="https://www.livemint.com/news/india/petrol-and-diesel-prices-today-november-18-how-much-does-fuel-cost-in-delhi-mumbai-bengaluru-11794966799274.html" target="_blank" rel="noopener noreferrer">Mint</a>, 
+      <span class="source-item-chip">
+        <a href="https://timesofindia.indiatimes.com/business/india-business/tata-sons-facing-back-door-takeover-warns-jimmy-tata/articleshow/135905376.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Jimmy flags ‘back-door takeover’ of Tata Sons by Trusts, supports Chandra &amp;amp; listing">Jimmy flags ‘back-door takeover’ of Tata Sons by Trusts, supports Chandra &amp;amp; listing</a>
+        <span class="badge badge-outlet">Times of India</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://www.livemint.com/news/us-news/los-angeles-on-mudslide-alert-as-atmospheric-river-slams-coast-11795040696942.html" target="_blank" rel="noopener noreferrer">Mint</a>, 
+      <span class="source-item-chip">
+        <a href="https://economictimes.indiatimes.com/news/company/corporate-trends/rbi-tells-tata-sons-to-comply-with-listing-requirement-says-no-exemption-from-upper-layer-nbfc-norms/articleshow/135894889.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="RBI tells Tata Sons to comply with listing norms">RBI tells Tata Sons to comply with listing norms</a>
+        <span class="badge badge-outlet">Economic Times</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://www.livemint.com/news/india/petrol-and-diesel-prices-today-november-19-check-fuel-rates-in-different-cities-across-india-11795052520173.html" target="_blank" rel="noopener noreferrer">Mint</a>, 
+      <span class="source-item-chip">
+        <a href="https://www.news18.com/explainers/why-jimmy-tata-is-accusing-half-brother-noel-of-backdoor-takeover-at-tata-sons-ws-klrt-10429605.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Jimmy Tata Has Accused Half-Brother Noel Of &#39;Backdoor Takeover&#39; At Tata Sons: Here&#39;s Why">Jimmy Tata Has Accused Half-Brother Noel Of &#39;Backdoor Takeover&#39; At Tata Sons: Here&#39;s Why</a>
+        <span class="badge badge-outlet">News18</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://economictimes.indiatimes.com/markets/stocks/news/tata-motors-pv-maruti-suzuki-and-other-auto-stocks-jump-up-to-4-whats-driving-the-rally/articleshow/135978962.cms" target="_blank" rel="noopener noreferrer">Economic Times</a>, 
-      
-      <a href="https://economictimes.indiatimes.com/industry/auto/rising-commodity-costs-hit-passenger-vehicle-makers-harder-than-two-wheeler-companies-jefferies/articleshow/135980084.cms" target="_blank" rel="noopener noreferrer">Economic Times</a>, 
-      
-      <a href="https://www.aljazeera.com/news/2026/11/19/yemens-besieged-city-of-taiz-faces-a-deepening-water-crisis?traffic_source=rss" target="_blank" rel="noopener noreferrer">Al Jazeera – World</a>, 
-      
-      <a href="https://www.aljazeera.com/news/2026/11/20/completely-messed-up-everything-malawis-fuel-crisis-causes-chaos?traffic_source=rss" target="_blank" rel="noopener noreferrer">Al Jazeera – World</a>, 
-      
-      <a href="https://www.straitstimes.com/world/united-states/los-angeles-flood-threat-builds-as-el-nino-storm-sweeps-south" target="_blank" rel="noopener noreferrer">The Straits Times – World</a>, 
-      
-      <a href="https://www.aljazeera.com/news/2026/11/20/contaminated-petrol-leaves-yemeni-drivers-struggling-to-make-ends-meet?traffic_source=rss" target="_blank" rel="noopener noreferrer">Al Jazeera – World</a>
+      <span class="source-item-chip">
+        <a href="https://www.business-standard.com/companies/news/tata-trusts-board-meet-on-november-20-tata-sons-listing-not-on-agenda-126111901507_1.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Tata Trusts board meet on November 20; Tata Sons listing not on agenda">Tata Trusts board meet on November 20; Tata Sons listing not on agenda</a>
+        <span class="badge badge-outlet">Business Standard</span>
+        
+      </span>
       
     </div>
   </article>
@@ -217,82 +443,48 @@
       
       <span class="source-count">3 independent sources</span>
       <span class="sep">•</span>
-      <span class="score-pill">Score: 8.06</span>
+      <span class="score-pill">Score: 5.91</span>
       
       <span class="sep">•</span>
-      <span class="story-date">20 Nov 2026, 09:55 IST</span>
+      <time datetime="2026-11-20T02:08:05+00:00" class="story-date local-time">20 Nov 2026, 07:38 IST</time>
       
     </div>
 
-    <h2><a href="story_379.html" class="headline-link">Cincinnati Zoo&#39;s Fiona the hippo dies after failed effort to remove swallowed hat</a></h2>
+    <h2><a href="story_298.html" class="headline-link">California probing if Nvidia misled investors on China risks</a></h2>
 
     
-    <p class="story-summary-omitted">
+    <div class="story-summary-omitted">
       
-      [Summary constrained to claim table — strict NLI entailment gate applied. <a href="story_379.html">View claims &rarr;</a>]
+      <div class="empty-state-notice entailment-notice">
+        <span class="notice-badge">&#9432; Constrained to Verified Facts</span>
+        <p>AI narrative synthesis suppressed to prevent hallucination because reporting lacks sufficient multi-source consensus. View individual source claims on the story page.</p>
+        <a href="story_298.html" class="view-claims-btn">View claims &rarr;</a>
+      </div>
       
-    </p>
+    </div>
     
 
+    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
     <div class="sources-list">
       <strong>Sources:</strong>
       
-      <a href="https://www.straitstimes.com/world/united-states/cincinnati-zoos-famed-fiona-the-hippo-dies-days-after-eating-a-visitors-hat" target="_blank" rel="noopener noreferrer">The Straits Times – World</a>, 
+      <span class="source-item-chip">
+        <a href="https://www.ndtv.com/world-news/nvidia-creates-oversight-committee-for-national-security-export-controls-12338870" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Nvidia Creates Oversight Committee For National Security, Export Controls">Nvidia Creates Oversight Committee For National Security, Export Controls</a>
+        <span class="badge badge-outlet">NDTV</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://www.channelnewsasia.com/world/fiona-hippo-dies-swallowed-hat-cincinnati-zoo-6567356" target="_blank" rel="noopener noreferrer">CNA – Asia</a>, 
+      <span class="source-item-chip">
+        <a href="https://www.thehindu.com/news/international/california-attorney-general-subpoenas-nvidia-over-chips-former-ceos-affair/article71722914.ece" target="_blank" rel="noopener noreferrer" class="source-title-link" title="California Attorney General subpoenas Nvidia over chips, former CEO’s affair">California Attorney General subpoenas Nvidia over chips, former CEO’s affair</a>
+        <span class="badge badge-outlet">The Hindu</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://www.straitstimes.com/world/united-states/fiona-the-hippos-death-gives-parents-a-chance-to-teach-kids-about-grief-and-life" target="_blank" rel="noopener noreferrer">The Straits Times – World</a>, 
-      
-      <a href="https://www.aljazeera.com/video/newsfeed/2026/11/20/beloved-hippo-fiona-dies-days-after-swallowing-visitors-hat?traffic_source=rss" target="_blank" rel="noopener noreferrer">Al Jazeera – World</a>
-      
-    </div>
-  </article>
-  
-  
-  
-  
-
-  <article class="story-card level-unconfirmed">
-    <div class="meta-row">
-      <span class="badge badge-unconfirmed">Unconfirmed</span>
-      
-      <span class="source-count">2 independent sources</span>
-      <span class="sep">•</span>
-      <span class="score-pill">Score: 3.7</span>
-      
-      <span class="sep">•</span>
-      <span class="story-date">20 Nov 2026, 09:48 IST</span>
-      
-    </div>
-
-    <h2><a href="story_446.html" class="headline-link">Gold, silver rates today: Check prices across brands</a></h2>
-
-    
-    <p class="story-summary-omitted">
-      
-      [Summary constrained to claim table — strict NLI entailment gate applied. <a href="story_446.html">View claims &rarr;</a>]
-      
-    </p>
-    
-
-    <div class="sources-list">
-      <strong>Sources:</strong>
-      
-      <a href="https://timesofindia.indiatimes.com/business/india-business/gold-price-prediction-today-india-where-is-gold-silver-rate-headed-on-november-18-2026-mcx-gold-futures-outlook-us-iran-war-middle-east-tensions-federal-reserve/articleshow/135951392.cms" target="_blank" rel="noopener noreferrer">Times of India</a>, 
-      
-      <a href="https://economictimes.indiatimes.com/wealth/invest/gold-rate-today-check-18k-20k-24k-ibja-gold-price-malabar-gold-kalyan-jewelers-joyalukkas-delhi-hyderabad-bengaluru/articleshow/135949736.cms" target="_blank" rel="noopener noreferrer">Economic Times</a>, 
-      
-      <a href="https://economictimes.indiatimes.com/wealth/save/selling-old-gold-jewellery-these-hidden-deductions-could-shrink-your-payout/articleshow/135910326.cms" target="_blank" rel="noopener noreferrer">Economic Times</a>, 
-      
-      <a href="https://economictimes.indiatimes.com/industry/cons-products/fashion-/-cosmetics-/-jewellery/indias-gold-imports-seen-falling-to-40-billion-in-fy27-as-higher-duty-curbs-shipments/articleshow/135963322.cms" target="_blank" rel="noopener noreferrer">Economic Times</a>, 
-      
-      <a href="https://timesofindia.indiatimes.com/business/india-business/gold-was-at-rs-1-81-lakh-at-the-start-of-2026-and-now-it-has-crashed-almost-29-to-rs-1-29-lakh-per-10-grams-why-is-gold-falling-and-how-much-more-will-it-drop/articleshow/135981326.cms" target="_blank" rel="noopener noreferrer">Times of India</a>, 
-      
-      <a href="https://economictimes.indiatimes.com/world/business/gold-prices-have-crashed-but-thats-not-the-only-reason-your-14k-gold-chain-may-fetch-less-the-math-buyers-dont-explain/articleshow/135994674.cms" target="_blank" rel="noopener noreferrer">Economic Times</a>, 
-      
-      <a href="https://economictimes.indiatimes.com/industry/cons-products/fashion-/-cosmetics-/-jewellery/all-that-is-quality-certified-may-not-be-pure-gold-ibja-flags-fake-hallmark-sophisticated-adulteration/articleshow/136009460.cms" target="_blank" rel="noopener noreferrer">Economic Times</a>, 
-      
-      <a href="https://economictimes.indiatimes.com/wealth/invest/gold-and-silver-rates-today-november-20-2026-check-24k-22k-20k-and-18k-gold-jewellery-prices-from-ibja-malabar-gold-diamonds-joyalukkas-kalyan-jewellers-and-tanishq/articleshow/136012917.cms" target="_blank" rel="noopener noreferrer">Economic Times</a>
+      <span class="source-item-chip">
+        <a href="https://www.straitstimes.com/world/united-states/california-probing-if-nvidia-misled-investors-on-china-risks" target="_blank" rel="noopener noreferrer" class="source-title-link" title="California probing if Nvidia misled investors on China risks">California probing if Nvidia misled investors on China risks</a>
+        <span class="badge badge-outlet">The Straits Times – World</span>
+        
+      </span>
       
     </div>
   </article>
@@ -306,31 +498,54 @@
       
       <span class="source-count">4 independent sources</span>
       <span class="sep">•</span>
-      <span class="score-pill">Score: 7.39</span>
+      <span class="score-pill">Score: 7.04</span>
       
       <span class="sep">•</span>
-      <span class="story-date">20 Nov 2026, 09:45 IST</span>
+      <time datetime="2026-11-19T19:53:24+00:00" class="story-date local-time">20 Nov 2026, 01:23 IST</time>
       
     </div>
 
-    <h2><a href="story_395.html" class="headline-link">Mumbai Diwali Pollution Row: Bombay High Court Weighs Firecracker Ban After 300+ Fires | News18</a></h2>
+    <h2><a href="story_288.html" class="headline-link">‘On the same page’: Hegseth hails US ties with Colombia’s de la Espriella</a></h2>
 
     
-    <p class="story-summary">One figure placed before the bench was 332 fires in the city. -newsn18oc_india CNN-News18 is your trusted source for breaking news, updates, and in-depth analysis from ... There were 332 fires in the city.</p>
+    <div class="story-summary-omitted">
+      
+      <div class="empty-state-notice entailment-notice">
+        <span class="notice-badge">&#9432; Constrained to Verified Facts</span>
+        <p>AI narrative synthesis suppressed to prevent hallucination because reporting lacks sufficient multi-source consensus. View individual source claims on the story page.</p>
+        <a href="story_288.html" class="view-claims-btn">View claims &rarr;</a>
+      </div>
+      
+    </div>
     
 
+    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
     <div class="sources-list">
       <strong>Sources:</strong>
       
-      <a href="https://economictimes.indiatimes.com/industry/cons-products/food/the-maggi-kids-are-all-grown-up-and-theyre-reaching-for-korean-ramen/articleshow/135952971.cms" target="_blank" rel="noopener noreferrer">Economic Times</a>, 
+      <span class="source-item-chip">
+        <a href="https://www.ndtv.com/world-news/us-announces-military-cooperation-agreement-with-venezuela-12346175" target="_blank" rel="noopener noreferrer" class="source-title-link" title="US Announces Military Cooperation Agreement With Venezuela">US Announces Military Cooperation Agreement With Venezuela</a>
+        <span class="badge badge-outlet">NDTV</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://economictimes.indiatimes.com/markets/ipos/fpos/mahanadi-coalfields-ipo-opens-today-check-gmp-and-key-details-should-you-subscribe/articleshow/135975182.cms" target="_blank" rel="noopener noreferrer">Economic Times</a>, 
+      <span class="source-item-chip">
+        <a href="https://www.indiatoday.in/world/story/us-venezuela-restore-military-ties-training-intelligence-pact-3041976-2026-11-19?utm_source=rss" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Months after Maduro&#39;s capture, US moves to rebuild military ties with Venezuela">Months after Maduro&#39;s capture, US moves to rebuild military ties with Venezuela</a>
+        <span class="badge badge-outlet">India Today</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://www.livemint.com/news/india/coal-india-renew-incentives-for-rare-earth-magnet-manufacturing-11795089127289.html" target="_blank" rel="noopener noreferrer">Mint</a>, 
+      <span class="source-item-chip">
+        <a href="https://timesofindia.indiatimes.com/world/rest-of-world/from-capture-of-maduro-to-inking-military-deal-venezuelas-stunning-u-turn-with-the-us/articleshow/135998343.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="From capture of Maduro to inking military deal: Venezuela&#39;s stunning U-turn with the US">From capture of Maduro to inking military deal: Venezuela&#39;s stunning U-turn with the US</a>
+        <span class="badge badge-outlet">Times of India</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://indianexpress.com/article/cities/mumbai/bombay-hc-drastic-order-firecracker-ban-mumbai-air-quality-diwali-10970679/" target="_blank" rel="noopener noreferrer">Indian Express</a>, 
-      
-      <a href="https://www.news18.com/videos/breaking-news/mumbai-diwali-pollution-row-bombay-high-court-weighs-firecracker-ban-after-300-fires-news18-10433492.html" target="_blank" rel="noopener noreferrer">News18</a>
+      <span class="source-item-chip">
+        <a href="https://www.aljazeera.com/news/2026/11/19/on-the-same-page-hegseth-hails-us-ties-with-colombias-de-la-espriella?traffic_source=rss" target="_blank" rel="noopener noreferrer" class="source-title-link" title="‘On the same page’: Hegseth hails US ties with Colombia’s de la Espriella">‘On the same page’: Hegseth hails US ties with Colombia’s de la Espriella</a>
+        <span class="badge badge-outlet">Al Jazeera – World</span>
+        
+      </span>
       
     </div>
   </article>
@@ -344,31 +559,48 @@
       
       <span class="source-count">3 independent sources</span>
       <span class="sep">•</span>
-      <span class="score-pill">Score: 8.31</span>
+      <span class="score-pill">Score: 5.89</span>
       
       <span class="sep">•</span>
-      <span class="story-date">20 Nov 2026, 09:45 IST</span>
+      <time datetime="2026-11-20T01:59:57+00:00" class="story-date local-time">20 Nov 2026, 07:29 IST</time>
       
     </div>
 
-    <h2><a href="story_380.html" class="headline-link">Who says dress shoes have to be boring? This Japanese brand&#39;s premium line gives them a modern twist</a></h2>
+    <h2><a href="story_299.html" class="headline-link">‘Only If Pakistan Stops Supporting Terrorism’: Rahul Gandhi Draws Red Line On Dialogue With Islamabad</a></h2>
 
     
-    <p class="story-summary-omitted">
+    <div class="story-summary-omitted">
       
-      [Summary constrained to claim table — strict NLI entailment gate applied. <a href="story_380.html">View claims &rarr;</a>]
+      <div class="empty-state-notice entailment-notice">
+        <span class="notice-badge">&#9432; Constrained to Verified Facts</span>
+        <p>AI narrative synthesis suppressed to prevent hallucination because reporting lacks sufficient multi-source consensus. View individual source claims on the story page.</p>
+        <a href="story_299.html" class="view-claims-btn">View claims &rarr;</a>
+      </div>
       
-    </p>
+    </div>
     
 
+    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
     <div class="sources-list">
       <strong>Sources:</strong>
       
-      <a href="https://www.ndtv.com/world-news/darker-fluffier-donald-trump-debuts-new-hairdo-during-philippines-asean-visit-internet-reacts-12338720" target="_blank" rel="noopener noreferrer">NDTV</a>, 
+      <span class="source-item-chip">
+        <a href="https://www.hindustantimes.com/india-news/indiaus-ties-at-historic-high-working-towards-fair-reciprocal-trade-relationship-us-envoy-101795074945889.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="India-US ties at historic high, working towards fair, reciprocal trade relationship: US envoy">India-US ties at historic high, working towards fair, reciprocal trade relationship: US envoy</a>
+        <span class="badge badge-outlet">Hindustan Times</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://www.channelnewsasia.com/style-beauty/dress-shoes-onitsuka-6512521" target="_blank" rel="noopener noreferrer">CNA – Asia</a>, 
+      <span class="source-item-chip">
+        <a href="https://www.indiatoday.in/india/story/india-is-a-side-player-rahul-gandhi-india-foreign-policy-pakistan-us-iran-negotiations-chicago-congress-3042597-2026-11-19?utm_source=rss" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Pak mediating US-Iran talks, India a side player: Rahul Gandhi at US event">Pak mediating US-Iran talks, India a side player: Rahul Gandhi at US event</a>
+        <span class="badge badge-outlet">India Today</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://www.scmp.com/news/world/article/3375020/comb-restores-hair-growth-kim-jong-un-daughters-luxury-ski-gear-scmps-7-highlights" target="_blank" rel="noopener noreferrer">SCMP – World</a>
+      <span class="source-item-chip">
+        <a href="https://www.news18.com/india/only-if-pakistan-stops-supporting-terrorism-rahul-gandhi-draws-red-line-on-dialogue-with-islamabad-ws-lrt-10433232.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="‘Only If Pakistan Stops Supporting Terrorism’: Rahul Gandhi Draws Red Line On Dialogue With Islamabad">‘Only If Pakistan Stops Supporting Terrorism’: Rahul Gandhi Draws Red Line On Dialogue With Islamabad</a>
+        <span class="badge badge-outlet">News18</span>
+        
+      </span>
       
     </div>
   </article>
@@ -382,116 +614,48 @@
       
       <span class="source-count">3 independent sources</span>
       <span class="sep">•</span>
-      <span class="score-pill">Score: 7.47</span>
+      <span class="score-pill">Score: 5.85</span>
       
       <span class="sep">•</span>
-      <span class="story-date">20 Nov 2026, 09:37 IST</span>
+      <time datetime="2026-11-20T01:31:24+00:00" class="story-date local-time">20 Nov 2026, 07:01 IST</time>
       
     </div>
 
-    <h2><a href="story_447.html" class="headline-link">Accused child sex predator Thomas Markle ruled competent to face trial</a></h2>
+    <h2><a href="story_302.html" class="headline-link">‘People not going to change mindset’: Bombay HC weighs complete firecracker ban</a></h2>
 
     
-    <p class="story-summary-omitted">
+    <div class="story-summary-omitted">
       
-      [Summary constrained to claim table — strict NLI entailment gate applied. <a href="story_447.html">View claims &rarr;</a>]
+      <div class="empty-state-notice entailment-notice">
+        <span class="notice-badge">&#9432; Constrained to Verified Facts</span>
+        <p>AI narrative synthesis suppressed to prevent hallucination because reporting lacks sufficient multi-source consensus. View individual source claims on the story page.</p>
+        <a href="story_302.html" class="view-claims-btn">View claims &rarr;</a>
+      </div>
       
-    </p>
+    </div>
     
 
+    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
     <div class="sources-list">
       <strong>Sources:</strong>
       
-      <a href="https://www.livemint.com/news/trends/meet-sarthak-sidhant-17-year-old-who-flagged-cbse-osm-irregularities-features-in-time100-next-india-2026-11795084934232.html" target="_blank" rel="noopener noreferrer">Mint</a>, 
+      <span class="source-item-chip">
+        <a href="https://economictimes.indiatimes.com/industry/cons-products/food/the-maggi-kids-are-all-grown-up-and-theyre-reaching-for-korean-ramen/articleshow/135952971.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="From Maggi to K-ramen, young India wants more fire">From Maggi to K-ramen, young India wants more fire</a>
+        <span class="badge badge-outlet">Economic Times</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://www.straitstimes.com/world/europe/accused-child-sex-predator-thomas-markle-ruled-competent-to-face-trial" target="_blank" rel="noopener noreferrer">The Straits Times – World</a>, 
+      <span class="source-item-chip">
+        <a href="https://www.livemint.com/news/india/coal-india-renew-incentives-for-rare-earth-magnet-manufacturing-11795089127289.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Coal India, ReNew, two others get initial nod for rare earth magnet sops">Coal India, ReNew, two others get initial nod for rare earth magnet sops</a>
+        <span class="badge badge-outlet">Mint</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://www.straitstimes.com/world/thomas-markle-meghans-father-is-competent-to-face-child-sex-abuse-images-case-expert-says" target="_blank" rel="noopener noreferrer">The Straits Times – World</a>, 
-      
-      <a href="https://www.channelnewsasia.com/world/accused-child-sex-predator-thomas-markle-competent-trial-6567646" target="_blank" rel="noopener noreferrer">CNA – Asia</a>
-      
-    </div>
-  </article>
-  
-  
-  
-
-  <article class="story-card level-corroborated">
-    <div class="meta-row">
-      <span class="badge badge-corroborated">Corroborated</span>
-      
-      <span class="source-count">5 independent sources</span>
-      <span class="sep">•</span>
-      <span class="score-pill">Score: 7.98</span>
-      
-      <span class="sep">•</span>
-      <span class="story-date">20 Nov 2026, 09:21 IST</span>
-      
-    </div>
-
-    <h2><a href="story_381.html" class="headline-link">Attack: JPM, Visa, Mastercard customer data leaks</a></h2>
-
-    
-    <p class="story-summary-omitted">
-      
-      [Summary constrained to claim table — strict NLI entailment gate applied. <a href="story_381.html">View claims &rarr;</a>]
-      
-    </p>
-    
-
-    <div class="sources-list">
-      <strong>Sources:</strong>
-      
-      <a href="https://www.ndtv.com/world-news/us-takes-custody-of-army-officer-accused-of-spying-for-russia-in-uk-12341180" target="_blank" rel="noopener noreferrer">NDTV</a>, 
-      
-      <a href="https://www.ndtv.com/world-news/alleged-russian-agent-arrested-for-surveillance-of-us-tech-company-12346462" target="_blank" rel="noopener noreferrer">NDTV</a>, 
-      
-      <a href="https://timesofindia.indiatimes.com/world/rest-of-world/beyond-nvidia-scandal-the-psychology-of-honey-traps-and-the-vulnerabilities-they-exploit/articleshow/135964707.cms" target="_blank" rel="noopener noreferrer">Times of India</a>, 
-      
-      <a href="https://www.deccanchronicle.com/world/jpmorgan-says-third-party-vendors-targeted-in-cyberattack-customer-data-potentially-accessed-2006117" target="_blank" rel="noopener noreferrer">Deccan Chronicle</a>, 
-      
-      <a href="https://www.livemint.com/news/us-news/cyberattack-russian-hackers-allegedly-steal-customer-data-from-jpmorgan-chase-visa-and-mastercard-social-media-reacts-11795145547056.html" target="_blank" rel="noopener noreferrer">Mint</a>, 
-      
-      <a href="https://economictimes.indiatimes.com/news/international/business/visa-mastercard-and-jpmorgan-customer-data-leaked-in-cyberattack-as-tech-woes-pile-up/articleshow/136010934.cms" target="_blank" rel="noopener noreferrer">Economic Times</a>
-      
-    </div>
-  </article>
-  
-  
-  
-
-  <article class="story-card level-corroborated">
-    <div class="meta-row">
-      <span class="badge badge-corroborated">Corroborated</span>
-      
-      <span class="source-count">5 independent sources</span>
-      <span class="sep">•</span>
-      <span class="score-pill">Score: 6.32</span>
-      
-      <span class="sep">•</span>
-      <span class="story-date">20 Nov 2026, 09:17 IST</span>
-      
-    </div>
-
-    <h2><a href="story_382.html" class="headline-link">Kashmir Free From &#34;India-Born Terrorists&#34; After 35 Years: Amit Shah After Lateef Bhat&#39;s Killing</a></h2>
-
-    
-    <p class="story-summary">INDIA
-Amit Shah said Kashmir is free from India-born terrorists after 35 years after Lashkar terrorist Lateef Bhat was killed in Kulgam. In a big moment for India&#39;s fight against terrorism, Union Home Minister Amit Shah on Thursday said Kashmir is now free from India-born terrorists after 35 years. Amit Shah states Kashmir is free from India-born terrorists after 35 years following security operations. Today, we can say with satisfaction that in this vast country, we are putting in place a system under which a uniform strategy to combat terrorism will operate right down to the level of every police station,&#34; he said. With the elimination of Lashkar terrorist Latif Bhat, the entire Kashmir region has become free from the presence of India-born terrorists -- a situation which has come about after 35 years.</p>
-    
-
-    <div class="sources-list">
-      <strong>Sources:</strong>
-      
-      <a href="https://www.hindustantimes.com/india-news/kashmir-has-no-india-born-terrorists-for-first-time-in-35-years-says-amit-shah-101795105753153.html" target="_blank" rel="noopener noreferrer">Hindustan Times</a>, 
-      
-      <a href="https://www.news18.com/india/kashmir-now-free-of-local-terrorists-after-lateef-bhats-killing-strike-entire-terror-network-amit-shah-ws-lt-10433199.html" target="_blank" rel="noopener noreferrer">News18</a>, 
-      
-      <a href="https://economictimes.indiatimes.com/news/defence/kashmir-now-free-of-locally-recruited-terrorists-says-amit-shah/articleshow/136003159.cms" target="_blank" rel="noopener noreferrer">Economic Times</a>, 
-      
-      <a href="https://www.ndtv.com/india-news/kashmir-free-from-india-born-terrorists-after-35-years-home-minister-amit-shah-12351448" target="_blank" rel="noopener noreferrer">NDTV</a>, 
-      
-      <a href="https://www.dnaindia.com/india/report-amit-shah-s-big-statement-after-lateef-bhat-killed-in-kulgam-says-kashmir-free-from-india-born-terrorists-3224370" target="_blank" rel="noopener noreferrer">DNA India</a>
+      <span class="source-item-chip">
+        <a href="https://indianexpress.com/article/cities/mumbai/bombay-hc-drastic-order-firecracker-ban-mumbai-air-quality-diwali-10970679/" target="_blank" rel="noopener noreferrer" class="source-title-link" title="‘People not going to change mindset’: Bombay HC weighs complete firecracker ban">‘People not going to change mindset’: Bombay HC weighs complete firecracker ban</a>
+        <span class="badge badge-outlet">Indian Express</span>
+        
+      </span>
       
     </div>
   </article>
@@ -504,15 +668,15 @@ Amit Shah said Kashmir is free from India-born terrorists after 35 years after L
        data-current-page="6"
        data-total-pages="10"
        data-total-stories="100">
-    <div class="scroll-status-box" id="scroll-status">
+    <!-- Hidden by default; unhidden by JavaScript when active (T4) -->
+    <div class="scroll-status-box" id="scroll-status" style="display: none;">
       <span class="spinner"></span>
       <span class="scroll-status-text">Loading more stories...</span>
     </div>
-    <noscript>
-      <div class="noscript-pagination">
-        <a href="page_7.html" class="page-btn">Next page &raquo;</a>
-      </div>
-    </noscript>
+    <!-- Visible next-page link for users without JS or if JS fails (T4) -->
+    <div class="pagination-fallback" id="pagination-fallback">
+      <a href="page_7.html" class="page-btn">Next page &raquo;</a>
+    </div>
   </div>
   
 </section>
@@ -524,14 +688,42 @@ Amit Shah said Kashmir is free from India-born terrorists after 35 years after L
   <footer>
     <div class="container">
       <p>Automated news corroboration — what sources agree and differ on.</p>
+      <div class="footer-nav" style="margin: 12px 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; font-size: 0.85rem;">
+        <a href="about.html">About</a>
+        <a href="methodology.html">Methodology</a>
+        <a href="corrections.html">Corrections</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="takedown.html">Copyright &amp; Takedown</a>
+        <a href="sources_policy.html">How We Use Sources</a>
+      </div>
       <div class="footer-divider"></div>
-      <p>Published transparently with no manual intervention. Never claims absolute truth &mdash; reports corroboration metrics only.</p>
+      <p style="font-size: 0.78rem; color: #94a3b8; max-width: 760px; margin: 8px auto 0;">
+        <strong>Trademark &amp; Non-Affiliation Disclaimer:</strong> All publication names, outlet titles, and publisher trademarks referenced herein are the property of their respective owners. TrippyNews is an independent news corroboration project with no commercial affiliation, sponsorship, or endorsement from any cited news organization. No publisher logos are displayed.
+      </p>
+      <p style="margin-top: 6px; font-size: 0.78rem; color: #64748b;">Contact: <a href="mailto:contact@trippynews.org">contact@trippynews.org</a> &bull; Response within 48h for takedowns.</p>
     </div>
   </footer>
 
-  <!-- GoatCounter — free, privacy-friendly visitor analytics (no cookies) -->
-  <!-- Sign up at https://www.goatcounter.com to get your site code, -->
-  <!-- then replace YOURCODE below with your chosen subdomain.       -->
+  <!-- Local time formatting for readers -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('time.local-time[datetime]').forEach(function(el) {
+        var dt = el.getAttribute('datetime');
+        if (!dt) return;
+        try {
+          var d = new Date(dt);
+          if (!isNaN(d.getTime())) {
+            var dateStr = d.toLocaleDateString(undefined, { day: 'numeric', month: 'short', year: 'numeric' });
+            var timeStr = d.toLocaleTimeString(undefined, { hour: '2-digit', minute: '2-digit' });
+            el.textContent = dateStr + ', ' + timeStr;
+          }
+        } catch(e) {}
+      });
+    });
+  </script>
+
+  <!-- GoatCounter — privacy-friendly visitor analytics (no cookies) -->
   <script data-goatcounter="https://trippynews.goatcounter.com/count"
           async src="//gc.zgo.at/count.js"></script>
 </body>

@@ -3,20 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Methodology & Integrity Standards — NewsCheck</title>
+  <title>Methodology &amp; Integrity Standards — TrippyNews</title>
 
   <!-- SEO -->
   <meta name="description" content="Automated news corroboration — what sources agree and differ on.">
   <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://rishi2104.github.io/TrippyNews/">
 
   <!-- Open Graph / Social -->
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="NewsCheck">
-  <meta property="og:title" content="NewsCheck">
+  <meta property="og:site_name" content="TrippyNews">
+  <meta property="og:title" content="TrippyNews">
   <meta property="og:description" content="Automated news corroboration — what sources agree and differ on.">
+  <meta property="og:url" content="https://rishi2104.github.io/TrippyNews/">
+  <meta property="og:image" content="https://rishi2104.github.io/TrippyNews/favicon.svg">
 
-  <!-- Favicon (simple emoji favicon via SVG data URI) -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⬡</text></svg>">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="TrippyNews">
+  <meta name="twitter:description" content="Automated news corroboration — what sources agree and differ on.">
+
+  <!-- Favicon (percent-encoded SVG data URI) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Ctext%20y='.9em'%20font-size='90'%3E%E2%AC%A1%3C/text%3E%3C/svg%3E">
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -25,14 +33,16 @@
     <div class="container">
       <div class="header-inner">
         <div class="site-brand">
-          <h1 class="site-title">
-            <a href="index.html">NewsCheck</a>
-          </h1>
-          <span class="site-tagline">Independent Corroboration Pipeline</span>
+          
+          <div class="site-title">
+            <a href="index.html">TrippyNews</a>
+          </div>
+          
+          <span class="site-tagline">Automated News Corroboration Pipeline</span>
         </div>
         <div class="header-live">
           <span class="live-dot"></span>
-          Auto-updated every 1 hour
+          Last updated: <time datetime="2026-11-20T10:03:53.313679+00:00" class="local-time">20 Nov 2026, 15:33 IST</time>
         </div>
       </div>
       <nav>
@@ -40,6 +50,7 @@
           <li><a href="index.html">Top Stories</a></li>
           <li><a href="methodology.html">Methodology</a></li>
           <li><a href="corrections.html">Corrections &amp; Changelog</a></li>
+          <li><a href="about.html">About</a></li>
         </ul>
       </nav>
     </div>
@@ -47,41 +58,61 @@
 
   <main class="container">
     <div class="disclosure-banner">
-      <span><strong>Automated report.</strong> May contain errors. Corroboration levels are computed mathematically from source diversity and agreement — not by human editors.</span>
-      <a href="mailto:corrections@newscheck.example.com?subject=TrippyNews%20Error%20Report">Report an error &rarr;</a>
+      <span><strong>Automated report.</strong> Corroboration levels are computed mathematically from source diversity and agreement &mdash; not by human editors. Never claims absolute truth.</span>
+      <a href="mailto:contact@trippynews.org?subject=TrippyNews%20Inquiry%20or%20Error%20Report">Report an error &rarr;</a>
     </div>
 
     
-<div class="story-card">
-  <h2>Methodology & Transparency Policy</h2>
-  <p><strong>NewsCheck</strong> is a fully automated news corroboration pipeline. It operates without human curation, editor bias, or manual publishing approvals.</p>
+<div class="story-card prose">
+  <h2>Methodology &amp; Transparency Policy</h2>
+  <p><strong>TrippyNews</strong> is a fully automated, algorithmic news corroboration pipeline. It operates without manual editorial curation, political slant, or subjective ranking. Every metric and label displayed on this website is computed mathematically from source diversity, independent reporting tiers, and semantic consensus.</p>
 
-  <h3>1. Independence & Wire Deduplication</h3>
-  <p>Wire services (PTI, ANI, Reuters, AP, AFP) are syndicated across hundreds of outlets. <strong>Ten outlets republishing the exact same wire story count as ONE confirmation, not ten.</strong> Our pipeline detects syndication credits and text shingles to collapse syndicated reprints into single canonical events.</p>
+  <h3>1. Independence &amp; Wire Deduplication</h3>
+  <p>Wire agencies (such as Press Trust of India, ANI, Reuters, Associated Press, AFP) syndicate their reporting across hundreds of partner newspapers and broadcasters. <strong>Ten outlets syndicating the exact same wire story count as ONE confirmation, not ten.</strong></p>
+  <p>Our pipeline analyzes syndication credits, wire markers, and n-gram shingles across articles. All syndicated copies are clustered and mapped to their primary wire origin. A story is only considered corroborated when multiple <em>independent newsrooms</em> independently verify the reporting.</p>
 
-  <h3>2. Corroboration Scoring Formula</h3>
-  <p>The corroboration score is computed mathematically:</p>
+  <h3>2. Scoring Formula &amp; Mathematical Metrics</h3>
+  <p>Every story cluster is scored using a calibrated mathematical formula defined by our pipeline constants:</p>
   <ul>
-    <li><strong>Tier 1 Sources (Wire services, government press bureaus):</strong> 3.0 points</li>
-    <li><strong>Tier 2 Sources (Major reputable national publications):</strong> 2.0 points</li>
-    <li><strong>Tier 3 Sources (Other whitelisted publications):</strong> 1.0 point</li>
-    <li><strong>Primary / Official Source Bonus:</strong> +2.0 points if verified primary source reported the event</li>
-    <li><strong>Conflict Penalty:</strong> Score is reduced when contradictory figures or assertions are detected</li>
+    <li><strong>Tier 1 Sources (Wire Services &amp; Official Bureaus):</strong> 3.0 points per independent outlet.</li>
+    <li><strong>Tier 2 Sources (Major National &amp; International Newsrooms):</strong> 2.0 points per independent outlet.</li>
+    <li><strong>Tier 3 Sources (Specialized &amp; Regional Outlets):</strong> 1.0 point per independent outlet.</li>
+    <li><strong>Primary / Official Source Bonus:</strong> +2.0 points if verified by a Tier 1 wire or official press bureau.</li>
+    <li><strong>Conflict Penalty:</strong> -0.3 points for each unresolved factual contradiction detected between reporting outlets.</li>
+    <li><strong>Recency Factor:</strong> A continuous decay function applies over time (with a half-decay window of 6.0 hours), ensuring recent developing reporting is prioritized.</li>
+  </ul>
+  <p>The final corroboration score is computed as:</p>
+  <pre style="background: var(--bg-color); padding: 12px; border-radius: var(--radius-sm); font-size: 0.85rem; overflow-x: auto;"><code>Score = max(0.0, (Base Tier Points + Primary Bonus - Dispute Penalty) × Recency Factor)</code></pre>
+  <p>This continuous recency scaling explains fractional corroboration scores (such as 3.98, 5.98, 7.03, 7.88, 10.92) as stories mature over hours while maintaining their underlying source strength.</p>
+
+  <h3>3. Corroboration Labels &amp; Strict Thresholds</h3>
+  <ul>
+    <li><strong style="color: #15803d;">Strongly Corroborated:</strong> Requires at least <strong>4+ independent sources</strong>, a corroboration score of &ge; 8.0, inclusion of at least one Tier 1 wire or official source, and zero major contradictions.</li>
+    <li><strong style="color: #0369a1;">Corroborated:</strong> Requires at least <strong>3+ independent sources</strong>, a score of &ge; 4.5, and consistent factual reporting across outlets.</li>
+    <li><strong style="color: #a16207;">Limited Corroboration:</strong> Stories with 1–2 sources or with significant unresolved factual disputes between reporting outlets.</li>
+    <li><strong style="color: #475569;">Unconfirmed:</strong> Fewer than 3 independent sources. AI narrative synthesis is strictly suppressed.</li>
   </ul>
 
-  <h3>3. Labels</h3>
+  <h3>4. AI Narrative Gate &amp; Hallucination Prevention</h3>
+  <p>To eliminate AI hallucinations, TrippyNews does not allow an LLM to freely invent narrative text. A natural language summary is synthesized ONLY when all of the following conditions are met:</p>
+  <ol>
+    <li>The story is corroborated by at least <strong>3 independent sources</strong>.</li>
+    <li>At least <strong>2 distinct factual claims</strong> are corroborated across multiple independent outlets.</li>
+    <li>The synthesized summary strictly entails the headline and key named entities. If entailment fails, the summary is suppressed.</li>
+    <li>The topic is not flagged as sensitive under our Defamation &amp; Legal Safeguard policy.</li>
+  </ol>
+  <p>If any condition is not met, the narrative summary is omitted, and the story page displays the structured claim comparison table directly.</p>
+
+  <h3>5. Defamation &amp; Legal Safeguards</h3>
+  <p>For reporting that involves court proceedings, ongoing trials, allegations against named private individuals, or crimes, our pipeline activates a strict <strong>Claims-Only Defamation Guard</strong>. In this mode:</p>
   <ul>
-    <li><strong style="color: #15803d;">Strongly Corroborated:</strong> 4+ independent sources including Tier 1, no significant contradictions.</li>
-    <li><strong style="color: #0369a1;">Corroborated:</strong> 3+ independent sources in consensus.</li>
-    <li><strong style="color: #a16207;">Limited Corroboration:</strong> Few sources or unresolved conflicts between reporting outlets.</li>
-    <li><strong style="color: #475569;">Unconfirmed:</strong> Fewer than 3 independent sources. No generated narrative is published.</li>
+    <li>Narrative generation is entirely disabled.</li>
+    <li>Every factual assertion is explicitly attributed with <code>Per &lt;outlet&gt;:</code> prefixes.</li>
+    <li>Conflicting claims or differing statements from legal parties are displayed side-by-side with both outlets named.</li>
   </ul>
 
-  <h3>4. Sensitive Topic Policy</h3>
-  <p>When reporting on crimes naming private individuals, health or medical claims, suicide, minors, communal violence, or active armed conflicts, <strong>NewsCheck suppresses all generated narrative</strong>. Only a verbatim claim comparison table and direct source links are displayed.</p>
-
-  <h3>5. Source Whitelist</h3>
-  <p>All feeds are vetted and whitelisted in <code>sources.yaml</code>. Unvetted third-party domains are discarded during ingestion.</p>
+  <h3>6. Vetted Ingestion &amp; Domain Whitelisting</h3>
+  <p>All feeds are whitelisted in <code>sources.yaml</code>. During feed fetching, article URLs are strictly checked against per-source <code>allowed_domains</code>. Unvetted third-party domains, redirect loops, and tracking parameters (such as <code>utm_*</code> and <code>traffic_source</code>) are stripped or discarded.</p>
 </div>
 
   </main>
@@ -89,14 +120,42 @@
   <footer>
     <div class="container">
       <p>Automated news corroboration — what sources agree and differ on.</p>
+      <div class="footer-nav" style="margin: 12px 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; font-size: 0.85rem;">
+        <a href="about.html">About</a>
+        <a href="methodology.html">Methodology</a>
+        <a href="corrections.html">Corrections</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="takedown.html">Copyright &amp; Takedown</a>
+        <a href="sources_policy.html">How We Use Sources</a>
+      </div>
       <div class="footer-divider"></div>
-      <p>Published transparently with no manual intervention. Never claims absolute truth &mdash; reports corroboration metrics only.</p>
+      <p style="font-size: 0.78rem; color: #94a3b8; max-width: 760px; margin: 8px auto 0;">
+        <strong>Trademark &amp; Non-Affiliation Disclaimer:</strong> All publication names, outlet titles, and publisher trademarks referenced herein are the property of their respective owners. TrippyNews is an independent news corroboration project with no commercial affiliation, sponsorship, or endorsement from any cited news organization. No publisher logos are displayed.
+      </p>
+      <p style="margin-top: 6px; font-size: 0.78rem; color: #64748b;">Contact: <a href="mailto:contact@trippynews.org">contact@trippynews.org</a> &bull; Response within 48h for takedowns.</p>
     </div>
   </footer>
 
-  <!-- GoatCounter — free, privacy-friendly visitor analytics (no cookies) -->
-  <!-- Sign up at https://www.goatcounter.com to get your site code, -->
-  <!-- then replace YOURCODE below with your chosen subdomain.       -->
+  <!-- Local time formatting for readers -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('time.local-time[datetime]').forEach(function(el) {
+        var dt = el.getAttribute('datetime');
+        if (!dt) return;
+        try {
+          var d = new Date(dt);
+          if (!isNaN(d.getTime())) {
+            var dateStr = d.toLocaleDateString(undefined, { day: 'numeric', month: 'short', year: 'numeric' });
+            var timeStr = d.toLocaleTimeString(undefined, { hour: '2-digit', minute: '2-digit' });
+            el.textContent = dateStr + ', ' + timeStr;
+          }
+        } catch(e) {}
+      });
+    });
+  </script>
+
+  <!-- GoatCounter — privacy-friendly visitor analytics (no cookies) -->
   <script data-goatcounter="https://trippynews.goatcounter.com/count"
           async src="//gc.zgo.at/count.js"></script>
 </body>

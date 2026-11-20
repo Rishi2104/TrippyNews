@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How We Use Sources &amp; Trademark Policy — TrippyNews</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Automated news corroboration — what sources agree and differ on.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://rishi2104.github.io/TrippyNews/">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="TrippyNews">
+  <meta property="og:title" content="TrippyNews">
+  <meta property="og:description" content="Automated news corroboration — what sources agree and differ on.">
+  <meta property="og:url" content="https://rishi2104.github.io/TrippyNews/">
+  <meta property="og:image" content="https://rishi2104.github.io/TrippyNews/favicon.svg">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="TrippyNews">
+  <meta name="twitter:description" content="Automated news corroboration — what sources agree and differ on.">
+
+  <!-- Favicon (percent-encoded SVG data URI) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Ctext%20y='.9em'%20font-size='90'%3E%E2%AC%A1%3C/text%3E%3C/svg%3E">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-inner">
+        <div class="site-brand">
+          
+          <div class="site-title">
+            <a href="index.html">TrippyNews</a>
+          </div>
+          
+          <span class="site-tagline">Automated News Corroboration Pipeline</span>
+        </div>
+        <div class="header-live">
+          <span class="live-dot"></span>
+          Last updated: <time datetime="2026-11-20T10:03:53.313679+00:00" class="local-time">20 Nov 2026, 15:33 IST</time>
+        </div>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Top Stories</a></li>
+          <li><a href="methodology.html">Methodology</a></li>
+          <li><a href="corrections.html">Corrections &amp; Changelog</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="disclosure-banner">
+      <span><strong>Automated report.</strong> Corroboration levels are computed mathematically from source diversity and agreement &mdash; not by human editors. Never claims absolute truth.</span>
+      <a href="mailto:contact@trippynews.org?subject=TrippyNews%20Inquiry%20or%20Error%20Report">Report an error &rarr;</a>
+    </div>
+
+    
+<div class="story-card prose">
+  <h2>How We Use Sources &amp; Trademark Disclaimer</h2>
+  <p class="text-muted">Last updated: 20 November 2026</p>
+
+  <h3>1. Trademark Disclaimer &amp; Non-Affiliation</h3>
+  <div style="background: #f8fafc; border: 1px solid var(--border); border-left: 4px solid var(--primary-dark); padding: 14px 18px; border-radius: var(--radius-sm); margin: 20px 0;">
+    <p style="margin: 0;"><strong>Trademark Notice:</strong> All publication names, outlet titles, media logos, and trademarks referenced on TrippyNews are the intellectual property of their respective copyright and trademark holders. Reference to any news organization, agency, or publisher is made solely for nominative fair use and factual attribution purposes.</p>
+    <p style="margin: 8px 0 0 0;"><strong>No Affiliation:</strong> TrippyNews is an independent research and news corroboration software system. It is not affiliated with, endorsed by, sponsored by, or operated in partnership with any of the news outlets, wire services, or publications listed on this website. To prevent trademark confusion, TrippyNews does not display third-party logos.</p>
+  </div>
+
+  <h3>2. Fair Use &amp; Own-Words Synthesis</h3>
+  <p>TrippyNews is designed from the ground up to respect publisher copyrights and intellectual property:</p>
+  <ul>
+    <li><strong>No Full-Text Republishing:</strong> We do not copy, scrape, or republish full articles or RSS snippets. All story summaries are generated strictly in our own neutral words based on structured claim tables.</li>
+    <li><strong>Verbatim Overlap Guard:</strong> Our automated build pipeline enforces a strict compliance gate: any rendered text that shares a sequence of 8 or more consecutive words with an ingested article is automatically rejected from the public build.</li>
+    <li><strong>Capped Evidentiary Quotes:</strong> In limited cases where an exact quote is required for factual verification, it is capped at a maximum of <strong>25 words</strong>, marked with an ellipsis if truncated, and presented with a prominent citation badge and a direct hyperlink to the original article on the publisher's domain.</li>
+    <li><strong>Direct Outbound Traffic:</strong> Every story card features prominent, direct outbound links to the contributing newsrooms so that readers can explore the full reporting directly at the source.</li>
+  </ul>
+
+  <h3>3. Source Vetting &amp; Operational Modes</h3>
+  <p>All feeds are cataloged in <code>sources.yaml</code> and regularly reviewed. Every source is assigned a distinct operational license status and mode:</p>
+  <ul>
+    <li><strong>Permitted:</strong> Standard RSS feeds ingested for claim extraction and multi-source corroboration.</li>
+    <li><strong>Headline Only:</strong> Sources where ingestion is limited to neutral headline indexing and outbound linking, without narrative synthesis.</li>
+    <li><strong>Prohibited:</strong> Outlets that have requested exclusion or whose terms prohibit automated ingestion. No content is ever ingested from prohibited sources.</li>
+  </ul>
+
+  <h3>4. Allowed Domains &amp; Security Verification</h3>
+  <p>To prevent spoofed or hijacked feeds from injecting unverified URLs, our ingestion engine validates every inbound article link against a strict list of <code>allowed_domains</code> configured per source. Unvetted third-party domains and tracking redirects are rejected during ingestion.</p>
+
+  <h3>5. Contact the Pipeline Operator</h3>
+  <p>If you are a news publisher and wish to update your source listing, modify operational modes, or request exclusion, please email <a href="mailto:contact@trippynews.org">contact@trippynews.org</a>.</p>
+</div>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Automated news corroboration — what sources agree and differ on.</p>
+      <div class="footer-nav" style="margin: 12px 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; font-size: 0.85rem;">
+        <a href="about.html">About</a>
+        <a href="methodology.html">Methodology</a>
+        <a href="corrections.html">Corrections</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="takedown.html">Copyright &amp; Takedown</a>
+        <a href="sources_policy.html">How We Use Sources</a>
+      </div>
+      <div class="footer-divider"></div>
+      <p style="font-size: 0.78rem; color: #94a3b8; max-width: 760px; margin: 8px auto 0;">
+        <strong>Trademark &amp; Non-Affiliation Disclaimer:</strong> All publication names, outlet titles, and publisher trademarks referenced herein are the property of their respective owners. TrippyNews is an independent news corroboration project with no commercial affiliation, sponsorship, or endorsement from any cited news organization. No publisher logos are displayed.
+      </p>
+      <p style="margin-top: 6px; font-size: 0.78rem; color: #64748b;">Contact: <a href="mailto:contact@trippynews.org">contact@trippynews.org</a> &bull; Response within 48h for takedowns.</p>
+    </div>
+  </footer>
+
+  <!-- Local time formatting for readers -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('time.local-time[datetime]').forEach(function(el) {
+        var dt = el.getAttribute('datetime');
+        if (!dt) return;
+        try {
+          var d = new Date(dt);
+          if (!isNaN(d.getTime())) {
+            var dateStr = d.toLocaleDateString(undefined, { day: 'numeric', month: 'short', year: 'numeric' });
+            var timeStr = d.toLocaleTimeString(undefined, { hour: '2-digit', minute: '2-digit' });
+            el.textContent = dateStr + ', ' + timeStr;
+          }
+        } catch(e) {}
+      });
+    });
+  </script>
+
+  <!-- GoatCounter — privacy-friendly visitor analytics (no cookies) -->
+  <script data-goatcounter="https://trippynews.goatcounter.com/count"
+          async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

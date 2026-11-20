@@ -62,6 +62,21 @@ class DedupMethod(StrEnum):
     BOTH = "both"
 
 
+class LicenseStatus(StrEnum):
+    """Source licensing and rights status."""
+
+    PERMITTED = "permitted"
+    UNKNOWN = "unknown"
+    PROHIBITED = "prohibited"
+
+
+class SourceMode(StrEnum):
+    """Content usage mode allowed for this source."""
+
+    CLAIMS = "claims"
+    HEADLINE_ONLY = "headline_only"
+
+
 # ── Data models ────────────────────────────────────────────────────────────────
 
 
@@ -76,6 +91,11 @@ class Source:
     country: str
     tier: ReliabilityTier
     enabled: bool = True
+    terms_url: str = ""
+    license_status: LicenseStatus = LicenseStatus.PERMITTED
+    last_reviewed: str = "2026-11-20"
+    mode: SourceMode = SourceMode.CLAIMS
+    allowed_domains: list[str] = field(default_factory=list)
     id: int | None = None
 
 

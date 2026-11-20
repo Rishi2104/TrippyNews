@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}How We Use Sources &amp; Trademark Policy — {{ site_title }}{% endblock %}
+
+{% block content %}
+<div class="story-card prose">
+  <h2>How We Use Sources &amp; Trademark Disclaimer</h2>
+  <p class="text-muted">Last updated: {{ (generated_at|to_ist).strftime('%d %B %Y') if generated_at else 'November 2026' }}</p>
+
+  <h3>1. Trademark Disclaimer &amp; Non-Affiliation</h3>
+  <div style="background: #f8fafc; border: 1px solid var(--border); border-left: 4px solid var(--primary-dark); padding: 14px 18px; border-radius: var(--radius-sm); margin: 20px 0;">
+    <p style="margin: 0;"><strong>Trademark Notice:</strong> All publication names, outlet titles, media logos, and trademarks referenced on {{ site_title }} are the intellectual property of their respective copyright and trademark holders. Reference to any news organization, agency, or publisher is made solely for nominative fair use and factual attribution purposes.</p>
+    <p style="margin: 8px 0 0 0;"><strong>No Affiliation:</strong> {{ site_title }} is an independent research and news corroboration software system. It is not affiliated with, endorsed by, sponsored by, or operated in partnership with any of the news outlets, wire services, or publications listed on this website. To prevent trademark confusion, {{ site_title }} does not display third-party logos.</p>
+  </div>
+
+  <h3>2. Fair Use &amp; Own-Words Synthesis</h3>
+  <p>{{ site_title }} is designed from the ground up to respect publisher copyrights and intellectual property:</p>
+  <ul>
+    <li><strong>No Full-Text Republishing:</strong> We do not copy, scrape, or republish full articles or RSS snippets. All story summaries are generated strictly in our own neutral words based on structured claim tables.</li>
+    <li><strong>Verbatim Overlap Guard:</strong> Our automated build pipeline enforces a strict compliance gate: any rendered text that shares a sequence of 8 or more consecutive words with an ingested article is automatically rejected from the public build.</li>
+    <li><strong>Capped Evidentiary Quotes:</strong> In limited cases where an exact quote is required for factual verification, it is capped at a maximum of <strong>25 words</strong>, marked with an ellipsis if truncated, and presented with a prominent citation badge and a direct hyperlink to the original article on the publisher's domain.</li>
+    <li><strong>Direct Outbound Traffic:</strong> Every story card features prominent, direct outbound links to the contributing newsrooms so that readers can explore the full reporting directly at the source.</li>
+  </ul>
+
+  <h3>3. Source Vetting &amp; Operational Modes</h3>
+  <p>All feeds are cataloged in <code>sources.yaml</code> and regularly reviewed. Every source is assigned a distinct operational license status and mode:</p>
+  <ul>
+    <li><strong>Permitted:</strong> Standard RSS feeds ingested for claim extraction and multi-source corroboration.</li>
+    <li><strong>Headline Only:</strong> Sources where ingestion is limited to neutral headline indexing and outbound linking, without narrative synthesis.</li>
+    <li><strong>Prohibited:</strong> Outlets that have requested exclusion or whose terms prohibit automated ingestion. No content is ever ingested from prohibited sources.</li>
+  </ul>
+
+  <h3>4. Allowed Domains &amp; Security Verification</h3>
+  <p>To prevent spoofed or hijacked feeds from injecting unverified URLs, our ingestion engine validates every inbound article link against a strict list of <code>allowed_domains</code> configured per source. Unvetted third-party domains and tracking redirects are rejected during ingestion.</p>
+
+  <h3>5. Contact the Pipeline Operator</h3>
+  <p>If you are a news publisher and wish to update your source listing, modify operational modes, or request exclusion, please email <a href="mailto:{{ contact_email }}">{{ contact_email }}</a>.</p>
+</div>
+{% endblock %}

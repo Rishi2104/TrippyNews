@@ -14,11 +14,11 @@ from urllib.parse import urlparse
 
 import trafilatura
 
-from newscheck.config import ExtractConfig, Settings
+from newscheck.config import ExtractConfig, Settings, load_blocklist
 from newscheck.ingest.feeds import FeedItem
 from newscheck.ingest.respect import RateLimiter, RobotsChecker
 from newscheck.log import get_logger
-from newscheck.models import Article, ExtractionStatus
+from newscheck.models import Article, ExtractionStatus, SourceMode
 
 logger = get_logger(__name__)
 
@@ -51,13 +51,54 @@ class ArticleExtractor:
 
         self._robots = RobotsChecker(self._user_agent, timeout=self._timeout)
         self._limiter = RateLimiter(min_delay=settings.ingest.rate_limit_per_domain_seconds)
+        blocklist_path = settings.ingest.blocklist_file
+        import pathlib
+
+        p = pathlib.Path(blocklist_path)
+        self._blocklist = load_blocklist(p if p.is_file() else pathlib.Path.cwd() / blocklist_path)
 
     def extract(self, item: FeedItem, *, source_id: int, run_id: int) -> Article:
         """Fetch and extract full text for a feed item, returning an Article.
 
-        On failure, returns an Article with ``extraction_status == LIMITED``
+        On failure or headline_only mode, returns an Article with ``extraction_status == LIMITED``
         containing only the headline, snippet, and URL from the feed.
         """
+        # L8: If source is headline_only mode, do not fetch full text
+        if getattr(item.source, "mode", SourceMode.CLAIMS) == SourceMode.HEADLINE_ONLY:
+            return Article(
+                source_id=source_id,
+                url=item.url,
+                title=item.title,
+                snippet="",
+                full_text=None,
+                author=item.author,
+                published_at=item.published_at,
+                fetched_at=datetime.now(UTC),
+                content_hash=self._compute_hash(f"{item.title}|{item.url}"),
+                extraction_status=ExtractionStatus.LIMITED,
+                wire_origin=None,
+                run_id=run_id,
+            )
+
+        # L9: Check blocklist
+        parsed = urlparse(item.url)
+        if parsed.netloc.lower() in self._blocklist["domains"] or item.url in self._blocklist["urls"]:
+            logger.info("article_skipped_blocklisted", url=item.url)
+            return Article(
+                source_id=source_id,
+                url=item.url,
+                title=item.title,
+                snippet="",
+                full_text=None,
+                author=item.author,
+                published_at=item.published_at,
+                fetched_at=datetime.now(UTC),
+                content_hash=self._compute_hash(f"{item.title}|{item.url}"),
+                extraction_status=ExtractionStatus.FAILED,
+                wire_origin=None,
+                run_id=run_id,
+            )
+
         result = self._try_extract(item.url)
 
         # Prefer extracted title, fall back to feed title.

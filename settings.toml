@@ -11,12 +11,13 @@ developing_threshold_hours = 2
 
 [ingest]
 request_timeout_seconds = 10
-max_retries = 1
+max_retries = 2
 retry_backoff_seconds = 2.0
-user_agent = "NewsCheck/0.1 (automated news aggregator; +https://github.com/newscheck/newscheck)"
+user_agent = "NewsCheckBot/1.0 (+https://rishi2104.github.io/TrippyNews/about.html; contact@trippynews.org)"
 max_articles_per_feed = 25
 rate_limit_per_domain_seconds = 1.0
 feeds_file = "sources.yaml"
+blocklist_file = "blocklist.yaml"
 
 [extract]
 max_content_length = 50000
@@ -55,9 +56,10 @@ min_entailment_score = 0.7
 
 [build]
 output_dir = "public"
-site_title = "NewsCheck"
+site_title = "TrippyNews"
 site_description = "Automated news corroboration — what sources agree and differ on."
-site_url = "https://newscheck.github.io/newscheck"
+site_url = "https://rishi2104.github.io/TrippyNews"
+contact_email = "contact@trippynews.org"
 
 [alerting]
 enabled = false

@@ -8,15 +8,23 @@
   <!-- SEO -->
   <meta name="description" content="{% block meta_description %}{{ site_description }}{% endblock %}">
   <meta name="robots" content="index, follow">
+  <link rel="canonical" href="{% block canonical %}{{ site_url }}/{% endblock %}">
 
   <!-- Open Graph / Social -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="{{ site_title }}">
   <meta property="og:title" content="{% block og_title %}{{ site_title }}{% endblock %}">
   <meta property="og:description" content="{% block og_description %}{{ site_description }}{% endblock %}">
+  <meta property="og:url" content="{% block og_url %}{{ site_url }}/{% endblock %}">
+  <meta property="og:image" content="{{ site_url }}/favicon.svg">
 
-  <!-- Favicon (simple emoji favicon via SVG data URI) -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⬡</text></svg>">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{% block twitter_title %}{{ site_title }}{% endblock %}">
+  <meta name="twitter:description" content="{% block twitter_description %}{{ site_description }}{% endblock %}">
+
+  <!-- Favicon (percent-encoded SVG data URI) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Ctext%20y='.9em'%20font-size='90'%3E%E2%AC%A1%3C/text%3E%3C/svg%3E">
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -25,14 +33,20 @@
     <div class="container">
       <div class="header-inner">
         <div class="site-brand">
+          {% if is_homepage %}
           <h1 class="site-title">
             <a href="index.html">{{ site_title }}</a>
           </h1>
-          <span class="site-tagline">Independent Corroboration Pipeline</span>
+          {% else %}
+          <div class="site-title">
+            <a href="index.html">{{ site_title }}</a>
+          </div>
+          {% endif %}
+          <span class="site-tagline">Automated News Corroboration Pipeline</span>
         </div>
         <div class="header-live">
           <span class="live-dot"></span>
-          Auto-updated every 1 hour
+          Last updated: {% if generated_at %}<time datetime="{{ generated_at.isoformat() }}" class="local-time">{{ (generated_at|to_ist).strftime('%d %b %Y, %H:%M IST') }}</time>{% else %}Recently{% endif %}
         </div>
       </div>
       <nav>
@@ -40,6 +54,7 @@
           <li><a href="index.html">Top Stories</a></li>
           <li><a href="methodology.html">Methodology</a></li>
           <li><a href="corrections.html">Corrections &amp; Changelog</a></li>
+          <li><a href="about.html">About</a></li>
         </ul>
       </nav>
     </div>
@@ -47,8 +62,8 @@
 
   <main class="container">
     <div class="disclosure-banner">
-      <span><strong>Automated report.</strong> May contain errors. Corroboration levels are computed mathematically from source diversity and agreement — not by human editors.</span>
-      <a href="mailto:corrections@newscheck.example.com?subject=TrippyNews%20Error%20Report">Report an error &rarr;</a>
+      <span><strong>Automated report.</strong> Corroboration levels are computed mathematically from source diversity and agreement &mdash; not by human editors. Never claims absolute truth.</span>
+      <a href="mailto:{{ contact_email }}?subject=TrippyNews%20Inquiry%20or%20Error%20Report">Report an error &rarr;</a>
     </div>
 
     {% block content %}{% endblock %}
@@ -57,14 +72,42 @@
   <footer>
     <div class="container">
       <p>{{ site_description }}</p>
+      <div class="footer-nav" style="margin: 12px 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; font-size: 0.85rem;">
+        <a href="about.html">About</a>
+        <a href="methodology.html">Methodology</a>
+        <a href="corrections.html">Corrections</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="takedown.html">Copyright &amp; Takedown</a>
+        <a href="sources_policy.html">How We Use Sources</a>
+      </div>
       <div class="footer-divider"></div>
-      <p>Published transparently with no manual intervention. Never claims absolute truth &mdash; reports corroboration metrics only.</p>
+      <p style="font-size: 0.78rem; color: #94a3b8; max-width: 760px; margin: 8px auto 0;">
+        <strong>Trademark &amp; Non-Affiliation Disclaimer:</strong> All publication names, outlet titles, and publisher trademarks referenced herein are the property of their respective owners. TrippyNews is an independent news corroboration project with no commercial affiliation, sponsorship, or endorsement from any cited news organization. No publisher logos are displayed.
+      </p>
+      <p style="margin-top: 6px; font-size: 0.78rem; color: #64748b;">Contact: <a href="mailto:{{ contact_email }}">{{ contact_email }}</a> &bull; Response within 48h for takedowns.</p>
     </div>
   </footer>
 
-  <!-- GoatCounter — free, privacy-friendly visitor analytics (no cookies) -->
-  <!-- Sign up at https://www.goatcounter.com to get your site code, -->
-  <!-- then replace YOURCODE below with your chosen subdomain.       -->
+  <!-- Local time formatting for readers -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('time.local-time[datetime]').forEach(function(el) {
+        var dt = el.getAttribute('datetime');
+        if (!dt) return;
+        try {
+          var d = new Date(dt);
+          if (!isNaN(d.getTime())) {
+            var dateStr = d.toLocaleDateString(undefined, { day: 'numeric', month: 'short', year: 'numeric' });
+            var timeStr = d.toLocaleTimeString(undefined, { hour: '2-digit', minute: '2-digit' });
+            el.textContent = dateStr + ', ' + timeStr;
+          }
+        } catch(e) {}
+      });
+    });
+  </script>
+
+  <!-- GoatCounter — privacy-friendly visitor analytics (no cookies) -->
   <script data-goatcounter="https://trippynews.goatcounter.com/count"
           async src="//gc.zgo.at/count.js"></script>
 </body>

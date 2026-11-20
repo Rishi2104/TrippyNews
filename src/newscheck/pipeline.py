@@ -13,6 +13,7 @@ articles or feeds never crash the pipeline — they are logged and skipped.
 
 from __future__ import annotations
 
+import re
 import sqlite3
 from datetime import UTC, datetime, timedelta
 from pathlib import Path
@@ -56,10 +57,12 @@ from newscheck.models import (
     ClusterArticle,
     DedupGroup,
     DedupMethod,
+    LicenseStatus,
     ReliabilityTier,
     Run,
     RunStatus,
     Source,
+    SourceMode,
     Story,
 )
 from newscheck.safety.gates import SafetyAuditor
@@ -357,16 +360,41 @@ def _execute(
             config=settings.scoring,
         )
 
-        # 4. Sensitive Topic Detection
-        is_sensitive, _ = topic_detector.is_sensitive(cluster_articles_list, cluster_claims)
+        # 4. Sensitive Topic & Defamation Detection (L13)
+        is_sensitive, sensitive_cat = topic_detector.is_sensitive(cluster_articles_list, cluster_claims)
 
-        # 5. Constrained Generation from Agreed Claims Only
+        # L13: Defamation guard for allegations, crime, or court proceedings
+        is_legal_or_allegation = is_sensitive or any(
+            re.search(r"\b(?:allegation|alleged|accused|court|bail|chargesheet|plea|hearing|trial)\b", c.claim_text, re.I)
+            for c in cluster_claims
+        )
+
+        if is_legal_or_allegation:
+            # Prefix each claim with "Per <outlet>:"
+            for c in cluster_claims:
+                art_opt = articles_by_id.get(c.article_id)
+                src_opt = sources_by_id.get(art_opt.source_id) if art_opt else None
+                outlet_name = src_opt.name if src_opt else "Source"
+                if not c.claim_text.startswith("Per "):
+                    c.claim_text = f"Per {outlet_name}: {c.claim_text}"
+                    conn.execute("UPDATE claims SET claim_text = ? WHERE id = ?", (c.claim_text, c.id))
+
+        # 5. Constrained Generation from Agreed Claims Only (L1, D2, D7)
         agreed_claims = get_agreed_claims(cluster_claims, cross_checks)
+        disputed_claims_list = [
+            c for c in cluster_claims
+            if any(cc.label == ClaimLabel.DISPUTED and (cc.claim_a_id == c.id or cc.claim_b_id == c.id) for cc in cross_checks)
+        ]
         source_passages = [a.full_text or a.snippet for a in cluster_articles_list if (a.full_text or a.snippet)]
 
         raw_summary = None
-        if not is_sensitive and score_breakdown.independent_sources >= settings.pipeline.min_sources_to_publish:
-            raw_summary = constrained_writer.generate_summary(agreed_claims, source_passages)
+        if not is_sensitive and not is_legal_or_allegation and score_breakdown.independent_sources >= settings.pipeline.min_sources_to_publish:
+            raw_summary = constrained_writer.generate_summary(
+                agreed_claims,
+                source_passages,
+                headline=cluster.label,
+                disputed_claims=disputed_claims_list,
+            )
 
         # 6. Safety Audit
         story = Story(
@@ -423,6 +451,28 @@ def _sync_sources(
 
     for raw in raw_sources:
         tier_val = int(str(raw.get("tier", 3)))
+        raw_allowed = raw.get("allowed_domains", [])
+        if isinstance(raw_allowed, list):
+            allowed_domains = [str(d).lower().strip() for d in raw_allowed]
+        else:
+            allowed_domains = [str(raw["domain"]).lower().strip()]
+        dom = str(raw["domain"]).lower().strip()
+        if dom not in allowed_domains:
+            allowed_domains.append(dom)
+
+        license_raw = str(raw.get("license_status", "permitted")).lower()
+        license_status = LicenseStatus(license_raw) if license_raw in LicenseStatus else LicenseStatus.PERMITTED
+
+        mode_raw = str(raw.get("mode", "claims")).lower()
+        mode = SourceMode(mode_raw) if mode_raw in SourceMode else SourceMode.CLAIMS
+        # If license is unknown, restrict to headline_only
+        if license_status == LicenseStatus.UNKNOWN:
+            mode = SourceMode.HEADLINE_ONLY
+
+        is_enabled = bool(raw.get("enabled", True))
+        if license_status == LicenseStatus.PROHIBITED:
+            is_enabled = False
+
         src = Source(
             name=str(raw["name"]),
             domain=str(raw["domain"]),
@@ -430,7 +480,12 @@ def _sync_sources(
             language=str(raw.get("language", "en")),
             country=str(raw.get("country", "IN")),
             tier=ReliabilityTier(tier_val),
-            enabled=bool(raw.get("enabled", True)),
+            enabled=is_enabled,
+            terms_url=str(raw.get("terms_url", "")),
+            license_status=license_status,
+            last_reviewed=str(raw.get("last_reviewed", "2026-11-20")),
+            mode=mode,
+            allowed_domains=allowed_domains,
         )
         upsert_source(conn, src)
 

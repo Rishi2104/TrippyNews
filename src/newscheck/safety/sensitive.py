@@ -72,9 +72,24 @@ _SENSITIVE_PATTERNS: list[tuple[str, re.Pattern[str]]] = [
     ),
     (
         "crime_named_individual",
-        re.compile(r"\b(?:arrested|booked|accused|charged with murder|detained)\s+[A-Z][a-z]+\s+[A-Z][a-z]+\b"),
+        re.compile(r"\b(?:arrested|booked|accused|charged with murder|detained)\s+([A-Z][a-z]+\s+[A-Z][a-z]+)\b"),
     ),
 ]
+
+_INSTITUTIONAL_TITLES = {
+    "chief justice",
+    "supreme court",
+    "high court",
+    "district court",
+    "sessions court",
+    "union government",
+    "state government",
+    "bar council",
+    "law commission",
+    "police department",
+    "constitution bench",
+    "division bench",
+}
 
 
 class SensitiveTopicDetector:
@@ -99,7 +114,13 @@ class SensitiveTopicDetector:
         combined = " ".join(texts)
 
         for category, pattern in _SENSITIVE_PATTERNS:
-            if pattern.search(combined):
+            match = pattern.search(combined)
+            if match:
+                # If matching crime_named_individual, verify it's not an institutional false positive
+                if category == "crime_named_individual":
+                    named = match.group(1).lower().strip()
+                    if named in _INSTITUTIONAL_TITLES or "court" in named or "justice" in named or "bench" in named:
+                        continue  # False positive on judicial/procedural hearing
                 return True, category
 
         return False, None

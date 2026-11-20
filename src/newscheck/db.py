@@ -6,6 +6,7 @@ All timestamps are stored as ISO-8601 UTC strings.
 
 from __future__ import annotations
 
+import json
 import sqlite3
 from collections.abc import Generator, Sequence
 from contextlib import contextmanager
@@ -22,10 +23,12 @@ from newscheck.models import (
     DedupGroup,
     DedupMethod,
     ExtractionStatus,
+    LicenseStatus,
     ReliabilityTier,
     Run,
     RunStatus,
     Source,
+    SourceMode,
     Story,
     StoryChangelog,
 )
@@ -34,15 +37,20 @@ logger = get_logger(__name__)
 
 _SCHEMA_SQL = """
 CREATE TABLE IF NOT EXISTS sources (
-    id          INTEGER PRIMARY KEY AUTOINCREMENT,
-    name        TEXT    NOT NULL,
-    domain      TEXT    NOT NULL UNIQUE,
-    feed_url    TEXT    NOT NULL,
-    language    TEXT    NOT NULL DEFAULT 'en',
-    country     TEXT    NOT NULL DEFAULT 'IN',
-    tier        INTEGER NOT NULL CHECK (tier IN (1, 2, 3)),
-    enabled     INTEGER NOT NULL DEFAULT 1,
-    created_at  TEXT    NOT NULL DEFAULT (datetime('now'))
+    id              INTEGER PRIMARY KEY AUTOINCREMENT,
+    name            TEXT    NOT NULL,
+    domain          TEXT    NOT NULL UNIQUE,
+    feed_url        TEXT    NOT NULL,
+    language        TEXT    NOT NULL DEFAULT 'en',
+    country         TEXT    NOT NULL DEFAULT 'IN',
+    tier            INTEGER NOT NULL CHECK (tier IN (1, 2, 3)),
+    enabled         INTEGER NOT NULL DEFAULT 1,
+    terms_url       TEXT    NOT NULL DEFAULT '',
+    license_status  TEXT    NOT NULL DEFAULT 'permitted',
+    last_reviewed   TEXT    NOT NULL DEFAULT '2026-11-20',
+    mode            TEXT    NOT NULL DEFAULT 'claims',
+    allowed_domains TEXT    NOT NULL DEFAULT '[]',
+    created_at      TEXT    NOT NULL DEFAULT (datetime('now'))
 );
 
 CREATE TABLE IF NOT EXISTS runs (
@@ -133,7 +141,7 @@ CREATE TABLE IF NOT EXISTS stories (
     corroboration_label TEXT    NOT NULL DEFAULT 'Unconfirmed',
     is_sensitive        INTEGER NOT NULL DEFAULT 0,
     is_developing       INTEGER NOT NULL DEFAULT 0,
-    published_at        TEXT    NOT NULL,
+    published_at        TEXT,
     updated_at          TEXT,
     content_hash        TEXT
 );
@@ -192,11 +200,24 @@ def get_connection(db_path: Path | None = None) -> sqlite3.Connection:
 
 
 def init_db(conn: sqlite3.Connection) -> None:
-    """Create all tables if they do not already exist.
+    """Create all tables if they do not already exist, and run schema migrations.
 
     Safe to call multiple times (idempotent).
     """
     conn.executescript(_SCHEMA_SQL)
+    # Check if sources table has new columns for L8 / C1
+    cur = conn.execute("PRAGMA table_info(sources)")
+    existing_cols = {row["name"] for row in cur.fetchall()}
+    new_cols = {
+        "terms_url": "TEXT NOT NULL DEFAULT ''",
+        "license_status": "TEXT NOT NULL DEFAULT 'permitted'",
+        "last_reviewed": "TEXT NOT NULL DEFAULT '2026-11-20'",
+        "mode": "TEXT NOT NULL DEFAULT 'claims'",
+        "allowed_domains": "TEXT NOT NULL DEFAULT '[]'",
+    }
+    for col_name, col_def in new_cols.items():
+        if col_name not in existing_cols:
+            conn.execute(f"ALTER TABLE sources ADD COLUMN {col_name} {col_def}")
     conn.commit()
     logger.info("database_initialised")
 
@@ -220,22 +241,70 @@ def upsert_source(conn: sqlite3.Connection, src: Source) -> int:
 
     Uses the ``domain`` as the natural key for upsert.
     """
+    allowed_json = json.dumps(src.allowed_domains)
     cur = conn.execute(
         """
-        INSERT INTO sources (name, domain, feed_url, language, country, tier, enabled)
-        VALUES (?, ?, ?, ?, ?, ?, ?)
+        INSERT INTO sources (name, domain, feed_url, language, country, tier, enabled,
+                             terms_url, license_status, last_reviewed, mode, allowed_domains)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
         ON CONFLICT(domain) DO UPDATE SET
-            name     = excluded.name,
-            feed_url = excluded.feed_url,
-            language = excluded.language,
-            country  = excluded.country,
-            tier     = excluded.tier,
-            enabled  = excluded.enabled
+            name            = excluded.name,
+            feed_url        = excluded.feed_url,
+            language        = excluded.language,
+            country         = excluded.country,
+            tier            = excluded.tier,
+            enabled         = excluded.enabled,
+            terms_url       = excluded.terms_url,
+            license_status  = excluded.license_status,
+            last_reviewed   = excluded.last_reviewed,
+            mode            = excluded.mode,
+            allowed_domains = excluded.allowed_domains
         """,
-        (src.name, src.domain, src.feed_url, src.language, src.country, int(src.tier), src.enabled),
+        (
+            src.name,
+            src.domain,
+            src.feed_url,
+            src.language,
+            src.country,
+            int(src.tier),
+            src.enabled,
+            src.terms_url,
+            str(src.license_status),
+            src.last_reviewed,
+            str(src.mode),
+            allowed_json,
+        ),
     )
     conn.commit()
     return cur.lastrowid or 0
+
+
+def _row_to_source(row: sqlite3.Row) -> Source:
+    d = dict(row)
+    allowed_raw = d.get("allowed_domains", "[]")
+    try:
+        allowed = json.loads(allowed_raw) if allowed_raw else []
+    except Exception:
+        allowed = []
+
+    license_str = d.get("license_status", "permitted")
+    mode_str = d.get("mode", "claims")
+
+    return Source(
+        id=d["id"],
+        name=d["name"],
+        domain=d["domain"],
+        feed_url=d["feed_url"],
+        language=d["language"],
+        country=d["country"],
+        tier=ReliabilityTier(d["tier"]),
+        enabled=bool(d["enabled"]),
+        terms_url=d.get("terms_url", ""),
+        license_status=LicenseStatus(license_str) if license_str in LicenseStatus else LicenseStatus.PERMITTED,
+        last_reviewed=d.get("last_reviewed", "2026-11-20"),
+        mode=SourceMode(mode_str) if mode_str in SourceMode else SourceMode.CLAIMS,
+        allowed_domains=allowed,
+    )
 
 
 def get_all_sources(conn: sqlite3.Connection, *, enabled_only: bool = True) -> list[Source]:
@@ -244,19 +313,7 @@ def get_all_sources(conn: sqlite3.Connection, *, enabled_only: bool = True) -> l
     if enabled_only:
         sql += " WHERE enabled = 1"
     rows = conn.execute(sql).fetchall()
-    return [
-        Source(
-            id=row["id"],
-            name=row["name"],
-            domain=row["domain"],
-            feed_url=row["feed_url"],
-            language=row["language"],
-            country=row["country"],
-            tier=ReliabilityTier(row["tier"]),
-            enabled=bool(row["enabled"]),
-        )
-        for row in rows
-    ]
+    return [_row_to_source(row) for row in rows]
 
 
 def get_source_by_domain(conn: sqlite3.Connection, domain: str) -> Source | None:
@@ -264,16 +321,7 @@ def get_source_by_domain(conn: sqlite3.Connection, domain: str) -> Source | None
     row = conn.execute("SELECT * FROM sources WHERE domain = ?", (domain,)).fetchone()
     if row is None:
         return None
-    return Source(
-        id=row["id"],
-        name=row["name"],
-        domain=row["domain"],
-        feed_url=row["feed_url"],
-        language=row["language"],
-        country=row["country"],
-        tier=ReliabilityTier(row["tier"]),
-        enabled=bool(row["enabled"]),
-    )
+    return _row_to_source(row)
 
 
 # ── Run CRUD ───────────────────────────────────────────────────────────────────

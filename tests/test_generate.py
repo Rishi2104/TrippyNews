@@ -39,7 +39,7 @@ class TestConstrainedWriter:
         summary = writer.generate_summary(agreed_claims, source_passages)
         assert summary is not None
         assert "15 injured" in summary
-        assert "Rescue teams" in summary
+        assert "rescue teams" in summary.lower()
 
     def test_insufficient_entailed_sentences_returns_none(self) -> None:
         nli = NLICrossChecker(offline_mode=True)

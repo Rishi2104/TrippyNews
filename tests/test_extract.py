@@ -69,6 +69,7 @@ class TestArticleExtractor:
         html_content = "<html><body><article><p>This is a fully extracted story body.</p></article></body></html>"
 
         with (
+            patch.object(extractor._robots, "is_allowed", return_value=True),
             patch("trafilatura.fetch_url", return_value=html_content),
             patch("trafilatura.extract", side_effect=["This is a fully extracted story body.", None]),
         ):

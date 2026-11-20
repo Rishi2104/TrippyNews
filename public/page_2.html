@@ -3,20 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NewsCheck</title>
+  <title>TrippyNews</title>
 
   <!-- SEO -->
   <meta name="description" content="Automated news corroboration — what sources agree and differ on.">
   <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://rishi2104.github.io/TrippyNews/">
 
   <!-- Open Graph / Social -->
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="NewsCheck">
-  <meta property="og:title" content="NewsCheck">
+  <meta property="og:site_name" content="TrippyNews">
+  <meta property="og:title" content="TrippyNews">
   <meta property="og:description" content="Automated news corroboration — what sources agree and differ on.">
+  <meta property="og:url" content="https://rishi2104.github.io/TrippyNews/">
+  <meta property="og:image" content="https://rishi2104.github.io/TrippyNews/favicon.svg">
 
-  <!-- Favicon (simple emoji favicon via SVG data URI) -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⬡</text></svg>">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="TrippyNews">
+  <meta name="twitter:description" content="Automated news corroboration — what sources agree and differ on.">
+
+  <!-- Favicon (percent-encoded SVG data URI) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Ctext%20y='.9em'%20font-size='90'%3E%E2%AC%A1%3C/text%3E%3C/svg%3E">
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -25,14 +33,16 @@
     <div class="container">
       <div class="header-inner">
         <div class="site-brand">
-          <h1 class="site-title">
-            <a href="index.html">NewsCheck</a>
-          </h1>
-          <span class="site-tagline">Independent Corroboration Pipeline</span>
+          
+          <div class="site-title">
+            <a href="index.html">TrippyNews</a>
+          </div>
+          
+          <span class="site-tagline">Automated News Corroboration Pipeline</span>
         </div>
         <div class="header-live">
           <span class="live-dot"></span>
-          Auto-updated every 1 hour
+          Last updated: <time datetime="2026-11-20T10:03:53.313679+00:00" class="local-time">20 Nov 2026, 15:33 IST</time>
         </div>
       </div>
       <nav>
@@ -40,6 +50,7 @@
           <li><a href="index.html">Top Stories</a></li>
           <li><a href="methodology.html">Methodology</a></li>
           <li><a href="corrections.html">Corrections &amp; Changelog</a></li>
+          <li><a href="about.html">About</a></li>
         </ul>
       </nav>
     </div>
@@ -47,8 +58,8 @@
 
   <main class="container">
     <div class="disclosure-banner">
-      <span><strong>Automated report.</strong> May contain errors. Corroboration levels are computed mathematically from source diversity and agreement — not by human editors.</span>
-      <a href="mailto:corrections@newscheck.example.com?subject=TrippyNews%20Error%20Report">Report an error &rarr;</a>
+      <span><strong>Automated report.</strong> Corroboration levels are computed mathematically from source diversity and agreement &mdash; not by human editors. Never claims absolute truth.</span>
+      <a href="mailto:contact@trippynews.org?subject=TrippyNews%20Inquiry%20or%20Error%20Report">Report an error &rarr;</a>
     </div>
 
     
@@ -59,7 +70,6 @@
       <p>Ranked by recency &amp; independent corroboration metrics.</p>
     </div>
     <div class="section-header-right">
-      Updated every 1 hour<br>
       
       <span id="stories-count-display">Showing 11–20 of 100 stories</span>
       
@@ -77,136 +87,148 @@
     <div class="meta-row">
       <span class="badge badge-corroborated">Corroborated</span>
       
-      <span class="source-count">3 independent sources</span>
+      <span class="source-count">6 independent sources</span>
       <span class="sep">•</span>
-      <span class="score-pill">Score: 5.93</span>
+      <span class="score-pill">Score: 10.01</span>
       
       <span class="sep">•</span>
-      <span class="story-date">20 Nov 2026, 13:40 IST</span>
+      <time datetime="2026-11-20T02:33:13+00:00" class="story-date local-time">20 Nov 2026, 08:03 IST</time>
       
     </div>
 
-    <h2><a href="story_413.html" class="headline-link">SpiceJet&#39;s ₹5,500-cr fundraise: Can it revive the airline&#39;s operations?</a></h2>
+    <h2><a href="story_262.html" class="headline-link">Jerusalem Daily: Israel launches ground offensive in Gaza</a></h2>
 
     
-    <p class="story-summary-omitted">
+    <div class="story-summary-omitted">
       
-      [Summary constrained to claim table — strict NLI entailment gate applied. <a href="story_413.html">View claims &rarr;</a>]
+      <div class="empty-state-notice sensitive-notice">
+        <span class="notice-badge">&#9888; Sensitive Topic Safeguard</span>
+        <p>Narrative generation suppressed under legal and defamation safeguards (court proceedings or private individuals). Only structured claims from named outlets are published.</p>
+        <a href="story_262.html" class="view-claims-btn">Inspect claims &rarr;</a>
+      </div>
       
-    </p>
+    </div>
     
 
+    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
     <div class="sources-list">
       <strong>Sources:</strong>
       
-      <a href="https://economictimes.indiatimes.com/markets/stocks/news/spicejet-board-approves-up-to-rs-5500-crore-fundraise-to-support-fleet-expansion-drive-revival/articleshow/135958224.cms" target="_blank" rel="noopener noreferrer">Economic Times</a>, 
+      <span class="source-item-chip">
+        <a href="https://www.ndtv.com/world-news/israel-uploaded-3-5-million-photos-to-amazon-cloud-to-track-palestinians-report-12337352" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Israel Uploaded 3.5 Million Photos To Amazon Cloud To Track Palestinians: Report">Israel Uploaded 3.5 Million Photos To Amazon Cloud To Track Palestinians: Report</a>
+        <span class="badge badge-outlet">NDTV</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://www.livemint.com/news/india/spicejet-seeks-rs-5-500-crore-to-revive-operations-where-will-it-be-used-amid-crisis-11795025450508.html" target="_blank" rel="noopener noreferrer">Mint</a>, 
+      <span class="source-item-chip">
+        <a href="https://timesofindia.indiatimes.com/sports/football/top-stories/ugly-scenes-against-india-palestine-player-thows-kicks-makes-alleged-racist-gesture-watch/articleshow/135925500.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Ugly scenes! Palestine player kicks, makes racist gesture against India - Watch">Ugly scenes! Palestine player kicks, makes racist gesture against India - Watch</a>
+        <span class="badge badge-outlet">Times of India</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://www.business-standard.com/industry/aviation/spicejet-5-500-cr-fundraise-can-revive-airline-s-operations-126112000497_1.html" target="_blank" rel="noopener noreferrer">Business Standard</a>
+      <span class="source-item-chip">
+        <a href="https://economictimes.indiatimes.com/news/defence/india-signs-rs-1976-crore-deal-with-israel-to-upgrade-navys-barak-missile-systems/articleshow/135963546.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="India and Israel fire up ₹1,976 crore missile deal">India and Israel fire up ₹1,976 crore missile deal</a>
+        <span class="badge badge-outlet">Economic Times</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.aljazeera.com/news/2026/11/19/save-the-children-gazas-children-face-unmatched-dangers?traffic_source=rss" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Save the Children: Gaza’s children face ‘unmatched dangers’">Save the Children: Gaza’s children face ‘unmatched dangers’</a>
+        <span class="badge badge-outlet">Al Jazeera – World</span>
+        
+        <span class="badge badge-wire">AFP</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.thequint.com/hindi/webqoof/birmingham-palestine-freedom-slogans-video-shared-with-false-claims" target="_blank" rel="noopener noreferrer" class="source-title-link" title="फिलिस्तीन की आजादी के नारे लगने का ये वीडियो इजरायल नहीं, बर्मिंघम का है">फिलिस्तीन की आजादी के नारे लगने का ये वीडियो इजरायल नहीं, बर्मिंघम का है</a>
+        <span class="badge badge-outlet">The Quint</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.straitstimes.com/world/middle-east/nearly-a-quarter-of-worlds-children-live-in-conflict-zone-charity" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Nearly a quarter of world’s children live in conflict zone: Charity">Nearly a quarter of world’s children live in conflict zone: Charity</a>
+        <span class="badge badge-outlet">The Straits Times – World</span>
+        
+      </span>
       
     </div>
   </article>
   
   
   
-  
 
-  <article class="story-card level-limited">
+  <article class="story-card level-corroborated">
     <div class="meta-row">
-      <span class="badge badge-limited">Limited corroboration</span>
+      <span class="badge badge-corroborated">Corroborated</span>
       
       <span class="source-count">8 independent sources</span>
       <span class="sep">•</span>
-      <span class="score-pill">Score: 1.19</span>
+      <span class="score-pill">Score: 11.93</span>
       
       <span class="sep">•</span>
-      <span class="story-date">20 Nov 2026, 13:38 IST</span>
+      <time datetime="2026-11-19T20:06:04+00:00" class="story-date local-time">20 Nov 2026, 01:36 IST</time>
       
     </div>
 
-    <h2><a href="story_355.html" class="headline-link">&#39;Just A Side Player&#39;: Rahul Gandhi Says India &#39;Looking&#39; As Pakistan Negotiates US-Iran War</a></h2>
+    <h2><a href="story_152.html" class="headline-link">PM Modi pulls up industry for reliance on imports, domestic demand</a></h2>
 
     
-    <p class="story-summary-omitted">
-      
-      [Narrative omitted — sensitive topic safety gate active. Review claims and sources on the story page.]
-      
-    </p>
+    <p class="story-summary">Up to ₹12 lakh, there is no income tax. You also work for the country; everyone deserves respect’,&#34; PM Modi said.
+“We brought the basic corporate tax rate down from 30% in 2014 to 22%, and today there is no income tax on earnings up to Rs 12 lakh.</p>
     
 
+    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
     <div class="sources-list">
       <strong>Sources:</strong>
       
-      <a href="https://www.hindustantimes.com/india-news/rahul-gandhi-posts-satyam-shivam-sundaram-after-bjp-dig-at-sonia-gandhi-rajiv-gandhi-lap-himanta-sarma-hits-back-101794920094880.html" target="_blank" rel="noopener noreferrer">Hindustan Times</a>, 
+      <span class="source-item-chip">
+        <a href="https://www.hindustantimes.com/india-news/pm-modi-urges-india-inc-to-look-beyond-domestic-market-compete-globally-101795074633888.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="PM Modi urges India Inc to look beyond domestic market, compete globally">PM Modi urges India Inc to look beyond domestic market, compete globally</a>
+        <span class="badge badge-outlet">Hindustan Times</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://www.hindustantimes.com/india-news/india-is-essential-interlocutor-in-resolving-conflicts-italy-s-deputy-prime-minister-antonio-tajani-101794913291919.html" target="_blank" rel="noopener noreferrer">Hindustan Times</a>, 
+      <span class="source-item-chip">
+        <a href="https://www.indiatoday.in/india/story/pm-modi-emphasises-savings-financial-discipline-khao-peeyo-mauj-karo-culture-to-sustain-poverty-gains-and-fight-drug-menace-3042149-2026-11-19?utm_source=rss" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Promote savings, India doesn&#39;t have khao, peeyo, mauj culture: PM to ministers">Promote savings, India doesn&#39;t have khao, peeyo, mauj culture: PM to ministers</a>
+        <span class="badge badge-outlet">India Today</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://www.livemint.com/news/trends/if-you-want-to-fall-in-love-never-eat-chicken-chasseur-rahul-gandhis-lighthearted-tale-at-sonias-memoir-launch-11794898937789.html" target="_blank" rel="noopener noreferrer">Mint</a>, 
+      <span class="source-item-chip">
+        <a href="https://www.news18.com/india/tax-cuts-given-but-where-are-the-jobs-pm-modi-questions-corporate-india-at-ficci-event-ws-l-10432252.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Tax Cuts Given, But Where Are The Jobs? PM Modi Questions Corporate India At FICCI Event">Tax Cuts Given, But Where Are The Jobs? PM Modi Questions Corporate India At FICCI Event</a>
+        <span class="badge badge-outlet">News18</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://www.indiatoday.in/india/story/rahul-gandhi-responds-bjp-rss-criticism-sonia-rajiv-gandhi-remarks-3040702-2026-11-17?utm_source=rss" target="_blank" rel="noopener noreferrer">India Today</a>, 
+      <span class="source-item-chip">
+        <a href="https://www.ndtv.com/india-news/pm-modi-at-ficci-i-gave-tax-cuts-have-you-hiked-salaries-created-jobs-pm-narendra-modi-asks-india-inc-12351154" target="_blank" rel="noopener noreferrer" class="source-title-link" title="&#34;I Gave Tax Cuts, Have You Hiked Salaries, Created Jobs?&#34; PM Modi Asks India Inc">&#34;I Gave Tax Cuts, Have You Hiked Salaries, Created Jobs?&#34; PM Modi Asks India Inc</a>
+        <span class="badge badge-outlet">NDTV</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://www.news18.com/india/as-a-true-hindu-rahul-gandhi-congress-respond-to-sonia-book-launch-row-remarks-with-love-ws-klrt-10429266.html" target="_blank" rel="noopener noreferrer">News18</a>, 
+      <span class="source-item-chip">
+        <a href="https://timesofindia.indiatimes.com/india/stop-complaining-look-inwards-congress-hits-back-after-pm-modi-pulls-up-india-inc-over-jobs-salaries/articleshow/135997732.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="&#39;Stop complaining&#39;: Cong fires salvo after PM Modi flays India Inc over jobs, pay">&#39;Stop complaining&#39;: Cong fires salvo after PM Modi flays India Inc over jobs, pay</a>
+        <span class="badge badge-outlet">Times of India</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://www.news18.com/india/congresss-disrupter-in-chief-what-rahul-gandhi-actually-revealed-at-sonia-gandhis-book-launch-ws-klrt-10429075.html" target="_blank" rel="noopener noreferrer">News18</a>, 
+      <span class="source-item-chip">
+        <a href="https://www.livemint.com/news/india/do-not-take-140-crore-indians-for-granted-pm-modis-blunt-message-to-india-inc-at-ficci-agm-10-key-takeaways-11795084622262.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="‘Do not take 140 crore Indians for granted’: PM Modi&#39;s blunt message to India Inc at FICCI AGM | 10 key takeaways">‘Do not take 140 crore Indians for granted’: PM Modi&#39;s blunt message to India Inc at FICCI AGM | 10 key takeaways</a>
+        <span class="badge badge-outlet">Mint</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://www.dnaindia.com/india/report-rahul-gandhi-hits-back-at-bjp-rss-trolls-over-parents-love-says-anger-and-hatred-stop-3224220" target="_blank" rel="noopener noreferrer">DNA India</a>, 
+      <span class="source-item-chip">
+        <a href="https://www.business-standard.com/industry/news/pm-modi-pulls-up-india-inc-over-import-dependence-domestic-complacency-126111901301_1.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="PM Modi pulls up industry for reliance on imports, domestic demand">PM Modi pulls up industry for reliance on imports, domestic demand</a>
+        <span class="badge badge-outlet">Business Standard</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://www.news18.com/videos/india/rahul-gandhi-s-personal-pda-moment-sonia-rajiv-romance-followed-by-political-battle-hard-facts-10429863.html" target="_blank" rel="noopener noreferrer">News18</a>, 
-      
-      <a href="https://www.hindustantimes.com/india-news/ysrcp-brs-upset-over-omissions-in-sonia-gandhi-s-belonging-a-journey-of-love-101794980485897.html" target="_blank" rel="noopener noreferrer">Hindustan Times</a>, 
-      
-      <a href="https://timesofindia.indiatimes.com/india/pernicious-pattern-of-tarnishing-indias-image-bjp-fires-back-at-rahul-gandhi-over-us-remarks/articleshow/135950945.cms" target="_blank" rel="noopener noreferrer">Times of India</a>, 
-      
-      <a href="https://www.indiatoday.in/india/story/rahul-gandhi-india-economic-disaster-colombia-university-modi-bjp-3041242-2026-11-18?utm_source=rss" target="_blank" rel="noopener noreferrer">India Today</a>, 
-      
-      <a href="https://www.news18.com/india/lacks-maturity-cm-adityanath-says-rahul-gandhi-part-of-every-anti-india-campaign-slams-congs-telangana-summit-ws-l-10430291.html" target="_blank" rel="noopener noreferrer">News18</a>, 
-      
-      <a href="https://timesofindia.indiatimes.com/india/addiction-to-being-in-spotlight-bjp-says-rahul-defames-india-to-grab-headlines-amid-row-over-his-remarks-in-us/articleshow/135967806.cms" target="_blank" rel="noopener noreferrer">Times of India</a>, 
-      
-      <a href="https://www.dnaindia.com/india/report-shaina-nc-photo-row-eknath-shinde-says-mani-shankar-aiyar-s-face-was-torn-not-balasaheb-s-3224282" target="_blank" rel="noopener noreferrer">DNA India</a>, 
-      
-      <a href="https://www.dnaindia.com/india/report-rahul-gandhi-slams-india-s-economy-during-us-visit-bjp-accuses-him-of-running-down-country-3224252" target="_blank" rel="noopener noreferrer">DNA India</a>, 
-      
-      <a href="https://timesofindia.indiatimes.com/india/balasaheb-like-a-deity-to-us-eknath-shinde-defends-shaina-nc-in-photo-row-says-she-has-clarified/articleshow/135967993.cms" target="_blank" rel="noopener noreferrer">Times of India</a>, 
-      
-      <a href="https://www.hindustantimes.com/india-news/indiaus-ties-at-historic-high-working-towards-fair-reciprocal-trade-relationship-us-envoy-101795074945889.html" target="_blank" rel="noopener noreferrer">Hindustan Times</a>, 
-      
-      <a href="https://www.hindustantimes.com/india-news/misuse-discussion-for-propaganda-india-slams-pakistan-over-indus-waters-treaty-101795073526885.html" target="_blank" rel="noopener noreferrer">Hindustan Times</a>, 
-      
-      <a href="https://www.news18.com/india/india-is-playing-a-whole-new-game-pm-modis-gta-6-post-takes-internet-by-storm-10431957.html" target="_blank" rel="noopener noreferrer">News18</a>, 
-      
-      <a href="https://www.hindustantimes.com/india-news/in-us-pakistan-national-asks-rahul-gandhi-if-india-neighbours-can-move-past-blame-game-his-reply-terrorism-101795103768347.html" target="_blank" rel="noopener noreferrer">Hindustan Times</a>, 
-      
-      <a href="https://timesofindia.indiatimes.com/india/india-has-become-a-side-player-rahul-attacks-pm-modis-foreign-policy-cites-paks-role-in-iran-us-talks/articleshow/135998901.cms" target="_blank" rel="noopener noreferrer">Times of India</a>, 
-      
-      <a href="https://www.indiatoday.in/india/story/india-is-a-side-player-rahul-gandhi-india-foreign-policy-pakistan-us-iran-negotiations-chicago-congress-3042597-2026-11-19?utm_source=rss" target="_blank" rel="noopener noreferrer">India Today</a>, 
-      
-      <a href="https://www.dnaindia.com/india/report-after-amit-shah-narendra-modi-would-have-been-arrested-some-congress-stalled-probe-ex-law-minister-drops-bombshell-3224350" target="_blank" rel="noopener noreferrer">DNA India</a>, 
-      
-      <a href="https://www.hindustantimes.com/india-news/india-a-side-player-in-global-affairs-rahul-gandhi-101795116195082.html" target="_blank" rel="noopener noreferrer">Hindustan Times</a>, 
-      
-      <a href="https://timesofindia.indiatimes.com/india/bjp-cites-moily-remark-to-claim-congress-tried-to-frame-pm-modi/articleshow/136009726.cms" target="_blank" rel="noopener noreferrer">Times of India</a>, 
-      
-      <a href="https://www.indiatoday.in/india/story/rahul-gandhi-india-pakistan-talks-terror-support-remains-key-obstacle-iuniversity-of-chicago-interaction-3042819-2026-11-20?utm_source=rss" target="_blank" rel="noopener noreferrer">India Today</a>, 
-      
-      <a href="https://www.news18.com/india/only-if-pakistan-stops-supporting-terrorism-rahul-gandhi-draws-red-line-on-dialogue-with-islamabad-ws-lrt-10433232.html" target="_blank" rel="noopener noreferrer">News18</a>, 
-      
-      <a href="https://www.thehindu.com/news/national/congress-leader-rahul-gandhi-on-xi-trump-putin-trilateral-meeting/article71723024.ece" target="_blank" rel="noopener noreferrer">The Hindu</a>, 
-      
-      <a href="https://indianexpress.com/article/political-pulse/sonia-gandhi-book-savarkar-reference-shinde-sena-ban-uddhav-thackeray-10971179/" target="_blank" rel="noopener noreferrer">Indian Express</a>, 
-      
-      <a href="https://timesofindia.indiatimes.com/india/rahul-gandhi-calls-india-a-side-player-in-geopolitics-bjp-hits-back-with-pak-fanboy-jibe/articleshow/136014416.cms" target="_blank" rel="noopener noreferrer">Times of India</a>, 
-      
-      <a href="https://www.news18.com/videos/breaking-news/rahul-gandhi-calls-india-a-side-player-globally-bjp-hits-back-economy-china-in-focus-news18-10433452.html" target="_blank" rel="noopener noreferrer">News18</a>, 
-      
-      <a href="https://www.news18.com/india/just-a-side-player-rahul-gandhi-says-india-looking-as-pakistan-negotiates-us-iran-war-ws-l-10433429.html" target="_blank" rel="noopener noreferrer">News18</a>, 
-      
-      <a href="https://www.dnaindia.com/india/report-bjp-slams-rahul-gandhi-over-compromised-pm-post-says-paid-to-defame-india-3224381" target="_blank" rel="noopener noreferrer">DNA India</a>, 
-      
-      <a href="https://www.dnaindia.com/india/report-rahul-gandhi-s-side-player-remark-on-india-sparks-bjp-s-pak-fanboy-attack-3224373" target="_blank" rel="noopener noreferrer">DNA India</a>, 
-      
-      <a href="https://www.dnaindia.com/india/report-rahul-gandhi-takes-dig-at-modi-after-trump-xi-putin-meet-says-compromised-pm-can-never-3224371" target="_blank" rel="noopener noreferrer">DNA India</a>
+      <span class="source-item-chip">
+        <a href="https://www.dnaindia.com/india/report-pm-modi-slams-corporates-for-not-creating-more-jobs-increasing-salaries-despite-tax-cuts-3224357" target="_blank" rel="noopener noreferrer" class="source-title-link" title="PM Modi slams corporates for not creating more jobs, increasing salaries despite tax cuts">PM Modi slams corporates for not creating more jobs, increasing salaries despite tax cuts</a>
+        <span class="badge badge-outlet">DNA India</span>
+        
+      </span>
       
     </div>
   </article>
@@ -215,173 +237,144 @@
   
   
 
-  <article class="story-card level-limited">
+  <article class="story-card level-strongly">
     <div class="meta-row">
-      <span class="badge badge-limited">Limited corroboration</span>
+      <span class="badge badge-strongly">Strongly corroborated</span>
       
-      <span class="source-count">10 independent sources</span>
+      <span class="source-count">9 independent sources</span>
       <span class="sep">•</span>
-      <span class="score-pill">Score: 0.0</span>
+      <span class="score-pill">Score: 10.10</span>
       
       <span class="sep">•</span>
-      <span class="story-date">20 Nov 2026, 13:38 IST</span>
+      <time datetime="2026-11-20T01:21:00+00:00" class="story-date local-time">20 Nov 2026, 06:51 IST</time>
       
     </div>
 
-    <h2><a href="story_354.html" class="headline-link">Cyclone Akvan: 45 trains cancelled, 28 rescheduled; Air India, IndiGo issue advisories - check affected routes</a></h2>
+    <h2><a href="story_251.html" class="headline-link">GTA 6 reveals the actors, voices and familiar names behind the characters of Vice City</a></h2>
 
     
-    <p class="story-summary">According to the IMD&#39;s latest bulletin issued at 5:30 am on November 20, the system was moving north-northwestwards at a speed of 23 kmph and was centred over the westcentral Bay of Bengal, near latitude 18.3°N and longitude 84.8°E. It was located approximately 110 km south of Gopalpur in Odisha, 70 km east of Kalingapatnam in Andhra Pradesh, 170 km east-northeast of Visakhapatnam and 200 km south-southwest of Puri. The weather department forecast that Cyclone Akvan would cross the North Andhra Pradesh-South Odisha coasts close to Gopalpur by forenoon on Friday, bringing maximum sustained wind speeds of 70-80 kmph, with gusts reaching 90 kmph. The IMD also confirmed that the storm&#39;s outer rain bands had started interacting with land and that the landfall process was expected to commence within the next two hours. Heavy rainfall measuring 7-11 cm could affect Kolkata, Howrah, Hooghly, North 24 Parganas, West Midnapore and Jhargram.</p>
+    <p class="story-summary">He also highlighted a decline in poverty, saying it stood at 27% earlier, while extreme poverty has now fallen to 2.6%. GTA 6 is the result of 13 years of development and anticipation. Prime Minister Narendra Modi has turned the launch of Grand Theft Auto 6 (GTA 6) into an opportunity to showcase India&#39;s economic and technological transformation over the past 13 years, using one of the world&#39;s most popular video game franchises to connect with younger audiences. In a post shared on his official Instagram account, Modi drew a comparison between GTA 5, released in 2013, and GTA 6, which launched on Thursday, November 19. It highlighted the country&#39;s shift from being counted among the &#39;Fragile 5&#39; economies in 2013 to becoming the world&#39;s fastest-growing major economy.</p>
     
 
+    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
     <div class="sources-list">
       <strong>Sources:</strong>
       
-      <a href="https://www.dnaindia.com/india/report-cyclone-akvan-alert-andhra-pradesh-braces-for-very-severe-storm-landfall-on-november-20-3224193" target="_blank" rel="noopener noreferrer">DNA India</a>, 
+      <span class="source-item-chip">
+        <a href="https://economictimes.indiatimes.com/news/international/world-news/gta-6-new-zealand-trick-explained-how-to-play-gta-6-early-on-ps5-and-xbox-series-xs-by-changing-timezone-settings/articleshow/135930880.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="How can you play GTA early?">How can you play GTA early?</a>
+        <span class="badge badge-outlet">Economic Times</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://www.hindustantimes.com/india-news/odisha-sanctions-6-5cr-for-cyclone-preparedness-ahead-of-akvan-landfall-101794974220047.html" target="_blank" rel="noopener noreferrer">Hindustan Times</a>, 
+      <span class="source-item-chip">
+        <a href="https://www.hindustantimes.com/india-news/tejasvi-surya-reveals-bengaluru-gta-6-connection-says-over-1-600-developers-worked-on-the-game-101795017842307.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="‘GTA 6 has a Bengaluru connection’: Tejasvi Surya highlights 1,600 developers&#39; hard work">‘GTA 6 has a Bengaluru connection’: Tejasvi Surya highlights 1,600 developers&#39; hard work</a>
+        <span class="badge badge-outlet">Hindustan Times</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://www.livemint.com/news/india/imd-issues-orange-alert-for-andhra-pradesh-odisha-telangana-as-cyclonic-storm-akvan-intensifies-check-forecast-11794964367208.html" target="_blank" rel="noopener noreferrer">Mint</a>, 
+      <span class="source-item-chip">
+        <a href="https://www.indiatoday.in/technology/news/story/gta-6-begins-global-rollout-after-13-year-wait-india-launch-set-for-midnight-tonight-3041624-2026-11-18?utm_source=rss" target="_blank" rel="noopener noreferrer" class="source-title-link" title="GTA 6 begins global rollout after 13-year wait, India launch set for midnight">GTA 6 begins global rollout after 13-year wait, India launch set for midnight</a>
+        <span class="badge badge-outlet">India Today</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://www.hindustantimes.com/india-news/odisha-andhra-prepare-shelters-evacuations-ahead-of-nov-20-cyclone-akvan-landfall-101795009673205.html" target="_blank" rel="noopener noreferrer">Hindustan Times</a>, 
+      <span class="source-item-chip">
+        <a href="https://www.ndtv.com/world-news/gta-6-launch-live-updates-release-time-download-gameplay-price-latest-news-key-announcements-reviews-12346071" target="_blank" rel="noopener noreferrer" class="source-title-link" title="GTA 6 Launch LIVE Updates: India Gets Blockbuster Game After 13-Year Wait">GTA 6 Launch LIVE Updates: India Gets Blockbuster Game After 13-Year Wait</a>
+        <span class="badge badge-outlet">NDTV</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://www.hindustantimes.com/india-news/odisha-steps-up-cyclone-preparations-as-imd-forecasts-akvan-landfall-on-nov-20-101795002952912.html" target="_blank" rel="noopener noreferrer">Hindustan Times</a>, 
+      <span class="source-item-chip">
+        <a href="https://www.livemint.com/news/trends/grand-theft-auto-6-review-out-biggest-disappointment-in-gaming-history-netizens-says-gta-5-was-better-after-13-years-11795025488336.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Grand Theft Auto 6 review out: Biggest disappointment in gaming history? Netizens says ‘GTA 5 was better’ after 13 years">Grand Theft Auto 6 review out: Biggest disappointment in gaming history? Netizens says ‘GTA 5 was better’ after 13 years</a>
+        <span class="badge badge-outlet">Mint</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://timesofindia.indiatimes.com/city/visakhapatnam/cyclone-akvan-intensifies-into-severe-storm-likely-to-cross-narsapur-puri-coast-by-nov-20-6-andhra-pradesh-districts-under-red-alert/articleshow/135965154.cms" target="_blank" rel="noopener noreferrer">Times of India</a>, 
+      <span class="source-item-chip">
+        <a href="https://www.news18.com/cities/bengaluru-news/gta-6-has-a-bengaluru-connection-1600-developers-a-1995-startup-and-a-desi-open-world-game-ws-l-10432162.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="GTA 6 Has A Bengaluru Connection: 1,600 Developers, A 1995 Startup And A Desi Open-World Game">GTA 6 Has A Bengaluru Connection: 1,600 Developers, A 1995 Startup And A Desi Open-World Game</a>
+        <span class="badge badge-outlet">News18</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://www.livemint.com/news/india/imd-weather-forecast-severe-cyclonic-storm-akvan-moves-over-bay-of-bengal-gusts-could-reach-110-kmph-11795061918899.html" target="_blank" rel="noopener noreferrer">Mint</a>, 
+      <span class="source-item-chip">
+        <a href="https://www.dnaindia.com/india/report-how-pm-modi-uses-gta-6-way-to-showcase-india-s-journey-from-fragile-5-to-fastest-growing-economy-3224300" target="_blank" rel="noopener noreferrer" class="source-title-link" title="How PM Modi uses GTA 6 way to showcase India&#39;s journey from &#39;Fragile 5&#39; to fastest-growing economy">How PM Modi uses GTA 6 way to showcase India&#39;s journey from &#39;Fragile 5&#39; to fastest-growing economy</a>
+        <span class="badge badge-outlet">DNA India</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://www.news18.com/india/puri-bans-tourists-and-closes-beaches-due-to-cyclone-akvan-odisha-puri-travel-advisory-ws-l-10432521.html" target="_blank" rel="noopener noreferrer">News18</a>, 
+      <span class="source-item-chip">
+        <a href="https://www.aljazeera.com/news/2026/11/19/blockbuster-gta-vi-release-shows-cultural-economic-heft-of-video-games?traffic_source=rss" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Blockbuster GTA VI release shows cultural, economic heft of video games">Blockbuster GTA VI release shows cultural, economic heft of video games</a>
+        <span class="badge badge-outlet">Al Jazeera – World</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://www.news18.com/india/cyclone-akvan-red-alert-in-6-odisha-districts-schools-shut-over-80000-evacuated-ws-l-10432294.html" target="_blank" rel="noopener noreferrer">News18</a>, 
-      
-      <a href="https://www.news18.com/cities/bhubaneswar/cyclone-akvan-east-coast-express-falaknuma-among-3-trains-rescheduled-check-new-timings-ws-l-10431838.html" target="_blank" rel="noopener noreferrer">News18</a>, 
-      
-      <a href="https://www.dnaindia.com/india/report-cyclone-akvan-alertthree-trains-rescheduled-schools-closed-in-odisha-check-imd-warning-3224289" target="_blank" rel="noopener noreferrer">DNA India</a>, 
-      
-      <a href="https://www.hindustantimes.com/india-news/odisha-evacuates-1-05-lakh-people-ahead-of-cyclone-akvan-deploys-295-rescue-teams-101795093029671.html" target="_blank" rel="noopener noreferrer">Hindustan Times</a>, 
-      
-      <a href="https://www.deccanchronicle.com/southern-states/andhra-pradesh/cyclone-akvan-4-trains-cancelled-hirakud-express-diverted-2006092" target="_blank" rel="noopener noreferrer">Deccan Chronicle</a>, 
-      
-      <a href="https://www.dnaindia.com/india/report-cyclone-akvan-over-1-lakh-evacuated-in-odisha-trains-and-flight-cancelled-schools-shut-in-6-districts-3224355" target="_blank" rel="noopener noreferrer">DNA India</a>, 
-      
-      <a href="https://www.dnaindia.com/india/report-cyclone-akavan-odisha-evacuates-one-lakh-people-ahead-of-landfall-at-gopalpur-red-alert-for-these-districts-3224323" target="_blank" rel="noopener noreferrer">DNA India</a>, 
-      
-      <a href="https://www.ndtv.com/india-news/cyclone-akvan-live-imd-weather-updates-landfall-rainfall-odisha-andhra-pradesh-akvan-weakens-into-cyclonic-storm-likely-to-cross-odisha-andhra-coast-12352070" target="_blank" rel="noopener noreferrer">NDTV</a>, 
-      
-      <a href="https://www.ndtv.com/india-news/47-train-cancelled-over-3-lakh-evacuated-as-cyclone-akvan-heads-to-odisha-12351955" target="_blank" rel="noopener noreferrer">NDTV</a>, 
-      
-      <a href="https://www.thehindu.com/news/national/cyclone-akvan-landfall-andhra-pradesh-odisha-imd-alert-live-updates-november-20-2026/article71722871.ece" target="_blank" rel="noopener noreferrer">The Hindu</a>, 
-      
-      <a href="https://www.thehindu.com/news/national/andhra-pradesh/very-heavy-rain-lashes-srikakulam-as-akvan-moves-closer-to-coast/article71722916.ece" target="_blank" rel="noopener noreferrer">The Hindu</a>, 
-      
-      <a href="https://www.thehindu.com/news/morning-digest-november-20-2026/article71721983.ece" target="_blank" rel="noopener noreferrer">The Hindu</a>, 
-      
-      <a href="https://www.thehindu.com/news/national/cyclone-akvan-odisha-andhra-pradesh-landfall-imd-updates/article71722866.ece" target="_blank" rel="noopener noreferrer">The Hindu</a>, 
-      
-      <a href="https://www.hindustantimes.com/india-news/cyclone-akvan-tracker-live-updates-landfall-imd-red-alert-heavy-rainfall-odisha-ganjam-gajapati-puri-jagatsinghp-101795135589664.html" target="_blank" rel="noopener noreferrer">Hindustan Times</a>, 
-      
-      <a href="https://www.hindustantimes.com/india-news/odisha-schools-closed-in-several-districts-today-november-20-due-to-cyclone-akvan-101795135380272.html" target="_blank" rel="noopener noreferrer">Hindustan Times</a>, 
-      
-      <a href="https://www.livemint.com/news/india/cyclone-avkan-are-schools-open-or-closed-in-odisha-tamil-nadu-check-flight-operations-train-disruptions-details-11795138328661.html" target="_blank" rel="noopener noreferrer">Mint</a>, 
-      
-      <a href="https://www.indiatoday.in/india/story/cyclone-akvan-live-updates-tracker-speed-odisha-red-alert-cyclonic-storm-bay-of-bengal-3042698-2026-11-19?utm_source=rss" target="_blank" rel="noopener noreferrer">India Today</a>, 
-      
-      <a href="https://www.news18.com/india/cyclone-akvan-landfall-live-updates-andhra-pradesh-odisha-narsapur-puri-imd-alert-liveblog-10433309.html" target="_blank" rel="noopener noreferrer">News18</a>, 
-      
-      <a href="https://www.news18.com/india/3-lakh-evacuated-47-trains-cancelled-odisha-on-high-alert-as-cyclone-akvan-heads-for-landfall-near-gopalpur-today-10433263.html" target="_blank" rel="noopener noreferrer">News18</a>, 
-      
-      <a href="https://www.dnaindia.com/india/report-cyclone-akvan-47-trains-cancelled-over-3-lakh-evacuated-as-odisha-braces-for-landfall-here-s-what-cm-said-3224364" target="_blank" rel="noopener noreferrer">DNA India</a>, 
-      
-      <a href="https://www.thehindu.com/news/national/andhra-pradesh/cyclone-akvan-heavy-rain-inundates-low-lying-areas-of-ichchapuram-sompeta-in-srikakulam-district/article71723029.ece" target="_blank" rel="noopener noreferrer">The Hindu</a>, 
-      
-      <a href="https://indianexpress.com/article/cities/kolkata/west-bengal-weather-alert-kolkata-south-bengal-heavy-rain-cyclone-akvan-10971127/" target="_blank" rel="noopener noreferrer">Indian Express</a>, 
-      
-      <a href="https://www.hindustantimes.com/india-news/cyclone-akvan-completes-landfall-on-odisha-coast-lashes-state-with-heavy-rain-101795162109520.html" target="_blank" rel="noopener noreferrer">Hindustan Times</a>, 
-      
-      <a href="https://www.livemint.com/news/india/bengal-rain-today-yellow-alert-in-multiple-districts-cyclone-akvan-brings-heavy-showers-when-will-weather-improve-11795154631511.html" target="_blank" rel="noopener noreferrer">Mint</a>, 
-      
-      <a href="https://www.livemint.com/news/india/cyclone-akvan-45-trains-cancelled-28-rescheduled-air-india-indigo-issue-advisories-check-affected-routes-11795148322555.html" target="_blank" rel="noopener noreferrer">Mint</a>, 
-      
-      <a href="https://www.dnaindia.com/india/report-cyclone-akvan-landfall-process-begins-near-gopalpur-in-odisha-to-continue-for-next-2-hours-imd-3224369" target="_blank" rel="noopener noreferrer">DNA India</a>
+      <span class="source-item-chip">
+        <a href="https://www.channelnewsasia.com/living/gta-6-voice-actors-manni-l-perez-dylan-rourke-jason-lucia-6567361" target="_blank" rel="noopener noreferrer" class="source-title-link" title="GTA 6 reveals the actors, voices and familiar names behind the characters of Vice City">GTA 6 reveals the actors, voices and familiar names behind the characters of Vice City</a>
+        <span class="badge badge-outlet">CNA – Asia</span>
+        
+      </span>
       
     </div>
   </article>
   
   
   
+  
 
-  <article class="story-card level-corroborated">
+  <article class="story-card level-strongly">
     <div class="meta-row">
-      <span class="badge badge-corroborated">Corroborated</span>
+      <span class="badge badge-strongly">Strongly corroborated</span>
       
       <span class="source-count">4 independent sources</span>
       <span class="sep">•</span>
-      <span class="score-pill">Score: 6.92</span>
+      <span class="score-pill">Score: 11.83</span>
       
       <span class="sep">•</span>
-      <span class="story-date">20 Nov 2026, 13:36 IST</span>
+      <time datetime="2026-11-19T19:34:26+00:00" class="story-date local-time">20 Nov 2026, 01:04 IST</time>
       
     </div>
 
-    <h2><a href="story_397.html" class="headline-link">Why the ball is in Kim Jong-un’s court on a meeting with Donald Trump</a></h2>
+    <h2><a href="story_157.html" class="headline-link">More support for retrenched workers, longer training stints for fresh grads being considered: Jasmin Lau</a></h2>
 
     
-    <p class="story-summary-omitted">
+    <div class="story-summary-omitted">
       
-      [Summary constrained to claim table — strict NLI entailment gate applied. <a href="story_397.html">View claims &rarr;</a>]
+      <div class="empty-state-notice entailment-notice">
+        <span class="notice-badge">&#9432; Constrained to Verified Facts</span>
+        <p>AI narrative synthesis suppressed to prevent hallucination because reporting lacks sufficient multi-source consensus. View individual source claims on the story page.</p>
+        <a href="story_157.html" class="view-claims-btn">View claims &rarr;</a>
+      </div>
       
-    </p>
+    </div>
     
 
+    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
     <div class="sources-list">
       <strong>Sources:</strong>
       
-      <a href="https://www.ndtv.com/world-news/north-koreas-kim-jong-un-smokes-daughter-skis-ahead-of-possible-meeting-with-trump-12338075" target="_blank" rel="noopener noreferrer">NDTV</a>, 
+      <span class="source-item-chip">
+        <a href="https://economictimes.indiatimes.com/jobs/fresher/hiring-takes-a-u-turn-job-recruitment-script-flips-in-an-unexpected-way-campus-placement-ai-cheating-interview/articleshow/135961791.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="The job interview is having a comeback moment">The job interview is having a comeback moment</a>
+        <span class="badge badge-outlet">Economic Times</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://www.straitstimes.com/world/united-states/trump-said-too-busy-to-meet-again-with-north-koreas-kim-nbc" target="_blank" rel="noopener noreferrer">The Straits Times – World</a>, 
+      <span class="source-item-chip">
+        <a href="https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2338770" target="_blank" rel="noopener noreferrer" class="source-title-link" title="एनएपीडीडीआर के माध्यम से पुनर्वास और आजीविका के अवसरों को सुदृढ़ करना">एनएपीडीडीआर के माध्यम से पुनर्वास और आजीविका के अवसरों को सुदृढ़ करना</a>
+        <span class="badge badge-outlet">Press Information Bureau</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://www.deccanchronicle.com/world/trump-leaves-asia-without-meeting-kim-jong-un-2006189" target="_blank" rel="noopener noreferrer">Deccan Chronicle</a>, 
+      <span class="source-item-chip">
+        <a href="https://www.thehindu.com/news/cities/chennai/demands-for-nulm-workers-job-permanency-continues/article71720743.ece" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Demands for NULM workers’ job permanency continues">Demands for NULM workers’ job permanency continues</a>
+        <span class="badge badge-outlet">The Hindu</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://www.scmp.com/news/china/diplomacy/article/3375160/why-ball-kim-jong-uns-court-meeting-donald-trump" target="_blank" rel="noopener noreferrer">SCMP – World</a>
-      
-    </div>
-  </article>
-  
-  
-  
-
-  <article class="story-card level-corroborated">
-    <div class="meta-row">
-      <span class="badge badge-corroborated">Corroborated</span>
-      
-      <span class="source-count">3 independent sources</span>
-      <span class="sep">•</span>
-      <span class="score-pill">Score: 5.93</span>
-      
-      <span class="sep">•</span>
-      <span class="story-date">20 Nov 2026, 13:35 IST</span>
-      
-    </div>
-
-    <h2><a href="story_414.html" class="headline-link">PM Modi calls for sustained government drive against drug trade, stresses financial prudence</a></h2>
-
-    
-    <p class="story-summary-omitted">
-      
-      [Summary constrained to claim table — strict NLI entailment gate applied. <a href="story_414.html">View claims &rarr;</a>]
-      
-    </p>
-    
-
-    <div class="sources-list">
-      <strong>Sources:</strong>
-      
-      <a href="https://www.hindustantimes.com/india-news/pm-sets-target-for-drug-abuse-eradication-at-ministers-meet-101795027436584.html" target="_blank" rel="noopener noreferrer">Hindustan Times</a>, 
-      
-      <a href="https://economictimes.indiatimes.com/news/india/pm-modi-calls-for-greater-jan-bhagidari-to-fight-substance-abuse/articleshow/135998882.cms" target="_blank" rel="noopener noreferrer">Economic Times</a>, 
-      
-      <a href="https://www.thehindu.com/news/national/pm-modi-calls-for-sustained-government-drive-against-drug-trade-stresses-financial-prudence/article71716138.ece" target="_blank" rel="noopener noreferrer">The Hindu</a>
+      <span class="source-item-chip">
+        <a href="https://www.channelnewsasia.com/singapore/acting-manpower-minister-jasmin-lau-mom-jobseeker-support-graduates-retrenchment-6565936" target="_blank" rel="noopener noreferrer" class="source-title-link" title="More support for retrenched workers, longer training stints for fresh grads being considered: Jasmin Lau">More support for retrenched workers, longer training stints for fresh grads being considered: Jasmin Lau</a>
+        <span class="badge badge-outlet">CNA – Asia</span>
+        
+      </span>
       
     </div>
   </article>
@@ -390,45 +383,78 @@
   
   
 
-  <article class="story-card level-limited">
+  <article class="story-card level-strongly">
     <div class="meta-row">
-      <span class="badge badge-limited">Limited corroboration</span>
+      <span class="badge badge-strongly">Strongly corroborated</span>
       
-      <span class="source-count">3 independent sources</span>
+      <span class="source-count">7 independent sources</span>
       <span class="sep">•</span>
-      <span class="score-pill">Score: 3.95</span>
+      <span class="score-pill">Score: 12.24</span>
       
       <span class="sep">•</span>
-      <span class="story-date">20 Nov 2026, 13:32 IST</span>
+      <time datetime="2026-11-19T16:56:13+00:00" class="story-date local-time">19 Nov 2026, 22:26 IST</time>
       
     </div>
 
-    <h2><a href="story_415.html" class="headline-link">After Ajit Pawar’s Death, Maharashtra Sanctions ₹64.53 Cr To Strengthen Baramati Airport Safety</a></h2>
+    <h2><a href="story_153.html" class="headline-link">लोकसभा अध्यक्ष ने श्रीमती इंदिरा गांधी को पुष्पांजलि अर्पित की</a></h2>
 
     
-    <p class="story-summary-omitted">
+    <div class="story-summary-omitted">
       
-      [Summary constrained to claim table — strict NLI entailment gate applied. <a href="story_415.html">View claims &rarr;</a>]
+      <div class="empty-state-notice sensitive-notice">
+        <span class="notice-badge">&#9888; Sensitive Topic Safeguard</span>
+        <p>Narrative generation suppressed under legal and defamation safeguards (court proceedings or private individuals). Only structured claims from named outlets are published.</p>
+        <a href="story_153.html" class="view-claims-btn">Inspect claims &rarr;</a>
+      </div>
       
-    </p>
+    </div>
     
 
+    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
     <div class="sources-list">
       <strong>Sources:</strong>
       
-      <a href="https://www.news18.com/india/because-you-ended-mafia-raj-hcl-women-workers-told-yogi-they-felt-safe-working-night-shifts-ws-l-10430268.html" target="_blank" rel="noopener noreferrer">News18</a>, 
+      <span class="source-item-chip">
+        <a href="https://www.hindustantimes.com/india-news/indiabloc-sonia-gandhi-book-launch-belonging-rajiv-gandhi-rahul-gandhi-indira-gandhi-congress-101794882463130.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="INDIA bloc leaders turn out for Sonia Gandhi’s memoir launch">INDIA bloc leaders turn out for Sonia Gandhi’s memoir launch</a>
+        <span class="badge badge-outlet">Hindustan Times</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://www.news18.com/videos/india/yogi-adityanath-exclusive-interview-daughters-can-step-out-at-night-without-fear-in-u-p-news18-10430249.html" target="_blank" rel="noopener noreferrer">News18</a>, 
+      <span class="source-item-chip">
+        <a href="https://timesofindia.indiatimes.com/india/at-sonias-book-launch-gandhis-open-up-about-love-loss-and-bad-chicken/articleshow/135905161.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="At Sonia&#39;s book launch, Gandhis open up about love, loss, and bad chicken">At Sonia&#39;s book launch, Gandhis open up about love, loss, and bad chicken</a>
+        <span class="badge badge-outlet">Times of India</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://www.news18.com/india/girls-no-longer-fear-returning-home-late-yogi-adityanath-says-last-mile-connectivity-transforming-up-ws-l-10430214.html" target="_blank" rel="noopener noreferrer">News18</a>, 
+      <span class="source-item-chip">
+        <a href="https://www.indiatoday.in/india/story/sonia-gandhi-memoir-reveals-her-relationship-with-indira-gandhi-her-dilemma-on-how-to-address-her-ma-or-mamma-3040380-2026-11-17?utm_source=rss" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Ma or Mamma? Sonia Gandhi&#39;s dilemma with mother-in-law Indira Gandhi">Ma or Mamma? Sonia Gandhi&#39;s dilemma with mother-in-law Indira Gandhi</a>
+        <span class="badge badge-outlet">India Today</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://www.dnaindia.com/india/report-maharashtra-tightens-lift-safety-norms-bans-children-below-12-from-using-lifts-alone-3224225" target="_blank" rel="noopener noreferrer">DNA India</a>, 
+      <span class="source-item-chip">
+        <a href="https://www.dnaindia.com/india/report-mum-on-papa-s-lap-rahul-gandhi-recalls-childhood-memory-of-sonia-and-rajiv-gandhi-video-3224170" target="_blank" rel="noopener noreferrer" class="source-title-link" title="&#39;Mum on papa&#39;s lap&#39;: Rahul Gandhi recalls childhood memory of Sonia and Rajiv Gandhi| Video">&#39;Mum on papa&#39;s lap&#39;: Rahul Gandhi recalls childhood memory of Sonia and Rajiv Gandhi| Video</a>
+        <span class="badge badge-outlet">DNA India</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://www.news18.com/india/those-under-12-barred-from-taking-lifts-escalators-moving-walkways-alone-the-new-rules-in-maharashtra-explained-ws-eklt-10430930.html" target="_blank" rel="noopener noreferrer">News18</a>, 
+      <span class="source-item-chip">
+        <a href="https://www.livemint.com/news/trends/if-you-want-to-fall-in-love-never-eat-chicken-chasseur-rahul-gandhis-lighthearted-tale-at-sonias-memoir-launch-11794898937789.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="‘If you want to fall in love...never eat chicken chasseur’: Rahul Gandhi&#39;s lighthearted tale at Sonia&#39;s memoir launch">‘If you want to fall in love...never eat chicken chasseur’: Rahul Gandhi&#39;s lighthearted tale at Sonia&#39;s memoir launch</a>
+        <span class="badge badge-outlet">Mint</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://www.news18.com/india/after-ajit-pawars-death-maharashtra-sanctions-64-53-cr-to-strengthen-baramati-airport-safety-ws-l-10433128.html" target="_blank" rel="noopener noreferrer">News18</a>, 
+      <span class="source-item-chip">
+        <a href="https://www.news18.com/india/as-a-true-hindu-rahul-gandhi-congress-respond-to-sonia-book-launch-row-remarks-with-love-ws-klrt-10429266.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Rahul Gandhi Responds To ‘Mumma In Papa’s Lap’ Remark Backlash With ‘Love As A True Hindu’">Rahul Gandhi Responds To ‘Mumma In Papa’s Lap’ Remark Backlash With ‘Love As A True Hindu’</a>
+        <span class="badge badge-outlet">News18</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://www.deccanchronicle.com/southern-states/telangana/telangana-sanctions-rs230-cr-for-anabheri-memorial-park-in-husnabad-2006187" target="_blank" rel="noopener noreferrer">Deccan Chronicle</a>
+      <span class="source-item-chip">
+        <a href="https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2338628" target="_blank" rel="noopener noreferrer" class="source-title-link" title="लोकसभा अध्यक्ष ने श्रीमती इंदिरा गांधी को पुष्पांजलि अर्पित की">लोकसभा अध्यक्ष ने श्रीमती इंदिरा गांधी को पुष्पांजलि अर्पित की</a>
+        <span class="badge badge-outlet">Press Information Bureau</span>
+        
+      </span>
       
     </div>
   </article>
@@ -437,115 +463,66 @@
   
   
 
-  <article class="story-card level-limited">
+  <article class="story-card level-strongly">
     <div class="meta-row">
-      <span class="badge badge-limited">Limited corroboration</span>
+      <span class="badge badge-strongly">Strongly corroborated</span>
       
-      <span class="source-count">10 independent sources</span>
+      <span class="source-count">5 independent sources</span>
       <span class="sep">•</span>
-      <span class="score-pill">Score: 0.0</span>
+      <span class="score-pill">Score: 11.40</span>
       
       <span class="sep">•</span>
-      <span class="story-date">20 Nov 2026, 13:29 IST</span>
+      <time datetime="2026-11-19T19:40:23+00:00" class="story-date local-time">20 Nov 2026, 01:10 IST</time>
       
     </div>
 
-    <h2><a href="story_351.html" class="headline-link">GIC, one of Anthropic’s largest investors, to stay invested beyond IPO</a></h2>
+    <h2><a href="story_260.html" class="headline-link">Ukraine&#39;s allies meet in Berlin after Trump-Putin-Xi talks</a></h2>
 
     
-    <p class="story-summary">The company’s shares opened at $111.50, around 34% above the initial public offering (
-IPO) price of $83. The stock began trading on the ticker ANT midday on Thursday.The artificial intelligence (AI) lab, valued at $2 trillion, said last week that it would offer 825 million shares with its initial public offering (IPO) at a price range of $70 to $78 per share. However, that changed on Wednesday when the Dario Amodei-led company announced it would sell 980 million shares at $83 each. The shares opened at USD 111.50, nearly 34 per cent above its initial public offering (IPO) price of USD 83. The shares opened at $111.50, against the IPO price of $83, before easing to $108.72.</p>
+    <div class="story-summary-omitted">
+      
+      <div class="empty-state-notice entailment-notice">
+        <span class="notice-badge">&#9432; Constrained to Verified Facts</span>
+        <p>AI narrative synthesis suppressed to prevent hallucination because reporting lacks sufficient multi-source consensus. View individual source claims on the story page.</p>
+        <a href="story_260.html" class="view-claims-btn">View claims &rarr;</a>
+      </div>
+      
+    </div>
     
 
+    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
     <div class="sources-list">
       <strong>Sources:</strong>
       
-      <a href="https://www.ndtv.com/world-news/anthropic-to-finalise-ipo-price-today-may-raise-it-to-80-per-share-report-12345888" target="_blank" rel="noopener noreferrer">NDTV</a>, 
+      <span class="source-item-chip">
+        <a href="https://www.ndtv.com/world-news/eu-proposes-45-billion-euro-loan-for-ukraine-to-be-repaid-by-russia-12345740" target="_blank" rel="noopener noreferrer" class="source-title-link" title="EU Proposes 45-Billion Euro Loan For Ukraine, To Be &#39;Repaid&#39; By Russia">EU Proposes 45-Billion Euro Loan For Ukraine, To Be &#39;Repaid&#39; By Russia</a>
+        <span class="badge badge-outlet">NDTV</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://economictimes.indiatimes.com/world/us/anthropic-ipo-want-to-buy-claude-makers-stock-heres-a-step-by-step-guide-for-retail-investors/articleshow/135961790.cms" target="_blank" rel="noopener noreferrer">Economic Times</a>, 
+      <span class="source-item-chip">
+        <a href="https://timesofindia.indiatimes.com/world/europe/a-war-bill-for-russia-europes-45-billion-ukraine-plan-echoes-germanys-wwi-reparations/articleshow/135967589.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="A war bill for Russia? Europe&#39;s €45 billion Ukraine plan echoes Germany&#39;s WWI reparations">A war bill for Russia? Europe&#39;s €45 billion Ukraine plan echoes Germany&#39;s WWI reparations</a>
+        <span class="badge badge-outlet">Times of India</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://economictimes.indiatimes.com/world/business/ant-ipo-buying-anthropic-stock-on-thursday-heres-why-you-could-pay-much-more-than-the-ipo-price/articleshow/135968101.cms" target="_blank" rel="noopener noreferrer">Economic Times</a>, 
+      <span class="source-item-chip">
+        <a href="https://www.channelnewsasia.com/world/ukraine-russia-coalition-willing-berlin-bilateral-talks-6566721" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Ukraine&#39;s allies meet in Berlin after Trump-Putin-Xi talks">Ukraine&#39;s allies meet in Berlin after Trump-Putin-Xi talks</a>
+        <span class="badge badge-outlet">CNA – Asia</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://economictimes.indiatimes.com/world/business/anthropic-ipo-buying-anthropic-on-a-crypto-exchange-why-antx-isnt-the-same-as-owning-ant-stock-and-the-5-fee-youll-pay/articleshow/135967150.cms" target="_blank" rel="noopener noreferrer">Economic Times</a>, 
+      <span class="source-item-chip">
+        <a href="https://www.straitstimes.com/world/europe/ukraines-nato-membership-is-relevant-for-european-security-macron-says" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Ukraine&#39;s NATO membership is relevant for European security, Macron says">Ukraine&#39;s NATO membership is relevant for European security, Macron says</a>
+        <span class="badge badge-outlet">The Straits Times – World</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://www.thehindu.com/business/markets/ai-firm-anthropic-shares-wall-streets-nasdaq-debut/article71721723.ece" target="_blank" rel="noopener noreferrer">The Hindu</a>, 
-      
-      <a href="https://timesofindia.indiatimes.com/business/international-business/anthropic-ipo-shares-jump-34-on-nasdaq-debut-valuation-tops-2-trillion/articleshow/136000048.cms" target="_blank" rel="noopener noreferrer">Times of India</a>, 
-      
-      <a href="https://www.indiatoday.in/business/story/anthropic-shares-surge-34-in-nasdaq-debut-push-ai-firms-valuation-to-2-trillion-3042723-2026-11-19?utm_source=rss" target="_blank" rel="noopener noreferrer">India Today</a>, 
-      
-      <a href="https://economictimes.indiatimes.com/world/business/dario-amodei-net-worth-soars-after-ant-ipo-how-anthropic-ceos-1-3-stake-at-83-a-share-boosted-his-fortune/articleshow/135997587.cms" target="_blank" rel="noopener noreferrer">Economic Times</a>, 
-      
-      <a href="https://economictimes.indiatimes.com/world/us/not-all-anthropic-shares-are-the-same-what-class-a-class-n-and-a-26-billion-private-deal-mean-for-ordinary-investors-buying-ant-stock/articleshow/135998371.cms" target="_blank" rel="noopener noreferrer">Economic Times</a>, 
-      
-      <a href="https://economictimes.indiatimes.com/world/business/ant-ipo-price-is-83-but-why-1000-may-not-buy-you-12-shares-how-retail-allocation-works-and-how-to-buy-anthropic-stock/articleshow/135992735.cms" target="_blank" rel="noopener noreferrer">Economic Times</a>, 
-      
-      <a href="https://economictimes.indiatimes.com/world/us/anthropic-ant-stock-wont-trade-at-the-opening-bell-why-a-market-order-on-ipo-day-could-cost-investors-more-than-83/articleshow/135989520.cms" target="_blank" rel="noopener noreferrer">Economic Times</a>, 
-      
-      <a href="https://economictimes.indiatimes.com/world/business/the-12-biggest-us-ipos-since-2008-all-fell-below-their-first-trade-within-a-year-what-that-history-means-for-anthropic-buyers/articleshow/135992221.cms" target="_blank" rel="noopener noreferrer">Economic Times</a>, 
-      
-      <a href="https://economictimes.indiatimes.com/world/business/ai-goldrush-he-left-stanford-joined-openai-and-at-23-sold-his-18-month-old-ai-startup-for-4-5-billion-about-250-million-for-every-month-it-existed/articleshow/135994206.cms" target="_blank" rel="noopener noreferrer">Economic Times</a>, 
-      
-      <a href="https://www.channelnewsasia.com/business/anthropic-hits-2-trillion-market-value-in-debut-6566706" target="_blank" rel="noopener noreferrer">CNA – Asia</a>, 
-      
-      <a href="https://www.aljazeera.com/economy/2026/11/19/anthropic-starts-trading-in-the-us-after-blockbuster-ipo?traffic_source=rss" target="_blank" rel="noopener noreferrer">Al Jazeera – World</a>, 
-      
-      <a href="https://www.ndtv.com/business-news/anthropic-ipo-raises-81-3-billion-stock-soars-then-slips-what-comes-next-12352190" target="_blank" rel="noopener noreferrer">NDTV</a>, 
-      
-      <a href="https://www.deccanchronicle.com/business/anthropic-listing-extends-nasdaqs-dominant-run-against-arch-rival-nyse-2006116" target="_blank" rel="noopener noreferrer">Deccan Chronicle</a>, 
-      
-      <a href="https://www.deccanchronicle.com/technology/anthropic-surges-in-market-debut-after-biggest-ipo-on-record-surpassing-2-trillion-at-one-point-2006110" target="_blank" rel="noopener noreferrer">Deccan Chronicle</a>, 
-      
-      <a href="https://www.deccanchronicle.com/technology/anthropic-starts-trading-in-the-us-after-blockbuster-ipo-2006108" target="_blank" rel="noopener noreferrer">Deccan Chronicle</a>, 
-      
-      <a href="https://timesofindia.indiatimes.com/business/international-business/from-apple-to-anthropic-worlds-10-most-valuable-companies-after-blockbuster-ipo/articleshow/136014713.cms" target="_blank" rel="noopener noreferrer">Times of India</a>, 
-      
-      <a href="https://www.news18.com/videos/breaking-news/ai-race-gets-costlier-anthropic-s-ipo-puts-infrastructure-spending-under-spotlight-news18-10433539.html" target="_blank" rel="noopener noreferrer">News18</a>, 
-      
-      <a href="https://www.business-standard.com/technology/tech-news/anthropic-founders-combined-wealth-jumps-to-166-bn-after-record-ipo-126112000257_1.html" target="_blank" rel="noopener noreferrer">Business Standard</a>, 
-      
-      <a href="https://www.channelnewsasia.com/singapore/gic-anthropic-investor-partnership-ipo-6568671" target="_blank" rel="noopener noreferrer">CNA – Asia</a>
-      
-    </div>
-  </article>
-  
-  
-  
-  
-
-  <article class="story-card level-unconfirmed">
-    <div class="meta-row">
-      <span class="badge badge-unconfirmed">Unconfirmed</span>
-      
-      <span class="badge badge-developing">Developing</span>
-      
-      <span class="source-count">2 independent sources</span>
-      <span class="sep">•</span>
-      <span class="score-pill">Score: 6.9</span>
-      
-      <span class="sep">•</span>
-      <span class="story-date">20 Nov 2026, 13:28 IST</span>
-      
-    </div>
-
-    <h2><a href="story_398.html" class="headline-link">लेंस के ज़रिए: गोवा के पणजी में 57वें भारतीय अंतर्राष्ट्रीय फिल्म महोत्सव (इफ्फी) की मेज़बानी के लिए तैयारियाँ ज़ोरों पर</a></h2>
-
-    
-    <p class="story-summary-omitted">
-      
-      [Summary constrained to claim table — strict NLI entailment gate applied. <a href="story_398.html">View claims &rarr;</a>]
-      
-    </p>
-    
-
-    <div class="sources-list">
-      <strong>Sources:</strong>
-      
-      <a href="https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2338799" target="_blank" rel="noopener noreferrer">Press Information Bureau</a>, 
-      
-      <a href="https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2338738" target="_blank" rel="noopener noreferrer">Press Information Bureau</a>, 
-      
-      <a href="https://indianexpress.com/article/sports/cricket/india-a-vs-nepal-live-streaming-asia-cup-rising-stars-2026-10971098/" target="_blank" rel="noopener noreferrer">Indian Express</a>
+      <span class="source-item-chip">
+        <a href="https://www.aljazeera.com/news/2026/11/19/european-leaders-unite-in-berlin-to-reaffirm-support-for-ukraine?traffic_source=rss" target="_blank" rel="noopener noreferrer" class="source-title-link" title="European leaders unite in Berlin to reaffirm support for Ukraine">European leaders unite in Berlin to reaffirm support for Ukraine</a>
+        <span class="badge badge-outlet">Al Jazeera – World</span>
+        
+      </span>
       
     </div>
   </article>
@@ -559,32 +536,53 @@ IPO) price of $83. The stock began trading on the ticker ANT midday on Thursday.
       
       <span class="source-count">5 independent sources</span>
       <span class="sep">•</span>
-      <span class="score-pill">Score: 9.56</span>
+      <span class="score-pill">Score: 9.65</span>
       
       <span class="sep">•</span>
-      <span class="story-date">20 Nov 2026, 13:26 IST</span>
+      <time datetime="2026-11-20T00:57:26+00:00" class="story-date local-time">20 Nov 2026, 06:27 IST</time>
       
     </div>
 
-    <h2><a href="story_416.html" class="headline-link">Islam set to be the largest religion by 2035: Where will most Muslims live?</a></h2>
+    <h2><a href="story_270.html" class="headline-link">Father, family’s tenant arrested: Man assaulted for entering influencer’s home in Delhi, dies of injuries</a></h2>
 
     
-    <p class="story-summary">Islam set to become world&#39;s largest religion by 2035, Hindu share projected to decline: Report
-Pew projects Islam will surpass Christianity as the world&#39;s largest religion by 2035. Islam is expected to overtake Christianity as the world’s largest religion by 2035, according to projections by the Pew Research Center. A new global religious demographic study by the Pew Research Center projects that Islam could overtake Christianity to become the world&#39;s largest religion by 2035, as the Muslim population continues to expand at a faster pace. Islam is expected to surpass Christianity as the world&#39;s largest religion by 2035.</p>
+    <p class="story-summary">Gold Buyers Beware: Chinese Rhenium Powder Could Adulterate Gold, Hallmark Tests Fail To Detect It
+A 25-year-old Indian national, identified as Tushar Sharma, was found dead inside a burning car in Langley, Canada. 25-year-old Tushar Sharma was found dead in British Columbia.</p>
     
 
+    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
     <div class="sources-list">
       <strong>Sources:</strong>
       
-      <a href="https://timesofindia.indiatimes.com/world/rest-of-world/its-the-babies-muslims-projected-to-outnumber-christians-by-2035-says-pew-study/articleshow/135966824.cms" target="_blank" rel="noopener noreferrer">Times of India</a>, 
+      <span class="source-item-chip">
+        <a href="https://www.livemint.com/news/india/all-that-glitters-is-not-silver-how-hyderabad-police-busted-racket-selling-aluminium-foil-as-edible-silver-waraq-11795009827779.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="All that glitters is not silver: How Hyderabad police busted racket selling aluminium foil as edible silver waraq">All that glitters is not silver: How Hyderabad police busted racket selling aluminium foil as edible silver waraq</a>
+        <span class="badge badge-outlet">Mint</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://www.ndtv.com/world-news/muslims-set-to-become-worlds-largest-religion-by-2035-12346356" target="_blank" rel="noopener noreferrer">NDTV</a>, 
+      <span class="source-item-chip">
+        <a href="https://www.ndtv.com/world-news/indian-mans-body-found-inside-burning-car-in-canada-target-killing-suspected-12347133" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Indian Man&#39;s Body Found Inside Burning Car In Canada, Targeted Killing Suspected">Indian Man&#39;s Body Found Inside Burning Car In Canada, Targeted Killing Suspected</a>
+        <span class="badge badge-outlet">NDTV</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://www.livemint.com/news/world/islam-projected-to-overtake-christianity-as-worlds-largest-religion-by-2035-says-study-heres-what-it-revealed-11795024171643.html" target="_blank" rel="noopener noreferrer">Mint</a>, 
+      <span class="source-item-chip">
+        <a href="https://timesofindia.indiatimes.com/city/hyderabad/hyd-man-accidentally-shot-dead-by-brother-inside-car-in-ny/articleshow/135970426.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Hyderabad man accidentally shot dead by brother inside car in New York">Hyderabad man accidentally shot dead by brother inside car in New York</a>
+        <span class="badge badge-outlet">Times of India</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://www.indiatoday.in/world/story/islam-population-overtake-christianity-largest-religion-2035-pew-ptag-3041810-2026-11-18?utm_source=rss" target="_blank" rel="noopener noreferrer">India Today</a>, 
+      <span class="source-item-chip">
+        <a href="https://www.news18.com/india/gold-adulteration-racket-chinese-rhenium-powder-being-mixed-hallmarking-test-ws-l-10431878.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Gold Buyers Beware: Chinese Rhenium Powder Could Adulterate Gold, Hallmark Tests Fail To Detect It">Gold Buyers Beware: Chinese Rhenium Powder Could Adulterate Gold, Hallmark Tests Fail To Detect It</a>
+        <span class="badge badge-outlet">News18</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://www.aljazeera.com/news/2026/11/20/islam-set-to-be-the-largest-religion-by-2035-where-will-most-muslims-live?traffic_source=rss" target="_blank" rel="noopener noreferrer">Al Jazeera – World</a>
+      <span class="source-item-chip">
+        <a href="https://indianexpress.com/article/cities/delhi/man-assaulted-influencer-home-dies-of-injuries-10970569/" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Father, family’s tenant arrested: Man assaulted for entering influencer’s home in Delhi, dies of injuries">Father, family’s tenant arrested: Man assaulted for entering influencer’s home in Delhi, dies of injuries</a>
+        <span class="badge badge-outlet">Indian Express</span>
+        
+      </span>
       
     </div>
   </article>
@@ -598,53 +596,182 @@ Pew projects Islam will surpass Christianity as the world&#39;s largest religion
       
       <span class="source-count">5 independent sources</span>
       <span class="sep">•</span>
-      <span class="score-pill">Score: 7.48</span>
+      <span class="score-pill">Score: 8.95</span>
       
       <span class="sep">•</span>
-      <span class="story-date">20 Nov 2026, 13:22 IST</span>
+      <time datetime="2026-11-20T02:42:42+00:00" class="story-date local-time">20 Nov 2026, 08:12 IST</time>
       
     </div>
 
-    <h2><a href="story_358.html" class="headline-link">UN General Assembly chief tells Myanmar to ‘bring Rohingya home’</a></h2>
+    <h2><a href="story_272.html" class="headline-link">Climate Talks Edge Toward Deal on Electrifying Global Economy</a></h2>
 
     
-    <p class="story-summary-omitted">
+    <div class="story-summary-omitted">
       
-      [Narrative omitted — sensitive topic safety gate active. Review claims and sources on the story page.]
+      <div class="empty-state-notice entailment-notice">
+        <span class="notice-badge">&#9432; Constrained to Verified Facts</span>
+        <p>AI narrative synthesis suppressed to prevent hallucination because reporting lacks sufficient multi-source consensus. View individual source claims on the story page.</p>
+        <a href="story_272.html" class="view-claims-btn">View claims &rarr;</a>
+      </div>
       
-    </p>
+    </div>
     
 
+    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
     <div class="sources-list">
       <strong>Sources:</strong>
       
-      <a href="https://www.hindustantimes.com/india-news/ht-evening-brief-nov-19-cyclone-akvan-to-make-landfall-tomorrow-putin-trump-xi-issue-peace-declaration-myanmar-ruled-guilty-of-rohingya-genocide-101795089587126.html" target="_blank" rel="noopener noreferrer">Hindustan Times</a>, 
+      <span class="source-item-chip">
+        <a href="https://www.thehindu.com/news/international/cop31-negotiators-publish-revised-deal-draft-with-no-mention-of-fossil-fuels/article71721240.ece" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Draft of COP31 cover text drops references to fossil fuel phase-out, net zero dates">Draft of COP31 cover text drops references to fossil fuel phase-out, net zero dates</a>
+        <span class="badge badge-outlet">The Hindu</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://www.livemint.com/news/world/icj-holds-myanmar-accountable-for-rohingya-genocide-orders-compensation-and-safe-return-11795110415214.html" target="_blank" rel="noopener noreferrer">Mint</a>, 
+      <span class="source-item-chip">
+        <a href="https://economictimes.indiatimes.com/news/international/world-news/backsliding-cop31-draft-omits-fossil-fuels/articleshow/136003374.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Backsliding? COP31 draft omits fossil fuels">Backsliding? COP31 draft omits fossil fuels</a>
+        <span class="badge badge-outlet">Economic Times</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://www.aljazeera.com/gallery/2026/11/19/photos-genocide-ruling-spotlights-2017-rohingya-crisis-human-toll?traffic_source=rss" target="_blank" rel="noopener noreferrer">Al Jazeera – World</a>, 
+      <span class="source-item-chip">
+        <a href="https://www.straitstimes.com/world/fossil-fuels-vanish-from-cop31-draft-sparking-ghost-cop-warning" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Fossil fuels vanish from COP31 draft, sparking ‘ghost COP’ warning">Fossil fuels vanish from COP31 draft, sparking ‘ghost COP’ warning</a>
+        <span class="badge badge-outlet">The Straits Times – World</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://www.aljazeera.com/news/2026/11/19/world-reacts-to-icj-finding-myanmar-guilty-of-genocide-against-rohingya?traffic_source=rss" target="_blank" rel="noopener noreferrer">Al Jazeera – World</a>, 
+      <span class="source-item-chip">
+        <a href="https://www.livemint.com/news/climate-talks-edge-toward-deal-on-electrifying-global-economy-11795142563294.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Climate Talks Edge Toward Deal on Electrifying Global Economy">Climate Talks Edge Toward Deal on Electrifying Global Economy</a>
+        <span class="badge badge-outlet">Mint</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://www.aljazeera.com/video/newsfeed/2026/11/19/rohingya-survivors-react-to-landmark-genocide-ruling-against-myanmar?traffic_source=rss" target="_blank" rel="noopener noreferrer">Al Jazeera – World</a>, 
+      <span class="source-item-chip">
+        <a href="https://www.thequint.com/climate-change/cop31-fossil-fuel-lobbyists-derailing-climate-action-once-again" target="_blank" rel="noopener noreferrer" class="source-title-link" title="COP31: Can Fossil Fuel Lobbyists Be Stopped From Derailing Climate Action?">COP31: Can Fossil Fuel Lobbyists Be Stopped From Derailing Climate Action?</a>
+        <span class="badge badge-outlet">The Quint</span>
+        
+      </span>
       
-      <a href="https://www.aljazeera.com/news/2026/11/19/what-the-icj-ruling-means-for-the-rohingya?traffic_source=rss" target="_blank" rel="noopener noreferrer">Al Jazeera – World</a>, 
+    </div>
+  </article>
+  
+  
+  
+
+  <article class="story-card level-corroborated">
+    <div class="meta-row">
+      <span class="badge badge-corroborated">Corroborated</span>
       
-      <a href="https://www.livemint.com/news/why-this-genocide-ruling-matters-way-beyond-myanmar-11795141426469.html" target="_blank" rel="noopener noreferrer">Mint</a>, 
+      <span class="source-count">3 independent sources</span>
+      <span class="sep">•</span>
+      <span class="score-pill">Score: 8.94</span>
       
-      <a href="https://www.aljazeera.com/video/newsfeed/2026/11/19/rohingya-genocide-survivor-perpetrators-will-have-to-face?traffic_source=rss" target="_blank" rel="noopener noreferrer">Al Jazeera – World</a>, 
+      <span class="sep">•</span>
+      <time datetime="2026-11-20T02:38:37+00:00" class="story-date local-time">20 Nov 2026, 08:08 IST</time>
       
-      <a href="https://www.aljazeera.com/video/newsfeed/2026/11/19/what-does-the-myanmar-genocide-ruling-mean-for-the-rohingya?traffic_source=rss" target="_blank" rel="noopener noreferrer">Al Jazeera – World</a>, 
+    </div>
+
+    <h2><a href="story_273.html" class="headline-link">CNA Now: Asia markets open lower after Wall Street stocks fall, plus other news as it happened</a></h2>
+
+    
+    <div class="story-summary-omitted">
       
-      <a href="https://www.thehindu.com/news/international/rohingya-in-bangladesh-welcome-un-courts-genocide-verdict-but-say-they-want-to-go-home-to-myanmar/article71723495.ece" target="_blank" rel="noopener noreferrer">The Hindu</a>, 
+      <div class="empty-state-notice entailment-notice">
+        <span class="notice-badge">&#9432; Constrained to Verified Facts</span>
+        <p>AI narrative synthesis suppressed to prevent hallucination because reporting lacks sufficient multi-source consensus. View individual source claims on the story page.</p>
+        <a href="story_273.html" class="view-claims-btn">View claims &rarr;</a>
+      </div>
       
-      <a href="https://www.livemint.com/news/world/icj-finds-myanmar-committed-genocide-against-rohingya-can-the-ruling-reshape-israel-gaza-and-russia-ukraine-cases-11795146707676.html" target="_blank" rel="noopener noreferrer">Mint</a>, 
+    </div>
+    
+
+    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
+    <div class="sources-list">
+      <strong>Sources:</strong>
       
-      <a href="https://www.channelnewsasia.com/asia/myanmar-rohingya-genocide-un-icj-6568711" target="_blank" rel="noopener noreferrer">CNA – Asia</a>, 
+      <span class="source-item-chip">
+        <a href="https://timesofindia.indiatimes.com/business/international-business/wall-streets-ai-jitters-return-as-stocks-tumble-sp-500-logs-longest-losing-streak-in-2-5-years/articleshow/136008927.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Wall Street&#39;s AI jitters return, S&amp;amp;P500 logs longest losing streak in 2.5 years">Wall Street&#39;s AI jitters return, S&amp;amp;P500 logs longest losing streak in 2.5 years</a>
+        <span class="badge badge-outlet">Times of India</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://www.aljazeera.com/opinions/2026/11/20/the-gambia-stood-up-for-the-rohingya-now-the-world-must-act?traffic_source=rss" target="_blank" rel="noopener noreferrer">Al Jazeera – World</a>, 
+      <span class="source-item-chip">
+        <a href="https://www.business-standard.com/markets/news/stock-market-live-november-20-nse-bse-sensex-today-nifty50-gift-nifty-crude-oil-prices-126112000118_1.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Stock Market LIVE: GIFT Nifty plunges 190 pts; Asian mkts extend losses on concern over AI trade">Stock Market LIVE: GIFT Nifty plunges 190 pts; Asian mkts extend losses on concern over AI trade</a>
+        <span class="badge badge-outlet">Business Standard</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://www.aljazeera.com/news/2026/11/20/tears-of-joy-prayers-for-return-home-rohingya-react-to-genocide-ruling?traffic_source=rss" target="_blank" rel="noopener noreferrer">Al Jazeera – World</a>
+      <span class="source-item-chip">
+        <a href="https://www.channelnewsasia.com/singapore/cna-now-live-blog-nov-20-6565406" target="_blank" rel="noopener noreferrer" class="source-title-link" title="CNA Now: Asia markets open lower after Wall Street stocks fall, plus other news as it happened">CNA Now: Asia markets open lower after Wall Street stocks fall, plus other news as it happened</a>
+        <span class="badge badge-outlet">CNA – Asia</span>
+        
+      </span>
+      
+    </div>
+  </article>
+  
+  
+  
+
+  <article class="story-card level-corroborated">
+    <div class="meta-row">
+      <span class="badge badge-corroborated">Corroborated</span>
+      
+      <span class="source-count">5 independent sources</span>
+      <span class="sep">•</span>
+      <span class="score-pill">Score: 9.00</span>
+      
+      <span class="sep">•</span>
+      <time datetime="2026-11-20T02:24:10+00:00" class="story-date local-time">20 Nov 2026, 07:54 IST</time>
+      
+    </div>
+
+    <h2><a href="story_268.html" class="headline-link">Noel, Chandra visit Air India’s HQ in Gurugram, review performance</a></h2>
+
+    
+    <div class="story-summary-omitted">
+      
+      <div class="empty-state-notice entailment-notice">
+        <span class="notice-badge">&#9432; Constrained to Verified Facts</span>
+        <p>AI narrative synthesis suppressed to prevent hallucination because reporting lacks sufficient multi-source consensus. View individual source claims on the story page.</p>
+        <a href="story_268.html" class="view-claims-btn">View claims &rarr;</a>
+      </div>
+      
+    </div>
+    
+
+    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
+    <div class="sources-list">
+      <strong>Sources:</strong>
+      
+      <span class="source-item-chip">
+        <a href="https://timesofindia.indiatimes.com/business/india-business/tata-sons-facing-back-door-takeover-warns-jimmy-tata/articleshow/135905376.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Jimmy flags ‘back-door takeover’ of Tata Sons by Trusts, supports Chandra &amp;amp; listing">Jimmy flags ‘back-door takeover’ of Tata Sons by Trusts, supports Chandra &amp;amp; listing</a>
+        <span class="badge badge-outlet">Times of India</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://economictimes.indiatimes.com/news/company/corporate-trends/rbi-tells-tata-sons-to-comply-with-listing-requirement-says-no-exemption-from-upper-layer-nbfc-norms/articleshow/135894889.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="RBI tells Tata Sons to comply with listing norms">RBI tells Tata Sons to comply with listing norms</a>
+        <span class="badge badge-outlet">Economic Times</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.news18.com/explainers/why-jimmy-tata-is-accusing-half-brother-noel-of-backdoor-takeover-at-tata-sons-ws-klrt-10429605.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Jimmy Tata Has Accused Half-Brother Noel Of &#39;Backdoor Takeover&#39; At Tata Sons: Here&#39;s Why">Jimmy Tata Has Accused Half-Brother Noel Of &#39;Backdoor Takeover&#39; At Tata Sons: Here&#39;s Why</a>
+        <span class="badge badge-outlet">News18</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.business-standard.com/companies/news/tata-trusts-board-meet-on-november-20-tata-sons-listing-not-on-agenda-126111901507_1.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Tata Trusts board meet on November 20; Tata Sons listing not on agenda">Tata Trusts board meet on November 20; Tata Sons listing not on agenda</a>
+        <span class="badge badge-outlet">Business Standard</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.hindustantimes.com/india-news/noel-chandra-visit-air-india-s-hq-in-gurugram-review-performance-101795115293497.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Noel, Chandra visit Air India’s HQ in Gurugram, review performance">Noel, Chandra visit Air India’s HQ in Gurugram, review performance</a>
+        <span class="badge badge-outlet">Hindustan Times</span>
+        
+      </span>
       
     </div>
   </article>
@@ -657,15 +784,15 @@ Pew projects Islam will surpass Christianity as the world&#39;s largest religion
        data-current-page="2"
        data-total-pages="10"
        data-total-stories="100">
-    <div class="scroll-status-box" id="scroll-status">
+    <!-- Hidden by default; unhidden by JavaScript when active (T4) -->
+    <div class="scroll-status-box" id="scroll-status" style="display: none;">
       <span class="spinner"></span>
       <span class="scroll-status-text">Loading more stories...</span>
     </div>
-    <noscript>
-      <div class="noscript-pagination">
-        <a href="page_3.html" class="page-btn">Next page &raquo;</a>
-      </div>
-    </noscript>
+    <!-- Visible next-page link for users without JS or if JS fails (T4) -->
+    <div class="pagination-fallback" id="pagination-fallback">
+      <a href="page_3.html" class="page-btn">Next page &raquo;</a>
+    </div>
   </div>
   
 </section>
@@ -677,14 +804,42 @@ Pew projects Islam will surpass Christianity as the world&#39;s largest religion
   <footer>
     <div class="container">
       <p>Automated news corroboration — what sources agree and differ on.</p>
+      <div class="footer-nav" style="margin: 12px 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; font-size: 0.85rem;">
+        <a href="about.html">About</a>
+        <a href="methodology.html">Methodology</a>
+        <a href="corrections.html">Corrections</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="takedown.html">Copyright &amp; Takedown</a>
+        <a href="sources_policy.html">How We Use Sources</a>
+      </div>
       <div class="footer-divider"></div>
-      <p>Published transparently with no manual intervention. Never claims absolute truth &mdash; reports corroboration metrics only.</p>
+      <p style="font-size: 0.78rem; color: #94a3b8; max-width: 760px; margin: 8px auto 0;">
+        <strong>Trademark &amp; Non-Affiliation Disclaimer:</strong> All publication names, outlet titles, and publisher trademarks referenced herein are the property of their respective owners. TrippyNews is an independent news corroboration project with no commercial affiliation, sponsorship, or endorsement from any cited news organization. No publisher logos are displayed.
+      </p>
+      <p style="margin-top: 6px; font-size: 0.78rem; color: #64748b;">Contact: <a href="mailto:contact@trippynews.org">contact@trippynews.org</a> &bull; Response within 48h for takedowns.</p>
     </div>
   </footer>
 
-  <!-- GoatCounter — free, privacy-friendly visitor analytics (no cookies) -->
-  <!-- Sign up at https://www.goatcounter.com to get your site code, -->
-  <!-- then replace YOURCODE below with your chosen subdomain.       -->
+  <!-- Local time formatting for readers -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('time.local-time[datetime]').forEach(function(el) {
+        var dt = el.getAttribute('datetime');
+        if (!dt) return;
+        try {
+          var d = new Date(dt);
+          if (!isNaN(d.getTime())) {
+            var dateStr = d.toLocaleDateString(undefined, { day: 'numeric', month: 'short', year: 'numeric' });
+            var timeStr = d.toLocaleTimeString(undefined, { hour: '2-digit', minute: '2-digit' });
+            el.textContent = dateStr + ', ' + timeStr;
+          }
+        } catch(e) {}
+      });
+    });
+  </script>
+
+  <!-- GoatCounter — privacy-friendly visitor analytics (no cookies) -->
   <script data-goatcounter="https://trippynews.goatcounter.com/count"
           async src="//gc.zgo.at/count.js"></script>
 </body>

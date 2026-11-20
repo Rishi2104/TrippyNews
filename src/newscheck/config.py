@@ -29,12 +29,13 @@ class IngestConfig(BaseModel, frozen=True):
     """RSS ingestion settings."""
 
     request_timeout_seconds: int = 10
-    max_retries: int = 1
+    max_retries: int = 2
     retry_backoff_seconds: float = 2.0
-    user_agent: str = "NewsCheck/0.1 (automated news aggregator; +https://github.com/newscheck/newscheck)"
+    user_agent: str = "NewsCheckBot/1.0 (+https://rishi2104.github.io/TrippyNews/about.html; contact@trippynews.org)"
     max_articles_per_feed: int = 25
     rate_limit_per_domain_seconds: float = 1.0
     feeds_file: str = "sources.yaml"
+    blocklist_file: str = "blocklist.yaml"
 
 
 class ExtractConfig(BaseModel, frozen=True):
@@ -94,9 +95,10 @@ class BuildConfig(BaseModel, frozen=True):
     """Static-site build settings."""
 
     output_dir: str = "public"
-    site_title: str = "NewsCheck"
+    site_title: str = "TrippyNews"
     site_description: str = "Automated news corroboration — what sources agree and differ on."
-    site_url: str = "https://newscheck.github.io/newscheck"
+    site_url: str = "https://rishi2104.github.io/TrippyNews"
+    contact_email: str = "contact@trippynews.org"
 
 
 class AlertingConfig(BaseModel, frozen=True):
@@ -182,3 +184,26 @@ def load_sources_yaml(path: Path) -> list[dict[str, object]]:
         raise ValueError(f"No sources defined in {path}")
 
     return sources
+
+
+def load_blocklist(path: Path) -> dict[str, set[str] | set[int]]:
+    """Parse blocklist.yaml and return blocked domains, urls, and story ids.
+
+    If file does not exist, returns empty sets.
+    """
+    import yaml
+
+    if not path.is_file():
+        return {"domains": set(), "urls": set(), "story_ids": set()}
+
+    try:
+        with open(path, encoding="utf-8") as fh:
+            data = yaml.safe_load(fh) or {}
+    except Exception:
+        return {"domains": set(), "urls": set(), "story_ids": set()}
+
+    domains = {str(d).lower().strip() for d in data.get("domains", []) if d}
+    urls = {str(u).strip() for u in data.get("urls", []) if u}
+    story_ids = {int(s) for s in data.get("story_ids", []) if s is not None}
+
+    return {"domains": domains, "urls": urls, "story_ids": story_ids}

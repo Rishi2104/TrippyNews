@@ -31,17 +31,18 @@ class TestPipelineIntegration:
         mock_source = Source(
             id=1,
             name="Test Source A",
-            domain="source-a.example.com",
-            feed_url="https://source-a.example.com/rss",
+            domain="source-a.test",
+            feed_url="https://source-a.test/rss",
             language="en",
             country="IN",
             tier=ReliabilityTier.WIRE_OFFICIAL,
+            allowed_domains=["source-a.test"],
         )
 
         mock_read_all.return_value = [
             FeedItem(
                 source=mock_source,
-                url=f"https://source-a.example.com/item-{i}",
+                url=f"https://source-a.test/item-{i}",
                 title=f"Breaking Story {i % 2}",
                 snippet=f"Snippet for item {i}",
                 published_at=None,

@@ -23,11 +23,13 @@
       {% if story.is_developing %}
       <span class="badge badge-developing">Developing</span>
       {% endif %}
-      <span class="source-count">{{ independent_source_count }} independent sources</span>
+      <span class="source-count">{{ independent_source_count }} independent source{% if independent_source_count != 1 %}s{% endif %}</span>
       <span class="sep">•</span>
-      <span class="score-pill">Score: {{ story.corroboration_score }}</span>
+      <span class="score-pill">Score: {{ "%.2f"|format(story.corroboration_score) }}</span>
+      {% if story.published_at %}
       <span class="sep">•</span>
-      <span style="font-size:0.8rem; color:var(--text-muted);">{{ (story.published_at|to_ist).strftime('%d %b %Y, %H:%M IST') }}</span>
+      <time datetime="{{ story.published_at.isoformat() }}" class="story-date local-time">{{ (story.published_at|to_ist).strftime('%d %b %Y, %H:%M IST') }}</time>
+      {% endif %}
     </div>
 
     <h1>{{ story.headline }}</h1>
@@ -43,22 +45,53 @@
     {% for claim in agreed_claims %}
     <div class="claim-box confirmed">
       <span class="claim-label confirmed">Confirmed fact</span>
-      {{ claim.claim_text }}
-      <span class="evidence">"{{ claim.source_sentence }}"</span>
+      <div class="claim-body">{{ claim.claim_text }}</div>
+      {% if claim.source_sentence %}
+      <div class="evidence">
+        "{{ claim.source_sentence }}" &mdash; <a href="{{ claim.outlet_url }}" target="_blank" rel="noopener noreferrer"><strong>{{ claim.outlet_name }}</strong></a>
+      </div>
+      {% endif %}
     </div>
     {% endfor %}
   {% else %}
     <p style="color:var(--text-muted); font-size:0.875rem;">No multi-source confirmed claims found for this story.</p>
   {% endif %}
 
-  <!-- Disputed / Contradictory Claims -->
-  {% if disputed_claims %}
-  <div class="claims-section-title claims-disputed">&#9888; Disputed / Differing Claims</div>
-  {% for claim in disputed_claims %}
+  <!-- Disputed / Contradictory Claims (L13: Show both outlets side by side) -->
+  {% if disputed_pairs %}
+  <div class="claims-section-title claims-disputed">&#9888; Disputed / Differing Reports</div>
+  {% for pair in disputed_pairs %}
   <div class="claim-box disputed">
     <span class="claim-label disputed">Contradiction detected</span>
-    {{ claim.claim_text }}
-    <span class="evidence">"{{ claim.source_sentence }}"</span>
+    <div class="dispute-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 8px;">
+      <div class="dispute-pane" style="background: rgba(255,255,255,0.6); padding: 10px; border-radius: var(--radius-sm); border: 1px solid var(--c-dispute-border);">
+        <strong style="color: var(--c-dispute);"><a href="{{ pair.claim_a.outlet_url }}" target="_blank" rel="noopener noreferrer">{{ pair.claim_a.outlet_name }}</a>:</strong>
+        <p style="margin: 4px 0 6px;">{{ pair.claim_a.claim_text }}</p>
+        {% if pair.claim_a.source_sentence %}
+        <span class="evidence">"{{ pair.claim_a.source_sentence }}"</span>
+        {% endif %}
+      </div>
+      <div class="dispute-pane" style="background: rgba(255,255,255,0.6); padding: 10px; border-radius: var(--radius-sm); border: 1px solid var(--c-dispute-border);">
+        <strong style="color: var(--c-dispute);"><a href="{{ pair.claim_b.outlet_url }}" target="_blank" rel="noopener noreferrer">{{ pair.claim_b.outlet_name }}</a>:</strong>
+        <p style="margin: 4px 0 6px;">{{ pair.claim_b.claim_text }}</p>
+        {% if pair.claim_b.source_sentence %}
+        <span class="evidence">"{{ pair.claim_b.source_sentence }}"</span>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+  {% elif disputed_claims %}
+  <div class="claims-section-title claims-disputed">&#9888; Disputed Claims</div>
+  {% for claim in disputed_claims %}
+  <div class="claim-box disputed">
+    <span class="claim-label disputed">Contradiction</span>
+    <div class="claim-body">{{ claim.claim_text }}</div>
+    {% if claim.source_sentence %}
+    <div class="evidence">
+      "{{ claim.source_sentence }}" &mdash; <a href="{{ claim.outlet_url }}" target="_blank" rel="noopener noreferrer"><strong>{{ claim.outlet_name }}</strong></a>
+    </div>
+    {% endif %}
   </div>
   {% endfor %}
   {% endif %}
@@ -68,21 +101,28 @@
   <div class="claims-section-title claims-single">&#9900; Single-Source / Uncorroborated Details</div>
   {% for claim in single_source_claims %}
   <div class="claim-box single">
-    {{ claim.claim_text }}
-    <span class="evidence">"{{ claim.source_sentence }}"</span>
+    <div class="claim-body">{{ claim.claim_text }}</div>
+    {% if claim.source_sentence %}
+    <div class="evidence">
+      "{{ claim.source_sentence }}" &mdash; <a href="{{ claim.outlet_url }}" target="_blank" rel="noopener noreferrer"><strong>{{ claim.outlet_name }}</strong></a>
+    </div>
+    {% endif %}
   </div>
   {% endfor %}
   {% endif %}
 
-  <!-- Source Links & Transparency Table -->
+  <!-- Source Links & Transparency Table (T2: Show outlet name instead of internal source ID) -->
   <div class="sources-table-wrap">
-    <h3>All Contributing Sources ({{ articles|length }})</h3>
-    {% for art in articles %}
+    <h3>All Contributing Sources ({{ article_sources|length }})</h3>
+    {% for art in article_sources %}
     <div class="source-item">
       <div>
         <a href="{{ art.url }}" target="_blank" rel="noopener noreferrer">{{ art.title }}</a>
-        <div class="source-meta">
-          Source ID: {{ art.source_id }}
+        <div class="source-meta" style="margin-top: 4px;">
+          <span class="badge badge-outlet">{{ art.outlet_name }}</span>
+          {% if art.outlet_domain %}
+          <span style="font-size: 0.75rem; color: var(--text-muted);">({{ art.outlet_domain }})</span>
+          {% endif %}
           {% if art.wire_origin %}
           &nbsp;<span class="badge badge-wire">Wire: {{ art.wire_origin }}</span>
           {% endif %}
@@ -97,7 +137,12 @@
     <h4>Update Log</h4>
     <ul>
       {% for entry in changelog %}
-      <li><strong>{{ (entry.changed_at|to_ist).strftime('%d %b %Y, %H:%M IST') }}</strong>: {{ entry.field_changed }} updated. {{ entry.reason or '' }}</li>
+      <li>
+        {% if entry.changed_at %}
+        <strong><time datetime="{{ entry.changed_at.isoformat() }}" class="local-time">{{ (entry.changed_at|to_ist).strftime('%d %b %Y, %H:%M IST') }}</time></strong>
+        {% endif %}
+        : {{ entry.field_changed }} updated. {{ entry.reason or '' }}
+      </li>
       {% endfor %}
     </ul>
   </div>

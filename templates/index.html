@@ -8,7 +8,6 @@
       <p>Ranked by recency &amp; independent corroboration metrics.</p>
     </div>
     <div class="section-header-right">
-      Updated every 1 hour<br>
       {% if total_stories is defined and total_stories > 0 %}
       <span id="stories-count-display">Showing {{ start_index }}–{{ end_index }} of {{ total_stories }} stories</span>
       {% else %}
@@ -37,12 +36,12 @@
       {% if item.story.is_developing %}
       <span class="badge badge-developing">Developing</span>
       {% endif %}
-      <span class="source-count">{{ item.independent_source_count }} independent sources</span>
+      <span class="source-count">{{ item.independent_source_count }} independent source{% if item.independent_source_count != 1 %}s{% endif %}</span>
       <span class="sep">•</span>
-      <span class="score-pill">Score: {{ item.story.corroboration_score }}</span>
+      <span class="score-pill">Score: {{ "%.2f"|format(item.story.corroboration_score) }}</span>
       {% if item.story.published_at %}
       <span class="sep">•</span>
-      <span class="story-date">{{ (item.story.published_at|to_ist).strftime('%d %b %Y, %H:%M IST') }}</span>
+      <time datetime="{{ item.story.published_at.isoformat() }}" class="story-date local-time">{{ (item.story.published_at|to_ist).strftime('%d %b %Y, %H:%M IST') }}</time>
       {% endif %}
     </div>
 
@@ -51,19 +50,34 @@
     {% if item.story.summary %}
     <p class="story-summary">{{ item.story.summary }}</p>
     {% else %}
-    <p class="story-summary-omitted">
+    <div class="story-summary-omitted">
       {% if item.story.is_sensitive %}
-      [Narrative omitted — sensitive topic safety gate active. Review claims and sources on the story page.]
+      <div class="empty-state-notice sensitive-notice">
+        <span class="notice-badge">&#9888; Sensitive Topic Safeguard</span>
+        <p>Narrative generation suppressed under legal and defamation safeguards (court proceedings or private individuals). Only structured claims from named outlets are published.</p>
+        <a href="story_{{ item.story.id }}.html" class="view-claims-btn">Inspect claims &rarr;</a>
+      </div>
       {% else %}
-      [Summary constrained to claim table — strict NLI entailment gate applied. <a href="story_{{ item.story.id }}.html">View claims &rarr;</a>]
+      <div class="empty-state-notice entailment-notice">
+        <span class="notice-badge">&#9432; Constrained to Verified Facts</span>
+        <p>AI narrative synthesis suppressed to prevent hallucination because reporting lacks sufficient multi-source consensus. View individual source claims on the story page.</p>
+        <a href="story_{{ item.story.id }}.html" class="view-claims-btn">View claims &rarr;</a>
+      </div>
       {% endif %}
-    </p>
+    </div>
     {% endif %}
 
+    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
     <div class="sources-list">
       <strong>Sources:</strong>
       {% for src in item.sources %}
-      <a href="{{ src.url }}" target="_blank" rel="noopener noreferrer">{{ src.name }}</a>{% if not loop.last %}, {% endif %}
+      <span class="source-item-chip">
+        <a href="{{ src.url }}" target="_blank" rel="noopener noreferrer" class="source-title-link" title="{{ src.title }}">{{ src.title }}</a>
+        <span class="badge badge-outlet">{{ src.outlet_name }}</span>
+        {% if src.wire_origin %}
+        <span class="badge badge-wire">{{ src.wire_origin }}</span>
+        {% endif %}
+      </span>{% if not loop.last %}<span class="source-sep"> &bull; </span>{% endif %}
       {% endfor %}
     </div>
   </article>
@@ -76,15 +90,15 @@
        data-current-page="{{ current_page }}"
        data-total-pages="{{ total_pages }}"
        data-total-stories="{{ total_stories }}">
-    <div class="scroll-status-box" id="scroll-status">
+    <!-- Hidden by default; unhidden by JavaScript when active (T4) -->
+    <div class="scroll-status-box" id="scroll-status" style="display: none;">
       <span class="spinner"></span>
       <span class="scroll-status-text">Loading more stories...</span>
     </div>
-    <noscript>
-      <div class="noscript-pagination">
-        <a href="{{ next_url }}" class="page-btn">Next page &raquo;</a>
-      </div>
-    </noscript>
+    <!-- Visible next-page link for users without JS or if JS fails (T4) -->
+    <div class="pagination-fallback" id="pagination-fallback">
+      <a href="{{ next_url }}" class="page-btn">Next page &raquo;</a>
+    </div>
   </div>
   {% else %}
   <div class="feed-end-notice">

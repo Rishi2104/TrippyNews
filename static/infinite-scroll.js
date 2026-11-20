@@ -3,6 +3,7 @@
  *
  * Automatically fetches and appends subsequent pages as the user scrolls
  * near the bottom of the current feed, eliminating manual pagination buttons.
+ * Implements progressive enhancement: fallback button remains visible if JS fails.
  */
 (function () {
   'use strict';
@@ -11,14 +12,22 @@
     const sentinel = document.getElementById('infinite-scroll-sentinel');
     const feed = document.getElementById('stories-feed');
     const countDisplay = document.getElementById('stories-count-display');
+    const fallback = document.getElementById('pagination-fallback');
+    const statusBox = document.getElementById('scroll-status');
 
     if (!sentinel || !feed) return;
+
+    // Progressive enhancement: JS is active, hide static fallback button
+    if (fallback) {
+      fallback.style.display = 'none';
+    }
 
     let isLoading = false;
     let nextUrl = sentinel.getAttribute('data-next-url');
     const totalStories = parseInt(sentinel.getAttribute('data-total-stories') || '0', 10);
 
     function setStatus(text, showSpinner) {
+      if (statusBox) statusBox.style.display = 'inline-flex';
       const statusText = sentinel.querySelector('.scroll-status-text');
       const spinner = sentinel.querySelector('.spinner');
       if (statusText) statusText.textContent = text;
@@ -70,6 +79,7 @@
           nextUrl = upcomingUrl;
           sentinel.setAttribute('data-next-url', nextUrl);
           isLoading = false;
+          if (statusBox) statusBox.style.display = 'none';
           checkIntersection();
         } else {
           showFinished();

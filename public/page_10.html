@@ -3,20 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NewsCheck</title>
+  <title>TrippyNews</title>
 
   <!-- SEO -->
   <meta name="description" content="Automated news corroboration — what sources agree and differ on.">
   <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://rishi2104.github.io/TrippyNews/">
 
   <!-- Open Graph / Social -->
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="NewsCheck">
-  <meta property="og:title" content="NewsCheck">
+  <meta property="og:site_name" content="TrippyNews">
+  <meta property="og:title" content="TrippyNews">
   <meta property="og:description" content="Automated news corroboration — what sources agree and differ on.">
+  <meta property="og:url" content="https://rishi2104.github.io/TrippyNews/">
+  <meta property="og:image" content="https://rishi2104.github.io/TrippyNews/favicon.svg">
 
-  <!-- Favicon (simple emoji favicon via SVG data URI) -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⬡</text></svg>">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="TrippyNews">
+  <meta name="twitter:description" content="Automated news corroboration — what sources agree and differ on.">
+
+  <!-- Favicon (percent-encoded SVG data URI) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Ctext%20y='.9em'%20font-size='90'%3E%E2%AC%A1%3C/text%3E%3C/svg%3E">
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -25,14 +33,16 @@
     <div class="container">
       <div class="header-inner">
         <div class="site-brand">
-          <h1 class="site-title">
-            <a href="index.html">NewsCheck</a>
-          </h1>
-          <span class="site-tagline">Independent Corroboration Pipeline</span>
+          
+          <div class="site-title">
+            <a href="index.html">TrippyNews</a>
+          </div>
+          
+          <span class="site-tagline">Automated News Corroboration Pipeline</span>
         </div>
         <div class="header-live">
           <span class="live-dot"></span>
-          Auto-updated every 1 hour
+          Last updated: <time datetime="2026-11-20T10:03:53.313679+00:00" class="local-time">20 Nov 2026, 15:33 IST</time>
         </div>
       </div>
       <nav>
@@ -40,6 +50,7 @@
           <li><a href="index.html">Top Stories</a></li>
           <li><a href="methodology.html">Methodology</a></li>
           <li><a href="corrections.html">Corrections &amp; Changelog</a></li>
+          <li><a href="about.html">About</a></li>
         </ul>
       </nav>
     </div>
@@ -47,8 +58,8 @@
 
   <main class="container">
     <div class="disclosure-banner">
-      <span><strong>Automated report.</strong> May contain errors. Corroboration levels are computed mathematically from source diversity and agreement — not by human editors.</span>
-      <a href="mailto:corrections@newscheck.example.com?subject=TrippyNews%20Error%20Report">Report an error &rarr;</a>
+      <span><strong>Automated report.</strong> Corroboration levels are computed mathematically from source diversity and agreement &mdash; not by human editors. Never claims absolute truth.</span>
+      <a href="mailto:contact@trippynews.org?subject=TrippyNews%20Inquiry%20or%20Error%20Report">Report an error &rarr;</a>
     </div>
 
     
@@ -59,7 +70,6 @@
       <p>Ranked by recency &amp; independent corroboration metrics.</p>
     </div>
     <div class="section-header-right">
-      Updated every 1 hour<br>
       
       <span id="stories-count-display">Showing 91–100 of 100 stories</span>
       
@@ -77,84 +87,62 @@
     <div class="meta-row">
       <span class="badge badge-corroborated">Corroborated</span>
       
-      <span class="source-count">4 independent sources</span>
+      <span class="source-count">5 independent sources</span>
       <span class="sep">•</span>
-      <span class="score-pill">Score: 6.34</span>
+      <span class="score-pill">Score: 7.37</span>
       
       <span class="sep">•</span>
-      <span class="story-date">20 Nov 2026, 07:54 IST</span>
+      <time datetime="2026-11-19T00:10:12.035131+00:00" class="story-date local-time">19 Nov 2026, 05:40 IST</time>
       
     </div>
 
-    <h2><a href="story_396.html" class="headline-link">Noel, Chandra visit Air India’s HQ in Gurugram, review performance</a></h2>
+    <h2><a href="story_135.html" class="headline-link">&#39;Balasaheb like a deity to us&#39;: Eknath Shinde defends Shaina NC in photo row</a></h2>
 
     
-    <p class="story-summary-omitted">
+    <div class="story-summary-omitted">
       
-      [Summary constrained to claim table — strict NLI entailment gate applied. <a href="story_396.html">View claims &rarr;</a>]
+      <div class="empty-state-notice sensitive-notice">
+        <span class="notice-badge">&#9888; Sensitive Topic Safeguard</span>
+        <p>Narrative generation suppressed under legal and defamation safeguards (court proceedings or private individuals). Only structured claims from named outlets are published.</p>
+        <a href="story_135.html" class="view-claims-btn">Inspect claims &rarr;</a>
+      </div>
       
-    </p>
+    </div>
     
 
+    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
     <div class="sources-list">
       <strong>Sources:</strong>
       
-      <a href="https://www.news18.com/explainers/why-jimmy-tata-is-accusing-half-brother-noel-of-backdoor-takeover-at-tata-sons-ws-klrt-10429605.html" target="_blank" rel="noopener noreferrer">News18</a>, 
+      <span class="source-item-chip">
+        <a href="https://www.hindustantimes.com/india-news/they-tore-bal-thackeray-s-image-row-erupts-after-shiv-sena-members-rip-pages-of-sonia-gandhi-s-book-101795013047298.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="‘They tore Bal Thackeray’s photo’: Row erupts after Shiv Sena members rip pages of Sonia Gandhi’s book">‘They tore Bal Thackeray’s photo’: Row erupts after Shiv Sena members rip pages of Sonia Gandhi’s book</a>
+        <span class="badge badge-outlet">Hindustan Times</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://economictimes.indiatimes.com/news/company/corporate-trends/darius-khambata-hits-back-at-venu-srinivasan-vijay-singh-says-control-of-tata-sons-by-trusts-essence-of-tata-model/articleshow/135933469.cms" target="_blank" rel="noopener noreferrer">Economic Times</a>, 
+      <span class="source-item-chip">
+        <a href="https://www.livemint.com/news/india/thalapathy-vijay-s-sweet-gesture-for-priyanka-gandhi-s-staff-member-steals-the-show-at-sonia-gandhi-s-book-launch-11795000525671.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Thalapathy Vijay’s sweet gesture for Priyanka Gandhi’s staff member steals the show at Sonia Gandhi’s book launch">Thalapathy Vijay’s sweet gesture for Priyanka Gandhi’s staff member steals the show at Sonia Gandhi’s book launch</a>
+        <span class="badge badge-outlet">Mint</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://economictimes.indiatimes.com/industry/transportation/airlines-/-aviation/tata-sons-reviews-air-india-performance-amidst-financial-struggles-ahead-of-key-board-meeting/articleshow/135992406.cms" target="_blank" rel="noopener noreferrer">Economic Times</a>, 
+      <span class="source-item-chip">
+        <a href="https://www.indiatoday.in/india/story/shiv-sena-shaina-nc-tears-bal-thackeray-photo-sonia-gandhi-book-protest-3041607-2026-11-18?utm_source=rss" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Sena leader tears Bal Thackeray&#39;s pic at Sonia Gandhi&#39;s book protest, stirs row">Sena leader tears Bal Thackeray&#39;s pic at Sonia Gandhi&#39;s book protest, stirs row</a>
+        <span class="badge badge-outlet">India Today</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://www.business-standard.com/companies/news/tata-trusts-board-meet-on-november-20-tata-sons-listing-not-on-agenda-126111901507_1.html" target="_blank" rel="noopener noreferrer">Business Standard</a>, 
+      <span class="source-item-chip">
+        <a href="https://www.dnaindia.com/india/report-shaina-nc-photo-row-eknath-shinde-says-mani-shankar-aiyar-s-face-was-torn-not-balasaheb-s-3224282" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Shaina NC Photo Row: Eknath Shinde says Mani Shankar Aiyar&#39;s face was torn, not Balasaheb&#39;s">Shaina NC Photo Row: Eknath Shinde says Mani Shankar Aiyar&#39;s face was torn, not Balasaheb&#39;s</a>
+        <span class="badge badge-outlet">DNA India</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://www.hindustantimes.com/india-news/noel-chandra-visit-air-india-s-hq-in-gurugram-review-performance-101795115293497.html" target="_blank" rel="noopener noreferrer">Hindustan Times</a>
-      
-    </div>
-  </article>
-  
-  
-  
-  
-
-  <article class="story-card level-limited">
-    <div class="meta-row">
-      <span class="badge badge-limited">Limited corroboration</span>
-      
-      <span class="source-count">3 independent sources</span>
-      <span class="sep">•</span>
-      <span class="score-pill">Score: 4.45</span>
-      
-      <span class="sep">•</span>
-      <span class="story-date">20 Nov 2026, 07:53 IST</span>
-      
-    </div>
-
-    <h2><a href="story_295.html" class="headline-link">What does the Myanmar genocide ruling mean for the Rohingya?</a></h2>
-
-    
-    <p class="story-summary">The International Court of Justice (ICJ) has ruled that Myanmar committed genocide against the predominantly Muslim Rohingya minority in 2017. The International Court of Justice (ICJ), the United Nations&#39; top court, on Thursday held Myanmar responsible for committing genocide against the Rohingya community in northern Rakhine State during the military&#39;s 2017 &#34;clearance operations&#34;.</p>
-    
-
-    <div class="sources-list">
-      <strong>Sources:</strong>
-      
-      <a href="https://www.hindustantimes.com/india-news/ht-evening-brief-nov-19-cyclone-akvan-to-make-landfall-tomorrow-putin-trump-xi-issue-peace-declaration-myanmar-ruled-guilty-of-rohingya-genocide-101795089587126.html" target="_blank" rel="noopener noreferrer">Hindustan Times</a>, 
-      
-      <a href="https://www.livemint.com/news/world/icj-holds-myanmar-accountable-for-rohingya-genocide-orders-compensation-and-safe-return-11795110415214.html" target="_blank" rel="noopener noreferrer">Mint</a>, 
-      
-      <a href="https://www.aljazeera.com/gallery/2026/11/19/photos-genocide-ruling-spotlights-2017-rohingya-crisis-human-toll?traffic_source=rss" target="_blank" rel="noopener noreferrer">Al Jazeera – World</a>, 
-      
-      <a href="https://www.aljazeera.com/news/2026/11/19/world-reacts-to-icj-finding-myanmar-guilty-of-genocide-against-rohingya?traffic_source=rss" target="_blank" rel="noopener noreferrer">Al Jazeera – World</a>, 
-      
-      <a href="https://www.aljazeera.com/video/newsfeed/2026/11/19/rohingya-survivors-react-to-landmark-genocide-ruling-against-myanmar?traffic_source=rss" target="_blank" rel="noopener noreferrer">Al Jazeera – World</a>, 
-      
-      <a href="https://www.aljazeera.com/news/2026/11/19/what-the-icj-ruling-means-for-the-rohingya?traffic_source=rss" target="_blank" rel="noopener noreferrer">Al Jazeera – World</a>, 
-      
-      <a href="https://www.livemint.com/news/why-this-genocide-ruling-matters-way-beyond-myanmar-11795141426469.html" target="_blank" rel="noopener noreferrer">Mint</a>, 
-      
-      <a href="https://www.aljazeera.com/video/newsfeed/2026/11/19/rohingya-genocide-survivor-perpetrators-will-have-to-face?traffic_source=rss" target="_blank" rel="noopener noreferrer">Al Jazeera – World</a>, 
-      
-      <a href="https://www.aljazeera.com/video/newsfeed/2026/11/19/what-does-the-myanmar-genocide-ruling-mean-for-the-rohingya?traffic_source=rss" target="_blank" rel="noopener noreferrer">Al Jazeera – World</a>
+      <span class="source-item-chip">
+        <a href="https://timesofindia.indiatimes.com/india/balasaheb-like-a-deity-to-us-eknath-shinde-defends-shaina-nc-in-photo-row-says-she-has-clarified/articleshow/135967993.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="&#39;Balasaheb like a deity to us&#39;: Eknath Shinde defends Shaina NC in photo row">&#39;Balasaheb like a deity to us&#39;: Eknath Shinde defends Shaina NC in photo row</a>
+        <span class="badge badge-outlet">Times of India</span>
+        
+      </span>
       
     </div>
   </article>
@@ -166,211 +154,60 @@
     <div class="meta-row">
       <span class="badge badge-corroborated">Corroborated</span>
       
-      <span class="source-count">4 independent sources</span>
+      <span class="source-count">6 independent sources</span>
       <span class="sep">•</span>
-      <span class="score-pill">Score: 6.92</span>
+      <span class="score-pill">Score: 8.25</span>
       
       <span class="sep">•</span>
-      <span class="story-date">20 Nov 2026, 07:53 IST</span>
+      <time datetime="2026-11-18T17:09:16.446128+00:00" class="story-date local-time">18 Nov 2026, 22:39 IST</time>
       
     </div>
 
-    <h2><a href="story_286.html" class="headline-link">1 Killed, 1 Injured As Basement Of 4-Storey Building Catches Fire In Delhi</a></h2>
+    <h2><a href="story_121.html" class="headline-link">Prince William, Kate Middleton meet PM Modi on final day of India visit</a></h2>
 
     
-    <p class="story-summary-omitted">
-      
-      [Summary constrained to claim table — strict NLI entailment gate applied. <a href="story_286.html">View claims &rarr;</a>]
-      
-    </p>
+    <p class="story-summary">The meeting marked the culmination of their engagements in the country, which included the 2026 Earthshot Prize awards ceremony in Mumbai. The royal couple&#39;s visit included the 2026 Earthshot Prize awards ceremony in Mumbai on Tuesday. The Princess of Wales made a stunning statement in a traditional red anarkali as she attended the Earthshot Prize Awards ceremony in Mumbai on November 17 alongside Prince William.</p>
     
 
+    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
     <div class="sources-list">
       <strong>Sources:</strong>
       
-      <a href="https://www.hindustantimes.com/india-news/30yrold-man-another-critical-in-delhi-fire-during-welding-for-fire-safety-gear-101795076285997.html" target="_blank" rel="noopener noreferrer">Hindustan Times</a>, 
+      <span class="source-item-chip">
+        <a href="https://www.bbc.co.uk/news/videos/cmvg2nl8v22do?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Prince and Princess of Wales play street cricket in Mumbai">Prince and Princess of Wales play street cricket in Mumbai</a>
+        <span class="badge badge-outlet">BBC News – India</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://www.news18.com/videos/india/delhi-fire-horror-1-killed-another-injured-in-lajpat-nagar-blaze-fir-registered-delhi-news-10432312.html" target="_blank" rel="noopener noreferrer">News18</a>, 
+      <span class="source-item-chip">
+        <a href="https://www.news18.com/cities/mumbai-news/why-are-prince-william-and-princess-catherine-in-india-earthshot-prize-2026-explained-ws-l-10428357.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Why Are Prince William And Princess Catherine In India? Earthshot Prize 2026 Explained">Why Are Prince William And Princess Catherine In India? Earthshot Prize 2026 Explained</a>
+        <span class="badge badge-outlet">News18</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://www.dnaindia.com/mumbai/report-mumbai-massive-blaze-engulfs-residential-flat-in-lalbaug-visuals-show-thick-smoke-video-3224310" target="_blank" rel="noopener noreferrer">DNA India</a>, 
+      <span class="source-item-chip">
+        <a href="https://www.dnaindia.com/india/report-prince-william-kate-middleton-arrive-in-mumbai-gully-cricket-with-sachin-tendulkar-nehru-jacket-and-5-key-highlights-3224138" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Prince William, Kate Middleton Arrive In Mumbai: Gully Cricket with Sachin Tendulkar, Nehru jacket and 5 key highlights">Prince William, Kate Middleton Arrive In Mumbai: Gully Cricket with Sachin Tendulkar, Nehru jacket and 5 key highlights</a>
+        <span class="badge badge-outlet">DNA India</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://www.ndtv.com/delhi-news/delhi-fire-lajpat-nagar-1-killed-1-injured-as-basement-of-4-storey-building-catches-fire-in-delhi-12348028" target="_blank" rel="noopener noreferrer">NDTV</a>
+      <span class="source-item-chip">
+        <a href="https://www.indiatoday.in/lifestyle/fashion/story/kate-middleton-anarkali-fashion-prince-william-bandhgala-earthshot-prize-awards-mumbai-3040984-2026-11-17?utm_source=rss" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Kate Middleton in anarkali, Prince William in bandhgala at Mumbai event. Pics">Kate Middleton in anarkali, Prince William in bandhgala at Mumbai event. Pics</a>
+        <span class="badge badge-outlet">India Today</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-    </div>
-  </article>
-  
-  
-  
-
-  <article class="story-card level-corroborated">
-    <div class="meta-row">
-      <span class="badge badge-corroborated">Corroborated</span>
+      <span class="source-item-chip">
+        <a href="https://www.hindustantimes.com/india-news/prince-william-kate-meet-pm-modi-in-delhi-on-final-day-of-india-visit-101795013178375.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Prince William, Kate meet PM Modi in Delhi on final day of India visit">Prince William, Kate meet PM Modi in Delhi on final day of India visit</a>
+        <span class="badge badge-outlet">Hindustan Times</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <span class="source-count">4 independent sources</span>
-      <span class="sep">•</span>
-      <span class="score-pill">Score: 6.25</span>
-      
-      <span class="sep">•</span>
-      <span class="story-date">20 Nov 2026, 07:53 IST</span>
-      
-    </div>
-
-    <h2><a href="story_404.html" class="headline-link">1 Killed, 1 Injured As Basement Of 4-Storey Building Catches Fire In Delhi</a></h2>
-
-    
-    <p class="story-summary-omitted">
-      
-      [Summary constrained to claim table — strict NLI entailment gate applied. <a href="story_404.html">View claims &rarr;</a>]
-      
-    </p>
-    
-
-    <div class="sources-list">
-      <strong>Sources:</strong>
-      
-      <a href="https://www.hindustantimes.com/india-news/30yrold-man-another-critical-in-delhi-fire-during-welding-for-fire-safety-gear-101795076285997.html" target="_blank" rel="noopener noreferrer">Hindustan Times</a>, 
-      
-      <a href="https://www.news18.com/videos/india/delhi-fire-horror-1-killed-another-injured-in-lajpat-nagar-blaze-fir-registered-delhi-news-10432312.html" target="_blank" rel="noopener noreferrer">News18</a>, 
-      
-      <a href="https://www.dnaindia.com/mumbai/report-mumbai-massive-blaze-engulfs-residential-flat-in-lalbaug-visuals-show-thick-smoke-video-3224310" target="_blank" rel="noopener noreferrer">DNA India</a>, 
-      
-      <a href="https://www.ndtv.com/delhi-news/delhi-fire-lajpat-nagar-1-killed-1-injured-as-basement-of-4-storey-building-catches-fire-in-delhi-12348028" target="_blank" rel="noopener noreferrer">NDTV</a>
-      
-    </div>
-  </article>
-  
-  
-  
-  
-
-  <article class="story-card level-limited">
-    <div class="meta-row">
-      <span class="badge badge-limited">Limited corroboration</span>
-      
-      <span class="source-count">3 independent sources</span>
-      <span class="sep">•</span>
-      <span class="score-pill">Score: 3.85</span>
-      
-      <span class="sep">•</span>
-      <span class="story-date">20 Nov 2026, 07:50 IST</span>
-      
-    </div>
-
-    <h2><a href="story_296.html" class="headline-link">52 Lakh Weddings In India In 25 Days, Over Rs 7 Lakh Crore Business Expected</a></h2>
-
-    
-    <p class="story-summary">Among services, catering is expected to account for Rs 75,000 crore. 52 lakh weddings in next 25 days: India eyes Rs 7.5 lakh crore business
-India is expected to host around 52 lakh weddings between November 21 and December 15, generating an estimated Rs 7.5 lakh crore in business, the CAIT said. India is expected to witness around 52 lakh weddings between November 21 and December 15, generating an estimated Rs 7.5 lakh crore in business, the Confederation of All India Traders (CAIT) said on Thursday. Delhi-NCR alone is projected to account for around five lakh weddings and Rs 2.5 lakh crore in business, according to the traders&#39; body. The estimates were prepared by CAIT&#39;s research arm, the CAIT Research and Trade Development Society, following consultations with more than 300 trade leaders and 550 trade associations across 25 states.</p>
-    
-
-    <div class="sources-list">
-      <strong>Sources:</strong>
-      
-      <a href="https://economictimes.indiatimes.com/news/company/corporate-trends/indias-wedding-season-set-to-generate-rs-7-5-lakh-crore-business-from-52-lakh-weddings-cait/articleshow/135983955.cms" target="_blank" rel="noopener noreferrer">Economic Times</a>, 
-      
-      <a href="https://www.indiatoday.in/business/story/india-wedding-season-52-lakh-weddings-7-5-lakh-crore-business-3042759-2026-11-19?utm_source=rss" target="_blank" rel="noopener noreferrer">India Today</a>, 
-      
-      <a href="https://www.ndtv.com/india-news/52-lakh-weddings-in-india-in-25-days-over-rs-7-lakh-crore-business-expected-12352163" target="_blank" rel="noopener noreferrer">NDTV</a>
-      
-    </div>
-  </article>
-  
-  
-  
-
-  <article class="story-card level-corroborated">
-    <div class="meta-row">
-      <span class="badge badge-corroborated">Corroborated</span>
-      
-      <span class="source-count">4 independent sources</span>
-      <span class="sep">•</span>
-      <span class="score-pill">Score: 6.9</span>
-      
-      <span class="sep">•</span>
-      <span class="story-date">20 Nov 2026, 07:44 IST</span>
-      
-    </div>
-
-    <h2><a href="story_287.html" class="headline-link">Reporters face rare phone restrictions on Air Force One</a></h2>
-
-    
-    <p class="story-summary-omitted">
-      
-      [Summary constrained to claim table — strict NLI entailment gate applied. <a href="story_287.html">View claims &rarr;</a>]
-      
-    </p>
-    
-
-    <div class="sources-list">
-      <strong>Sources:</strong>
-      
-      <a href="https://timesofindia.indiatimes.com/india/from-manila-quad-signal-to-china-peace-by-strength/articleshow/135943307.cms" target="_blank" rel="noopener noreferrer">Times of India</a>, 
-      
-      <a href="https://timesofindia.indiatimes.com/world/us/white-house-officials-seize-reporters-phones-aboard-air-force-one-after-china-departure/articleshow/135998625.cms" target="_blank" rel="noopener noreferrer">Times of India</a>, 
-      
-      <a href="https://www.straitstimes.com/world/united-states/us-should-not-certify-chinese-aircraft-restrict-investments-in-chinas-aerospace-sector-lawmakers-say" target="_blank" rel="noopener noreferrer">The Straits Times – World</a>, 
-      
-      <a href="https://www.straitstimes.com/world/united-states/reporters-phones-taken-on-air-force-one-in-rare-security-move" target="_blank" rel="noopener noreferrer">The Straits Times – World</a>, 
-      
-      <a href="https://www.scmp.com/news/china/diplomacy/article/3375128/fcc-votes-ban-chinese-telecoms-direct-access-us-phone-numbers" target="_blank" rel="noopener noreferrer">SCMP – World</a>, 
-      
-      <a href="https://www.scmp.com/news/china/diplomacy/article/3375056/qatar-gifted-boeing-747-makes-china-debut-air-force-one-shenzhen" target="_blank" rel="noopener noreferrer">SCMP – World</a>, 
-      
-      <a href="https://www.deccanchronicle.com/world/china-bars-bloomberg-reporter-from-trilateral-meeting-after-she-shouted-question-at-earlier-event-2006113" target="_blank" rel="noopener noreferrer">Deccan Chronicle</a>, 
-      
-      <a href="https://www.straitstimes.com/world/united-states/us-lawmakers-near-deal-to-ban-chinese-cars-spare-mercedes" target="_blank" rel="noopener noreferrer">The Straits Times – World</a>, 
-      
-      <a href="https://www.straitstimes.com/world/united-states/reporters-face-rare-phone-restrictions-on-air-force-one" target="_blank" rel="noopener noreferrer">The Straits Times – World</a>
-      
-    </div>
-  </article>
-  
-  
-  
-
-  <article class="story-card level-corroborated">
-    <div class="meta-row">
-      <span class="badge badge-corroborated">Corroborated</span>
-      
-      <span class="source-count">4 independent sources</span>
-      <span class="sep">•</span>
-      <span class="score-pill">Score: 6.23</span>
-      
-      <span class="sep">•</span>
-      <span class="story-date">20 Nov 2026, 07:44 IST</span>
-      
-    </div>
-
-    <h2><a href="story_405.html" class="headline-link">Reporters face rare phone restrictions on Air Force One</a></h2>
-
-    
-    <p class="story-summary-omitted">
-      
-      [Summary constrained to claim table — strict NLI entailment gate applied. <a href="story_405.html">View claims &rarr;</a>]
-      
-    </p>
-    
-
-    <div class="sources-list">
-      <strong>Sources:</strong>
-      
-      <a href="https://timesofindia.indiatimes.com/india/from-manila-quad-signal-to-china-peace-by-strength/articleshow/135943307.cms" target="_blank" rel="noopener noreferrer">Times of India</a>, 
-      
-      <a href="https://timesofindia.indiatimes.com/world/us/white-house-officials-seize-reporters-phones-aboard-air-force-one-after-china-departure/articleshow/135998625.cms" target="_blank" rel="noopener noreferrer">Times of India</a>, 
-      
-      <a href="https://www.straitstimes.com/world/united-states/us-should-not-certify-chinese-aircraft-restrict-investments-in-chinas-aerospace-sector-lawmakers-say" target="_blank" rel="noopener noreferrer">The Straits Times – World</a>, 
-      
-      <a href="https://www.straitstimes.com/world/united-states/reporters-phones-taken-on-air-force-one-in-rare-security-move" target="_blank" rel="noopener noreferrer">The Straits Times – World</a>, 
-      
-      <a href="https://www.scmp.com/news/china/diplomacy/article/3375128/fcc-votes-ban-chinese-telecoms-direct-access-us-phone-numbers" target="_blank" rel="noopener noreferrer">SCMP – World</a>, 
-      
-      <a href="https://www.scmp.com/news/china/diplomacy/article/3375056/qatar-gifted-boeing-747-makes-china-debut-air-force-one-shenzhen" target="_blank" rel="noopener noreferrer">SCMP – World</a>, 
-      
-      <a href="https://www.deccanchronicle.com/world/china-bars-bloomberg-reporter-from-trilateral-meeting-after-she-shouted-question-at-earlier-event-2006113" target="_blank" rel="noopener noreferrer">Deccan Chronicle</a>, 
-      
-      <a href="https://www.straitstimes.com/world/united-states/us-lawmakers-near-deal-to-ban-chinese-cars-spare-mercedes" target="_blank" rel="noopener noreferrer">The Straits Times – World</a>, 
-      
-      <a href="https://www.straitstimes.com/world/united-states/reporters-face-rare-phone-restrictions-on-air-force-one" target="_blank" rel="noopener noreferrer">The Straits Times – World</a>
+      <span class="source-item-chip">
+        <a href="https://timesofindia.indiatimes.com/india/prince-william-kate-middleton-meet-pm-modi-in-delhi-as-three-day-india-visit-concludes/articleshow/135966803.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Prince William, Kate Middleton meet PM Modi in Delhi">Prince William, Kate Middleton meet PM Modi in Delhi</a>
+        <span class="badge badge-outlet">Times of India</span>
+        
+      </span>
       
     </div>
   </article>
@@ -384,35 +221,42 @@ India is expected to host around 52 lakh weddings between November 21 and Decemb
       
       <span class="source-count">3 independent sources</span>
       <span class="sep">•</span>
-      <span class="score-pill">Score: 5.91</span>
+      <span class="score-pill">Score: 5.28</span>
       
       <span class="sep">•</span>
-      <span class="story-date">20 Nov 2026, 07:38 IST</span>
+      <time datetime="2026-11-19T16:01:14+00:00" class="story-date local-time">19 Nov 2026, 21:31 IST</time>
       
     </div>
 
-    <h2><a href="story_298.html" class="headline-link">California probing if Nvidia misled investors on China risks</a></h2>
+    <h2><a href="story_193.html" class="headline-link">India proposes joint vision document ahead of Nepal PM Balen Shah’s visit next week</a></h2>
 
     
-    <p class="story-summary-omitted">
-      
-      [Summary constrained to claim table — strict NLI entailment gate applied. <a href="story_298.html">View claims &rarr;</a>]
-      
-    </p>
+    <p class="story-summary">According to Foreign Ministry sources, Shah will visit Delhi on November 22. Nepal Prime Minister Balendra Shah is set to visit New Delhi on November 22, news agency ANI reported citing sources in Nepal&#39;s ministry of foreign affairs.</p>
     
 
+    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
     <div class="sources-list">
       <strong>Sources:</strong>
       
-      <a href="https://www.ndtv.com/world-news/nvidia-creates-oversight-committee-for-national-security-export-controls-12338870" target="_blank" rel="noopener noreferrer">NDTV</a>, 
+      <span class="source-item-chip">
+        <a href="https://timesofindia.indiatimes.com/world/south-asia/nepal-pm-balendra-shah-to-visit-india-on-nov-22-connectivity-trade-on-agenda/articleshow/135928320.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Nepal PM Balendra Shah to visit India on Nov 22, connectivity &amp;amp; trade on agenda">Nepal PM Balendra Shah to visit India on Nov 22, connectivity &amp;amp; trade on agenda</a>
+        <span class="badge badge-outlet">Times of India</span>
+        
+        <span class="badge badge-wire">ANI</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://www.ndtv.com/world-news/nvidia-under-securities-and-exchange-commissions-lens-report-jensen-huang-affair-with-suspected-chinese-spy-alice-huang-12342404" target="_blank" rel="noopener noreferrer">NDTV</a>, 
+      <span class="source-item-chip">
+        <a href="https://www.news18.com/videos/india/actor-pankaj-tripathi-reveals-plans-to-venture-into-direction-at-news18-rising-bharat-summit-10429811.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Actor Pankaj Tripathi Reveals Plans To Venture Into Direction At News18 Rising Bharat Summit">Actor Pankaj Tripathi Reveals Plans To Venture Into Direction At News18 Rising Bharat Summit</a>
+        <span class="badge badge-outlet">News18</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://www.ndtv.com/world-news/california-summons-nvidia-over-concerns-about-former-ceo-china-ties-12351970" target="_blank" rel="noopener noreferrer">NDTV</a>, 
-      
-      <a href="https://www.thehindu.com/news/international/california-attorney-general-subpoenas-nvidia-over-chips-former-ceos-affair/article71722914.ece" target="_blank" rel="noopener noreferrer">The Hindu</a>, 
-      
-      <a href="https://www.straitstimes.com/world/united-states/california-probing-if-nvidia-misled-investors-on-china-risks" target="_blank" rel="noopener noreferrer">The Straits Times – World</a>
+      <span class="source-item-chip">
+        <a href="https://www.hindustantimes.com/india-news/preparations-underway-for-pm-balendra-shahs-india-visit-nepal-foreign-ministry-sources-101794926564617.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Preparations underway for PM Balendra Shah&#39;s India visit: Nepal foreign ministry sources">Preparations underway for PM Balendra Shah&#39;s India visit: Nepal foreign ministry sources</a>
+        <span class="badge badge-outlet">Hindustan Times</span>
+        
+      </span>
       
     </div>
   </article>
@@ -424,37 +268,311 @@ India is expected to host around 52 lakh weddings between November 21 and Decemb
     <div class="meta-row">
       <span class="badge badge-corroborated">Corroborated</span>
       
-      <span class="source-count">3 independent sources</span>
+      <span class="source-count">6 independent sources</span>
       <span class="sep">•</span>
-      <span class="score-pill">Score: 5.33</span>
+      <span class="score-pill">Score: 7.26</span>
       
       <span class="sep">•</span>
-      <span class="story-date">20 Nov 2026, 07:38 IST</span>
+      <time datetime="2026-11-19T00:10:11.869335+00:00" class="story-date local-time">19 Nov 2026, 05:40 IST</time>
       
     </div>
 
-    <h2><a href="story_430.html" class="headline-link">California probing if Nvidia misled investors on China risks</a></h2>
+    <h2><a href="story_131.html" class="headline-link">&#39;Addiction to being in spotlight&#39;: BJP says Rahul &#39;defames&#39; India to grab headlines</a></h2>
 
     
-    <p class="story-summary-omitted">
+    <div class="story-summary-omitted">
       
-      [Summary constrained to claim table — strict NLI entailment gate applied. <a href="story_430.html">View claims &rarr;</a>]
+      <div class="empty-state-notice sensitive-notice">
+        <span class="notice-badge">&#9888; Sensitive Topic Safeguard</span>
+        <p>Narrative generation suppressed under legal and defamation safeguards (court proceedings or private individuals). Only structured claims from named outlets are published.</p>
+        <a href="story_131.html" class="view-claims-btn">Inspect claims &rarr;</a>
+      </div>
       
-    </p>
+    </div>
     
 
+    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
     <div class="sources-list">
       <strong>Sources:</strong>
       
-      <a href="https://www.ndtv.com/world-news/nvidia-creates-oversight-committee-for-national-security-export-controls-12338870" target="_blank" rel="noopener noreferrer">NDTV</a>, 
+      <span class="source-item-chip">
+        <a href="https://www.hindustantimes.com/india-news/indiabloc-sonia-gandhi-book-launch-belonging-rajiv-gandhi-rahul-gandhi-indira-gandhi-congress-101794882463130.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="INDIA bloc leaders turn out for Sonia Gandhi’s memoir launch">INDIA bloc leaders turn out for Sonia Gandhi’s memoir launch</a>
+        <span class="badge badge-outlet">Hindustan Times</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://www.ndtv.com/world-news/nvidia-under-securities-and-exchange-commissions-lens-report-jensen-huang-affair-with-suspected-chinese-spy-alice-huang-12342404" target="_blank" rel="noopener noreferrer">NDTV</a>, 
+      <span class="source-item-chip">
+        <a href="https://timesofindia.indiatimes.com/india/at-sonias-book-launch-gandhis-open-up-about-love-loss-and-bad-chicken/articleshow/135905161.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="At Sonia&#39;s book launch, Gandhis open up about love, loss, and bad chicken">At Sonia&#39;s book launch, Gandhis open up about love, loss, and bad chicken</a>
+        <span class="badge badge-outlet">Times of India</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://www.ndtv.com/world-news/california-summons-nvidia-over-concerns-about-former-ceo-china-ties-12351970" target="_blank" rel="noopener noreferrer">NDTV</a>, 
+      <span class="source-item-chip">
+        <a href="https://www.indiatoday.in/india/story/sonia-gandhi-memoir-reveals-her-relationship-with-indira-gandhi-her-dilemma-on-how-to-address-her-ma-or-mamma-3040380-2026-11-17?utm_source=rss" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Ma or Mamma? Sonia Gandhi&#39;s dilemma with mother-in-law Indira Gandhi">Ma or Mamma? Sonia Gandhi&#39;s dilemma with mother-in-law Indira Gandhi</a>
+        <span class="badge badge-outlet">India Today</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://www.thehindu.com/news/international/california-attorney-general-subpoenas-nvidia-over-chips-former-ceos-affair/article71722914.ece" target="_blank" rel="noopener noreferrer">The Hindu</a>, 
+      <span class="source-item-chip">
+        <a href="https://www.dnaindia.com/india/report-mum-on-papa-s-lap-rahul-gandhi-recalls-childhood-memory-of-sonia-and-rajiv-gandhi-video-3224170" target="_blank" rel="noopener noreferrer" class="source-title-link" title="&#39;Mum on papa&#39;s lap&#39;: Rahul Gandhi recalls childhood memory of Sonia and Rajiv Gandhi| Video">&#39;Mum on papa&#39;s lap&#39;: Rahul Gandhi recalls childhood memory of Sonia and Rajiv Gandhi| Video</a>
+        <span class="badge badge-outlet">DNA India</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://www.straitstimes.com/world/united-states/california-probing-if-nvidia-misled-investors-on-china-risks" target="_blank" rel="noopener noreferrer">The Straits Times – World</a>
+      <span class="source-item-chip">
+        <a href="https://www.livemint.com/news/trends/if-you-want-to-fall-in-love-never-eat-chicken-chasseur-rahul-gandhis-lighthearted-tale-at-sonias-memoir-launch-11794898937789.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="‘If you want to fall in love...never eat chicken chasseur’: Rahul Gandhi&#39;s lighthearted tale at Sonia&#39;s memoir launch">‘If you want to fall in love...never eat chicken chasseur’: Rahul Gandhi&#39;s lighthearted tale at Sonia&#39;s memoir launch</a>
+        <span class="badge badge-outlet">Mint</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.news18.com/india/as-a-true-hindu-rahul-gandhi-congress-respond-to-sonia-book-launch-row-remarks-with-love-ws-klrt-10429266.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Rahul Gandhi Responds To ‘Mumma In Papa’s Lap’ Remark Backlash With ‘Love As A True Hindu’">Rahul Gandhi Responds To ‘Mumma In Papa’s Lap’ Remark Backlash With ‘Love As A True Hindu’</a>
+        <span class="badge badge-outlet">News18</span>
+        
+      </span>
+      
+    </div>
+  </article>
+  
+  
+  
+
+  <article class="story-card level-corroborated">
+    <div class="meta-row">
+      <span class="badge badge-corroborated">Corroborated</span>
+      
+      <span class="source-count">6 independent sources</span>
+      <span class="sep">•</span>
+      <span class="score-pill">Score: 9.92</span>
+      
+      <span class="sep">•</span>
+      <time datetime="2026-11-17T23:30:41.622192+00:00" class="story-date local-time">18 Nov 2026, 05:00 IST</time>
+      
+    </div>
+
+    <h2><a href="story_104.html" class="headline-link">Kulgam attack: Operation continues to track wounded terrorist</a></h2>
+
+    
+    <p class="story-summary">Security services claim that on November 10, LeT commander Lateef Bhat and Umar Nisar Dar conducted reconnaissance at Mir Bazaar, Akhran, Hablish, and Kilam. A Lashkar terrorist, Latief Bhat, was killed in an encounter in Jammu and Kashmir&#39;s Kulgam district. INDIA
+Security forces recovered a terrorist’s body during an encounter in Jammu and Kashmir’s Kulgam district, days after three CRPF personnel were injured in an attack. Security forces recovered the body of a terrorist from an encounter site in Jammu and Kashmir’s Kulgam district on Monday, days after an attack on a Central Reserve Police Force (CRPF) checkpoint left three personnel injured. The Kashmir Zone Police confirmed the encounter in a post on X, saying the entire area had been cordoned off and a joint operation was underway.
+“Encounter with terrorists started in Kulgam.</p>
+    
+
+    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
+    <div class="sources-list">
+      <strong>Sources:</strong>
+      
+      <span class="source-item-chip">
+        <a href="https://www.hindustantimes.com/india-news/lateef-bhat-killed-kulgam-encounter-kashmir-crpf-attack-terrorist-trapped-101794817992183.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Terrorists behind CRPF attack trapped in Kulgam, encounter underway">Terrorists behind CRPF attack trapped in Kulgam, encounter underway</a>
+        <span class="badge badge-outlet">Hindustan Times</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://timesofindia.indiatimes.com/india/2-terrorists-killed-in-jk-kulgam-encounter-days-after-attack-on-crpf-personnel/articleshow/135878975.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Terrorist killed in J&amp;amp;K&#39;s Kulgam encounter days after attack on CRPF personnel">Terrorist killed in J&amp;amp;K&#39;s Kulgam encounter days after attack on CRPF personnel</a>
+        <span class="badge badge-outlet">Times of India</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.indiatoday.in/india/jammu-and-kashmir/story/2-terrorists-including-wanted-lashkar-operative-killed-days-after-ambush-of-crpf-patrol-in-kulgam-3039867-2026-11-16?utm_source=rss" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Lashkar operative among 2 terrorists killed days after CRPF patrol ambush in J&amp;K">Lashkar operative among 2 terrorists killed days after CRPF patrol ambush in J&amp;K</a>
+        <span class="badge badge-outlet">India Today</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.news18.com/india/lashkar-commander-latif-bhat-one-other-terrorist-involved-in-kulgam-attack-gunned-down-10427464.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Lashkar Commander Lateef Bhat Among Two Kulgam Attack Suspects Gunned Down By Security Forces">Lashkar Commander Lateef Bhat Among Two Kulgam Attack Suspects Gunned Down By Security Forces</a>
+        <span class="badge badge-outlet">News18</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://economictimes.indiatimes.com/news/india/kulgam-encounter-terrorists-jammu-kashmir-security-forces-police-operation/articleshow/135878992.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Encounter between security forces, terrorists in J&amp;amp;K">Encounter between security forces, terrorists in J&amp;amp;K</a>
+        <span class="badge badge-outlet">Economic Times</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.dnaindia.com/india/report-kulgam-encounter-one-terrorist-killed-after-crpf-attack-search-for-others-on-3224158" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Kulgam Encounter: One terrorist killed after CRPF attack, search for others on">Kulgam Encounter: One terrorist killed after CRPF attack, search for others on</a>
+        <span class="badge badge-outlet">DNA India</span>
+        
+      </span>
+      
+    </div>
+  </article>
+  
+  
+  
+
+  <article class="story-card level-corroborated">
+    <div class="meta-row">
+      <span class="badge badge-corroborated">Corroborated</span>
+      
+      <span class="source-count">4 independent sources</span>
+      <span class="sep">•</span>
+      <span class="score-pill">Score: 6.03</span>
+      
+      <span class="sep">•</span>
+      <time datetime="2026-11-19T07:26:49+00:00" class="story-date local-time">19 Nov 2026, 12:56 IST</time>
+      
+    </div>
+
+    <h2><a href="story_180.html" class="headline-link">Goa tourism minister seeks rethink on turtle nesting sites for 21 more beaches</a></h2>
+
+    
+    <div class="story-summary-omitted">
+      
+      <div class="empty-state-notice entailment-notice">
+        <span class="notice-badge">&#9432; Constrained to Verified Facts</span>
+        <p>AI narrative synthesis suppressed to prevent hallucination because reporting lacks sufficient multi-source consensus. View individual source claims on the story page.</p>
+        <a href="story_180.html" class="view-claims-btn">View claims &rarr;</a>
+      </div>
+      
+    </div>
+    
+
+    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
+    <div class="sources-list">
+      <strong>Sources:</strong>
+      
+      <span class="source-item-chip">
+        <a href="https://timesofindia.indiatimes.com/world/us/florida-conservation-groups-have-permanently-protected-22461-acres-of-working-forests-and-wetlands-in-the-apalachicola-river-basin-completing-the-first-phase-of-a-larger-41619-acre-project-planned-for-2030/articleshow/135857667.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Florida protects 22,461 acres of forests, wetlands in Apalachicola basin">Florida protects 22,461 acres of forests, wetlands in Apalachicola basin</a>
+        <span class="badge badge-outlet">Times of India</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.hindustantimes.com/india-news/npp-seeks-governor-s-intervention-on-wildlife-protection-act-s-applicability-in-nagaland-101794913181636.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="NPP seeks Governor&#39;s intervention on Wildlife Protection Act&#39;s applicability in Nagaland">NPP seeks Governor&#39;s intervention on Wildlife Protection Act&#39;s applicability in Nagaland</a>
+        <span class="badge badge-outlet">Hindustan Times</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://economictimes.indiatimes.com/news/international/world-news/orlando-tampa-weather-how-much-rain-will-florida-cities-get-as-flood-watch-warns-of-flooding-and-heavy-downpours/articleshow/135926339.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Orlando, Tampa weather: Florida braces for floods">Orlando, Tampa weather: Florida braces for floods</a>
+        <span class="badge badge-outlet">Economic Times</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.ndtv.com/world-news/flooded-road-collapsed-synagogue-roof-in-south-florida-amid-heavy-rain-12346685" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Flooded Road, Collapsed Synagogue Roof In South Florida Amid Heavy Rain">Flooded Road, Collapsed Synagogue Roof In South Florida Amid Heavy Rain</a>
+        <span class="badge badge-outlet">NDTV</span>
+        
+      </span>
+      
+    </div>
+  </article>
+  
+  
+  
+
+  <article class="story-card level-corroborated">
+    <div class="meta-row">
+      <span class="badge badge-corroborated">Corroborated</span>
+      
+      <span class="source-count">4 independent sources</span>
+      <span class="sep">•</span>
+      <span class="score-pill">Score: 6.08</span>
+      
+      <span class="sep">•</span>
+      <time datetime="2026-11-19T06:02:06+00:00" class="story-date local-time">19 Nov 2026, 11:32 IST</time>
+      
+    </div>
+
+    <h2><a href="story_187.html" class="headline-link">Gold Buyers Beware: Chinese Rhenium Powder Could Adulterate Gold, Hallmark Tests Fail To Detect It</a></h2>
+
+    
+    <p class="story-summary">Gold Buyers Beware: Chinese Rhenium Powder Could Adulterate Gold, Hallmark Tests Fail To Detect It
+A 25-year-old Indian national, identified as Tushar Sharma, was found dead inside a burning car in Langley, Canada. 25-year-old Tushar Sharma was found dead in British Columbia.</p>
+    
+
+    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
+    <div class="sources-list">
+      <strong>Sources:</strong>
+      
+      <span class="source-item-chip">
+        <a href="https://www.livemint.com/news/india/all-that-glitters-is-not-silver-how-hyderabad-police-busted-racket-selling-aluminium-foil-as-edible-silver-waraq-11795009827779.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="All that glitters is not silver: How Hyderabad police busted racket selling aluminium foil as edible silver waraq">All that glitters is not silver: How Hyderabad police busted racket selling aluminium foil as edible silver waraq</a>
+        <span class="badge badge-outlet">Mint</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.ndtv.com/world-news/indian-mans-body-found-inside-burning-car-in-canada-target-killing-suspected-12347133" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Indian Man&#39;s Body Found Inside Burning Car In Canada, Targeted Killing Suspected">Indian Man&#39;s Body Found Inside Burning Car In Canada, Targeted Killing Suspected</a>
+        <span class="badge badge-outlet">NDTV</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://timesofindia.indiatimes.com/city/hyderabad/hyd-man-accidentally-shot-dead-by-brother-inside-car-in-ny/articleshow/135970426.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Hyderabad man accidentally shot dead by brother inside car in New York">Hyderabad man accidentally shot dead by brother inside car in New York</a>
+        <span class="badge badge-outlet">Times of India</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.news18.com/india/gold-adulteration-racket-chinese-rhenium-powder-being-mixed-hallmarking-test-ws-l-10431878.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Gold Buyers Beware: Chinese Rhenium Powder Could Adulterate Gold, Hallmark Tests Fail To Detect It">Gold Buyers Beware: Chinese Rhenium Powder Could Adulterate Gold, Hallmark Tests Fail To Detect It</a>
+        <span class="badge badge-outlet">News18</span>
+        
+      </span>
+      
+    </div>
+  </article>
+  
+  
+  
+
+  <article class="story-card level-corroborated">
+    <div class="meta-row">
+      <span class="badge badge-corroborated">Corroborated</span>
+      
+      <span class="source-count">4 independent sources</span>
+      <span class="sep">•</span>
+      <span class="score-pill">Score: 7.39</span>
+      
+      <span class="sep">•</span>
+      <time datetime="2026-11-18T17:09:16.776821+00:00" class="story-date local-time">18 Nov 2026, 22:39 IST</time>
+      
+    </div>
+
+    <h2><a href="story_130.html" class="headline-link">Dhanush thanks CM Vijay for 6 am OM shows, urges fans to celebrate responsibly</a></h2>
+
+    
+    <div class="story-summary-omitted">
+      
+      <div class="empty-state-notice sensitive-notice">
+        <span class="notice-badge">&#9888; Sensitive Topic Safeguard</span>
+        <p>Narrative generation suppressed under legal and defamation safeguards (court proceedings or private individuals). Only structured claims from named outlets are published.</p>
+        <a href="story_130.html" class="view-claims-btn">Inspect claims &rarr;</a>
+      </div>
+      
+    </div>
+    
+
+    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
+    <div class="sources-list">
+      <strong>Sources:</strong>
+      
+      <span class="source-item-chip">
+        <a href="https://www.hindustantimes.com/india-news/ht-evening-news-brief-november-17-2026-modi-quad-summit-bilkis-bano-leaves-gujarat-ms-dhoni-retires-ipl-101794919438882.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="HT Evening News Brief November 17: Modi hails Quad partnership, Bilkis Bano leaves Gujarat, Dhoni retires from IPL and more">HT Evening News Brief November 17: Modi hails Quad partnership, Bilkis Bano leaves Gujarat, Dhoni retires from IPL and more</a>
+        <span class="badge badge-outlet">Hindustan Times</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.indiatoday.in/sports/cricket/story/ms-dhoni-ipl-retirement-chennai-farewell-promise-csk-mentor-3040726-2026-11-17?utm_source=rss" target="_blank" rel="noopener noreferrer" class="source-title-link" title="How MS Dhoni retired from IPL before fulfilling a promise to Chennai">How MS Dhoni retired from IPL before fulfilling a promise to Chennai</a>
+        <span class="badge badge-outlet">India Today</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://economictimes.indiatimes.com/news/new-updates/mai-har-ek-pal-ka-shayar-hu-ms-dhonis-first-reaction-after-csk-retirement-shares-heartfelt-instagram-post/articleshow/135927055.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="MS Dhoni&#39;s first reaction after CSK retirement">MS Dhoni&#39;s first reaction after CSK retirement</a>
+        <span class="badge badge-outlet">Economic Times</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://timesofindia.indiatimes.com/sports/cricket/ipl/top-stories/ms-dhoni-chennais-own-like-rajini-an-adopted-son-gave-the-fans-as-much-love-as-he-received/articleshow/135946763.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Dhoni: Like Rajini, Chennai’s adopted son gave the fans as much love as he received">Dhoni: Like Rajini, Chennai’s adopted son gave the fans as much love as he received</a>
+        <span class="badge badge-outlet">Times of India</span>
+        
+      </span>
       
     </div>
   </article>
@@ -468,43 +586,129 @@ India is expected to host around 52 lakh weddings between November 21 and Decemb
       
       <span class="source-count">5 independent sources</span>
       <span class="sep">•</span>
-      <span class="score-pill">Score: 8.56</span>
+      <span class="score-pill">Score: 7.39</span>
       
       <span class="sep">•</span>
-      <span class="story-date">20 Nov 2026, 07:35 IST</span>
+      <time datetime="2026-11-18T17:09:16.654456+00:00" class="story-date local-time">18 Nov 2026, 22:39 IST</time>
       
     </div>
 
-    <h2><a href="story_275.html" class="headline-link">Trump pushes Iran war decision to 2027, says he&#39;ll &#39;see what happens&#39; after Jan 1</a></h2>
+    <h2><a href="story_126.html" class="headline-link">‘Karnataka Yet To Get Rs 2,186 Crore’: Why DK Shivakumar Govt Plans To Move Supreme Court</a></h2>
 
     
-    <p class="story-summary-omitted">
+    <div class="story-summary-omitted">
       
-      [Summary constrained to claim table — strict NLI entailment gate applied. <a href="story_275.html">View claims &rarr;</a>]
+      <div class="empty-state-notice sensitive-notice">
+        <span class="notice-badge">&#9888; Sensitive Topic Safeguard</span>
+        <p>Narrative generation suppressed under legal and defamation safeguards (court proceedings or private individuals). Only structured claims from named outlets are published.</p>
+        <a href="story_126.html" class="view-claims-btn">Inspect claims &rarr;</a>
+      </div>
       
-    </p>
+    </div>
     
 
+    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
     <div class="sources-list">
       <strong>Sources:</strong>
       
-      <a href="https://timesofindia.indiatimes.com/world/us/iran-planning-dirty-bomb-attack-in-washington-us-intel-warns/articleshow/135906822.cms" target="_blank" rel="noopener noreferrer">Times of India</a>, 
+      <span class="source-item-chip">
+        <a href="https://www.indiatoday.in/india/law-news/story/supreme-court-lawyer-escorted-out-remarks-cji-surya-kant-3040078-2026-11-16?utm_source=rss" target="_blank" rel="noopener noreferrer" class="source-title-link" title="You don&#39;t deserve that chair: Lawyer escorted out after remarks at CJI">You don&#39;t deserve that chair: Lawyer escorted out after remarks at CJI</a>
+        <span class="badge badge-outlet">India Today</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://www.livemint.com/news/us-news/iran-planning-dirty-bomb-chemical-weapon-attack-on-trump-officials-in-washington-warns-us-intelligence-report-11794882364671.html" target="_blank" rel="noopener noreferrer">Mint</a>, 
+      <span class="source-item-chip">
+        <a href="https://www.news18.com/india/you-dont-deserve-that-chair-lawyer-escorted-out-after-unpleasant-remarks-against-cji-surya-kant-in-sc-10427993.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="&#39;You Don&#39;t Deserve That Chair&#39;: Lawyer Escorted Out After Unpleasant Remarks Against CJI Surya Kant In SC">&#39;You Don&#39;t Deserve That Chair&#39;: Lawyer Escorted Out After Unpleasant Remarks Against CJI Surya Kant In SC</a>
+        <span class="badge badge-outlet">News18</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://www.ndtv.com/world-news/us-iran-war-they-are-crazy-trump-on-reported-iranian-dirty-bomb-plot-in-washington-12339810" target="_blank" rel="noopener noreferrer">NDTV</a>, 
+      <span class="source-item-chip">
+        <a href="https://timesofindia.indiatimes.com/india/miffed-lawyer-questions-cjis-integrity-advocates-seek-action-against-him/articleshow/135902674.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Miffed lawyer questions CJI&#39;s &#39;integrity&#39;, advocates seek action against him">Miffed lawyer questions CJI&#39;s &#39;integrity&#39;, advocates seek action against him</a>
+        <span class="badge badge-outlet">Times of India</span>
+        
+        <span class="badge badge-wire">PTI</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://economictimes.indiatimes.com/news/defence/us-iran-war-dirty-bomb-warning-the-long-arm-of-iran-looms-over-washington/articleshow/135928765.cms" target="_blank" rel="noopener noreferrer">Economic Times</a>, 
+      <span class="source-item-chip">
+        <a href="https://www.hindustantimes.com/india-news/kerala-hc-dismisses-lawyer-s-plea-for-contempt-action-against-trial-judge-in-actress-assault-case-101794916615112.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Kerala HC dismisses lawyer’s plea for contempt action against trial judge in actress assault case">Kerala HC dismisses lawyer’s plea for contempt action against trial judge in actress assault case</a>
+        <span class="badge badge-outlet">Hindustan Times</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://economictimes.indiatimes.com/news/defence/what-is-dirty-bomb-that-iran-is-planning-to-use-against-us-and-how-is-it-different-from-nuclear-bomb/articleshow/135913384.cms" target="_blank" rel="noopener noreferrer">Economic Times</a>, 
+      <span class="source-item-chip">
+        <a href="https://www.dnaindia.com/india/report-supreme-court-issues-contempt-notice-to-lawyer-pravin-singhal-over-alleged-objectionable-remarks-against-cji-surya-kant-3224255" target="_blank" rel="noopener noreferrer" class="source-title-link" title="SC issues contempt notice to lawyer Pravin Singhal over alleged objectionable remarks against CJI Surya Kant">SC issues contempt notice to lawyer Pravin Singhal over alleged objectionable remarks against CJI Surya Kant</a>
+        <span class="badge badge-outlet">DNA India</span>
+        
+      </span>
       
-      <a href="https://www.ndtv.com/world-news/irans-army-chief-threatens-more-devastating-response-if-attacked-12343224" target="_blank" rel="noopener noreferrer">NDTV</a>, 
+    </div>
+  </article>
+  
+  
+  
+
+  <article class="story-card level-corroborated">
+    <div class="meta-row">
+      <span class="badge badge-corroborated">Corroborated</span>
       
-      <a href="https://www.ndtv.com/world-news/iran-war-us-will-see-what-happens-in-conflict-with-iran-after-january-1-says-donald-trump-12351565" target="_blank" rel="noopener noreferrer">NDTV</a>, 
+      <span class="source-count">5 independent sources</span>
+      <span class="sep">•</span>
+      <span class="score-pill">Score: 6.52</span>
       
-      <a href="https://timesofindia.indiatimes.com/world/us/trump-pushes-iran-war-decision-to-2027-says-he-will-see-what-happens-after-january-1/articleshow/136005177.cms" target="_blank" rel="noopener noreferrer">Times of India</a>, 
+      <span class="sep">•</span>
+      <time datetime="2026-11-19T00:10:12.119696+00:00" class="story-date local-time">19 Nov 2026, 05:40 IST</time>
       
-      <a href="https://www.deccanchronicle.com/world/iran-rejects-us-claims-of-developing-biological-chemical-weapons-recalls-iraq-wmd-controversy-2006118" target="_blank" rel="noopener noreferrer">Deccan Chronicle</a>
+    </div>
+
+    <h2><a href="story_139.html" class="headline-link">SpiceJet seeks  ₹5,500 crore to revive operations: Where will it be used amid crisis?</a></h2>
+
+    
+    <div class="story-summary-omitted">
+      
+      <div class="empty-state-notice entailment-notice">
+        <span class="notice-badge">&#9432; Constrained to Verified Facts</span>
+        <p>AI narrative synthesis suppressed to prevent hallucination because reporting lacks sufficient multi-source consensus. View individual source claims on the story page.</p>
+        <a href="story_139.html" class="view-claims-btn">View claims &rarr;</a>
+      </div>
+      
+    </div>
+    
+
+    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
+    <div class="sources-list">
+      <strong>Sources:</strong>
+      
+      <span class="source-item-chip">
+        <a href="https://www.ndtv.com/world-news/no-spicejet-departures-from-mumbai-airport-since-7-pm-hundreds-of-passengers-stranded-12341118" target="_blank" rel="noopener noreferrer" class="source-title-link" title="No SpiceJet Departures Since 7 pm, Hundreds Of Passengers Stranded In Mumbai">No SpiceJet Departures Since 7 pm, Hundreds Of Passengers Stranded In Mumbai</a>
+        <span class="badge badge-outlet">NDTV</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.livemint.com/news/spicejet-passengers-left-stranded-at-mumbai-airport-over-severe-flight-delays-lack-of-clarity-triggers-protests-11794974727042.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="SpiceJet passengers left stranded at Mumbai airport over severe flight delays, lack of clarity; triggers protests">SpiceJet passengers left stranded at Mumbai airport over severe flight delays, lack of clarity; triggers protests</a>
+        <span class="badge badge-outlet">Mint</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.indiatoday.in/cities/mumbai/story/spicejet-passengers-stranded-mumbai-airport-flights-cancelled-operational-disruptions-terminal-1-aviation-news-3041209-2026-11-18?utm_source=rss" target="_blank" rel="noopener noreferrer" class="source-title-link" title="SpiceJet passengers stranded at Mumbai airport as no flights take off, chaos erupts">SpiceJet passengers stranded at Mumbai airport as no flights take off, chaos erupts</a>
+        <span class="badge badge-outlet">India Today</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://economictimes.indiatimes.com/markets/stocks/news/spicejet-board-approves-up-to-rs-5500-crore-fundraise-to-support-fleet-expansion-drive-revival/articleshow/135958224.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="SpiceJet&#39;s cash crunch sparks ₹5,500 crore rescue">SpiceJet&#39;s cash crunch sparks ₹5,500 crore rescue</a>
+        <span class="badge badge-outlet">Economic Times</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.dnaindia.com/india/report-no-flights-for-12-hours-hundreds-of-spicejet-passengers-stranded-at-mumbai-airport-3224243" target="_blank" rel="noopener noreferrer" class="source-title-link" title="&#39;No flights for 12 hours&#39;: Hundreds of SpiceJet passengers stranded at Mumbai airport">&#39;No flights for 12 hours&#39;: Hundreds of SpiceJet passengers stranded at Mumbai airport</a>
+        <span class="badge badge-outlet">DNA India</span>
+        
+      </span>
       
     </div>
   </article>
@@ -525,14 +729,42 @@ India is expected to host around 52 lakh weddings between November 21 and Decemb
   <footer>
     <div class="container">
       <p>Automated news corroboration — what sources agree and differ on.</p>
+      <div class="footer-nav" style="margin: 12px 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; font-size: 0.85rem;">
+        <a href="about.html">About</a>
+        <a href="methodology.html">Methodology</a>
+        <a href="corrections.html">Corrections</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="takedown.html">Copyright &amp; Takedown</a>
+        <a href="sources_policy.html">How We Use Sources</a>
+      </div>
       <div class="footer-divider"></div>
-      <p>Published transparently with no manual intervention. Never claims absolute truth &mdash; reports corroboration metrics only.</p>
+      <p style="font-size: 0.78rem; color: #94a3b8; max-width: 760px; margin: 8px auto 0;">
+        <strong>Trademark &amp; Non-Affiliation Disclaimer:</strong> All publication names, outlet titles, and publisher trademarks referenced herein are the property of their respective owners. TrippyNews is an independent news corroboration project with no commercial affiliation, sponsorship, or endorsement from any cited news organization. No publisher logos are displayed.
+      </p>
+      <p style="margin-top: 6px; font-size: 0.78rem; color: #64748b;">Contact: <a href="mailto:contact@trippynews.org">contact@trippynews.org</a> &bull; Response within 48h for takedowns.</p>
     </div>
   </footer>
 
-  <!-- GoatCounter — free, privacy-friendly visitor analytics (no cookies) -->
-  <!-- Sign up at https://www.goatcounter.com to get your site code, -->
-  <!-- then replace YOURCODE below with your chosen subdomain.       -->
+  <!-- Local time formatting for readers -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('time.local-time[datetime]').forEach(function(el) {
+        var dt = el.getAttribute('datetime');
+        if (!dt) return;
+        try {
+          var d = new Date(dt);
+          if (!isNaN(d.getTime())) {
+            var dateStr = d.toLocaleDateString(undefined, { day: 'numeric', month: 'short', year: 'numeric' });
+            var timeStr = d.toLocaleTimeString(undefined, { hour: '2-digit', minute: '2-digit' });
+            el.textContent = dateStr + ', ' + timeStr;
+          }
+        } catch(e) {}
+      });
+    });
+  </script>
+
+  <!-- GoatCounter — privacy-friendly visitor analytics (no cookies) -->
   <script data-goatcounter="https://trippynews.goatcounter.com/count"
           async src="//gc.zgo.at/count.js"></script>
 </body>

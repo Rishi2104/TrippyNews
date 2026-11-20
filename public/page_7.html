@@ -3,20 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NewsCheck</title>
+  <title>TrippyNews</title>
 
   <!-- SEO -->
   <meta name="description" content="Automated news corroboration — what sources agree and differ on.">
   <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://rishi2104.github.io/TrippyNews/">
 
   <!-- Open Graph / Social -->
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="NewsCheck">
-  <meta property="og:title" content="NewsCheck">
+  <meta property="og:site_name" content="TrippyNews">
+  <meta property="og:title" content="TrippyNews">
   <meta property="og:description" content="Automated news corroboration — what sources agree and differ on.">
+  <meta property="og:url" content="https://rishi2104.github.io/TrippyNews/">
+  <meta property="og:image" content="https://rishi2104.github.io/TrippyNews/favicon.svg">
 
-  <!-- Favicon (simple emoji favicon via SVG data URI) -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⬡</text></svg>">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="TrippyNews">
+  <meta name="twitter:description" content="Automated news corroboration — what sources agree and differ on.">
+
+  <!-- Favicon (percent-encoded SVG data URI) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Ctext%20y='.9em'%20font-size='90'%3E%E2%AC%A1%3C/text%3E%3C/svg%3E">
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -25,14 +33,16 @@
     <div class="container">
       <div class="header-inner">
         <div class="site-brand">
-          <h1 class="site-title">
-            <a href="index.html">NewsCheck</a>
-          </h1>
-          <span class="site-tagline">Independent Corroboration Pipeline</span>
+          
+          <div class="site-title">
+            <a href="index.html">TrippyNews</a>
+          </div>
+          
+          <span class="site-tagline">Automated News Corroboration Pipeline</span>
         </div>
         <div class="header-live">
           <span class="live-dot"></span>
-          Auto-updated every 1 hour
+          Last updated: <time datetime="2026-11-20T10:03:53.313679+00:00" class="local-time">20 Nov 2026, 15:33 IST</time>
         </div>
       </div>
       <nav>
@@ -40,6 +50,7 @@
           <li><a href="index.html">Top Stories</a></li>
           <li><a href="methodology.html">Methodology</a></li>
           <li><a href="corrections.html">Corrections &amp; Changelog</a></li>
+          <li><a href="about.html">About</a></li>
         </ul>
       </nav>
     </div>
@@ -47,8 +58,8 @@
 
   <main class="container">
     <div class="disclosure-banner">
-      <span><strong>Automated report.</strong> May contain errors. Corroboration levels are computed mathematically from source diversity and agreement — not by human editors.</span>
-      <a href="mailto:corrections@newscheck.example.com?subject=TrippyNews%20Error%20Report">Report an error &rarr;</a>
+      <span><strong>Automated report.</strong> Corroboration levels are computed mathematically from source diversity and agreement &mdash; not by human editors. Never claims absolute truth.</span>
+      <a href="mailto:contact@trippynews.org?subject=TrippyNews%20Inquiry%20or%20Error%20Report">Report an error &rarr;</a>
     </div>
 
     
@@ -59,7 +70,6 @@
       <p>Ranked by recency &amp; independent corroboration metrics.</p>
     </div>
     <div class="section-header-right">
-      Updated every 1 hour<br>
       
       <span id="stories-count-display">Showing 61–70 of 100 stories</span>
       
@@ -72,414 +82,6 @@
   
   
   
-  
-
-  <article class="story-card level-strongly">
-    <div class="meta-row">
-      <span class="badge badge-strongly">Strongly corroborated</span>
-      
-      <span class="source-count">4 independent sources</span>
-      <span class="sep">•</span>
-      <span class="score-pill">Score: 10.04</span>
-      
-      <span class="sep">•</span>
-      <span class="story-date">20 Nov 2026, 09:05 IST</span>
-      
-    </div>
-
-    <h2><a href="story_364.html" class="headline-link">Oil prices edge higher as Houthi attacks on Riyadh raise supply concerns</a></h2>
-
-    
-    <p class="story-summary-omitted">
-      
-      [Summary constrained to claim table — strict NLI entailment gate applied. <a href="story_364.html">View claims &rarr;</a>]
-      
-    </p>
-    
-
-    <div class="sources-list">
-      <strong>Sources:</strong>
-      
-      <a href="https://www.ndtv.com/world-news/extremely-loud-explosion-in-riyadh-amid-saudi-arabia-houthi-clashes-smoke-seen-near-airport-12343563" target="_blank" rel="noopener noreferrer">NDTV</a>, 
-      
-      <a href="https://www.straitstimes.com/world/middle-east/houthi-attacks-on-saudi-arabia" target="_blank" rel="noopener noreferrer">The Straits Times – World</a>, 
-      
-      <a href="https://www.channelnewsasia.com/business/oil-prices-edge-higher-houthi-attacks-riyadh-raise-supply-concerns-6568016" target="_blank" rel="noopener noreferrer">CNA – Asia</a>, 
-      
-      <a href="https://www.aljazeera.com/news/liveblog/2026/11/19/iran-war-live-houthis-escalate-attacks-on-saudi-capital?traffic_source=rss" target="_blank" rel="noopener noreferrer">Al Jazeera – World</a>, 
-      
-      <a href="https://www.straitstimes.com/world/middle-east/saudi-led-coalition-says-it-intercepted-houthi-missile-targeting-southern-region" target="_blank" rel="noopener noreferrer">The Straits Times – World</a>
-      
-    </div>
-  </article>
-  
-  
-  
-  
-
-  <article class="story-card level-limited">
-    <div class="meta-row">
-      <span class="badge badge-limited">Limited corroboration</span>
-      
-      <span class="source-count">9 independent sources</span>
-      <span class="sep">•</span>
-      <span class="score-pill">Score: 0.0</span>
-      
-      <span class="sep">•</span>
-      <span class="story-date">20 Nov 2026, 08:23 IST</span>
-      
-    </div>
-
-    <h2><a href="story_256.html" class="headline-link">3 Lakh Evacuated, 47 Trains Cancelled: Odisha On High Alert As Cyclone Akvan Heads For Landfall Near Gopalpur Today</a></h2>
-
-    
-    <p class="story-summary">INDIA
-Cyclone Akvan will make landfall in Odisha on Friday with winds up to 110 kmph. According to the IMD, the cyclone is expected to hit Haripur, which is close to Gopalpur, on Friday afternoon. 3 Lakh Evacuated, 47 Trains Cancelled: Odisha On High Alert As Cyclone Akvan Heads For Landfall Near Gopalpur Today
-According to the IMD’s latest bulletin, Akvan was moving north-northwestwards at a speed of 19 kmph over the west-central Bay of Bengal. According to the IMD’s latest bulletin, Akvan was moving north-northwestwards at a speed of 19 kmph over the west-central Bay of Bengal. The weather system is expected to bring maximum sustained wind speeds of 70-80 kmph, with gusts reaching up to 90 kmph during landfall.</p>
-    
-
-    <div class="sources-list">
-      <strong>Sources:</strong>
-      
-      <a href="https://www.hindustantimes.com/india-news/major-gas-leak-from-ongc-well-in-andhra-pradesh-konaseema-residents-evacuated-101794885034474.html" target="_blank" rel="noopener noreferrer">Hindustan Times</a>, 
-      
-      <a href="https://www.hindustantimes.com/india-news/cyclone-akvan-odisha-govt-steps-up-precautionary-measures-in-flood-hit-ganjam-101794885124867.html" target="_blank" rel="noopener noreferrer">Hindustan Times</a>, 
-      
-      <a href="https://www.hindustantimes.com/india-news/cyclone-akvan-landfall-live-updates-imd-rain-alert-odisha-andhra-pradesh-schools-closed-bay-of-bengal-cyclone-tracker-101794883521691.html" target="_blank" rel="noopener noreferrer">Hindustan Times</a>, 
-      
-      <a href="https://www.livemint.com/news/india/imd-weather-update-yellow-alert-issued-for-andhra-odisha-as-cyclone-akvan-turns-very-severe-ahead-of-landfall-11794878693669.html" target="_blank" rel="noopener noreferrer">Mint</a>, 
-      
-      <a href="https://www.livemint.com/news/india/andhra-gas-leak-ongc-well-incident-triggers-safety-alert-in-konaseema-district-11794891525548.html" target="_blank" rel="noopener noreferrer">Mint</a>, 
-      
-      <a href="https://www.dnaindia.com/india/report-cyclone-akvan-alert-andhra-pradesh-braces-for-very-severe-storm-landfall-on-november-20-3224193" target="_blank" rel="noopener noreferrer">DNA India</a>, 
-      
-      <a href="https://www.hindustantimes.com/india-news/odisha-sanctions-6-5cr-for-cyclone-preparedness-ahead-of-akvan-landfall-101794974220047.html" target="_blank" rel="noopener noreferrer">Hindustan Times</a>, 
-      
-      <a href="https://www.livemint.com/news/india/imd-issues-orange-alert-for-andhra-pradesh-odisha-telangana-as-cyclonic-storm-akvan-intensifies-check-forecast-11794964367208.html" target="_blank" rel="noopener noreferrer">Mint</a>, 
-      
-      <a href="https://www.hindustantimes.com/india-news/odisha-andhra-prepare-shelters-evacuations-ahead-of-nov-20-cyclone-akvan-landfall-101795009673205.html" target="_blank" rel="noopener noreferrer">Hindustan Times</a>, 
-      
-      <a href="https://www.hindustantimes.com/india-news/odisha-steps-up-cyclone-preparations-as-imd-forecasts-akvan-landfall-on-nov-20-101795002952912.html" target="_blank" rel="noopener noreferrer">Hindustan Times</a>, 
-      
-      <a href="https://timesofindia.indiatimes.com/city/visakhapatnam/cyclone-akvan-intensifies-into-severe-storm-likely-to-cross-narsapur-puri-coast-by-nov-20-6-andhra-pradesh-districts-under-red-alert/articleshow/135965154.cms" target="_blank" rel="noopener noreferrer">Times of India</a>, 
-      
-      <a href="https://www.livemint.com/news/india/imd-weather-forecast-severe-cyclonic-storm-akvan-moves-over-bay-of-bengal-gusts-could-reach-110-kmph-11795061918899.html" target="_blank" rel="noopener noreferrer">Mint</a>, 
-      
-      <a href="https://www.news18.com/india/puri-bans-tourists-and-closes-beaches-due-to-cyclone-akvan-odisha-puri-travel-advisory-ws-l-10432521.html" target="_blank" rel="noopener noreferrer">News18</a>, 
-      
-      <a href="https://www.news18.com/india/cyclone-akvan-red-alert-in-6-odisha-districts-schools-shut-over-80000-evacuated-ws-l-10432294.html" target="_blank" rel="noopener noreferrer">News18</a>, 
-      
-      <a href="https://www.news18.com/cities/bhubaneswar/cyclone-akvan-east-coast-express-falaknuma-among-3-trains-rescheduled-check-new-timings-ws-l-10431838.html" target="_blank" rel="noopener noreferrer">News18</a>, 
-      
-      <a href="https://www.dnaindia.com/india/report-cyclone-akvan-alertthree-trains-rescheduled-schools-closed-in-odisha-check-imd-warning-3224289" target="_blank" rel="noopener noreferrer">DNA India</a>, 
-      
-      <a href="https://www.hindustantimes.com/india-news/odisha-evacuates-1-05-lakh-people-ahead-of-cyclone-akvan-deploys-295-rescue-teams-101795093029671.html" target="_blank" rel="noopener noreferrer">Hindustan Times</a>, 
-      
-      <a href="https://www.deccanchronicle.com/southern-states/andhra-pradesh/cyclone-akvan-4-trains-cancelled-hirakud-express-diverted-2006092" target="_blank" rel="noopener noreferrer">Deccan Chronicle</a>, 
-      
-      <a href="https://www.dnaindia.com/india/report-cyclone-akvan-over-1-lakh-evacuated-in-odisha-trains-and-flight-cancelled-schools-shut-in-6-districts-3224355" target="_blank" rel="noopener noreferrer">DNA India</a>, 
-      
-      <a href="https://www.dnaindia.com/india/report-cyclone-akavan-odisha-evacuates-one-lakh-people-ahead-of-landfall-at-gopalpur-red-alert-for-these-districts-3224323" target="_blank" rel="noopener noreferrer">DNA India</a>, 
-      
-      <a href="https://www.ndtv.com/india-news/cyclone-akvan-live-imd-weather-updates-landfall-rainfall-odisha-andhra-pradesh-akvan-weakens-into-cyclonic-storm-likely-to-cross-odisha-andhra-coast-12352070" target="_blank" rel="noopener noreferrer">NDTV</a>, 
-      
-      <a href="https://www.ndtv.com/india-news/47-train-cancelled-over-3-lakh-evacuated-as-cyclone-akvan-heads-to-odisha-12351955" target="_blank" rel="noopener noreferrer">NDTV</a>, 
-      
-      <a href="https://www.thehindu.com/news/national/cyclone-akvan-landfall-andhra-pradesh-odisha-imd-alert-live-updates-november-20-2026/article71722871.ece" target="_blank" rel="noopener noreferrer">The Hindu</a>, 
-      
-      <a href="https://www.thehindu.com/news/national/andhra-pradesh/very-heavy-rain-lashes-srikakulam-as-akvan-moves-closer-to-coast/article71722916.ece" target="_blank" rel="noopener noreferrer">The Hindu</a>, 
-      
-      <a href="https://www.thehindu.com/news/morning-digest-november-20-2026/article71721983.ece" target="_blank" rel="noopener noreferrer">The Hindu</a>, 
-      
-      <a href="https://www.thehindu.com/news/national/cyclone-akvan-odisha-andhra-pradesh-landfall-imd-updates/article71722866.ece" target="_blank" rel="noopener noreferrer">The Hindu</a>, 
-      
-      <a href="https://www.hindustantimes.com/india-news/cyclone-akvan-tracker-live-updates-landfall-imd-red-alert-heavy-rainfall-odisha-ganjam-gajapati-puri-jagatsinghp-101795135589664.html" target="_blank" rel="noopener noreferrer">Hindustan Times</a>, 
-      
-      <a href="https://www.hindustantimes.com/india-news/odisha-schools-closed-in-several-districts-today-november-20-due-to-cyclone-akvan-101795135380272.html" target="_blank" rel="noopener noreferrer">Hindustan Times</a>, 
-      
-      <a href="https://www.livemint.com/news/india/cyclone-avkan-are-schools-open-or-closed-in-odisha-tamil-nadu-check-flight-operations-train-disruptions-details-11795138328661.html" target="_blank" rel="noopener noreferrer">Mint</a>, 
-      
-      <a href="https://www.indiatoday.in/india/story/cyclone-akvan-live-updates-tracker-speed-odisha-red-alert-cyclonic-storm-bay-of-bengal-3042698-2026-11-19?utm_source=rss" target="_blank" rel="noopener noreferrer">India Today</a>, 
-      
-      <a href="https://www.news18.com/india/cyclone-akvan-landfall-live-updates-andhra-pradesh-odisha-narsapur-puri-imd-alert-liveblog-10433309.html" target="_blank" rel="noopener noreferrer">News18</a>, 
-      
-      <a href="https://www.news18.com/india/3-lakh-evacuated-47-trains-cancelled-odisha-on-high-alert-as-cyclone-akvan-heads-for-landfall-near-gopalpur-today-10433263.html" target="_blank" rel="noopener noreferrer">News18</a>, 
-      
-      <a href="https://www.dnaindia.com/india/report-cyclone-akvan-47-trains-cancelled-over-3-lakh-evacuated-as-odisha-braces-for-landfall-here-s-what-cm-said-3224364" target="_blank" rel="noopener noreferrer">DNA India</a>
-      
-    </div>
-  </article>
-  
-  
-  
-
-  <article class="story-card level-corroborated">
-    <div class="meta-row">
-      <span class="badge badge-corroborated">Corroborated</span>
-      
-      <span class="source-count">5 independent sources</span>
-      <span class="sep">•</span>
-      <span class="score-pill">Score: 5.08</span>
-      
-      <span class="sep">•</span>
-      <span class="story-date">20 Nov 2026, 08:22 IST</span>
-      
-    </div>
-
-    <h2><a href="story_271.html" class="headline-link">Delhi AQI Today, November 20: ‘Stay indoors’ as pollution rises sharply overnight; air quality turns hazardous at 510</a></h2>
-
-    
-    <p class="story-summary-omitted">
-      
-      [Summary constrained to claim table — strict NLI entailment gate applied. <a href="story_271.html">View claims &rarr;</a>]
-      
-    </p>
-    
-
-    <div class="sources-list">
-      <strong>Sources:</strong>
-      
-      <a href="https://timesofindia.indiatimes.com/city/delhi/first-since-2015-no-severe-aqi-days-for-delhi-during-november-1-15/articleshow/135907218.cms" target="_blank" rel="noopener noreferrer">Times of India</a>, 
-      
-      <a href="https://www.dnaindia.com/india/report-delhi-aqi-remains-poor-soon-likely-to-slip-into-very-poor-category-may-impact-schools-offices-3224172" target="_blank" rel="noopener noreferrer">DNA India</a>, 
-      
-      <a href="https://www.news18.com/lifestyle/health-and-fitness/we-have-stopped-fixing-delhis-air-we-are-only-learning-to-survive-it-ws-blrt-10429612.html" target="_blank" rel="noopener noreferrer">News18</a>, 
-      
-      <a href="https://economictimes.indiatimes.com/news/india/delhi-ncr-revokes-grap-stage-3-restrictions-aqi-improves-204/articleshow/135924332.cms" target="_blank" rel="noopener noreferrer">Economic Times</a>, 
-      
-      <a href="https://www.dnaindia.com/india/report-delhi-air-pollution-aqi-stands-at-286-aiims-and-chandni-chowk-in-very-poor-category-3224292" target="_blank" rel="noopener noreferrer">DNA India</a>, 
-      
-      <a href="https://timesofindia.indiatimes.com/legal/news/right-to-breathe-can-you-take-the-government-to-court-over-polluted-air/articleshow/135985384.cms" target="_blank" rel="noopener noreferrer">Times of India</a>, 
-      
-      <a href="https://www.livemint.com/news/india/delhi-aqi-today-november-20-stay-indoors-as-pollution-rises-sharply-overnight-air-quality-turns-hazardous-at-510-11795141980077.html" target="_blank" rel="noopener noreferrer">Mint</a>
-      
-    </div>
-  </article>
-  
-  
-  
-
-  <article class="story-card level-corroborated">
-    <div class="meta-row">
-      <span class="badge badge-corroborated">Corroborated</span>
-      
-      <span class="source-count">8 independent sources</span>
-      <span class="sep">•</span>
-      <span class="score-pill">Score: 6.38</span>
-      
-      <span class="sep">•</span>
-      <span class="story-date">20 Nov 2026, 08:20 IST</span>
-      
-    </div>
-
-    <h2><a href="story_257.html" class="headline-link">Will the Shenzhen summit safeguard world peace?</a></h2>
-
-    
-    <p class="story-summary">They also stressed that a nuclear war should never be fought because it cannot be won. Following the meeting, the three countries issued a joint statement reaffirming that “a nuclear war cannot be won and must never be fought”. Quick answers to key questions
-It is the shared understanding that a nuclear war cannot be won and must never be fought. Nuclear pledge In a peace declaration after the three-way summit, the three heads of state reaffirmed that a nuclear war “cannot be won and must never be fought”. Trump said Iran was on the agenda.</p>
-    
-
-    <div class="sources-list">
-      <strong>Sources:</strong>
-      
-      <a href="https://economictimes.indiatimes.com/news/international/world-news/trumps-asia-trip-deals-in-manila-and-shenzhen-nuclear-summit-with-xi-and-putin-maybe-kim-meeting/articleshow/135907617.cms" target="_blank" rel="noopener noreferrer">Economic Times</a>, 
-      
-      <a href="https://www.ndtv.com/world-news/trump-putin-xi-leaders-eyeing-legacies-stage-strongman-summit-12341726" target="_blank" rel="noopener noreferrer">NDTV</a>, 
-      
-      <a href="https://www.ndtv.com/world-news/trump-heads-to-china-for-trilateral-meeting-with-xi-jinping-vladimir-putin-12341630" target="_blank" rel="noopener noreferrer">NDTV</a>, 
-      
-      <a href="https://timesofindia.indiatimes.com/world/china/big-potential-benefit-putin-backs-trilateral-talks-with-trump-xi-on-apec-sidelines/articleshow/135951139.cms" target="_blank" rel="noopener noreferrer">Times of India</a>, 
-      
-      <a href="https://economictimes.indiatimes.com/news/international/world-news/trump-heads-to-china-betting-on-unscripted-diplomacy-with-xi-and-putin/articleshow/135946150.cms" target="_blank" rel="noopener noreferrer">Economic Times</a>, 
-      
-      <a href="https://www.ndtv.com/world-news/xi-jinpings-warm-welcome-for-trump-as-us-president-lands-in-china-12344585" target="_blank" rel="noopener noreferrer">NDTV</a>, 
-      
-      <a href="https://timesofindia.indiatimes.com/world/china/trump-putin-to-hold-talks-in-china-after-2025-alaska-summit-failed-to-end-ukraine-war/articleshow/135966064.cms" target="_blank" rel="noopener noreferrer">Times of India</a>, 
-      
-      <a href="https://economictimes.indiatimes.com/news/international/world-news/a-global-carve-up-fears-of-trump-xi-putin-striking-a-grand-bargain/articleshow/135964702.cms" target="_blank" rel="noopener noreferrer">Economic Times</a>, 
-      
-      <a href="https://economictimes.indiatimes.com/news/international/world-news/putin-trump-xi-three-men-three-different-agendas/articleshow/135964205.cms" target="_blank" rel="noopener noreferrer">Economic Times</a>, 
-      
-      <a href="https://www.ndtv.com/world-news/historic-xi-jinping-donald-trump-vladimir-putin-meeting-begins-in-china-12348331" target="_blank" rel="noopener noreferrer">NDTV</a>, 
-      
-      <a href="https://www.ndtv.com/world-news/ukraine-war-dominates-trumps-interactions-with-xi-putin-ahead-of-trilateral-12347983" target="_blank" rel="noopener noreferrer">NDTV</a>, 
-      
-      <a href="https://www.ndtv.com/world-news/trump-putin-xi-trilateral-meet-in-china-today-whats-on-agenda-12346996" target="_blank" rel="noopener noreferrer">NDTV</a>, 
-      
-      <a href="https://timesofindia.indiatimes.com/world/china/chaos-if-major-powers-clash-xis-warning-at-trilateral-with-trump-putin-who-said-what/articleshow/135984095.cms" target="_blank" rel="noopener noreferrer">Times of India</a>, 
-      
-      <a href="https://timesofindia.indiatimes.com/india/watch-on-way-to-meet-putin-trump-lends-helping-hand-to-xi-jinping-on-escalator/articleshow/135982669.cms" target="_blank" rel="noopener noreferrer">Times of India</a>, 
-      
-      <a href="https://timesofindia.indiatimes.com/world/china/historic-trilateral-talks-trump-xi-and-putin-meet-nuclear-arms-iran-ukraine-wars-on-table/articleshow/135983456.cms" target="_blank" rel="noopener noreferrer">Times of India</a>, 
-      
-      <a href="https://www.livemint.com/news/world/trump-putin-and-xi-to-hold-historic-trilateral-meeting-in-china-whats-on-the-agenda-and-why-it-matters-11795065774997.html" target="_blank" rel="noopener noreferrer">Mint</a>, 
-      
-      <a href="https://www.indiatoday.in/world/story/trump-putin-xi-meet-historic-trilateral-global-peace-nuclear-weapons-3042221-2026-11-19?utm_source=rss" target="_blank" rel="noopener noreferrer">India Today</a>, 
-      
-      <a href="https://www.indiatoday.in/world/video/watch-trump-helps-xi-jinping-get-on-escalator-says-take-my-hand-3042231-2026-11-19?utm_source=rss" target="_blank" rel="noopener noreferrer">India Today</a>, 
-      
-      <a href="https://www.indiatoday.in/world/story/donald-trump-jokes-vladimir-putin-who-is-he-friend-apec-trilateral-meeting-xi-jinping-3042173-2026-11-19?utm_source=rss" target="_blank" rel="noopener noreferrer">India Today</a>, 
-      
-      <a href="https://www.ndtv.com/world-news/xi-jinping-trump-putin-meet-in-historic-summit-discuss-what-is-democracy-12350708" target="_blank" rel="noopener noreferrer">NDTV</a>, 
-      
-      <a href="https://www.livemint.com/news/world/trumpxiputin-summit-in-china-what-the-three-leaders-agreed-on-and-what-they-left-out-5-key-takeaways-11795107791856.html" target="_blank" rel="noopener noreferrer">Mint</a>, 
-      
-      <a href="https://economictimes.indiatimes.com/news/international/world-news/symbolism-over-substance-what-trump-xi-and-putins-historic-meeting-achieved/articleshow/135999915.cms" target="_blank" rel="noopener noreferrer">Economic Times</a>, 
-      
-      <a href="https://www.scmp.com/news/china/article/3375131/china-centred-order-or-host-duties-experts-weigh-xi-trump-putin-seating" target="_blank" rel="noopener noreferrer">SCMP – World</a>, 
-      
-      <a href="https://www.scmp.com/news/china/diplomacy/article/3375130/xi-trump-and-putin-peace-declaration-suggests-summit-more-photo-op" target="_blank" rel="noopener noreferrer">SCMP – World</a>, 
-      
-      <a href="https://www.scmp.com/news/china/diplomacy/article/3375124/nuclear-arms-energy-supplies-no-kim-main-takeaways-historic-apec-summit" target="_blank" rel="noopener noreferrer">SCMP – World</a>, 
-      
-      <a href="https://www.scmp.com/news/china/diplomacy/article/3375114/china-russia-and-us-3-presidents-3-nuclear-powers-and-1-historic-precedent" target="_blank" rel="noopener noreferrer">SCMP – World</a>, 
-      
-      <a href="https://www.scmp.com/news/china/diplomacy/article/3375122/power-plays-verbal-displays-xi-trump-putin-talk-historic-apec-summit-explained" target="_blank" rel="noopener noreferrer">SCMP – World</a>, 
-      
-      <a href="https://www.scmp.com/news/china/diplomacy/article/3375112/handshakes-hugs-and-subtle-power-plays-decoding-xi-trump-putin-dynamic-shenzhen" target="_blank" rel="noopener noreferrer">SCMP – World</a>, 
-      
-      <a href="https://www.scmp.com/news/china/diplomacy/article/3375087/apec-sartorial-diplomacy-first-ladies-peng-liyuan-ngo-phuong-ly-and-kim-hea-kyung-shine" target="_blank" rel="noopener noreferrer">SCMP – World</a>, 
-      
-      <a href="https://www.scmp.com/plus/economy/china-economy/article/3375070/xi-trump-putin-trilateral-breaks-historic-ground" target="_blank" rel="noopener noreferrer">SCMP – World</a>, 
-      
-      <a href="https://www.scmp.com/news/china/diplomacy/article/3375069/whos-who-shenzhen-priorities-revealed-xi-trump-putin-summit-rosters" target="_blank" rel="noopener noreferrer">SCMP – World</a>, 
-      
-      <a href="https://www.scmp.com/news/china/diplomacy/article/3375055/xi-trump-and-putin-meet-landmark-trilateral-talks-apec" target="_blank" rel="noopener noreferrer">SCMP – World</a>, 
-      
-      <a href="https://www.scmp.com/news/china/diplomacy/article/3375044/side-side-shenzhen-inside-xi-jinping-and-peng-liyuans-first-couple-diplomacy" target="_blank" rel="noopener noreferrer">SCMP – World</a>, 
-      
-      <a href="https://www.aljazeera.com/video/newsfeed/2026/11/19/trump-xi-putin-summit-five-things-you-need-to-know?traffic_source=rss" target="_blank" rel="noopener noreferrer">Al Jazeera – World</a>, 
-      
-      <a href="https://www.aljazeera.com/video/newsfeed/2026/11/19/aje-onl-nf_chinas-xi-urges-us-and-russia-for-world-peace-191126?traffic_source=rss" target="_blank" rel="noopener noreferrer">Al Jazeera – World</a>, 
-      
-      <a href="https://www.aljazeera.com/video/newsfeed/2026/11/19/trump-and-putin-hijacked-china-summit?traffic_source=rss" target="_blank" rel="noopener noreferrer">Al Jazeera – World</a>, 
-      
-      <a href="https://www.ndtv.com/world-news/apec-summit-historic-donald-trump-xi-jinping-vladimir-putin-summit-ends-with-symbolism-no-substance-us-russia-china-ties-12352148" target="_blank" rel="noopener noreferrer">NDTV</a>, 
-      
-      <a href="https://www.livemint.com/news/us-news/trump-xi-and-putin-revive-reagan-gorbachev-nuclear-pledge-why-the-40-year-old-principle-matters-today-11795142465240.html" target="_blank" rel="noopener noreferrer">Mint</a>, 
-      
-      <a href="https://www.indiatoday.in/world/story/china-shenzhen-donald-trump-xi-jinping-vladimir-putin-russia-apec-summit-ignore-diplomacy-itspc-3042333-2026-11-20?utm_source=rss" target="_blank" rel="noopener noreferrer">India Today</a>, 
-      
-      <a href="https://economictimes.indiatimes.com/news/international/world-news/trump-xi-or-putin-who-fared-best-at-china-summit/articleshow/135999210.cms" target="_blank" rel="noopener noreferrer">Economic Times</a>, 
-      
-      <a href="https://www.straitstimes.com/world/united-states/trumps-camaraderie-with-xi-and-putin-draws-pushback-at-home" target="_blank" rel="noopener noreferrer">The Straits Times – World</a>, 
-      
-      <a href="https://www.aljazeera.com/video/inside-story/2026/11/19/will-the-shenzhen-summit-safeguard-world-peace?traffic_source=rss" target="_blank" rel="noopener noreferrer">Al Jazeera – World</a>
-      
-    </div>
-  </article>
-  
-  
-  
-
-  <article class="story-card level-corroborated">
-    <div class="meta-row">
-      <span class="badge badge-corroborated">Corroborated</span>
-      
-      <span class="badge badge-developing">Developing</span>
-      
-      <span class="source-count">3 independent sources</span>
-      <span class="sep">•</span>
-      <span class="score-pill">Score: 5.98</span>
-      
-      <span class="sep">•</span>
-      <span class="story-date">20 Nov 2026, 08:20 IST</span>
-      
-    </div>
-
-    <h2><a href="story_316.html" class="headline-link">US cyber chief Sean Cairncross &#39;fired&#39; amid wave of tech outages</a></h2>
-
-    
-    <p class="story-summary">The source also said that US president Donald Trump &#34;fully supported firing Sean Cairncross from his position&#34;, citing concerns that he lacked the appropriate credentials for the role. The source said she had more appropriate credentials and had been confirmed by the US Senate. He also served as the Republican National Committee&#39;s Chief Operating Officer during the 2016 election cycle. Cairncross lacked proper credentials to perform the job, the source said. His role will be filled in an acting capacity by current Defense Department Chief Information Officer Kirsten Davies, who has more appropriate credentials and has been Senate-confirmed, the source said.</p>
-    
-
-    <div class="sources-list">
-      <strong>Sources:</strong>
-      
-      <a href="https://www.ndtv.com/world-news/trump-white-house-cybersecurity-chief-sean-cairncross-fired-over-multiple-recent-outages-kirsten-davies-12352033" target="_blank" rel="noopener noreferrer">NDTV</a>, 
-      
-      <a href="https://www.thehindu.com/news/international/white-house-fires-cybersecurity-chief-after-widespread-outages/article71722952.ece" target="_blank" rel="noopener noreferrer">The Hindu</a>, 
-      
-      <a href="https://timesofindia.indiatimes.com/world/us/trump-backs-firing-of-us-cyber-chief-sean-cairncross-amid-tech-outages/articleshow/136009545.cms" target="_blank" rel="noopener noreferrer">Times of India</a>
-      
-    </div>
-  </article>
-  
-  
-  
-
-  <article class="story-card level-corroborated">
-    <div class="meta-row">
-      <span class="badge badge-corroborated">Corroborated</span>
-      
-      <span class="source-count">3 independent sources</span>
-      <span class="sep">•</span>
-      <span class="score-pill">Score: 5.4</span>
-      
-      <span class="sep">•</span>
-      <span class="story-date">20 Nov 2026, 08:20 IST</span>
-      
-    </div>
-
-    <h2><a href="story_449.html" class="headline-link">US cyber chief Sean Cairncross &#39;fired&#39; amid wave of tech outages</a></h2>
-
-    
-    <p class="story-summary">The source also said that US president Donald Trump &#34;fully supported firing Sean Cairncross from his position&#34;, citing concerns that he lacked the appropriate credentials for the role. The source said she had more appropriate credentials and had been confirmed by the US Senate. He also served as the Republican National Committee&#39;s Chief Operating Officer during the 2016 election cycle. Cairncross lacked proper credentials to perform the job, the source said. His role will be filled in an acting capacity by current Defense Department Chief Information Officer Kirsten Davies, who has more appropriate credentials and has been Senate-confirmed, the source said.</p>
-    
-
-    <div class="sources-list">
-      <strong>Sources:</strong>
-      
-      <a href="https://www.ndtv.com/world-news/trump-white-house-cybersecurity-chief-sean-cairncross-fired-over-multiple-recent-outages-kirsten-davies-12352033" target="_blank" rel="noopener noreferrer">NDTV</a>, 
-      
-      <a href="https://www.thehindu.com/news/international/white-house-fires-cybersecurity-chief-after-widespread-outages/article71722952.ece" target="_blank" rel="noopener noreferrer">The Hindu</a>, 
-      
-      <a href="https://timesofindia.indiatimes.com/world/us/trump-backs-firing-of-us-cyber-chief-sean-cairncross-amid-tech-outages/articleshow/136009545.cms" target="_blank" rel="noopener noreferrer">Times of India</a>
-      
-    </div>
-  </article>
-  
-  
-  
-  
-
-  <article class="story-card level-unconfirmed">
-    <div class="meta-row">
-      <span class="badge badge-unconfirmed">Unconfirmed</span>
-      
-      <span class="source-count">2 independent sources</span>
-      <span class="sep">•</span>
-      <span class="score-pill">Score: 2.79</span>
-      
-      <span class="sep">•</span>
-      <span class="story-date">20 Nov 2026, 08:19 IST</span>
-      
-    </div>
-
-    <h2><a href="story_317.html" class="headline-link">Rajasthan Zila Parishad Result 2026 Live: Vote Counting Begins At 8 AM Across 37 Districts, BJP-Congress Battle In Focus</a></h2>
-
-    
-    <p class="story-summary-omitted">
-      
-      [Summary constrained to claim table — strict NLI entailment gate applied. <a href="story_317.html">View claims &rarr;</a>]
-      
-    </p>
-    
-
-    <div class="sources-list">
-      <strong>Sources:</strong>
-      
-      <a href="https://www.news18.com/india/kerala-lottery-result-today-sthree-sakthi-ss-546-november-17-live-ws-e-10428374.html" target="_blank" rel="noopener noreferrer">News18</a>, 
-      
-      <a href="https://indianexpress.com/article/india/eci-rajasthan-election-results-2026-live-updates-panchayat-samiti-zila-parishad-ward-wise-winners-10970720/" target="_blank" rel="noopener noreferrer">Indian Express</a>, 
-      
-      <a href="https://www.news18.com/india/rajasthan-zila-parishad-result-2026-live-eci-panchayat-samiti-counting-bjp-congress-ward-wise-winners-liveblog-ws-l-10433268.html" target="_blank" rel="noopener noreferrer">News18</a>
-      
-    </div>
-  </article>
-  
-  
-  
 
   <article class="story-card level-corroborated">
     <div class="meta-row">
@@ -487,55 +89,180 @@ It is the shared understanding that a nuclear war cannot be won and must never b
       
       <span class="source-count">7 independent sources</span>
       <span class="sep">•</span>
-      <span class="score-pill">Score: 12.63</span>
+      <span class="score-pill">Score: 6.76</span>
       
       <span class="sep">•</span>
-      <span class="story-date">20 Nov 2026, 08:15 IST</span>
+      <time datetime="2026-11-19T20:05:44+00:00" class="story-date local-time">20 Nov 2026, 01:35 IST</time>
       
     </div>
 
-    <h2><a href="story_261.html" class="headline-link">Supreme Court to reconsider nationwide PIL on private universities after CJI shifts case over roster concerns</a></h2>
+    <h2><a href="story_155.html" class="headline-link">Trump and Putin ‘hijacked’ China summit</a></h2>
 
     
-    <p class="story-summary-omitted">
-      
-      [Narrative omitted — sensitive topic safety gate active. Review claims and sources on the story page.]
-      
-    </p>
+    <p class="story-summary">Trump said Iran was on the agenda. Iran was among the issues Trump said he discussed with Xi. He stressed that a nuclear war could never be won and must never be fought, urging countries to make every possible effort to prevent one. On nuclear weapons, Xi said, according to China&#39;s state news agency Xinhua, that &#34;nuclear war cannot be won and must not be fought&#34;, urging all sides to make every effort to prevent such a conflict.</p>
     
 
+    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
     <div class="sources-list">
       <strong>Sources:</strong>
       
-      <a href="https://timesofindia.indiatimes.com/india/miffed-lawyer-questions-cjis-integrity-advocates-seek-action-against-him/articleshow/135902674.cms" target="_blank" rel="noopener noreferrer">Times of India</a>, 
+      <span class="source-item-chip">
+        <a href="https://economictimes.indiatimes.com/news/international/world-news/trumps-asia-trip-deals-in-manila-and-shenzhen-nuclear-summit-with-xi-and-putin-maybe-kim-meeting/articleshow/135907617.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Trump&#39;s Asia trip: Meet with Putin &amp;amp; Xi, deal dates">Trump&#39;s Asia trip: Meet with Putin &amp;amp; Xi, deal dates</a>
+        <span class="badge badge-outlet">Economic Times</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://www.hindustantimes.com/india-news/kerala-hc-dismisses-lawyer-s-plea-for-contempt-action-against-trial-judge-in-actress-assault-case-101794916615112.html" target="_blank" rel="noopener noreferrer">Hindustan Times</a>, 
+      <span class="source-item-chip">
+        <a href="https://www.ndtv.com/world-news/trump-putin-xi-leaders-eyeing-legacies-stage-strongman-summit-12341726" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Trump, Putin, Xi: Leaders Eyeing Legacies Stage Strongman Summit">Trump, Putin, Xi: Leaders Eyeing Legacies Stage Strongman Summit</a>
+        <span class="badge badge-outlet">NDTV</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://www.hindustantimes.com/india-news/supreme-court-cji-surya-kant-notice-contempt-petition-101794981935302.html" target="_blank" rel="noopener noreferrer">Hindustan Times</a>, 
+      <span class="source-item-chip">
+        <a href="https://timesofindia.indiatimes.com/world/china/big-potential-benefit-putin-backs-trilateral-talks-with-trump-xi-on-apec-sidelines/articleshow/135951139.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="&#39;Big potential benefit&#39;: Putin backs trilateral talks with Trump, Xi on APEC sidelines">&#39;Big potential benefit&#39;: Putin backs trilateral talks with Trump, Xi on APEC sidelines</a>
+        <span class="badge badge-outlet">Times of India</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://www.hindustantimes.com/india-news/unsavoury-remarks-against-cji-sc-issues-contempt-notice-to-lawyer-101794980386255.html" target="_blank" rel="noopener noreferrer">Hindustan Times</a>, 
+      <span class="source-item-chip">
+        <a href="https://www.livemint.com/news/world/trump-putin-and-xi-to-hold-historic-trilateral-meeting-in-china-whats-on-the-agenda-and-why-it-matters-11795065774997.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Trump, Putin and Xi to hold historic trilateral meeting in China: What&#39;s on the agenda and why it matters">Trump, Putin and Xi to hold historic trilateral meeting in China: What&#39;s on the agenda and why it matters</a>
+        <span class="badge badge-outlet">Mint</span>
+        
+        <span class="badge badge-wire">Reuters</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://timesofindia.indiatimes.com/india/supreme-court-issues-contempt-notice-to-lawyer-over-remarks-against-cji-surya-kant/articleshow/135951002.cms" target="_blank" rel="noopener noreferrer">Times of India</a>, 
+      <span class="source-item-chip">
+        <a href="https://www.indiatoday.in/world/story/trump-putin-xi-meet-historic-trilateral-global-peace-nuclear-weapons-3042221-2026-11-19?utm_source=rss" target="_blank" rel="noopener noreferrer" class="source-title-link" title="No peace forged without engagement: Trump at historic talks with Xi, Putin">No peace forged without engagement: Trump at historic talks with Xi, Putin</a>
+        <span class="badge badge-outlet">India Today</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://www.indiatoday.in/india/law-news/story/supreme-court-contempt-notice-lawyer-remarks-chief-justice-of-india-surya-kant-ptag-3041272-2026-11-18?utm_source=rss" target="_blank" rel="noopener noreferrer">India Today</a>, 
+      <span class="source-item-chip">
+        <a href="https://www.scmp.com/news/china/article/3375131/china-centred-order-or-host-duties-experts-weigh-xi-trump-putin-seating" target="_blank" rel="noopener noreferrer" class="source-title-link" title="China-centred order or host duties? Experts weigh in on Xi-Trump-Putin seating">China-centred order or host duties? Experts weigh in on Xi-Trump-Putin seating</a>
+        <span class="badge badge-outlet">SCMP – World</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://www.hindustantimes.com/india-news/supreme-court-seeks-centre-s-response-on-delay-in-finalising-judges-appointment-procedure-101795010333438.html" target="_blank" rel="noopener noreferrer">Hindustan Times</a>, 
+      <span class="source-item-chip">
+        <a href="https://www.aljazeera.com/video/newsfeed/2026/11/19/trump-xi-putin-summit-five-things-you-need-to-know?traffic_source=rss" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Trump-Xi-Putin summit: Five things you need to know">Trump-Xi-Putin summit: Five things you need to know</a>
+        <span class="badge badge-outlet">Al Jazeera – World</span>
+        
+      </span>
       
-      <a href="https://www.news18.com/india/karnataka-yet-to-get-rs-2186-crore-why-dk-shivakumar-govt-plans-to-move-supreme-court-ws-klrt-10430504.html" target="_blank" rel="noopener noreferrer">News18</a>, 
+    </div>
+  </article>
+  
+  
+  
+
+  <article class="story-card level-corroborated">
+    <div class="meta-row">
+      <span class="badge badge-corroborated">Corroborated</span>
       
-      <a href="https://www.dnaindia.com/india/report-supreme-court-issues-contempt-notice-to-lawyer-pravin-singhal-over-alleged-objectionable-remarks-against-cji-surya-kant-3224255" target="_blank" rel="noopener noreferrer">DNA India</a>, 
+      <span class="source-count">4 independent sources</span>
+      <span class="sep">•</span>
+      <span class="score-pill">Score: 6.66</span>
       
-      <a href="https://timesofindia.indiatimes.com/india/us-court-to-delhi-courts-help-serve-summons-to-raw-ex-chief-doval/articleshow/135971832.cms" target="_blank" rel="noopener noreferrer">Times of India</a>, 
+      <span class="sep">•</span>
+      <time datetime="2026-11-19T20:06:05+00:00" class="story-date local-time">20 Nov 2026, 01:36 IST</time>
       
-      <a href="https://timesofindia.indiatimes.com/india/sc-starts-contempt-case-against-lawyer-for-remarks-against-cji/articleshow/135971381.cms" target="_blank" rel="noopener noreferrer">Times of India</a>, 
+    </div>
+
+    <h2><a href="story_172.html" class="headline-link">Speakers recall Sathya Sai Baba’s emphasis on vital role of women in society</a></h2>
+
+    
+    <p class="story-summary">With the 2027 Uttar Pradesh assembly elections approaching, the Bharatiya Janata Party (BJP) is preparing an extensive organisational push under ‘Mission 403’, placing women-led grassroots outreach at the centre of its electoral preparations. The party plans to deploy women Vistaraks (organisers) in the state’s 403 assembly constituencies. With the 2027 Uttar Pradesh Assembly elections approaching, the Bharatiya Janata Party (BJP) is placing women voters at the centre of its outreach strategy. The party&#39;s women&#39;s wing, the BJP Mahila Morcha, is preparing to deploy &#39;Mahila Vistaraks&#39; (women field workers) across all 403 Assembly constituencies to strengthen its connection with women voters.</p>
+    
+
+    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
+    <div class="sources-list">
+      <strong>Sources:</strong>
       
-      <a href="https://www.ndtv.com/india-news/delhi-high-court-seeks-response-from-centre-meta-on-automated-content-takedowns-12351420" target="_blank" rel="noopener noreferrer">NDTV</a>, 
+      <span class="source-item-chip">
+        <a href="https://www.indiatoday.in/elections/assembly/story/bjp-uttar-pradesh-strategy-women-field-workers-planned-across-403-assembly-seats-3041858-2026-11-18?utm_source=rss" target="_blank" rel="noopener noreferrer" class="source-title-link" title="How BJP plans to woo women voters ahead of 2027 Uttar Pradesh elections">How BJP plans to woo women voters ahead of 2027 Uttar Pradesh elections</a>
+        <span class="badge badge-outlet">India Today</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://www.thehindu.com/news/national/kerala/kerala-high-court-disposes-of-pils-against-reconstitution-of-waqf-board/article71721176.ece" target="_blank" rel="noopener noreferrer">The Hindu</a>, 
+      <span class="source-item-chip">
+        <a href="https://www.news18.com/india/bjps-women-first-strategy-for-up-2027-403-organisers-to-take-partys-message-to-doorsteps-ws-l-10430624.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="BJP&#39;s Women-First Strategy For UP 2027: 403 Organisers To Take Party&#39;s Message To Doorsteps">BJP&#39;s Women-First Strategy For UP 2027: 403 Organisers To Take Party&#39;s Message To Doorsteps</a>
+        <span class="badge badge-outlet">News18</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://www.thehindu.com/news/national/maharashtra/tukaram-mundhe-two-months-after-deciding-to-drag-the-centre-to-court-maharashtra-government-decides-to-withdraw-petition/article71720000.ece" target="_blank" rel="noopener noreferrer">The Hindu</a>, 
+      <span class="source-item-chip">
+        <a href="https://www.thehindu.com/news/national/andhra-pradesh/speakers-recall-sathya-sai-babas-emphasis-on-vital-role-of-women-in-society/article71720862.ece" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Speakers recall Sathya Sai Baba’s emphasis on vital role of women in society">Speakers recall Sathya Sai Baba’s emphasis on vital role of women in society</a>
+        <span class="badge badge-outlet">The Hindu</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://www.hindustantimes.com/india-news/supreme-court-to-reconsider-nationwide-pil-on-private-universities-after-cji-shifts-case-over-roster-concerns-101795116034303.html" target="_blank" rel="noopener noreferrer">Hindustan Times</a>
+      <span class="source-item-chip">
+        <a href="https://www.deccanchronicle.com/opinion/columnists/americas-female-surge-and-indias-wake-up-call-2006090" target="_blank" rel="noopener noreferrer" class="source-title-link" title="America’s Female Surge And India’s Wake-up Call">America’s Female Surge And India’s Wake-up Call</a>
+        <span class="badge badge-outlet">Deccan Chronicle</span>
+        
+      </span>
+      
+    </div>
+  </article>
+  
+  
+  
+
+  <article class="story-card level-corroborated">
+    <div class="meta-row">
+      <span class="badge badge-corroborated">Corroborated</span>
+      
+      <span class="source-count">4 independent sources</span>
+      <span class="sep">•</span>
+      <span class="score-pill">Score: 7.06</span>
+      
+      <span class="sep">•</span>
+      <time datetime="2026-11-19T17:41:10+00:00" class="story-date local-time">19 Nov 2026, 23:11 IST</time>
+      
+    </div>
+
+    <h2><a href="story_170.html" class="headline-link">Retire in peace: EPFO enables smooth fund flow for sunset years</a></h2>
+
+    
+    <div class="story-summary-omitted">
+      
+      <div class="empty-state-notice entailment-notice">
+        <span class="notice-badge">&#9432; Constrained to Verified Facts</span>
+        <p>AI narrative synthesis suppressed to prevent hallucination because reporting lacks sufficient multi-source consensus. View individual source claims on the story page.</p>
+        <a href="story_170.html" class="view-claims-btn">View claims &rarr;</a>
+      </div>
+      
+    </div>
+    
+
+    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
+    <div class="sources-list">
+      <strong>Sources:</strong>
+      
+      <span class="source-item-chip">
+        <a href="https://www.hindustantimes.com/india-news/epfo-board-approves-cut-in-minimum-pf-balance-requirement-to-10-per-cent-from-25-101795080134154.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="EPFO board approves cut in minimum PF balance requirement to 10% from 25%">EPFO board approves cut in minimum PF balance requirement to 10% from 25%</a>
+        <span class="badge badge-outlet">Hindustan Times</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://timesofindia.indiatimes.com/business/india-business/epfo-approves-systematic-withdrawal-plan-retirees-can-now-withdraw-pf-savings-in-regular-instalments/articleshow/135983737.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="EPFO approves systematic withdrawal plan - what it means">EPFO approves systematic withdrawal plan - what it means</a>
+        <span class="badge badge-outlet">Times of India</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://economictimes.indiatimes.com/wealth/save/epfo-member-higher-eps-95-pension-will-minimum-payout-increase-from-rs-1000-be-discussed-in-cbt-meeting-on-november-19-2026/articleshow/135961786.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="More pension in pocket? EPFO&#39;s key meeting today">More pension in pocket? EPFO&#39;s key meeting today</a>
+        <span class="badge badge-outlet">Economic Times</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.business-standard.com/finance/investment/epfo-okays-systematic-withdrawal-plan-raises-partial-pf-withdrawal-to-90-126111901374_1.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Retire in peace: EPFO enables smooth fund flow for sunset years">Retire in peace: EPFO enables smooth fund flow for sunset years</a>
+        <span class="badge badge-outlet">Business Standard</span>
+        
+      </span>
       
     </div>
   </article>
@@ -549,33 +276,41 @@ It is the shared understanding that a nuclear war cannot be won and must never b
       
       <span class="source-count">3 independent sources</span>
       <span class="sep">•</span>
-      <span class="score-pill">Score: 5.97</span>
+      <span class="score-pill">Score: 5.77</span>
       
       <span class="sep">•</span>
-      <span class="story-date">20 Nov 2026, 08:15 IST</span>
+      <time datetime="2026-11-20T00:45:05+00:00" class="story-date local-time">20 Nov 2026, 06:15 IST</time>
       
     </div>
 
-    <h2><a href="story_292.html" class="headline-link">Bengal Blueprint? Amit Shah To Spend 7 Days A Month In UP As BJP Gears Up For 2027 Polls | Exclusive</a></h2>
+    <h2><a href="story_305.html" class="headline-link">The messy, marvellous business of being human</a></h2>
 
     
-    <p class="story-summary-omitted">
-      
-      [Summary constrained to claim table — strict NLI entailment gate applied. <a href="story_292.html">View claims &rarr;</a>]
-      
-    </p>
+    <p class="story-summary">The Cambridge Dictionary has announced &#39;Human&#39; as its Word of the Year for 2026, amid a growing debate surrounding artificial intelligence (AI). I’m willing to be selfish and choose humans.”
+Colin McIntosh, chief editor of Cambridge Dictionary, said, &#34;Artificial intelligence has been a growing presence in society for years now, but this year it seemed to be everywhere. 2026 has been all about a newfound appreciation of the human factor in what we consume (with a consequent human premium), and a new value is being placed on the human element in our lives in general: all confirmed by our analysis of the language data, internet trends, and search habits. The Cambridge Dictionary has named ‘human’ its Word of the Year for 2026, reflecting a growing debate over what distinguishes people from artificial intelligence (AI) as machines become increasingly capable of performing tasks once considered uniquely human. Colin McIntosh, chief editor of Cambridge Dictionary, said: “Artificial intelligence has been a growing presence in society for years now, but this year it seemed to be everywhere.</p>
     
 
+    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
     <div class="sources-list">
       <strong>Sources:</strong>
       
-      <a href="https://www.livemint.com/news/trends/who-is-rajiv-anchal-man-behind-keralas-jatayu-centre-amid-ramayana-tourism-boom-how-to-reach-ticket-prices-11794905822788.html" target="_blank" rel="noopener noreferrer">Mint</a>, 
+      <span class="source-item-chip">
+        <a href="https://timesofindia.indiatimes.com/world/uk/human-cambridges-word-of-the-year-is-a-counterbalance-to-ai/articleshow/135947730.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="&#39;Human&#39;: Cambridge’s &#39;word of the year&#39; is a counterbalance to AI">&#39;Human&#39;: Cambridge’s &#39;word of the year&#39; is a counterbalance to AI</a>
+        <span class="badge badge-outlet">Times of India</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://timesofindia.indiatimes.com/life-style/travel/news/bengaluru-to-goa-in-13-hours-new-bengaluru-mangaluru-madgaon-vande-bharat-express-to-connect-coastal-destinations-check-route-timings-and-stops/articleshow/135949975.cms" target="_blank" rel="noopener noreferrer">Times of India</a>, 
+      <span class="source-item-chip">
+        <a href="https://www.livemint.com/news/trends/ai-vs-humanity-why-cambridge-dictionary-chose-human-as-its-word-of-the-year-2026-explained-11794972248185.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="AI vs humanity: Why Cambridge Dictionary chose &#39;Human&#39; as its Word of the Year 2026 | Explained">AI vs humanity: Why Cambridge Dictionary chose &#39;Human&#39; as its Word of the Year 2026 | Explained</a>
+        <span class="badge badge-outlet">Mint</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://timesofindia.indiatimes.com/business/india-business/bengalurumumbai-vande-bharat-sleeper-is-the-fastest-train-on-the-route-and-cuts-travel-time-by-nearly-6-hours-to-16-hours-10-minutes-but-its-ac-3-fare-of-rs-2810-is-6096-higher-than-rival-trains/articleshow/135983321.cms" target="_blank" rel="noopener noreferrer">Times of India</a>, 
-      
-      <a href="https://www.news18.com/india/bengal-blueprint-amit-shah-to-spend-7-days-a-month-in-up-as-bjp-gears-up-for-2027-polls-exclusive-ws-l-10433283.html" target="_blank" rel="noopener noreferrer">News18</a>
+      <span class="source-item-chip">
+        <a href="https://indianexpress.com/article/opinion/editorials/cambridge-word-of-the-year-2026-human-10970494/" target="_blank" rel="noopener noreferrer" class="source-title-link" title="The messy, marvellous business of being human">The messy, marvellous business of being human</a>
+        <span class="badge badge-outlet">Indian Express</span>
+        
+      </span>
       
     </div>
   </article>
@@ -589,33 +324,334 @@ It is the shared understanding that a nuclear war cannot be won and must never b
       
       <span class="source-count">3 independent sources</span>
       <span class="sep">•</span>
-      <span class="score-pill">Score: 5.39</span>
+      <span class="score-pill">Score: 5.50</span>
       
       <span class="sep">•</span>
-      <span class="story-date">20 Nov 2026, 08:15 IST</span>
+      <time datetime="2026-11-20T01:00:36+00:00" class="story-date local-time">20 Nov 2026, 06:30 IST</time>
       
     </div>
 
-    <h2><a href="story_427.html" class="headline-link">Bengal Blueprint? Amit Shah To Spend 7 Days A Month In UP As BJP Gears Up For 2027 Polls | Exclusive</a></h2>
+    <h2><a href="story_304.html" class="headline-link">Removal proceedings against me infructuous after resignation: Justice Varma tells Lok Sabha Secretariat</a></h2>
 
     
-    <p class="story-summary-omitted">
+    <div class="story-summary-omitted">
       
-      [Summary constrained to claim table — strict NLI entailment gate applied. <a href="story_427.html">View claims &rarr;</a>]
+      <div class="empty-state-notice entailment-notice">
+        <span class="notice-badge">&#9432; Constrained to Verified Facts</span>
+        <p>AI narrative synthesis suppressed to prevent hallucination because reporting lacks sufficient multi-source consensus. View individual source claims on the story page.</p>
+        <a href="story_304.html" class="view-claims-btn">View claims &rarr;</a>
+      </div>
       
-    </p>
+    </div>
     
 
+    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
     <div class="sources-list">
       <strong>Sources:</strong>
       
-      <a href="https://www.livemint.com/news/trends/who-is-rajiv-anchal-man-behind-keralas-jatayu-centre-amid-ramayana-tourism-boom-how-to-reach-ticket-prices-11794905822788.html" target="_blank" rel="noopener noreferrer">Mint</a>, 
+      <span class="source-item-chip">
+        <a href="https://www.ndtv.com/india-news/resignation-not-admission-of-guilt-justice-yashwant-varma-tells-lok-sabha-secretariat-12351554" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Resignation Not Admission Of Guilt: Justice Yashwant Varma Tells Lok Sabha Secretariat">Resignation Not Admission Of Guilt: Justice Yashwant Varma Tells Lok Sabha Secretariat</a>
+        <span class="badge badge-outlet">NDTV</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://timesofindia.indiatimes.com/life-style/travel/news/bengaluru-to-goa-in-13-hours-new-bengaluru-mangaluru-madgaon-vande-bharat-express-to-connect-coastal-destinations-check-route-timings-and-stops/articleshow/135949975.cms" target="_blank" rel="noopener noreferrer">Times of India</a>, 
+      <span class="source-item-chip">
+        <a href="https://www.hindustantimes.com/india-news/resignation-not-admission-of-wrongdoing-i-am-innocent-justice-varma-tells-lok-sabha-secretariat-101795115727274.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Resignation not admission of wrongdoing, I am innocent: Justice Varma tells Lok Sabha secretariat">Resignation not admission of wrongdoing, I am innocent: Justice Varma tells Lok Sabha secretariat</a>
+        <span class="badge badge-outlet">Hindustan Times</span>
+        
+      </span><span class="source-sep"> &bull; </span>
       
-      <a href="https://timesofindia.indiatimes.com/business/india-business/bengalurumumbai-vande-bharat-sleeper-is-the-fastest-train-on-the-route-and-cuts-travel-time-by-nearly-6-hours-to-16-hours-10-minutes-but-its-ac-3-fare-of-rs-2810-is-6096-higher-than-rival-trains/articleshow/135983321.cms" target="_blank" rel="noopener noreferrer">Times of India</a>, 
+      <span class="source-item-chip">
+        <a href="https://www.thehindu.com/news/national/removal-proceedings-against-me-infructuous-after-resignation-justice-varma-tells-lok-sabha-secretariat/article71721688.ece" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Removal proceedings against me infructuous after resignation: Justice Varma tells Lok Sabha Secretariat">Removal proceedings against me infructuous after resignation: Justice Varma tells Lok Sabha Secretariat</a>
+        <span class="badge badge-outlet">The Hindu</span>
+        
+      </span>
       
-      <a href="https://www.news18.com/india/bengal-blueprint-amit-shah-to-spend-7-days-a-month-in-up-as-bjp-gears-up-for-2027-polls-exclusive-ws-l-10433283.html" target="_blank" rel="noopener noreferrer">News18</a>
+    </div>
+  </article>
+  
+  
+  
+
+  <article class="story-card level-corroborated">
+    <div class="meta-row">
+      <span class="badge badge-corroborated">Corroborated</span>
+      
+      <span class="source-count">4 independent sources</span>
+      <span class="sep">•</span>
+      <span class="score-pill">Score: 7.92</span>
+      
+      <span class="sep">•</span>
+      <time datetime="2026-11-19T10:08:04.784181+00:00" class="story-date local-time">19 Nov 2026, 15:38 IST</time>
+      
+    </div>
+
+    <h2><a href="story_146.html" class="headline-link">India-Japan Agreement Likely For Tokyo To Use Indian Missile Test Ranges For Long-Range Weapon Trials</a></h2>
+
+    
+    <p class="story-summary">The fourth India-Japan 2+2 Foreign and Defence Ministers’ Dialogue is being co-chaired by Rajnath Singh and External Affairs Minister S Jaishankar, along with their Japanese counterparts, Defence Minister Shinjiro Koizumi and Foreign Minister Toshimitsu Motegi. Singh and external affairs minister S Jaishankar will meet their Japanese counterparts, Koizumi and Toshimitsu Motegi, in Tokyo on Thursday for the India-Japan 2+2 dialogue to strengthen bilateral ties.</p>
+    
+
+    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
+    <div class="sources-list">
+      <strong>Sources:</strong>
+      
+      <span class="source-item-chip">
+        <a href="https://economictimes.indiatimes.com/news/defence/india-japan-to-deepen-defence-ties-at-22-talks/articleshow/135938534.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="India, Japan to deepen defence ties at 2+2 talks">India, Japan to deepen defence ties at 2+2 talks</a>
+        <span class="badge badge-outlet">Economic Times</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.hindustantimes.com/india-news/trusted-india-japan-partnership-vital-amid-global-uncertainty-says-jaishankar-101795008173004.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Trusted India-Japan partnership vital amid global uncertainty, says Jaishankar">Trusted India-Japan partnership vital amid global uncertainty, says Jaishankar</a>
+        <span class="badge badge-outlet">Hindustan Times</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://timesofindia.indiatimes.com/india/defence-security-ties-key-jaishankar-ahead-of-india-japan-22-dialogue/articleshow/135974046.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="&#39;Defence, security ties key&#39;: Jaishankar ahead of India-Japan 2+2 dialogue">&#39;Defence, security ties key&#39;: Jaishankar ahead of India-Japan 2+2 dialogue</a>
+        <span class="badge badge-outlet">Times of India</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.news18.com/videos/india/japan-s-missile-trials-in-india-rajnath-singh-s-tokyo-talks-put-defence-cooperation-in-focus-n18-10432522.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Japan&#39;s Missile Trials In India? Rajnath Singh&#39;s Tokyo Talks Put Defence Cooperation In Focus | N18">Japan&#39;s Missile Trials In India? Rajnath Singh&#39;s Tokyo Talks Put Defence Cooperation In Focus | N18</a>
+        <span class="badge badge-outlet">News18</span>
+        
+      </span>
+      
+    </div>
+  </article>
+  
+  
+  
+
+  <article class="story-card level-corroborated">
+    <div class="meta-row">
+      <span class="badge badge-corroborated">Corroborated</span>
+      
+      <span class="source-count">6 independent sources</span>
+      <span class="sep">•</span>
+      <span class="score-pill">Score: 7.50</span>
+      
+      <span class="sep">•</span>
+      <time datetime="2026-11-19T10:08:04.777098+00:00" class="story-date local-time">19 Nov 2026, 15:38 IST</time>
+      
+    </div>
+
+    <h2><a href="story_145.html" class="headline-link">India&#39;s religious make-up - what a new Pew study says about Hindus and Muslims</a></h2>
+
+    
+    <p class="story-summary">Islam set to become world&#39;s largest religion by 2035, Hindu share projected to decline: Report
+Pew projects Islam will surpass Christianity as the world&#39;s largest religion by 2035. Islam is expected to overtake Christianity as the world’s largest religion by 2035, according to projections by the Pew Research Center. A new global religious demographic study by the Pew Research Center projects that Islam could overtake Christianity to become the world&#39;s largest religion by 2035, as the Muslim population continues to expand at a faster pace. Islam is expected to surpass Christianity as the world&#39;s largest religion by 2035.</p>
+    
+
+    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
+    <div class="sources-list">
+      <strong>Sources:</strong>
+      
+      <span class="source-item-chip">
+        <a href="https://www.news18.com/world/asim-munir-pm-sharif-top-influential-muslim-list-after-mecca-pact-only-one-indian-make-it-to-the-list-10429180.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Asim Munir, PM Sharif Top Influential Muslim List After Mecca Pact; Only One Indian Make It To The List">Asim Munir, PM Sharif Top Influential Muslim List After Mecca Pact; Only One Indian Make It To The List</a>
+        <span class="badge badge-outlet">News18</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://timesofindia.indiatimes.com/india/hindu-population-growth-to-fall-behind-other-religions-in-india-globally-pew-study/articleshow/135966828.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Hindu population growth to fall behind other religions in next few decades: Report">Hindu population growth to fall behind other religions in next few decades: Report</a>
+        <span class="badge badge-outlet">Times of India</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.ndtv.com/world-news/muslims-set-to-become-worlds-largest-religion-by-2035-12346356" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Islam Set To Become World&#39;s Largest Religion By 2035: Report">Islam Set To Become World&#39;s Largest Religion By 2035: Report</a>
+        <span class="badge badge-outlet">NDTV</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.livemint.com/news/world/islam-projected-to-overtake-christianity-as-worlds-largest-religion-by-2035-says-study-heres-what-it-revealed-11795024171643.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Islam projected to overtake Christianity as world&#39;s largest religion by 2035, says study – here&#39;s what it revealed">Islam projected to overtake Christianity as world&#39;s largest religion by 2035, says study – here&#39;s what it revealed</a>
+        <span class="badge badge-outlet">Mint</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.indiatoday.in/world/story/islam-population-overtake-christianity-largest-religion-2035-pew-ptag-3041810-2026-11-18?utm_source=rss" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Islam set to become world&#39;s largest religion by 2035, Hindu share projected to decline">Islam set to become world&#39;s largest religion by 2035, Hindu share projected to decline</a>
+        <span class="badge badge-outlet">India Today</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.bbc.co.uk/news/articles/cqd01epyrz1do?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" class="source-title-link" title="India&#39;s religious make-up - what a new Pew study says about Hindus and Muslims">India&#39;s religious make-up - what a new Pew study says about Hindus and Muslims</a>
+        <span class="badge badge-outlet">BBC News – India</span>
+        
+      </span>
+      
+    </div>
+  </article>
+  
+  
+  
+
+  <article class="story-card level-corroborated">
+    <div class="meta-row">
+      <span class="badge badge-corroborated">Corroborated</span>
+      
+      <span class="source-count">3 independent sources</span>
+      <span class="sep">•</span>
+      <span class="score-pill">Score: 5.93</span>
+      
+      <span class="sep">•</span>
+      <time datetime="2026-11-19T19:45:14+00:00" class="story-date local-time">20 Nov 2026, 01:15 IST</time>
+      
+    </div>
+
+    <h2><a href="story_176.html" class="headline-link">US, China lead AI expansion as data centre carbon emissions projected to jump 70% by 2030: Report</a></h2>
+
+    
+    <div class="story-summary-omitted">
+      
+      <div class="empty-state-notice entailment-notice">
+        <span class="notice-badge">&#9432; Constrained to Verified Facts</span>
+        <p>AI narrative synthesis suppressed to prevent hallucination because reporting lacks sufficient multi-source consensus. View individual source claims on the story page.</p>
+        <a href="story_176.html" class="view-claims-btn">View claims &rarr;</a>
+      </div>
+      
+    </div>
+    
+
+    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
+    <div class="sources-list">
+      <strong>Sources:</strong>
+      
+      <span class="source-item-chip">
+        <a href="https://www.livemint.com/news/world/xi-jinping-calls-for-free-and-open-trade-as-china-threatens-retaliation-if-us-imposes-more-restrictions-on-ai-chips-11794977422737.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Xi Jinping calls for free and open trade as China threatens retaliation if US imposes more restrictions on AI chips">Xi Jinping calls for free and open trade as China threatens retaliation if US imposes more restrictions on AI chips</a>
+        <span class="badge badge-outlet">Mint</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.ndtv.com/artificial-intelligence/us-vs-china-ai-war-ibm-ceo-arvind-krishna-reveals-who-leads-the-race-for-ai-dominance-12342575" target="_blank" rel="noopener noreferrer" class="source-title-link" title="US vs China AI War: IBM CEO Arvind Krishna Reveals Who Leads The Race For AI Dominance">US vs China AI War: IBM CEO Arvind Krishna Reveals Who Leads The Race For AI Dominance</a>
+        <span class="badge badge-outlet">NDTV</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://timesofindia.indiatimes.com/world/us/beyond-microchips-trump-takes-aim-at-chinas-growing-ai-footprint-in-us/articleshow/135966996.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Beyond microchips, Trump takes aim at China&#39;s growing AI footprint in US">Beyond microchips, Trump takes aim at China&#39;s growing AI footprint in US</a>
+        <span class="badge badge-outlet">Times of India</span>
+        
+        <span class="badge badge-wire">Reuters</span>
+        
+      </span>
+      
+    </div>
+  </article>
+  
+  
+  
+
+  <article class="story-card level-corroborated">
+    <div class="meta-row">
+      <span class="badge badge-corroborated">Corroborated</span>
+      
+      <span class="source-count">3 independent sources</span>
+      <span class="sep">•</span>
+      <span class="score-pill">Score: 5.91</span>
+      
+      <span class="sep">•</span>
+      <time datetime="2026-11-19T19:31:16+00:00" class="story-date local-time">20 Nov 2026, 01:01 IST</time>
+      
+    </div>
+
+    <h2><a href="story_178.html" class="headline-link">Fossil fuels vanish from COP31 draft, sparking ‘ghost COP’ warning</a></h2>
+
+    
+    <div class="story-summary-omitted">
+      
+      <div class="empty-state-notice entailment-notice">
+        <span class="notice-badge">&#9432; Constrained to Verified Facts</span>
+        <p>AI narrative synthesis suppressed to prevent hallucination because reporting lacks sufficient multi-source consensus. View individual source claims on the story page.</p>
+        <a href="story_178.html" class="view-claims-btn">View claims &rarr;</a>
+      </div>
+      
+    </div>
+    
+
+    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
+    <div class="sources-list">
+      <strong>Sources:</strong>
+      
+      <span class="source-item-chip">
+        <a href="https://www.thehindu.com/news/international/cop31-negotiators-publish-revised-deal-draft-with-no-mention-of-fossil-fuels/article71721240.ece" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Draft of COP31 cover text drops references to fossil fuel phase-out, net zero dates">Draft of COP31 cover text drops references to fossil fuel phase-out, net zero dates</a>
+        <span class="badge badge-outlet">The Hindu</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://economictimes.indiatimes.com/news/international/world-news/backsliding-cop31-draft-omits-fossil-fuels/articleshow/136003374.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Backsliding? COP31 draft omits fossil fuels">Backsliding? COP31 draft omits fossil fuels</a>
+        <span class="badge badge-outlet">Economic Times</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.straitstimes.com/world/fossil-fuels-vanish-from-cop31-draft-sparking-ghost-cop-warning" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Fossil fuels vanish from COP31 draft, sparking ‘ghost COP’ warning">Fossil fuels vanish from COP31 draft, sparking ‘ghost COP’ warning</a>
+        <span class="badge badge-outlet">The Straits Times – World</span>
+        
+      </span>
+      
+    </div>
+  </article>
+  
+  
+  
+
+  <article class="story-card level-corroborated">
+    <div class="meta-row">
+      <span class="badge badge-corroborated">Corroborated</span>
+      
+      <span class="source-count">3 independent sources</span>
+      <span class="sep">•</span>
+      <span class="score-pill">Score: 5.90</span>
+      
+      <span class="sep">•</span>
+      <time datetime="2026-11-19T19:27:59+00:00" class="story-date local-time">20 Nov 2026, 00:57 IST</time>
+      
+    </div>
+
+    <h2><a href="story_179.html" class="headline-link">Surprise raids conducted by police teams in Sholinganallur results in seize of ganja and narcotic tablets</a></h2>
+
+    
+    <div class="story-summary-omitted">
+      
+      <div class="empty-state-notice sensitive-notice">
+        <span class="notice-badge">&#9888; Sensitive Topic Safeguard</span>
+        <p>Narrative generation suppressed under legal and defamation safeguards (court proceedings or private individuals). Only structured claims from named outlets are published.</p>
+        <a href="story_179.html" class="view-claims-btn">Inspect claims &rarr;</a>
+      </div>
+      
+    </div>
+    
+
+    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
+    <div class="sources-list">
+      <strong>Sources:</strong>
+      
+      <span class="source-item-chip">
+        <a href="https://www.hindustantimes.com/india-news/life-after-the-gun-former-maoists-start-over-bijapur-chhattisgarh-101794885157863.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Life after the gun: Former Maoists start over">Life after the gun: Former Maoists start over</a>
+        <span class="badge badge-outlet">Hindustan Times</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.news18.com/videos/breaking-news/maoist-explosives-dump-busted-andhra-police-crpf-recover-hidden-cache-near-chhattisgarh-border-10431618.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Maoist Explosives Dump Busted: Andhra Police, CRPF Recover Hidden Cache Near Chhattisgarh Border">Maoist Explosives Dump Busted: Andhra Police, CRPF Recover Hidden Cache Near Chhattisgarh Border</a>
+        <span class="badge badge-outlet">News18</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.thehindu.com/news/cities/chennai/surprise-raids-conducted-by-police-teams-in-sholinganallur-results-in-seize-of-ganja-and-narcotic-tablets/article71720474.ece" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Surprise raids conducted by police teams in Sholinganallur results in seize of ganja and narcotic tablets">Surprise raids conducted by police teams in Sholinganallur results in seize of ganja and narcotic tablets</a>
+        <span class="badge badge-outlet">The Hindu</span>
+        
+      </span>
       
     </div>
   </article>
@@ -628,15 +664,15 @@ It is the shared understanding that a nuclear war cannot be won and must never b
        data-current-page="7"
        data-total-pages="10"
        data-total-stories="100">
-    <div class="scroll-status-box" id="scroll-status">
+    <!-- Hidden by default; unhidden by JavaScript when active (T4) -->
+    <div class="scroll-status-box" id="scroll-status" style="display: none;">
       <span class="spinner"></span>
       <span class="scroll-status-text">Loading more stories...</span>
     </div>
-    <noscript>
-      <div class="noscript-pagination">
-        <a href="page_8.html" class="page-btn">Next page &raquo;</a>
-      </div>
-    </noscript>
+    <!-- Visible next-page link for users without JS or if JS fails (T4) -->
+    <div class="pagination-fallback" id="pagination-fallback">
+      <a href="page_8.html" class="page-btn">Next page &raquo;</a>
+    </div>
   </div>
   
 </section>
@@ -648,14 +684,42 @@ It is the shared understanding that a nuclear war cannot be won and must never b
   <footer>
     <div class="container">
       <p>Automated news corroboration — what sources agree and differ on.</p>
+      <div class="footer-nav" style="margin: 12px 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; font-size: 0.85rem;">
+        <a href="about.html">About</a>
+        <a href="methodology.html">Methodology</a>
+        <a href="corrections.html">Corrections</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="takedown.html">Copyright &amp; Takedown</a>
+        <a href="sources_policy.html">How We Use Sources</a>
+      </div>
       <div class="footer-divider"></div>
-      <p>Published transparently with no manual intervention. Never claims absolute truth &mdash; reports corroboration metrics only.</p>
+      <p style="font-size: 0.78rem; color: #94a3b8; max-width: 760px; margin: 8px auto 0;">
+        <strong>Trademark &amp; Non-Affiliation Disclaimer:</strong> All publication names, outlet titles, and publisher trademarks referenced herein are the property of their respective owners. TrippyNews is an independent news corroboration project with no commercial affiliation, sponsorship, or endorsement from any cited news organization. No publisher logos are displayed.
+      </p>
+      <p style="margin-top: 6px; font-size: 0.78rem; color: #64748b;">Contact: <a href="mailto:contact@trippynews.org">contact@trippynews.org</a> &bull; Response within 48h for takedowns.</p>
     </div>
   </footer>
 
-  <!-- GoatCounter — free, privacy-friendly visitor analytics (no cookies) -->
-  <!-- Sign up at https://www.goatcounter.com to get your site code, -->
-  <!-- then replace YOURCODE below with your chosen subdomain.       -->
+  <!-- Local time formatting for readers -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('time.local-time[datetime]').forEach(function(el) {
+        var dt = el.getAttribute('datetime');
+        if (!dt) return;
+        try {
+          var d = new Date(dt);
+          if (!isNaN(d.getTime())) {
+            var dateStr = d.toLocaleDateString(undefined, { day: 'numeric', month: 'short', year: 'numeric' });
+            var timeStr = d.toLocaleTimeString(undefined, { hour: '2-digit', minute: '2-digit' });
+            el.textContent = dateStr + ', ' + timeStr;
+          }
+        } catch(e) {}
+      });
+    });
+  </script>
+
+  <!-- GoatCounter — privacy-friendly visitor analytics (no cookies) -->
   <script data-goatcounter="https://trippynews.goatcounter.com/count"
           async src="//gc.zgo.at/count.js"></script>
 </body>

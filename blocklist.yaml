@@ -1,0 +1,16 @@
+# NewsCheck / TrippyNews Content Blocklist
+#
+# Valid takedown requests or prohibited sources are registered here.
+# Takedown policy: Valid requests actioned within 48 hours.
+# Contact: contact@trippynews.org
+#
+# Schema:
+#   domains: List of fully-qualified domain names to reject during ingestion and rendering.
+#   urls: List of exact article/feed URLs to exclude.
+#   story_ids: List of database story IDs to suppress from publishing.
+
+domains: []
+
+urls: []
+
+story_ids: []

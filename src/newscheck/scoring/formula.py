@@ -14,6 +14,24 @@ from datetime import UTC, datetime
 from newscheck.config import ScoringConfig
 from newscheck.models import CorroborationLabel, ReliabilityTier, Source
 
+# ── Single Source of Truth for Scoring & Methodology (L12) ───────────────────
+SCORING_CONSTANTS: dict[str, float | int | bool] = {
+    "tier1_weight": 3.0,
+    "tier2_weight": 2.0,
+    "tier3_weight": 1.0,
+    "primary_source_bonus": 2.0,
+    "conflict_penalty": 0.3,
+    "recency_decay_hours": 6.0,
+    "strongly_min_sources": 4,
+    "strongly_min_score": 8.0,
+    "strongly_requires_tier1": True,
+    "corroborated_min_sources": 3,
+    "corroborated_min_score": 4.5,
+    "min_sources_for_narrative": 3,
+    "min_entailed_sentences_for_narrative": 2,
+    "max_quote_words": 25,
+}
+
 
 @dataclass(frozen=True)
 class StoryScoreBreakdown:

@@ -54,25 +54,43 @@ min_samples = 1
     sources_content = """
 sources:
   - name: "Test Source A"
-    domain: "source-a.example.com"
-    feed_url: "https://source-a.example.com/rss"
+    domain: "source-a.test"
+    feed_url: "https://source-a.test/rss"
     language: "en"
     country: "IN"
     tier: 1
+    terms_url: "https://source-a.test/terms"
+    license_status: "permitted"
+    last_reviewed: "2026-11-20"
+    mode: "claims"
+    allowed_domains:
+      - "source-a.test"
 
   - name: "Test Source B"
-    domain: "source-b.example.com"
-    feed_url: "https://source-b.example.com/rss"
+    domain: "source-b.test"
+    feed_url: "https://source-b.test/rss"
     language: "en"
     country: "IN"
     tier: 2
+    terms_url: "https://source-b.test/terms"
+    license_status: "permitted"
+    last_reviewed: "2026-11-20"
+    mode: "claims"
+    allowed_domains:
+      - "source-b.test"
 
   - name: "Test Source C"
-    domain: "source-c.example.com"
-    feed_url: "https://source-c.example.com/rss"
+    domain: "source-c.test"
+    feed_url: "https://source-c.test/rss"
     language: "en"
     country: "IN"
     tier: 3
+    terms_url: "https://source-c.test/terms"
+    license_status: "permitted"
+    last_reviewed: "2026-11-20"
+    mode: "claims"
+    allowed_domains:
+      - "source-c.test"
 """
     (tmp_path / "sources.yaml").write_text(sources_content, encoding="utf-8")
 

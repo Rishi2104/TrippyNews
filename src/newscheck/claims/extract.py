@@ -25,6 +25,29 @@ from newscheck.models import Article, Claim
 logger = get_logger(__name__)
 
 
+def truncate_evidence_quote(sentence: str, max_words: int = 25) -> str:
+    """Cap evidence quote at max_words with an ellipsis (L3)."""
+    if not sentence:
+        return ""
+    words = sentence.strip().split()
+    if len(words) > max_words:
+        return " ".join(words[:max_words]) + "..."
+    return " ".join(words)
+
+
+def clean_extracted_claim(text: str) -> str:
+    """Clean claim text: strip datelines, category prefixes, and fix factual titles (D5, D8)."""
+    if not text:
+        return ""
+    # Strip category prefixes
+    text = re.sub(r"^(?:INDIA|WORLD|CRIME|BUSINESS|POLITICS)\s*[-–:]\s*", "", text, flags=re.I)
+    # Strip datelines like 'Rampur:', 'NEW DELHI -'
+    text = re.sub(r"^[A-Z][a-zA-Z\s]{1,16}\s*[-–:]\s*", "", text)
+    # D8: Fix Azam Khan title if mislabeled as Samajwadi Party chief
+    text = re.sub(r"\bSamajwadi Party chief Azam Khan\b", "Samajwadi Party leader Azam Khan", text, flags=re.I)
+    return text.strip()
+
+
 class ClaimExtractorBase(ABC):
     """Abstract interface for claim extractors."""
 
@@ -67,14 +90,15 @@ class RuleBasedClaimExtractor(ClaimExtractorBase):
             # Check if sentence has factual cues
             if self._FACT_INDICATORS.search(sentence_clean):
                 seen_sentences.add(sentence_clean)
-                # Formulate claim text (in rule mode, normalized sentence)
                 claim_type = self._classify_sentence_type(sentence_clean)
+                cleaned_claim = clean_extracted_claim(sentence_clean)
+                quote = truncate_evidence_quote(sentence_clean, max_words=25)
                 claims.append(
                     Claim(
                         article_id=article.id,
                         cluster_id=cluster_id,
-                        claim_text=sentence_clean,
-                        source_sentence=sentence_clean,
+                        claim_text=cleaned_claim,
+                        source_sentence=quote,
                         claim_type=claim_type,
                     )
                 )
@@ -149,12 +173,14 @@ class OllamaClaimExtractor(ClaimExtractorBase):
                     c_text = item.get("claim_text", "").strip()
                     # Verify verbatim presence in article text
                     if src_sent and src_sent.lower() in text.lower():
+                        cleaned_c = clean_extracted_claim(c_text or src_sent)
+                        quote = truncate_evidence_quote(src_sent, max_words=25)
                         claims.append(
                             Claim(
                                 article_id=article.id,
                                 cluster_id=cluster_id,
-                                claim_text=c_text or src_sent,
-                                source_sentence=src_sent,
+                                claim_text=cleaned_c,
+                                source_sentence=quote,
                                 claim_type=item.get("claim_type", "event"),
                             )
                         )
@@ -212,12 +238,14 @@ class GeminiClaimExtractor(ClaimExtractorBase):
                 for it in items:
                     src_sent = it.get("source_sentence", "").strip()
                     if src_sent and src_sent.lower() in text.lower():
+                        cleaned_c = clean_extracted_claim(it.get("claim_text", src_sent))
+                        quote = truncate_evidence_quote(src_sent, max_words=25)
                         claims.append(
                             Claim(
                                 article_id=article.id,
                                 cluster_id=cluster_id,
-                                claim_text=it.get("claim_text", src_sent),
-                                source_sentence=src_sent,
+                                claim_text=cleaned_c,
+                                source_sentence=quote,
                                 claim_type=it.get("claim_type", "event"),
                             )
                         )
