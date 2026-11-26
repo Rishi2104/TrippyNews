@@ -13,7 +13,7 @@ developing_threshold_hours = 2
 request_timeout_seconds = 10
 max_retries = 2
 retry_backoff_seconds = 2.0
-user_agent = "NewsCheckBot/1.0 (+https://rishi2104.github.io/TrippyNews/about.html; contact@trippynews.org)"
+user_agent = "NewsCheckBot/1.0 (+https://rishi2104.github.io/TrippyNews/about.html; psection189@gmail.com)"
 max_articles_per_feed = 25
 rate_limit_per_domain_seconds = 1.0
 feeds_file = "sources.yaml"
@@ -59,7 +59,7 @@ output_dir = "public"
 site_title = "TrippyNews"
 site_description = "Automated news corroboration — what sources agree and differ on."
 site_url = "https://rishi2104.github.io/TrippyNews"
-contact_email = "contact@trippynews.org"
+contact_email = "psection189@gmail.com"
 
 [alerting]
 enabled = false

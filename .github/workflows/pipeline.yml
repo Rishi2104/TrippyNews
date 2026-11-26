@@ -52,7 +52,12 @@ jobs:
           git config --global user.name "newscheck-bot"
           git config --global user.email "bot@newscheck.local"
           git add newscheck.db public/
-          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: persist automated run database and public site [skip ci]" && git push origin main)
+          if ! git diff --quiet || ! git diff --staged --quiet; then
+            git commit -m "chore: persist automated run database and public site [skip ci]"
+            # Pull with rebase in case of any concurrent remote commits, then push
+            git pull --rebase origin main || true
+            git push origin main
+          fi
 
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3

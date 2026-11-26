@@ -765,3 +765,50 @@ def insert_story_changelog(conn: sqlite3.Connection, cl: StoryChangelog) -> int:
         ),
     )
     return cur.lastrowid or 0
+
+
+def prune_old_data(conn: sqlite3.Connection, *, retention_days: int = 5) -> int:
+    """Purge stale records older than `retention_days` and compact the database.
+
+    Deletes historic runs, articles, clusters, claims, cross-checks, and stories
+    past the retention window to keep database size healthy under git file size limits.
+    """
+    from datetime import UTC, datetime, timedelta
+
+    cutoff = (datetime.now(UTC) - timedelta(days=retention_days)).isoformat()
+    logger.info("pruning_old_data", cutoff=cutoff, retention_days=retention_days)
+
+    conn.execute("PRAGMA foreign_keys = OFF")
+    try:
+        conn.execute(
+            """
+            DELETE FROM cross_checks WHERE claim_a_id IN (
+                SELECT id FROM claims WHERE created_at < ?
+            ) OR claim_b_id IN (
+                SELECT id FROM claims WHERE created_at < ?
+            )
+            """,
+            (cutoff, cutoff),
+        )
+        conn.execute("DELETE FROM claims WHERE created_at < ?", (cutoff,))
+        conn.execute(
+            "DELETE FROM cluster_articles WHERE cluster_id IN (SELECT id FROM clusters WHERE created_at < ?)",
+            (cutoff,),
+        )
+        conn.execute("DELETE FROM story_changelog WHERE story_id IN (SELECT id FROM stories WHERE published_at < ?)", (cutoff,))
+        conn.execute("DELETE FROM stories WHERE published_at < ?", (cutoff,))
+        conn.execute("DELETE FROM clusters WHERE created_at < ?", (cutoff,))
+        conn.execute(
+            "DELETE FROM dedup_groups WHERE article_id IN (SELECT id FROM articles WHERE published_at < ?)",
+            (cutoff,),
+        )
+        cur = conn.execute("DELETE FROM articles WHERE published_at < ?", (cutoff,))
+        deleted_count = cur.rowcount
+        conn.execute("DELETE FROM runs WHERE started_at < ?", (cutoff,))
+        conn.commit()
+    finally:
+        conn.execute("PRAGMA foreign_keys = ON")
+
+    logger.info("prune_complete", deleted_articles=deleted_count)
+    return deleted_count
+

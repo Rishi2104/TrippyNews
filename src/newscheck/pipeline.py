@@ -39,6 +39,7 @@ from newscheck.db import (
     insert_cluster_article,
     insert_cross_check,
     insert_dedup_group,
+    prune_old_data,
     transaction,
     upsert_source,
     upsert_story,
@@ -422,6 +423,13 @@ def _execute(
     # ── Stage 10: Static Site Generation (Atomic Deploy) ───────────────
     site_gen = SiteGenerator(settings, project_root)
     site_gen.build_site(conn)
+
+    # ── Stage 11: Data Retention Pruning & Vacuum ──────────────────────
+    prune_old_data(conn, retention_days=settings.pipeline.retention_days)
+    try:
+        conn.execute("VACUUM")
+    except Exception as exc:
+        logger.warning("vacuum_failed", error=str(exc))
 
     logger.info(
         "pipeline_complete",

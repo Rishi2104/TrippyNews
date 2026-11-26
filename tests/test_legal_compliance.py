@@ -119,7 +119,7 @@ Allow: /
         # Verify default settings contain the honest bot UA
         settings = Settings()
         assert "NewsCheckBot/1.0" in settings.ingest.user_agent
-        assert "contact@" in settings.ingest.user_agent
+        assert "@" in settings.ingest.user_agent
         assert "Mozilla" not in settings.ingest.user_agent
 
     def test_no_example_com_in_output_and_pages_exist(self, project_root: Path, settings: Settings) -> None:

@@ -23,6 +23,7 @@ class PipelineConfig(BaseModel, frozen=True):
     min_sources_for_valid_run: int = 15
     max_story_age_hours: int = 48
     developing_threshold_hours: int = 2
+    retention_days: int = 5
 
 
 class IngestConfig(BaseModel, frozen=True):
@@ -31,7 +32,7 @@ class IngestConfig(BaseModel, frozen=True):
     request_timeout_seconds: int = 10
     max_retries: int = 2
     retry_backoff_seconds: float = 2.0
-    user_agent: str = "NewsCheckBot/1.0 (+https://rishi2104.github.io/TrippyNews/about.html; contact@trippynews.org)"
+    user_agent: str = "NewsCheckBot/1.0 (+https://rishi2104.github.io/TrippyNews/about.html; psection189@gmail.com)"
     max_articles_per_feed: int = 25
     rate_limit_per_domain_seconds: float = 1.0
     feeds_file: str = "sources.yaml"
@@ -98,7 +99,7 @@ class BuildConfig(BaseModel, frozen=True):
     site_title: str = "TrippyNews"
     site_description: str = "Automated news corroboration — what sources agree and differ on."
     site_url: str = "https://rishi2104.github.io/TrippyNews"
-    contact_email: str = "contact@trippynews.org"
+    contact_email: str = "psection189@gmail.com"
 
 
 class AlertingConfig(BaseModel, frozen=True):
