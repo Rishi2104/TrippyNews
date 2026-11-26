@@ -14,7 +14,7 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="TrippyNews">
   <meta property="og:title" content="Mexico captures FBI-wanted cartel boss in military raid">
-  <meta property="og:description" content="Corroborated by 7 independent sources.">
+  <meta property="og:description" content="Corroborated by 6 independent sources.">
   <meta property="og:url" content="https://rishi2104.github.io/TrippyNews/">
   <meta property="og:image" content="https://rishi2104.github.io/TrippyNews/favicon.svg">
 
@@ -29,32 +29,53 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
+  <!-- Reading Progress Bar (stays subtle at the very top edge) -->
+  <div class="reading-progress-bar" id="readingProgress" aria-hidden="true"></div>
+
+  <header id="siteHeader">
     <div class="container">
       <div class="header-inner">
         <div class="site-brand">
           
           <div class="site-title">
-            <a href="index.html">TrippyNews</a>
+            <a href="index.html">
+              <span class="brand-icon" aria-hidden="true">⬡</span>
+              <span class="brand-name">TrippyNews</span>
+            </a>
           </div>
           
           <span class="site-tagline">Automated News Corroboration Pipeline</span>
         </div>
-        <div class="header-live">
-          <span class="live-dot"></span>
-          Last updated: <time datetime="2026-11-26T14:13:44.632597+00:00" class="local-time">26 Nov 2026, 19:43 IST</time>
+
+        <nav class="header-nav" aria-label="Main Navigation">
+          <ul class="nav-links">
+            <li><a href="index.html">Top Stories</a></li>
+            <li><a href="methodology.html">Methodology</a></li>
+            <li><a href="corrections.html">Corrections &amp; Changelog</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-live" title="Automated pipeline status">
+          <span class="live-dot-wrap">
+            <span class="live-dot-ping"></span>
+            <span class="live-dot"></span>
+          </span>
+          <span class="live-label">LIVE</span>
+          <span class="live-sep">•</span>
+          <span class="live-time"><time datetime="2026-11-26T14:43:30.958621+00:00" class="local-time">26 Nov, 20:13 IST</time></span>
         </div>
       </div>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html">Top Stories</a></li>
-          <li><a href="methodology.html">Methodology</a></li>
-          <li><a href="corrections.html">Corrections &amp; Changelog</a></li>
-          <li><a href="about.html">About</a></li>
-        </ul>
-      </nav>
     </div>
   </header>
+
+  <!-- Floating Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top" title="Scroll to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <line x1="12" y1="19" x2="12" y2="5"></line>
+      <polyline points="5 12 12 5 19 12"></polyline>
+    </svg>
+  </button>
 
   <main class="container">
     <div class="disclosure-banner">
@@ -75,7 +96,7 @@
     <div class="meta-row">
       <span class="badge badge-corroborated">Corroborated</span>
       
-      <span class="source-count">7 independent sources</span>
+      <span class="source-count">6 independent sources</span>
       <span class="sep">•</span>
       <span class="score-pill">Score: 12.88</span>
       
@@ -119,7 +140,7 @@
 Mexican security forces carried out the operation in Guasave on Friday, November 20, using elite military units and intelligence gathered in coordination with US agencies.</div>
       
       <div class="evidence">
-        "Mexico captures FBI&#39;s most-wanted drug lord El Chapo Isidro in chaotic military op Mexican security forces carried out the operation in Guasave on Friday, November..." &mdash; <a href="https://www.indiatoday.in/world/story/el-chapo-isidro-arrest-how-fbi-fugitive-captured-in-mexico-chaotic-military-operation-3044004-2026-11-21" target="_blank" rel="noopener noreferrer"><strong>India Today</strong></a>
+        "Mexico captures FBI&#39;s most-wanted drug lord El Chapo Isidro in chaotic military op Mexican security forces carried out the operation in Guasave on Friday, November..." &mdash; <a href="#" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a>
       </div>
       
     </div>
@@ -235,7 +256,7 @@ Mexican security forces carried out the operation in Guasave on Friday, November
     <div class="claim-body">Per India Today: The FBI has listed Meza-Flores among its Ten Most Wanted Fugitives and offered a reward of up to USD 5 million for information leading to his arrest.</div>
     
     <div class="evidence">
-      "The FBI has listed Meza-Flores among its Ten Most Wanted Fugitives and offered a reward of up to USD 5 million for information leading to..." &mdash; <a href="https://www.indiatoday.in/world/story/el-chapo-isidro-arrest-how-fbi-fugitive-captured-in-mexico-chaotic-military-operation-3044004-2026-11-21" target="_blank" rel="noopener noreferrer"><strong>India Today</strong></a>
+      "The FBI has listed Meza-Flores among its Ten Most Wanted Fugitives and offered a reward of up to USD 5 million for information leading to..." &mdash; <a href="#" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a>
     </div>
     
   </div>
@@ -304,7 +325,7 @@ Opens a full-screen, scroll-driven story with sound in a new tab.</div>
     <div class="claim-body">Per India Today: Mexican authorities said Meza-Flores was taken into custody along with two alleged members of his organisation.</div>
     
     <div class="evidence">
-      "Mexican authorities said Meza-Flores was taken into custody along with two alleged members of his organisation." &mdash; <a href="https://www.indiatoday.in/world/story/el-chapo-isidro-arrest-how-fbi-fugitive-captured-in-mexico-chaotic-military-operation-3044004-2026-11-21" target="_blank" rel="noopener noreferrer"><strong>India Today</strong></a>
+      "Mexican authorities said Meza-Flores was taken into custody along with two alleged members of his organisation." &mdash; <a href="#" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a>
     </div>
     
   </div>
@@ -314,7 +335,7 @@ Opens a full-screen, scroll-driven story with sound in a new tab.</div>
 Mexican security forces carried out the operation in Guasave on Friday, November 20, using elite military units and intelligence gathered in coordination with US agencies.</div>
     
     <div class="evidence">
-      "FBI&#39;S MOST-WANTED CARTEL FIGURE CAPTURED Mexican security forces carried out the operation in Guasave on Friday, November 20, using elite military units and intelligence gathered..." &mdash; <a href="https://www.indiatoday.in/world/story/el-chapo-isidro-arrest-how-fbi-fugitive-captured-in-mexico-chaotic-military-operation-3044004-2026-11-21" target="_blank" rel="noopener noreferrer"><strong>India Today</strong></a>
+      "FBI&#39;S MOST-WANTED CARTEL FIGURE CAPTURED Mexican security forces carried out the operation in Guasave on Friday, November 20, using elite military units and intelligence gathered..." &mdash; <a href="#" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a>
     </div>
     
   </div>
@@ -323,7 +344,7 @@ Mexican security forces carried out the operation in Guasave on Friday, November
     <div class="claim-body">Per India Today: The US government had originally indicted him in 2012, with later charges involving drug trafficking and possession of firearms.</div>
     
     <div class="evidence">
-      "The US government had originally indicted him in 2012, with later charges involving drug trafficking and possession of firearms." &mdash; <a href="https://www.indiatoday.in/world/story/el-chapo-isidro-arrest-how-fbi-fugitive-captured-in-mexico-chaotic-military-operation-3044004-2026-11-21" target="_blank" rel="noopener noreferrer"><strong>India Today</strong></a>
+      "The US government had originally indicted him in 2012, with later charges involving drug trafficking and possession of firearms." &mdash; <a href="#" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a>
     </div>
     
   </div>
@@ -332,7 +353,7 @@ Mexican security forces carried out the operation in Guasave on Friday, November
     <div class="claim-body">Per India Today: Mexico&#39;s Defence Ministry said federal forces came under attack with gunfire and explosives after the operation began.</div>
     
     <div class="evidence">
-      "Mexico&#39;s Defence Ministry said federal forces came under attack with gunfire and explosives after the operation began." &mdash; <a href="https://www.indiatoday.in/world/story/el-chapo-isidro-arrest-how-fbi-fugitive-captured-in-mexico-chaotic-military-operation-3044004-2026-11-21" target="_blank" rel="noopener noreferrer"><strong>India Today</strong></a>
+      "Mexico&#39;s Defence Ministry said federal forces came under attack with gunfire and explosives after the operation began." &mdash; <a href="#" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a>
     </div>
     
   </div>
@@ -465,20 +486,7 @@ The capture of Meza Flores and his number 2 in the city of Guasave, Sinaloa, set
 
   <!-- Source Links & Transparency Table (T2: Show outlet name instead of internal source ID) -->
   <div class="sources-table-wrap">
-    <h3>All Contributing Sources (8)</h3>
-    
-    <div class="source-item">
-      <div>
-        <a href="https://www.indiatoday.in/world/story/el-chapo-isidro-arrest-how-fbi-fugitive-captured-in-mexico-chaotic-military-operation-3044004-2026-11-21" target="_blank" rel="noopener noreferrer">Mexico captures FBI&#39;s most-wanted drug lord Chapo Isidro in chaotic military op</a>
-        <div class="source-meta" style="margin-top: 4px;">
-          <span class="badge badge-outlet">India Today</span>
-          
-          <span style="font-size: 0.75rem; color: var(--text-muted);">(indiatoday.in)</span>
-          
-          
-        </div>
-      </div>
-    </div>
+    <h3>All Contributing Sources (6)</h3>
     
     <div class="source-item">
       <div>
@@ -496,19 +504,6 @@ The capture of Meza Flores and his number 2 in the city of Guasave, Sinaloa, set
     <div class="source-item">
       <div>
         <a href="https://www.aljazeera.com/news/2026/11/21/who-is-el-chapo-isidro-the-alleged-cartel-boss-arrested-in-mexico" target="_blank" rel="noopener noreferrer">Who is El Chapo Isidro, the alleged cartel boss arrested in Mexico?</a>
-        <div class="source-meta" style="margin-top: 4px;">
-          <span class="badge badge-outlet">Al Jazeera – World</span>
-          
-          <span style="font-size: 0.75rem; color: var(--text-muted);">(aljazeera.com)</span>
-          
-          
-        </div>
-      </div>
-    </div>
-    
-    <div class="source-item">
-      <div>
-        <a href="https://www.aljazeera.com/video/newsfeed/2026/11/21/mexico-captures-fbi-wanted-cartel-boss-in-military-raid" target="_blank" rel="noopener noreferrer">Mexico captures FBI-wanted cartel boss in military raid</a>
         <div class="source-meta" style="margin-top: 4px;">
           <span class="badge badge-outlet">Al Jazeera – World</span>
           
@@ -612,6 +607,99 @@ The capture of Meza Flores and his number 2 in the city of Guasave, Sinaloa, set
             el.textContent = dateStr + ', ' + timeStr;
           }
         } catch(e) {}
+      });
+    });
+  </script>
+
+  <!-- Smart Hide-on-Scroll Navigation, Reading Progress & Back-to-Top -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var header = document.getElementById('siteHeader');
+      var progressBar = document.getElementById('readingProgress');
+      var backToTop = document.getElementById('backToTop');
+
+      var lastScrollY = window.pageYOffset || document.documentElement.scrollTop;
+      var ticking = false;
+      var scrollThreshold = 8;
+
+      function onScroll() {
+        var currentScrollY = window.pageYOffset || document.documentElement.scrollTop;
+        var maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+
+        // 1. Reading progress bar
+        if (progressBar && maxScroll > 0) {
+          var pct = Math.min(100, Math.max(0, (currentScrollY / maxScroll) * 100));
+          progressBar.style.width = pct + '%';
+        }
+
+        // 2. Back to top button
+        if (backToTop) {
+          if (currentScrollY > 400) {
+            backToTop.classList.add('visible');
+          } else {
+            backToTop.classList.remove('visible');
+          }
+        }
+
+        // 3. Smart Hide/Show Header
+        if (!header) {
+          ticking = false;
+          return;
+        }
+
+        // Always show and remove elevation at very top
+        if (currentScrollY <= 15) {
+          header.classList.remove('header--hidden');
+          header.classList.remove('header--scrolled');
+          lastScrollY = currentScrollY;
+          ticking = false;
+          return;
+        }
+
+        header.classList.add('header--scrolled');
+
+        var delta = currentScrollY - lastScrollY;
+
+        // Prevent hiding near bottom of page on mobile rubber-band bounce
+        if (maxScroll > 0 && currentScrollY >= maxScroll - 30) {
+          ticking = false;
+          return;
+        }
+
+        if (delta > scrollThreshold && currentScrollY > 60) {
+          // Scrolling DOWN -> Hide nav bar so full news occupies entire viewport
+          header.classList.add('header--hidden');
+        } else if (delta < -scrollThreshold) {
+          // Scrolling UP -> Reveal nav bar smoothly
+          header.classList.remove('header--hidden');
+        }
+
+        lastScrollY = currentScrollY;
+        ticking = false;
+      }
+
+      window.addEventListener('scroll', function() {
+        if (!ticking) {
+          window.requestAnimationFrame(onScroll);
+          ticking = true;
+        }
+      }, { passive: true });
+
+      if (backToTop) {
+        backToTop.addEventListener('click', function() {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+
+      // Active nav link highlight based on current path
+      var currentPath = window.location.pathname.split('/').pop() || 'index.html';
+      document.querySelectorAll('.nav-links a').forEach(function(link) {
+        var href = link.getAttribute('href');
+        if (href === currentPath || (currentPath === '' && href === 'index.html')) {
+          link.classList.add('active');
+        } else if (currentPath.indexOf('page_') === 0 && href === 'index.html') {
+          link.classList.add('active');
+        }
       });
     });
   </script>

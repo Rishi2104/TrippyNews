@@ -14,7 +14,7 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="TrippyNews">
   <meta property="og:title" content="Meta&#39;s India offices hit by opposition protests over account removals">
-  <meta property="og:description" content="Corroborated by 6 independent sources.">
+  <meta property="og:description" content="Corroborated by 1 independent sources.">
   <meta property="og:url" content="https://rishi2104.github.io/TrippyNews/">
   <meta property="og:image" content="https://rishi2104.github.io/TrippyNews/favicon.svg">
 
@@ -29,32 +29,53 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
+  <!-- Reading Progress Bar (stays subtle at the very top edge) -->
+  <div class="reading-progress-bar" id="readingProgress" aria-hidden="true"></div>
+
+  <header id="siteHeader">
     <div class="container">
       <div class="header-inner">
         <div class="site-brand">
           
           <div class="site-title">
-            <a href="index.html">TrippyNews</a>
+            <a href="index.html">
+              <span class="brand-icon" aria-hidden="true">⬡</span>
+              <span class="brand-name">TrippyNews</span>
+            </a>
           </div>
           
           <span class="site-tagline">Automated News Corroboration Pipeline</span>
         </div>
-        <div class="header-live">
-          <span class="live-dot"></span>
-          Last updated: <time datetime="2026-11-26T14:13:44.632597+00:00" class="local-time">26 Nov 2026, 19:43 IST</time>
+
+        <nav class="header-nav" aria-label="Main Navigation">
+          <ul class="nav-links">
+            <li><a href="index.html">Top Stories</a></li>
+            <li><a href="methodology.html">Methodology</a></li>
+            <li><a href="corrections.html">Corrections &amp; Changelog</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-live" title="Automated pipeline status">
+          <span class="live-dot-wrap">
+            <span class="live-dot-ping"></span>
+            <span class="live-dot"></span>
+          </span>
+          <span class="live-label">LIVE</span>
+          <span class="live-sep">•</span>
+          <span class="live-time"><time datetime="2026-11-26T14:43:30.958621+00:00" class="local-time">26 Nov, 20:13 IST</time></span>
         </div>
       </div>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html">Top Stories</a></li>
-          <li><a href="methodology.html">Methodology</a></li>
-          <li><a href="corrections.html">Corrections &amp; Changelog</a></li>
-          <li><a href="about.html">About</a></li>
-        </ul>
-      </nav>
     </div>
   </header>
+
+  <!-- Floating Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top" title="Scroll to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <line x1="12" y1="19" x2="12" y2="5"></line>
+      <polyline points="5 12 12 5 19 12"></polyline>
+    </svg>
+  </button>
 
   <main class="container">
     <div class="disclosure-banner">
@@ -76,7 +97,7 @@
     <div class="meta-row">
       <span class="badge badge-strongly">Strongly corroborated</span>
       
-      <span class="source-count">6 independent sources</span>
+      <span class="source-count">1 independent source</span>
       <span class="sep">•</span>
       <span class="score-pill">Score: 12.59</span>
       
@@ -99,7 +120,7 @@
       <div class="claim-body">Per Mint: Congress has repeatedly accused Meta and other social media companies of curbing online dissent while allegedly favouring the ruling party.</div>
       
       <div class="evidence">
-        "Congress has repeatedly accused Meta and other social media companies of curbing online dissent while allegedly favouring the ruling party." &mdash; <a href="https://www.livemint.com/news/india/meta-offices-in-gurugram-hyderabad-mumbai-see-protests-from-congresss-youth-wing-heres-why-11795254533372.html" target="_blank" rel="noopener noreferrer"><strong>Mint</strong></a>
+        "Congress has repeatedly accused Meta and other social media companies of curbing online dissent while allegedly favouring the ruling party." &mdash; <a href="#" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a>
       </div>
       
     </div>
@@ -109,7 +130,7 @@
       <div class="claim-body">Per Mint: In February this year, the government directed social media companies to remove unlawful content within three hours of receiving a notification, tightening the earlier 36-hour deadline.</div>
       
       <div class="evidence">
-        "In February this year, the government directed social media companies to remove unlawful content within three hours of receiving a notification, tightening the earlier 36-hour..." &mdash; <a href="https://www.livemint.com/news/india/meta-offices-in-gurugram-hyderabad-mumbai-see-protests-from-congresss-youth-wing-heres-why-11795254533372.html" target="_blank" rel="noopener noreferrer"><strong>Mint</strong></a>
+        "In February this year, the government directed social media companies to remove unlawful content within three hours of receiving a notification, tightening the earlier 36-hour..." &mdash; <a href="#" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a>
       </div>
       
     </div>
@@ -119,7 +140,7 @@
       <div class="claim-body">Per Mint: The company restricted more than 5.4 million posts or accounts in India under local laws during the first half of 2026.</div>
       
       <div class="evidence">
-        "The company restricted more than 5.4 million posts or accounts in India under local laws during the first half of 2026." &mdash; <a href="https://www.livemint.com/news/india/meta-offices-in-gurugram-hyderabad-mumbai-see-protests-from-congresss-youth-wing-heres-why-11795254533372.html" target="_blank" rel="noopener noreferrer"><strong>Mint</strong></a>
+        "The company restricted more than 5.4 million posts or accounts in India under local laws during the first half of 2026." &mdash; <a href="#" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a>
       </div>
       
     </div>
@@ -129,7 +150,7 @@
       <div class="claim-body">Per News18: This is Congress Model: Vandalise offices of private companies!&#34; Bhandari said.</div>
       
       <div class="evidence">
-        "This is Congress Model: Vandalise offices of private companies!&#34; Bhandari said." &mdash; <a href="https://www.news18.com/india/youth-congress-workers-vandalise-metas-hyderabad-office-over-suspended-accounts-video-ws-l-10435040.html" target="_blank" rel="noopener noreferrer"><strong>News18</strong></a>
+        "This is Congress Model: Vandalise offices of private companies!&#34; Bhandari said." &mdash; <a href="#" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a>
       </div>
       
     </div>
@@ -139,7 +160,7 @@
       <div class="claim-body">Per News18: The protesters accused Meta of political interference and favoring the BJP.</div>
       
       <div class="evidence">
-        "The protesters accused Meta of political interference and favoring the BJP." &mdash; <a href="https://www.news18.com/india/youth-congress-workers-vandalise-metas-hyderabad-office-over-suspended-accounts-video-ws-l-10435040.html" target="_blank" rel="noopener noreferrer"><strong>News18</strong></a>
+        "The protesters accused Meta of political interference and favoring the BJP." &mdash; <a href="#" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a>
       </div>
       
     </div>
@@ -149,7 +170,7 @@
       <div class="claim-body">Per CNA – Asia: Congress has long accused Meta and other social media platforms of curbing dissent online by removing party accounts, favouring Modi&#39;s government.</div>
       
       <div class="evidence">
-        "Congress has long accused Meta and other social media platforms of curbing dissent online by removing party accounts, favouring Modi&#39;s government." &mdash; <a href="https://www.channelnewsasia.com/asia/india-congress-party-meta-protests-censorship-6571316" target="_blank" rel="noopener noreferrer"><strong>CNA – Asia</strong></a>
+        "Congress has long accused Meta and other social media platforms of curbing dissent online by removing party accounts, favouring Modi&#39;s government." &mdash; <a href="#" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a>
       </div>
       
     </div>
@@ -159,7 +180,7 @@
       <div class="claim-body">Per CNA – Asia: In February, Modi&#39;s government ordered social media companies to take down unlawful content within three hours of being notified about it, tightening an earlier 36-hour timeline.</div>
       
       <div class="evidence">
-        "In February, Modi&#39;s government ordered social media companies to take down unlawful content within three hours of being notified about it, tightening an earlier 36-hour..." &mdash; <a href="https://www.channelnewsasia.com/asia/india-congress-party-meta-protests-censorship-6571316" target="_blank" rel="noopener noreferrer"><strong>CNA – Asia</strong></a>
+        "In February, Modi&#39;s government ordered social media companies to take down unlawful content within three hours of being notified about it, tightening an earlier 36-hour..." &mdash; <a href="#" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a>
       </div>
       
     </div>
@@ -200,7 +221,7 @@
 &#34;This is Congress Model: Vandalise offices of private companies!&#34; he added.</div>
       
       <div class="evidence">
-        "Rahul Gandhi&#39;s party Congress is a party of goons,&#34; he said. &#34;This is Congress Model: Vandalise offices of private companies!&#34; he added." &mdash; <a href="https://economictimes.indiatimes.com/news/politics-and-nation/youth-congress-vandalises-meta-offices-in-hyderabad-and-mumbai-over-suspension-of-social-media-accounts/articleshow/136048468.cms" target="_blank" rel="noopener noreferrer"><strong>Economic Times</strong></a>
+        "Rahul Gandhi&#39;s party Congress is a party of goons,&#34; he said. &#34;This is Congress Model: Vandalise offices of private companies!&#34; he added." &mdash; <a href="#" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a>
       </div>
       
     </div>
@@ -217,7 +238,7 @@
 &#34;Goons of Indian Youth Congress have not only vandalised and destroyed Meta&#39;s office in Hyderabad, &amp; also are flaunting it on social media!&#34; BJP spokesperson Pradeep Bhandari said.</div>
     
     <div class="evidence">
-      "The BJP slammed the Youth Congress workers&#39; vandalism, calling the Congress a &#34;party of goons&#34;. &#34;Goons of Indian Youth Congress have not only vandalised and..." &mdash; <a href="https://www.dnaindia.com/india/report-youth-congress-workers-vandalise-meta-office-in-hyderabad-over-restricted-accounts-3224440" target="_blank" rel="noopener noreferrer"><strong>DNA India</strong></a>
+      "The BJP slammed the Youth Congress workers&#39; vandalism, calling the Congress a &#34;party of goons&#34;. &#34;Goons of Indian Youth Congress have not only vandalised and..." &mdash; <a href="#" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a>
     </div>
     
   </div>
@@ -227,7 +248,7 @@
     <div class="claim-body">Per DNA India: These idiots are even bragging about it,&#34; he said.</div>
     
     <div class="evidence">
-      "These idiots are even bragging about it,&#34; he said." &mdash; <a href="https://www.dnaindia.com/india/report-youth-congress-workers-vandalise-meta-office-in-hyderabad-over-restricted-accounts-3224440" target="_blank" rel="noopener noreferrer"><strong>DNA India</strong></a>
+      "These idiots are even bragging about it,&#34; he said." &mdash; <a href="#" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a>
     </div>
     
   </div>
@@ -237,7 +258,7 @@
     <div class="claim-body">Per News18: The protesters accused Meta of political interference and favoring the BJP.</div>
     
     <div class="evidence">
-      "The protesters accused Meta of political interference and favoring the BJP." &mdash; <a href="https://www.news18.com/india/youth-congress-workers-vandalise-metas-hyderabad-office-over-suspended-accounts-video-ws-l-10435040.html" target="_blank" rel="noopener noreferrer"><strong>News18</strong></a>
+      "The protesters accused Meta of political interference and favoring the BJP." &mdash; <a href="#" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a>
     </div>
     
   </div>
@@ -257,7 +278,7 @@
     <div class="claim-body">Per Economic Times: Goons of Indian Youth Congress not only vandalised and destroyed Meta&#39;s office in Hyderabad, they are also are flaunting it on social media,&#34; he said.</div>
     
     <div class="evidence">
-      "Goons of Indian Youth Congress not only vandalised and destroyed Meta&#39;s office in Hyderabad, they are also are flaunting it on social media,&#34; he said." &mdash; <a href="https://economictimes.indiatimes.com/news/politics-and-nation/youth-congress-vandalises-meta-offices-in-hyderabad-and-mumbai-over-suspension-of-social-media-accounts/articleshow/136048468.cms" target="_blank" rel="noopener noreferrer"><strong>Economic Times</strong></a>
+      "Goons of Indian Youth Congress not only vandalised and destroyed Meta&#39;s office in Hyderabad, they are also are flaunting it on social media,&#34; he said." &mdash; <a href="#" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a>
     </div>
     
   </div>
@@ -273,7 +294,7 @@
 &#34;Foreign companies should conduct business in our country, not politics.</div>
     
     <div class="evidence">
-      "Samajwadi Party chief Akhilesh Yadav, in a post on X, hit out at Meta over the restrictions. &#34;Foreign companies should conduct business in our country,..." &mdash; <a href="https://www.dnaindia.com/india/report-youth-congress-workers-vandalise-meta-office-in-hyderabad-over-restricted-accounts-3224440" target="_blank" rel="noopener noreferrer"><strong>DNA India</strong></a>
+      "Samajwadi Party chief Akhilesh Yadav, in a post on X, hit out at Meta over the restrictions. &#34;Foreign companies should conduct business in our country,..." &mdash; <a href="#" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a>
     </div>
     
   </div>
@@ -330,7 +351,7 @@ He accused Meta of acting at the BJP’s direction by suspending the accounts of
     <div class="claim-body">Per News18: Remove restrictions from all accounts within 7 days, or we will shut down your offices everywhere!</div>
     
     <div class="evidence">
-      "Remove restrictions from all accounts within 7 days, or we will shut down your offices everywhere!" &mdash; <a href="https://www.news18.com/india/youth-congress-workers-vandalise-metas-hyderabad-office-over-suspended-accounts-video-ws-l-10435040.html" target="_blank" rel="noopener noreferrer"><strong>News18</strong></a>
+      "Remove restrictions from all accounts within 7 days, or we will shut down your offices everywhere!" &mdash; <a href="#" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a>
     </div>
     
   </div>
@@ -341,7 +362,7 @@ He accused Meta of acting at the BJP’s direction by suspending the accounts of
 Why Are Youth Congress Workers Protesting Against Meta?</div>
     
     <div class="evidence">
-      "The countdown begins! — Indian Youth Congress (@IYC) November 20, 2026 Why Are Youth Congress Workers Protesting Against Meta?" &mdash; <a href="https://www.news18.com/india/youth-congress-workers-vandalise-metas-hyderabad-office-over-suspended-accounts-video-ws-l-10435040.html" target="_blank" rel="noopener noreferrer"><strong>News18</strong></a>
+      "The countdown begins! — Indian Youth Congress (@IYC) November 20, 2026 Why Are Youth Congress Workers Protesting Against Meta?" &mdash; <a href="#" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a>
     </div>
     
   </div>
@@ -350,7 +371,7 @@ Why Are Youth Congress Workers Protesting Against Meta?</div>
     <div class="claim-body">Per News18: Led by Mumbai Youth Congress president Zeenat Shabrin, protesters raised slogans against Meta and accused the company of favouring the BJP.</div>
     
     <div class="evidence">
-      "Led by Mumbai Youth Congress president Zeenat Shabrin, protesters raised slogans against Meta and accused the company of favouring the BJP." &mdash; <a href="https://www.news18.com/india/youth-congress-workers-vandalise-metas-hyderabad-office-over-suspended-accounts-video-ws-l-10435040.html" target="_blank" rel="noopener noreferrer"><strong>News18</strong></a>
+      "Led by Mumbai Youth Congress president Zeenat Shabrin, protesters raised slogans against Meta and accused the company of favouring the BJP." &mdash; <a href="#" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a>
     </div>
     
   </div>
@@ -360,7 +381,7 @@ Why Are Youth Congress Workers Protesting Against Meta?</div>
 Debate is growing in India about potential risks to free speech from the increasingly strict efforts of Prime Minister Narendra Modi&#39;s government to remove social media content it objects to.</div>
     
     <div class="evidence">
-      "Meta&#39;s India offices hit by opposition protests over account removals Debate is growing in India about potential risks to free speech from the increasingly strict..." &mdash; <a href="https://www.channelnewsasia.com/asia/india-congress-party-meta-protests-censorship-6571316" target="_blank" rel="noopener noreferrer"><strong>CNA – Asia</strong></a>
+      "Meta&#39;s India offices hit by opposition protests over account removals Debate is growing in India about potential risks to free speech from the increasingly strict..." &mdash; <a href="#" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a>
     </div>
     
   </div>
@@ -369,7 +390,7 @@ Debate is growing in India about potential risks to free speech from the increas
     <div class="claim-body">Per CNA – Asia: The youth wing of India&#39;s main opposition Congress party clashed with police outside Meta offices, protesting the company&#39;s removal of some Instagram accounts of its members, according to footage released by the group on Saturday (Nov 21).</div>
     
     <div class="evidence">
-      "NEW DELHI: The youth wing of India&#39;s main opposition Congress party clashed with police outside Meta offices, protesting the company&#39;s removal of some Instagram accounts..." &mdash; <a href="https://www.channelnewsasia.com/asia/india-congress-party-meta-protests-censorship-6571316" target="_blank" rel="noopener noreferrer"><strong>CNA – Asia</strong></a>
+      "NEW DELHI: The youth wing of India&#39;s main opposition Congress party clashed with police outside Meta offices, protesting the company&#39;s removal of some Instagram accounts..." &mdash; <a href="#" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a>
     </div>
     
   </div>
@@ -378,7 +399,7 @@ Debate is growing in India about potential risks to free speech from the increas
     <div class="claim-body">Per CNA – Asia: Meta has said it restricts content in India to comply with local laws.</div>
     
     <div class="evidence">
-      "Meta has said it restricts content in India to comply with local laws." &mdash; <a href="https://www.channelnewsasia.com/asia/india-congress-party-meta-protests-censorship-6571316" target="_blank" rel="noopener noreferrer"><strong>CNA – Asia</strong></a>
+      "Meta has said it restricts content in India to comply with local laws." &mdash; <a href="#" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a>
     </div>
     
   </div>
@@ -387,7 +408,7 @@ Debate is growing in India about potential risks to free speech from the increas
     <div class="claim-body">Per CNA – Asia: Reporters Without Borders has said the removal of journalistic content from social media has been on the rise in India this year, and free-speech activists say a new government rule gives social media companies hardly any time to review and decide on takedown requests.</div>
     
     <div class="evidence">
-      "Reporters Without Borders has said the removal of journalistic content from social media has been on the rise in India this year, and free-speech activists..." &mdash; <a href="https://www.channelnewsasia.com/asia/india-congress-party-meta-protests-censorship-6571316" target="_blank" rel="noopener noreferrer"><strong>CNA – Asia</strong></a>
+      "Reporters Without Borders has said the removal of journalistic content from social media has been on the rise in India this year, and free-speech activists..." &mdash; <a href="#" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a>
     </div>
     
   </div>
@@ -424,7 +445,7 @@ Police registered a complaint against four Youth Congress leaders in Mumbai and 
     <div class="claim-body">Per Economic Times: Around 20 to 21 protesters were taken into preventive custody by police and released after roughly three hours.</div>
     
     <div class="evidence">
-      "Around 20 to 21 protesters were taken into preventive custody by police and released after roughly three hours." &mdash; <a href="https://economictimes.indiatimes.com/news/politics-and-nation/youth-congress-vandalises-meta-offices-in-hyderabad-and-mumbai-over-suspension-of-social-media-accounts/articleshow/136048468.cms" target="_blank" rel="noopener noreferrer"><strong>Economic Times</strong></a>
+      "Around 20 to 21 protesters were taken into preventive custody by police and released after roughly three hours." &mdash; <a href="#" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a>
     </div>
     
   </div>
@@ -433,7 +454,7 @@ Police registered a complaint against four Youth Congress leaders in Mumbai and 
     <div class="claim-body">Per Economic Times: Similar demonstrations were reported by Youth Congress units in other cities, including Mumbai, where protesters also burnt a poster of IT and I&amp;B Minister Ashwini Vaishnaw and Gurugram.</div>
     
     <div class="evidence">
-      "Similar demonstrations were reported by Youth Congress units in other cities, including Mumbai, where protesters also burnt a poster of IT and I&amp;B Minister Ashwini..." &mdash; <a href="https://economictimes.indiatimes.com/news/politics-and-nation/youth-congress-vandalises-meta-offices-in-hyderabad-and-mumbai-over-suspension-of-social-media-accounts/articleshow/136048468.cms" target="_blank" rel="noopener noreferrer"><strong>Economic Times</strong></a>
+      "Similar demonstrations were reported by Youth Congress units in other cities, including Mumbai, where protesters also burnt a poster of IT and I&amp;B Minister Ashwini..." &mdash; <a href="#" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a>
     </div>
     
   </div>
@@ -443,7 +464,7 @@ Police registered a complaint against four Youth Congress leaders in Mumbai and 
 &#34;Every Indian who believes in growth should oppose Congress vandalism!&#34; he said.</div>
     
     <div class="evidence">
-      "Taking a swipe at the Congress, Bhandari said this was the reason India was a &#34;fragile five economy&#34; when Congress was in power. &#34;Every Indian..." &mdash; <a href="https://economictimes.indiatimes.com/news/politics-and-nation/youth-congress-vandalises-meta-offices-in-hyderabad-and-mumbai-over-suspension-of-social-media-accounts/articleshow/136048468.cms" target="_blank" rel="noopener noreferrer"><strong>Economic Times</strong></a>
+      "Taking a swipe at the Congress, Bhandari said this was the reason India was a &#34;fragile five economy&#34; when Congress was in power. &#34;Every Indian..." &mdash; <a href="#" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a>
     </div>
     
   </div>
@@ -507,72 +528,7 @@ The World Hindu Congress 2026 organising committee has sought Maharashtra Chief 
 
   <!-- Source Links & Transparency Table (T2: Show outlet name instead of internal source ID) -->
   <div class="sources-table-wrap">
-    <h3>All Contributing Sources (6)</h3>
-    
-    <div class="source-item">
-      <div>
-        <a href="https://www.livemint.com/news/india/meta-offices-in-gurugram-hyderabad-mumbai-see-protests-from-congresss-youth-wing-heres-why-11795254533372.html" target="_blank" rel="noopener noreferrer">Meta offices in Gurugram, Hyderabad, Mumbai see protests from Congress&#39;s youth wing: Here&#39;s why</a>
-        <div class="source-meta" style="margin-top: 4px;">
-          <span class="badge badge-outlet">Mint</span>
-          
-          <span style="font-size: 0.75rem; color: var(--text-muted);">(livemint.com)</span>
-          
-          
-        </div>
-      </div>
-    </div>
-    
-    <div class="source-item">
-      <div>
-        <a href="https://www.news18.com/india/youth-congress-workers-vandalise-metas-hyderabad-office-over-suspended-accounts-video-ws-l-10435040.html" target="_blank" rel="noopener noreferrer">Youth Congress Workers Vandalise Meta&#39;s Hyderabad Office Over Suspended Accounts | Video</a>
-        <div class="source-meta" style="margin-top: 4px;">
-          <span class="badge badge-outlet">News18</span>
-          
-          <span style="font-size: 0.75rem; color: var(--text-muted);">(news18.com)</span>
-          
-          
-        </div>
-      </div>
-    </div>
-    
-    <div class="source-item">
-      <div>
-        <a href="https://economictimes.indiatimes.com/news/politics-and-nation/youth-congress-vandalises-meta-offices-in-hyderabad-and-mumbai-over-suspension-of-social-media-accounts/articleshow/136048468.cms" target="_blank" rel="noopener noreferrer">Youth Congress vandalises Meta offices in Hyd, Bom</a>
-        <div class="source-meta" style="margin-top: 4px;">
-          <span class="badge badge-outlet">Economic Times</span>
-          
-          <span style="font-size: 0.75rem; color: var(--text-muted);">(economictimes.indiatimes.com)</span>
-          
-          
-        </div>
-      </div>
-    </div>
-    
-    <div class="source-item">
-      <div>
-        <a href="https://www.dnaindia.com/india/report-youth-congress-workers-vandalise-meta-office-in-hyderabad-over-restricted-accounts-3224440" target="_blank" rel="noopener noreferrer">Youth Congress workers vandalise Meta office in Hyderabad over restricted accounts</a>
-        <div class="source-meta" style="margin-top: 4px;">
-          <span class="badge badge-outlet">DNA India</span>
-          
-          <span style="font-size: 0.75rem; color: var(--text-muted);">(dnaindia.com)</span>
-          
-          
-        </div>
-      </div>
-    </div>
-    
-    <div class="source-item">
-      <div>
-        <a href="https://www.channelnewsasia.com/asia/india-congress-party-meta-protests-censorship-6571316" target="_blank" rel="noopener noreferrer">Meta&#39;s India offices hit by opposition protests over account removals</a>
-        <div class="source-meta" style="margin-top: 4px;">
-          <span class="badge badge-outlet">CNA – Asia</span>
-          
-          <span style="font-size: 0.75rem; color: var(--text-muted);">(channelnewsasia.com)</span>
-          
-          
-        </div>
-      </div>
-    </div>
+    <h3>All Contributing Sources (1)</h3>
     
     <div class="source-item">
       <div>
@@ -628,6 +584,99 @@ The World Hindu Congress 2026 organising committee has sought Maharashtra Chief 
             el.textContent = dateStr + ', ' + timeStr;
           }
         } catch(e) {}
+      });
+    });
+  </script>
+
+  <!-- Smart Hide-on-Scroll Navigation, Reading Progress & Back-to-Top -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var header = document.getElementById('siteHeader');
+      var progressBar = document.getElementById('readingProgress');
+      var backToTop = document.getElementById('backToTop');
+
+      var lastScrollY = window.pageYOffset || document.documentElement.scrollTop;
+      var ticking = false;
+      var scrollThreshold = 8;
+
+      function onScroll() {
+        var currentScrollY = window.pageYOffset || document.documentElement.scrollTop;
+        var maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+
+        // 1. Reading progress bar
+        if (progressBar && maxScroll > 0) {
+          var pct = Math.min(100, Math.max(0, (currentScrollY / maxScroll) * 100));
+          progressBar.style.width = pct + '%';
+        }
+
+        // 2. Back to top button
+        if (backToTop) {
+          if (currentScrollY > 400) {
+            backToTop.classList.add('visible');
+          } else {
+            backToTop.classList.remove('visible');
+          }
+        }
+
+        // 3. Smart Hide/Show Header
+        if (!header) {
+          ticking = false;
+          return;
+        }
+
+        // Always show and remove elevation at very top
+        if (currentScrollY <= 15) {
+          header.classList.remove('header--hidden');
+          header.classList.remove('header--scrolled');
+          lastScrollY = currentScrollY;
+          ticking = false;
+          return;
+        }
+
+        header.classList.add('header--scrolled');
+
+        var delta = currentScrollY - lastScrollY;
+
+        // Prevent hiding near bottom of page on mobile rubber-band bounce
+        if (maxScroll > 0 && currentScrollY >= maxScroll - 30) {
+          ticking = false;
+          return;
+        }
+
+        if (delta > scrollThreshold && currentScrollY > 60) {
+          // Scrolling DOWN -> Hide nav bar so full news occupies entire viewport
+          header.classList.add('header--hidden');
+        } else if (delta < -scrollThreshold) {
+          // Scrolling UP -> Reveal nav bar smoothly
+          header.classList.remove('header--hidden');
+        }
+
+        lastScrollY = currentScrollY;
+        ticking = false;
+      }
+
+      window.addEventListener('scroll', function() {
+        if (!ticking) {
+          window.requestAnimationFrame(onScroll);
+          ticking = true;
+        }
+      }, { passive: true });
+
+      if (backToTop) {
+        backToTop.addEventListener('click', function() {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+
+      // Active nav link highlight based on current path
+      var currentPath = window.location.pathname.split('/').pop() || 'index.html';
+      document.querySelectorAll('.nav-links a').forEach(function(link) {
+        var href = link.getAttribute('href');
+        if (href === currentPath || (currentPath === '' && href === 'index.html')) {
+          link.classList.add('active');
+        } else if (currentPath.indexOf('page_') === 0 && href === 'index.html') {
+          link.classList.add('active');
+        }
       });
     });
   </script>

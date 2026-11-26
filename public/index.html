@@ -29,32 +29,53 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
+  <!-- Reading Progress Bar (stays subtle at the very top edge) -->
+  <div class="reading-progress-bar" id="readingProgress" aria-hidden="true"></div>
+
+  <header id="siteHeader">
     <div class="container">
       <div class="header-inner">
         <div class="site-brand">
           
           <h1 class="site-title">
-            <a href="index.html">TrippyNews</a>
+            <a href="index.html">
+              <span class="brand-icon" aria-hidden="true">⬡</span>
+              <span class="brand-name">TrippyNews</span>
+            </a>
           </h1>
           
           <span class="site-tagline">Automated News Corroboration Pipeline</span>
         </div>
-        <div class="header-live">
-          <span class="live-dot"></span>
-          Last updated: <time datetime="2026-11-26T14:13:44.632597+00:00" class="local-time">26 Nov 2026, 19:43 IST</time>
+
+        <nav class="header-nav" aria-label="Main Navigation">
+          <ul class="nav-links">
+            <li><a href="index.html">Top Stories</a></li>
+            <li><a href="methodology.html">Methodology</a></li>
+            <li><a href="corrections.html">Corrections &amp; Changelog</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-live" title="Automated pipeline status">
+          <span class="live-dot-wrap">
+            <span class="live-dot-ping"></span>
+            <span class="live-dot"></span>
+          </span>
+          <span class="live-label">LIVE</span>
+          <span class="live-sep">•</span>
+          <span class="live-time"><time datetime="2026-11-26T14:43:30.958621+00:00" class="local-time">26 Nov, 20:13 IST</time></span>
         </div>
       </div>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html">Top Stories</a></li>
-          <li><a href="methodology.html">Methodology</a></li>
-          <li><a href="corrections.html">Corrections &amp; Changelog</a></li>
-          <li><a href="about.html">About</a></li>
-        </ul>
-      </nav>
     </div>
   </header>
+
+  <!-- Floating Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top" title="Scroll to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <line x1="12" y1="19" x2="12" y2="5"></line>
+      <polyline points="5 12 12 5 19 12"></polyline>
+    </svg>
+  </button>
 
   <main class="container">
     <div class="disclosure-banner">
@@ -274,6 +295,78 @@
   
   
   
+  
+
+  <article class="story-card level-strongly">
+    <div class="meta-row">
+      <span class="badge badge-strongly">Strongly corroborated</span>
+      
+      <span class="source-count">7 independent sources</span>
+      <span class="sep">•</span>
+      <span class="score-pill">Score: 15.55</span>
+      
+      <span class="sep">•</span>
+      <time datetime="2026-11-25T17:21:06+00:00" class="story-date local-time">25 Nov 2026, 22:51 IST</time>
+      
+    </div>
+
+    <h2><a href="story_2055.html" class="headline-link">China to launch Shenzhou-24 spaceship with first foreign astronaut</a></h2>
+
+    
+    <p class="story-summary">Independent corroboration across reporting outlets indicates that china will launch its Shenzhou-24 spaceship recently at 8:18 a.m. local time (per reporting, November 25) with a crew including a per reporting, Pakistani national, who will be the first per reporting, foreign astronaut to board per reporting, China’s space station. Consensus reporting also confirms that the China Manned Space Agency (CMSA) announced recently that the crew is in good condition as well as launch preparations are complete. While core facts align, sources present differing accounts regarding whether Ali is scheduled for a short-term visit before returning with two of the outgoing Shenzhou-23 crew or Ali is scheduled for a short-term visit before returning with two of the outgoing Shenzhou-23 crew.</p>
+    
+
+    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
+    <div class="sources-list">
+      <strong>Sources:</strong>
+      
+      <span class="source-item-chip">
+        <a href="https://www.thehindu.com/sci-tech/science/chinas-shenzhou-24-spaceship-to-include-first-foreign-astronaut-from-pakistan/article71737165.ece" target="_blank" rel="noopener noreferrer" class="source-title-link" title="China&#39;s Shenzhou-24 spaceship to include first foreign astronaut from Pakistan">China&#39;s Shenzhou-24 spaceship to include first foreign astronaut from Pakistan</a>
+        <span class="badge badge-outlet">The Hindu</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://economictimes.indiatimes.com/news/international/world-news/china-to-launch-shenzhou-24-with-pakistani-astronaut-first-foreigner-on-space-station/articleshow/136117969.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="China to send Shenzhou-24 with Pakistani astronaut">China to send Shenzhou-24 with Pakistani astronaut</a>
+        <span class="badge badge-outlet">Economic Times</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.channelnewsasia.com/east-asia/china-first-foreign-astronaut-pakistani-national-shenzhou-24-6576981" target="_blank" rel="noopener noreferrer" class="source-title-link" title="China to launch Shenzhou-24 spaceship with first foreign astronaut">China to launch Shenzhou-24 spaceship with first foreign astronaut</a>
+        <span class="badge badge-outlet">CNA – Asia</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://timesofindia.indiatimes.com/world/china/china-launches-shenzhou-24-spacecraft-carrying-first-pakistani-astronaut-to-its-space-station-90-experiments-planned/articleshow/136144937.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="China launches Shenzhou-24 with first Pakistani astronaut to its space station">China launches Shenzhou-24 with first Pakistani astronaut to its space station</a>
+        <span class="badge badge-outlet">Times of India</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.aljazeera.com/news/2026/11/25/pakistan-rejoices-as-countrys-first-astronaut-enters-orbit" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Pakistan rejoices as country’s first astronaut enters orbit">Pakistan rejoices as country’s first astronaut enters orbit</a>
+        <span class="badge badge-outlet">Al Jazeera – World</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.livemint.com/news/world/pakistans-first-astronaut-reaches-china-s-space-station-what-xi-jinping-asif-ali-zardari-said-in-letter-exchange-11795618993943.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Pakistan’s first astronaut reaches China’s space station: What Xi Jinping, Asif Ali Zardari said in letter exchange">Pakistan’s first astronaut reaches China’s space station: What Xi Jinping, Asif Ali Zardari said in letter exchange</a>
+        <span class="badge badge-outlet">Mint</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.news18.com/videos/raw-report/china-pakistan-partnership-reaches-orbit-the-new-geopolitical-equation-space-race-raw-report-10441097.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="China-Pakistan Partnership Reaches Orbit: The New Geopolitical Equation | Space Race | raw Report">China-Pakistan Partnership Reaches Orbit: The New Geopolitical Equation | Space Race | raw Report</a>
+        <span class="badge badge-outlet">News18</span>
+        
+      </span>
+      
+    </div>
+  </article>
+  
+  
+  
 
   <article class="story-card level-corroborated">
     <div class="meta-row">
@@ -347,78 +440,6 @@
     <div class="meta-row">
       <span class="badge badge-strongly">Strongly corroborated</span>
       
-      <span class="source-count">7 independent sources</span>
-      <span class="sep">•</span>
-      <span class="score-pill">Score: 15.55</span>
-      
-      <span class="sep">•</span>
-      <time datetime="2026-11-25T17:21:06+00:00" class="story-date local-time">25 Nov 2026, 22:51 IST</time>
-      
-    </div>
-
-    <h2><a href="story_2055.html" class="headline-link">China to launch Shenzhou-24 spaceship with first foreign astronaut</a></h2>
-
-    
-    <p class="story-summary">Independent corroboration across reporting outlets indicates that china will launch its Shenzhou-24 spaceship recently at 8:18 a.m. local time (per reporting, November 25) with a crew including a per reporting, Pakistani national, who will be the first per reporting, foreign astronaut to board per reporting, China’s space station. Consensus reporting also confirms that the China Manned Space Agency (CMSA) announced recently that the crew is in good condition as well as launch preparations are complete. While core facts align, sources present differing accounts regarding whether Ali is scheduled for a short-term visit before returning with two of the outgoing Shenzhou-23 crew or Ali is scheduled for a short-term visit before returning with two of the outgoing Shenzhou-23 crew.</p>
-    
-
-    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
-    <div class="sources-list">
-      <strong>Sources:</strong>
-      
-      <span class="source-item-chip">
-        <a href="https://www.thehindu.com/sci-tech/science/chinas-shenzhou-24-spaceship-to-include-first-foreign-astronaut-from-pakistan/article71737165.ece" target="_blank" rel="noopener noreferrer" class="source-title-link" title="China&#39;s Shenzhou-24 spaceship to include first foreign astronaut from Pakistan">China&#39;s Shenzhou-24 spaceship to include first foreign astronaut from Pakistan</a>
-        <span class="badge badge-outlet">The Hindu</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://economictimes.indiatimes.com/news/international/world-news/china-to-launch-shenzhou-24-with-pakistani-astronaut-first-foreigner-on-space-station/articleshow/136117969.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="China to send Shenzhou-24 with Pakistani astronaut">China to send Shenzhou-24 with Pakistani astronaut</a>
-        <span class="badge badge-outlet">Economic Times</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://www.channelnewsasia.com/east-asia/china-first-foreign-astronaut-pakistani-national-shenzhou-24-6576981" target="_blank" rel="noopener noreferrer" class="source-title-link" title="China to launch Shenzhou-24 spaceship with first foreign astronaut">China to launch Shenzhou-24 spaceship with first foreign astronaut</a>
-        <span class="badge badge-outlet">CNA – Asia</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://timesofindia.indiatimes.com/world/china/china-launches-shenzhou-24-spacecraft-carrying-first-pakistani-astronaut-to-its-space-station-90-experiments-planned/articleshow/136144937.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="China launches Shenzhou-24 with first Pakistani astronaut to its space station">China launches Shenzhou-24 with first Pakistani astronaut to its space station</a>
-        <span class="badge badge-outlet">Times of India</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://www.aljazeera.com/news/2026/11/25/pakistan-rejoices-as-countrys-first-astronaut-enters-orbit" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Pakistan rejoices as country’s first astronaut enters orbit">Pakistan rejoices as country’s first astronaut enters orbit</a>
-        <span class="badge badge-outlet">Al Jazeera – World</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://www.livemint.com/news/world/pakistans-first-astronaut-reaches-china-s-space-station-what-xi-jinping-asif-ali-zardari-said-in-letter-exchange-11795618993943.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Pakistan’s first astronaut reaches China’s space station: What Xi Jinping, Asif Ali Zardari said in letter exchange">Pakistan’s first astronaut reaches China’s space station: What Xi Jinping, Asif Ali Zardari said in letter exchange</a>
-        <span class="badge badge-outlet">Mint</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://www.news18.com/videos/raw-report/china-pakistan-partnership-reaches-orbit-the-new-geopolitical-equation-space-race-raw-report-10441097.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="China-Pakistan Partnership Reaches Orbit: The New Geopolitical Equation | Space Race | raw Report">China-Pakistan Partnership Reaches Orbit: The New Geopolitical Equation | Space Race | raw Report</a>
-        <span class="badge badge-outlet">News18</span>
-        
-      </span>
-      
-    </div>
-  </article>
-  
-  
-  
-  
-
-  <article class="story-card level-strongly">
-    <div class="meta-row">
-      <span class="badge badge-strongly">Strongly corroborated</span>
-      
       <span class="source-count">4 independent sources</span>
       <span class="sep">•</span>
       <span class="score-pill">Score: 9.40</span>
@@ -467,6 +488,79 @@
       <span class="source-item-chip">
         <a href="https://www.dnaindia.com/india/report-anant-singh-s-daughter-s-wedding-goes-viral-grand-celebrations-luxury-gifts-and-chaotic-scenes-at-food-counters-3224655" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Anant Singh&#39;s daughter&#39;s wedding goes viral: Grand celebrations, luxury gifts and chaotic scenes at food counters">Anant Singh&#39;s daughter&#39;s wedding goes viral: Grand celebrations, luxury gifts and chaotic scenes at food counters</a>
         <span class="badge badge-outlet">DNA India</span>
+        
+      </span>
+      
+    </div>
+  </article>
+  
+  
+  
+
+  <article class="story-card level-corroborated">
+    <div class="meta-row">
+      <span class="badge badge-corroborated">Corroborated</span>
+      
+      <span class="source-count">6 independent sources</span>
+      <span class="sep">•</span>
+      <span class="score-pill">Score: 8.16</span>
+      
+      <span class="sep">•</span>
+      <time datetime="2026-11-26T11:07:30+00:00" class="story-date local-time">26 Nov 2026, 16:37 IST</time>
+      
+    </div>
+
+    <h2><a href="story_2154.html" class="headline-link">Are Trump’s tariffs aimed at securing US-friendly trade deals?</a></h2>
+
+    
+    <div class="story-summary-omitted">
+      
+      <div class="empty-state-notice entailment-notice">
+        <span class="notice-badge">&#9432; Constrained to Verified Facts</span>
+        <p>AI narrative synthesis suppressed to prevent hallucination because reporting lacks sufficient multi-source consensus. View individual source claims on the story page.</p>
+        <a href="story_2154.html" class="view-claims-btn">View claims &rarr;</a>
+      </div>
+      
+    </div>
+    
+
+    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
+    <div class="sources-list">
+      <strong>Sources:</strong>
+      
+      <span class="source-item-chip">
+        <a href="https://www.indiatoday.in/business/story/india-faces-fresh-us-tariff-threat-as-trump-prepares-to-raise-duties-on-16-nations-3046105-2026-11-24" target="_blank" rel="noopener noreferrer" class="source-title-link" title="India faces fresh US tariff threat as Trump prepares to raise duties on 16 nations">India faces fresh US tariff threat as Trump prepares to raise duties on 16 nations</a>
+        <span class="badge badge-outlet">India Today</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.thehindu.com/news/international/trump-administration-set-to-unveil-new-tariffs-after-probeon-excess-factory-capacity-sources/article71740905.ece" target="_blank" rel="noopener noreferrer" class="source-title-link" title="U.S. set to slap tariffs on China, EU and others after probe on excess industrial capacity: report">U.S. set to slap tariffs on China, EU and others after probe on excess industrial capacity: report</a>
+        <span class="badge badge-outlet">The Hindu</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.livemint.com/news/us-news/us-preparing-to-raise-tariffs-on-china-india-others-to-be-added-to-levies-imposed-under-section-301-heres-why-11795574083097.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="US preparing to raise tariffs on China, India, others; to be added to levies imposed under Section 301 | Here&#39;s why">US preparing to raise tariffs on China, India, others; to be added to levies imposed under Section 301 | Here&#39;s why</a>
+        <span class="badge badge-outlet">Mint</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.news18.com/videos/breaking-news/u-s-threatens-india-with-25-tariffs-deal-could-bring-rate-down-to-17-trump-tariffs-news18-10441126.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="U.S. Threatens India With 25% Tariffs: Deal Could Bring Rate Down To 17% | Trump Tariffs | News18">U.S. Threatens India With 25% Tariffs: Deal Could Bring Rate Down To 17% | Trump Tariffs | News18</a>
+        <span class="badge badge-outlet">News18</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.dnaindia.com/india/report-us-proposes-25-percent-tariff-indian-goods-trump-india-trade-deal-3224628" target="_blank" rel="noopener noreferrer" class="source-title-link" title="US proposes 25% tariffs on Indian goods: Why is Trump raising duties amid trade deal talks?">US proposes 25% tariffs on Indian goods: Why is Trump raising duties amid trade deal talks?</a>
+        <span class="badge badge-outlet">DNA India</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.aljazeera.com/news/2026/11/26/are-trumps-tariffs-aimed-at-securing-us-friendly-trade-deals" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Are Trump’s tariffs aimed at securing US-friendly trade deals?">Are Trump’s tariffs aimed at securing US-friendly trade deals?</a>
+        <span class="badge badge-outlet">Al Jazeera – World</span>
         
       </span>
       
@@ -685,80 +779,6 @@
     </div>
   </article>
   
-  
-  
-  
-
-  <article class="story-card level-strongly">
-    <div class="meta-row">
-      <span class="badge badge-strongly">Strongly corroborated</span>
-      
-      <span class="source-count">6 independent sources</span>
-      <span class="sep">•</span>
-      <span class="score-pill">Score: 12.16</span>
-      
-      <span class="sep">•</span>
-      <time datetime="2026-11-25T10:09:32+00:00" class="story-date local-time">25 Nov 2026, 15:39 IST</time>
-      
-    </div>
-
-    <h2><a href="story_1955.html" class="headline-link">US preparing to unveil plan for new tariffs on global trading partners</a></h2>
-
-    
-    <div class="story-summary-omitted">
-      
-      <div class="empty-state-notice entailment-notice">
-        <span class="notice-badge">&#9432; Constrained to Verified Facts</span>
-        <p>AI narrative synthesis suppressed to prevent hallucination because reporting lacks sufficient multi-source consensus. View individual source claims on the story page.</p>
-        <a href="story_1955.html" class="view-claims-btn">View claims &rarr;</a>
-      </div>
-      
-    </div>
-    
-
-    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
-    <div class="sources-list">
-      <strong>Sources:</strong>
-      
-      <span class="source-item-chip">
-        <a href="https://timesofindia.indiatimes.com/business/india-business/trump-administration-may-raise-tariffs-on-many-countries-including-india-and-china-report/articleshow/136133821.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Trump admin may raise tariffs on many countries including India and China: Report">Trump admin may raise tariffs on many countries including India and China: Report</a>
-        <span class="badge badge-outlet">Times of India</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://www.indiatoday.in/business/story/india-faces-fresh-us-tariff-threat-as-trump-prepares-to-raise-duties-on-16-nations-3046105-2026-11-24" target="_blank" rel="noopener noreferrer" class="source-title-link" title="India faces fresh US tariff threat as Trump prepares to raise duties on 16 nations">India faces fresh US tariff threat as Trump prepares to raise duties on 16 nations</a>
-        <span class="badge badge-outlet">India Today</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://www.thehindu.com/news/international/trump-administration-set-to-unveil-new-tariffs-after-probeon-excess-factory-capacity-sources/article71740905.ece" target="_blank" rel="noopener noreferrer" class="source-title-link" title="U.S. set to slap tariffs on China, EU and others after probe on excess industrial capacity: report">U.S. set to slap tariffs on China, EU and others after probe on excess industrial capacity: report</a>
-        <span class="badge badge-outlet">The Hindu</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://www.livemint.com/news/world/trump-set-to-unveil-new-tariffs-after-probe-on-excess-factory-capacity-11795584975909.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Trump set to unveil new tariffs after probe on excess factory capacity">Trump set to unveil new tariffs after probe on excess factory capacity</a>
-        <span class="badge badge-outlet">Mint</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://www.bbc.co.uk/news/articles/c893r9ke5p97o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" class="source-title-link" title="US preparing to unveil plan for new tariffs on global trading partners">US preparing to unveil plan for new tariffs on global trading partners</a>
-        <span class="badge badge-outlet">BBC News – India</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://www.straitstimes.com/world/united-states/us-ready-to-slap-tariffs-on-china-eu-and-others-over-subsidised-production-sources" target="_blank" rel="noopener noreferrer" class="source-title-link" title="US ready to impose tariffs on China, EU and others over subsidised production: Sources">US ready to impose tariffs on China, EU and others over subsidised production: Sources</a>
-        <span class="badge badge-outlet">The Straits Times – World</span>
-        
-      </span>
-      
-    </div>
-  </article>
-  
   </div>
 
   
@@ -818,6 +838,99 @@
             el.textContent = dateStr + ', ' + timeStr;
           }
         } catch(e) {}
+      });
+    });
+  </script>
+
+  <!-- Smart Hide-on-Scroll Navigation, Reading Progress & Back-to-Top -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var header = document.getElementById('siteHeader');
+      var progressBar = document.getElementById('readingProgress');
+      var backToTop = document.getElementById('backToTop');
+
+      var lastScrollY = window.pageYOffset || document.documentElement.scrollTop;
+      var ticking = false;
+      var scrollThreshold = 8;
+
+      function onScroll() {
+        var currentScrollY = window.pageYOffset || document.documentElement.scrollTop;
+        var maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+
+        // 1. Reading progress bar
+        if (progressBar && maxScroll > 0) {
+          var pct = Math.min(100, Math.max(0, (currentScrollY / maxScroll) * 100));
+          progressBar.style.width = pct + '%';
+        }
+
+        // 2. Back to top button
+        if (backToTop) {
+          if (currentScrollY > 400) {
+            backToTop.classList.add('visible');
+          } else {
+            backToTop.classList.remove('visible');
+          }
+        }
+
+        // 3. Smart Hide/Show Header
+        if (!header) {
+          ticking = false;
+          return;
+        }
+
+        // Always show and remove elevation at very top
+        if (currentScrollY <= 15) {
+          header.classList.remove('header--hidden');
+          header.classList.remove('header--scrolled');
+          lastScrollY = currentScrollY;
+          ticking = false;
+          return;
+        }
+
+        header.classList.add('header--scrolled');
+
+        var delta = currentScrollY - lastScrollY;
+
+        // Prevent hiding near bottom of page on mobile rubber-band bounce
+        if (maxScroll > 0 && currentScrollY >= maxScroll - 30) {
+          ticking = false;
+          return;
+        }
+
+        if (delta > scrollThreshold && currentScrollY > 60) {
+          // Scrolling DOWN -> Hide nav bar so full news occupies entire viewport
+          header.classList.add('header--hidden');
+        } else if (delta < -scrollThreshold) {
+          // Scrolling UP -> Reveal nav bar smoothly
+          header.classList.remove('header--hidden');
+        }
+
+        lastScrollY = currentScrollY;
+        ticking = false;
+      }
+
+      window.addEventListener('scroll', function() {
+        if (!ticking) {
+          window.requestAnimationFrame(onScroll);
+          ticking = true;
+        }
+      }, { passive: true });
+
+      if (backToTop) {
+        backToTop.addEventListener('click', function() {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+
+      // Active nav link highlight based on current path
+      var currentPath = window.location.pathname.split('/').pop() || 'index.html';
+      document.querySelectorAll('.nav-links a').forEach(function(link) {
+        var href = link.getAttribute('href');
+        if (href === currentPath || (currentPath === '' && href === 'index.html')) {
+          link.classList.add('active');
+        } else if (currentPath.indexOf('page_') === 0 && href === 'index.html') {
+          link.classList.add('active');
+        }
       });
     });
   </script>

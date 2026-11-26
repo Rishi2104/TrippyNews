@@ -14,7 +14,7 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="TrippyNews">
   <meta property="og:title" content="Zelenskyy says Putin a &#39;killer&#39; after Trump calls him his &#39;friend&#39;">
-  <meta property="og:description" content="Corroborated by 2 independent sources.">
+  <meta property="og:description" content="Corroborated by 1 independent sources.">
   <meta property="og:url" content="https://rishi2104.github.io/TrippyNews/">
   <meta property="og:image" content="https://rishi2104.github.io/TrippyNews/favicon.svg">
 
@@ -29,32 +29,53 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
+  <!-- Reading Progress Bar (stays subtle at the very top edge) -->
+  <div class="reading-progress-bar" id="readingProgress" aria-hidden="true"></div>
+
+  <header id="siteHeader">
     <div class="container">
       <div class="header-inner">
         <div class="site-brand">
           
           <div class="site-title">
-            <a href="index.html">TrippyNews</a>
+            <a href="index.html">
+              <span class="brand-icon" aria-hidden="true">⬡</span>
+              <span class="brand-name">TrippyNews</span>
+            </a>
           </div>
           
           <span class="site-tagline">Automated News Corroboration Pipeline</span>
         </div>
-        <div class="header-live">
-          <span class="live-dot"></span>
-          Last updated: <time datetime="2026-11-26T14:13:44.632597+00:00" class="local-time">26 Nov 2026, 19:43 IST</time>
+
+        <nav class="header-nav" aria-label="Main Navigation">
+          <ul class="nav-links">
+            <li><a href="index.html">Top Stories</a></li>
+            <li><a href="methodology.html">Methodology</a></li>
+            <li><a href="corrections.html">Corrections &amp; Changelog</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-live" title="Automated pipeline status">
+          <span class="live-dot-wrap">
+            <span class="live-dot-ping"></span>
+            <span class="live-dot"></span>
+          </span>
+          <span class="live-label">LIVE</span>
+          <span class="live-sep">•</span>
+          <span class="live-time"><time datetime="2026-11-26T14:43:30.958621+00:00" class="local-time">26 Nov, 20:13 IST</time></span>
         </div>
       </div>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html">Top Stories</a></li>
-          <li><a href="methodology.html">Methodology</a></li>
-          <li><a href="corrections.html">Corrections &amp; Changelog</a></li>
-          <li><a href="about.html">About</a></li>
-        </ul>
-      </nav>
     </div>
   </header>
+
+  <!-- Floating Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top" title="Scroll to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <line x1="12" y1="19" x2="12" y2="5"></line>
+      <polyline points="5 12 12 5 19 12"></polyline>
+    </svg>
+  </button>
 
   <main class="container">
     <div class="disclosure-banner">
@@ -76,7 +97,7 @@
     <div class="meta-row">
       <span class="badge badge-strongly">Strongly corroborated</span>
       
-      <span class="source-count">2 independent sources</span>
+      <span class="source-count">1 independent source</span>
       <span class="sep">•</span>
       <span class="score-pill">Score: 10.37</span>
       
@@ -100,7 +121,7 @@
 &#34;For us he&#39;s an enemy, and of course, for us, he is a killer.</div>
       
       <div class="evidence">
-        "WASHINGTON: Ukrainian President Volodymyr Zelenskyy branded Vladimir Putin a &#34;killer&#34; in an interview broadcast on Friday (Nov 20), after President Donald Trump described the Russian..." &mdash; <a href="https://www.channelnewsasia.com/world/ukraine-russia-volodymyr-zelenskyy-vladimir-putin-6571101" target="_blank" rel="noopener noreferrer"><strong>CNA – Asia</strong></a>
+        "WASHINGTON: Ukrainian President Volodymyr Zelenskyy branded Vladimir Putin a &#34;killer&#34; in an interview broadcast on Friday (Nov 20), after President Donald Trump described the Russian..." &mdash; <a href="#" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a>
       </div>
       
     </div>
@@ -110,7 +131,7 @@
       <div class="claim-body">Per CNA – Asia: That&#39;s a good thing, and our country is safe because of that,&#34; Trump said.</div>
       
       <div class="evidence">
-        "That&#39;s a good thing, and our country is safe because of that,&#34; Trump said." &mdash; <a href="https://www.channelnewsasia.com/world/ukraine-russia-volodymyr-zelenskyy-vladimir-putin-6571101" target="_blank" rel="noopener noreferrer"><strong>CNA – Asia</strong></a>
+        "That&#39;s a good thing, and our country is safe because of that,&#34; Trump said." &mdash; <a href="#" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a>
       </div>
       
     </div>
@@ -120,7 +141,7 @@
       <div class="claim-body">Per CNA – Asia: Asked if he believed Putin was a friend to America, Trump said &#34;I can&#39;t speak to America&#34; but added that their &#34;very good relationship ... gives us a lot of additional strength&#34;.</div>
       
       <div class="evidence">
-        "Asked if he believed Putin was a friend to America, Trump said &#34;I can&#39;t speak to America&#34; but added that their &#34;very good relationship ......" &mdash; <a href="https://www.channelnewsasia.com/world/ukraine-russia-volodymyr-zelenskyy-vladimir-putin-6571101" target="_blank" rel="noopener noreferrer"><strong>CNA – Asia</strong></a>
+        "Asked if he believed Putin was a friend to America, Trump said &#34;I can&#39;t speak to America&#34; but added that their &#34;very good relationship ......" &mdash; <a href="#" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a>
       </div>
       
     </div>
@@ -130,7 +151,7 @@
       <div class="claim-body">Per CNA – Asia: Putin&#39;s forces launched an all-out invasion of Ukraine in February 2022, sparking a devastating war that is estimated to have killed hundreds of thousands of people.</div>
       
       <div class="evidence">
-        "Putin&#39;s forces launched an all-out invasion of Ukraine in February 2022, sparking a devastating war that is estimated to have killed hundreds of thousands of..." &mdash; <a href="https://www.channelnewsasia.com/world/ukraine-russia-volodymyr-zelenskyy-vladimir-putin-6571101" target="_blank" rel="noopener noreferrer"><strong>CNA – Asia</strong></a>
+        "Putin&#39;s forces launched an all-out invasion of Ukraine in February 2022, sparking a devastating war that is estimated to have killed hundreds of thousands of..." &mdash; <a href="#" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a>
       </div>
       
     </div>
@@ -142,7 +163,7 @@ WASHINGTON - Ukrainian President Volodymyr Zelensky branded Vladimir Putin a “
 “For us he’s an enemy, and of course, for us, he is a killer.</div>
       
       <div class="evidence">
-        "AI generated WASHINGTON - Ukrainian President Volodymyr Zelensky branded Vladimir Putin a “killer” in an interview broadcast on Nov 20, US President Donald Trump described..." &mdash; <a href="https://www.straitstimes.com/world/europe/hes-a-killer-zelensky-on-putin-after-trump-calls-russian-leader-a-friend" target="_blank" rel="noopener noreferrer"><strong>The Straits Times – World</strong></a>
+        "AI generated WASHINGTON - Ukrainian President Volodymyr Zelensky branded Vladimir Putin a “killer” in an interview broadcast on Nov 20, US President Donald Trump described..." &mdash; <a href="#" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a>
       </div>
       
     </div>
@@ -152,7 +173,7 @@ WASHINGTON - Ukrainian President Volodymyr Zelensky branded Vladimir Putin a “
       <div class="claim-body">Per The Straits Times – World: That’s a good thing, and our country is safe because of that,” Trump said.</div>
       
       <div class="evidence">
-        "That’s a good thing, and our country is safe because of that,” Trump said." &mdash; <a href="https://www.straitstimes.com/world/europe/hes-a-killer-zelensky-on-putin-after-trump-calls-russian-leader-a-friend" target="_blank" rel="noopener noreferrer"><strong>The Straits Times – World</strong></a>
+        "That’s a good thing, and our country is safe because of that,” Trump said." &mdash; <a href="#" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a>
       </div>
       
     </div>
@@ -162,7 +183,7 @@ WASHINGTON - Ukrainian President Volodymyr Zelensky branded Vladimir Putin a “
       <div class="claim-body">Per The Straits Times – World: Asked if he believed Putin was a friend to America, Trump said “I can’t speak to America” but added that their “very good relationship... gives us a lot of additional strength”.</div>
       
       <div class="evidence">
-        "Asked if he believed Putin was a friend to America, Trump said “I can’t speak to America” but added that their “very good relationship... gives..." &mdash; <a href="https://www.straitstimes.com/world/europe/hes-a-killer-zelensky-on-putin-after-trump-calls-russian-leader-a-friend" target="_blank" rel="noopener noreferrer"><strong>The Straits Times – World</strong></a>
+        "Asked if he believed Putin was a friend to America, Trump said “I can’t speak to America” but added that their “very good relationship... gives..." &mdash; <a href="#" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a>
       </div>
       
     </div>
@@ -172,7 +193,7 @@ WASHINGTON - Ukrainian President Volodymyr Zelensky branded Vladimir Putin a “
       <div class="claim-body">Per The Straits Times – World: Putin’s forces launched an all-out invasion of Ukraine in February 2022, sparking a devastating war that is estimated to have killed hundreds of thousands of people.</div>
       
       <div class="evidence">
-        "Putin’s forces launched an all-out invasion of Ukraine in February 2022, sparking a devastating war that is estimated to have killed hundreds of thousands of..." &mdash; <a href="https://www.straitstimes.com/world/europe/hes-a-killer-zelensky-on-putin-after-trump-calls-russian-leader-a-friend" target="_blank" rel="noopener noreferrer"><strong>The Straits Times – World</strong></a>
+        "Putin’s forces launched an all-out invasion of Ukraine in February 2022, sparking a devastating war that is estimated to have killed hundreds of thousands of..." &mdash; <a href="#" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a>
       </div>
       
     </div>
@@ -230,7 +251,7 @@ Trump insisted his relationships with the other world leaders is a key to an eve
     <div class="claim-body">Per The Straits Times – World: Washington was Kyiv’s primary backer under president Joe Biden, but Trump has slashed military support for Ukraine since returning to office at the beginning of 2025.</div>
     
     <div class="evidence">
-      "Washington was Kyiv’s primary backer under president Joe Biden, but Trump has slashed military support for Ukraine since returning to office at the beginning of..." &mdash; <a href="https://www.straitstimes.com/world/europe/hes-a-killer-zelensky-on-putin-after-trump-calls-russian-leader-a-friend" target="_blank" rel="noopener noreferrer"><strong>The Straits Times – World</strong></a>
+      "Washington was Kyiv’s primary backer under president Joe Biden, but Trump has slashed military support for Ukraine since returning to office at the beginning of..." &mdash; <a href="#" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a>
     </div>
     
   </div>
@@ -386,33 +407,7 @@ Trump also warned US tech companies against building new artificial intelligence
 
   <!-- Source Links & Transparency Table (T2: Show outlet name instead of internal source ID) -->
   <div class="sources-table-wrap">
-    <h3>All Contributing Sources (3)</h3>
-    
-    <div class="source-item">
-      <div>
-        <a href="https://www.channelnewsasia.com/world/ukraine-russia-volodymyr-zelenskyy-vladimir-putin-6571101" target="_blank" rel="noopener noreferrer">Zelenskyy says Putin a &#39;killer&#39; after Trump calls him his &#39;friend&#39;</a>
-        <div class="source-meta" style="margin-top: 4px;">
-          <span class="badge badge-outlet">CNA – Asia</span>
-          
-          <span style="font-size: 0.75rem; color: var(--text-muted);">(channelnewsasia.com)</span>
-          
-          
-        </div>
-      </div>
-    </div>
-    
-    <div class="source-item">
-      <div>
-        <a href="https://www.straitstimes.com/world/europe/hes-a-killer-zelensky-on-putin-after-trump-calls-russian-leader-a-friend" target="_blank" rel="noopener noreferrer">‘He’s a killer’: Zelensky on Putin after Trump calls Russian leader a ‘friend’</a>
-        <div class="source-meta" style="margin-top: 4px;">
-          <span class="badge badge-outlet">The Straits Times – World</span>
-          
-          <span style="font-size: 0.75rem; color: var(--text-muted);">(straitstimes.com)</span>
-          
-          
-        </div>
-      </div>
-    </div>
+    <h3>All Contributing Sources (1)</h3>
     
     <div class="source-item">
       <div>
@@ -468,6 +463,99 @@ Trump also warned US tech companies against building new artificial intelligence
             el.textContent = dateStr + ', ' + timeStr;
           }
         } catch(e) {}
+      });
+    });
+  </script>
+
+  <!-- Smart Hide-on-Scroll Navigation, Reading Progress & Back-to-Top -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var header = document.getElementById('siteHeader');
+      var progressBar = document.getElementById('readingProgress');
+      var backToTop = document.getElementById('backToTop');
+
+      var lastScrollY = window.pageYOffset || document.documentElement.scrollTop;
+      var ticking = false;
+      var scrollThreshold = 8;
+
+      function onScroll() {
+        var currentScrollY = window.pageYOffset || document.documentElement.scrollTop;
+        var maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+
+        // 1. Reading progress bar
+        if (progressBar && maxScroll > 0) {
+          var pct = Math.min(100, Math.max(0, (currentScrollY / maxScroll) * 100));
+          progressBar.style.width = pct + '%';
+        }
+
+        // 2. Back to top button
+        if (backToTop) {
+          if (currentScrollY > 400) {
+            backToTop.classList.add('visible');
+          } else {
+            backToTop.classList.remove('visible');
+          }
+        }
+
+        // 3. Smart Hide/Show Header
+        if (!header) {
+          ticking = false;
+          return;
+        }
+
+        // Always show and remove elevation at very top
+        if (currentScrollY <= 15) {
+          header.classList.remove('header--hidden');
+          header.classList.remove('header--scrolled');
+          lastScrollY = currentScrollY;
+          ticking = false;
+          return;
+        }
+
+        header.classList.add('header--scrolled');
+
+        var delta = currentScrollY - lastScrollY;
+
+        // Prevent hiding near bottom of page on mobile rubber-band bounce
+        if (maxScroll > 0 && currentScrollY >= maxScroll - 30) {
+          ticking = false;
+          return;
+        }
+
+        if (delta > scrollThreshold && currentScrollY > 60) {
+          // Scrolling DOWN -> Hide nav bar so full news occupies entire viewport
+          header.classList.add('header--hidden');
+        } else if (delta < -scrollThreshold) {
+          // Scrolling UP -> Reveal nav bar smoothly
+          header.classList.remove('header--hidden');
+        }
+
+        lastScrollY = currentScrollY;
+        ticking = false;
+      }
+
+      window.addEventListener('scroll', function() {
+        if (!ticking) {
+          window.requestAnimationFrame(onScroll);
+          ticking = true;
+        }
+      }, { passive: true });
+
+      if (backToTop) {
+        backToTop.addEventListener('click', function() {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+
+      // Active nav link highlight based on current path
+      var currentPath = window.location.pathname.split('/').pop() || 'index.html';
+      document.querySelectorAll('.nav-links a').forEach(function(link) {
+        var href = link.getAttribute('href');
+        if (href === currentPath || (currentPath === '' && href === 'index.html')) {
+          link.classList.add('active');
+        } else if (currentPath.indexOf('page_') === 0 && href === 'index.html') {
+          link.classList.add('active');
+        }
       });
     });
   </script>

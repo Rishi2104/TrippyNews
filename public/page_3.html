@@ -29,32 +29,53 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
+  <!-- Reading Progress Bar (stays subtle at the very top edge) -->
+  <div class="reading-progress-bar" id="readingProgress" aria-hidden="true"></div>
+
+  <header id="siteHeader">
     <div class="container">
       <div class="header-inner">
         <div class="site-brand">
           
           <div class="site-title">
-            <a href="index.html">TrippyNews</a>
+            <a href="index.html">
+              <span class="brand-icon" aria-hidden="true">⬡</span>
+              <span class="brand-name">TrippyNews</span>
+            </a>
           </div>
           
           <span class="site-tagline">Automated News Corroboration Pipeline</span>
         </div>
-        <div class="header-live">
-          <span class="live-dot"></span>
-          Last updated: <time datetime="2026-11-26T14:13:44.632597+00:00" class="local-time">26 Nov 2026, 19:43 IST</time>
+
+        <nav class="header-nav" aria-label="Main Navigation">
+          <ul class="nav-links">
+            <li><a href="index.html">Top Stories</a></li>
+            <li><a href="methodology.html">Methodology</a></li>
+            <li><a href="corrections.html">Corrections &amp; Changelog</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-live" title="Automated pipeline status">
+          <span class="live-dot-wrap">
+            <span class="live-dot-ping"></span>
+            <span class="live-dot"></span>
+          </span>
+          <span class="live-label">LIVE</span>
+          <span class="live-sep">•</span>
+          <span class="live-time"><time datetime="2026-11-26T14:43:30.958621+00:00" class="local-time">26 Nov, 20:13 IST</time></span>
         </div>
       </div>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html">Top Stories</a></li>
-          <li><a href="methodology.html">Methodology</a></li>
-          <li><a href="corrections.html">Corrections &amp; Changelog</a></li>
-          <li><a href="about.html">About</a></li>
-        </ul>
-      </nav>
     </div>
   </header>
+
+  <!-- Floating Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top" title="Scroll to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <line x1="12" y1="19" x2="12" y2="5"></line>
+      <polyline points="5 12 12 5 19 12"></polyline>
+    </svg>
+  </button>
 
   <main class="container">
     <div class="disclosure-banner">
@@ -79,6 +100,135 @@
   
 
   <div id="stories-feed" class="stories-feed">
+  
+  
+  
+  
+
+  <article class="story-card level-strongly">
+    <div class="meta-row">
+      <span class="badge badge-strongly">Strongly corroborated</span>
+      
+      <span class="source-count">6 independent sources</span>
+      <span class="sep">•</span>
+      <span class="score-pill">Score: 9.39</span>
+      
+      <span class="sep">•</span>
+      <time datetime="2026-11-25T15:47:13+00:00" class="story-date local-time">25 Nov 2026, 21:17 IST</time>
+      
+    </div>
+
+    <h2><a href="story_2171.html" class="headline-link">China to launch Shenzhou-24 spaceship with first foreign astronaut</a></h2>
+
+    
+    <div class="story-summary-omitted">
+      
+      <div class="empty-state-notice entailment-notice">
+        <span class="notice-badge">&#9432; Constrained to Verified Facts</span>
+        <p>AI narrative synthesis suppressed to prevent hallucination because reporting lacks sufficient multi-source consensus. View individual source claims on the story page.</p>
+        <a href="story_2171.html" class="view-claims-btn">View claims &rarr;</a>
+      </div>
+      
+    </div>
+    
+
+    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
+    <div class="sources-list">
+      <strong>Sources:</strong>
+      
+      <span class="source-item-chip">
+        <a href="https://www.thehindu.com/sci-tech/science/chinas-shenzhou-24-spaceship-to-include-first-foreign-astronaut-from-pakistan/article71737165.ece" target="_blank" rel="noopener noreferrer" class="source-title-link" title="China&#39;s Shenzhou-24 spaceship to include first foreign astronaut from Pakistan">China&#39;s Shenzhou-24 spaceship to include first foreign astronaut from Pakistan</a>
+        <span class="badge badge-outlet">The Hindu</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.channelnewsasia.com/east-asia/china-first-foreign-astronaut-pakistani-national-shenzhou-24-6576981" target="_blank" rel="noopener noreferrer" class="source-title-link" title="China to launch Shenzhou-24 spaceship with first foreign astronaut">China to launch Shenzhou-24 spaceship with first foreign astronaut</a>
+        <span class="badge badge-outlet">CNA – Asia</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.scmp.com/news/china/science/article/3375536/pakistani-astronaut-joins-shenzhou-24-crew-heading-chinas-tiangong-space-station" target="_blank" rel="noopener noreferrer" class="source-title-link" title="‘The hope of 250 million’: China’s space station to welcome Pakistani astronaut">‘The hope of 250 million’: China’s space station to welcome Pakistani astronaut</a>
+        <span class="badge badge-outlet">SCMP – World</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://timesofindia.indiatimes.com/world/china/china-launches-shenzhou-24-spacecraft-carrying-first-pakistani-astronaut-to-its-space-station-90-experiments-planned/articleshow/136144937.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="China launches Shenzhou-24 with first Pakistani astronaut to its space station">China launches Shenzhou-24 with first Pakistani astronaut to its space station</a>
+        <span class="badge badge-outlet">Times of India</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.aljazeera.com/features/2026/11/25/from-stargazing-to-space-pakistan-watches-its-first-astronaut-take-flight" target="_blank" rel="noopener noreferrer" class="source-title-link" title="From stargazing to space: Pakistan watches its first astronaut take flight">From stargazing to space: Pakistan watches its first astronaut take flight</a>
+        <span class="badge badge-outlet">Al Jazeera – World</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.livemint.com/news/world/pakistans-first-astronaut-reaches-china-s-space-station-what-xi-jinping-asif-ali-zardari-said-in-letter-exchange-11795618993943.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Pakistan’s first astronaut reaches China’s space station: What Xi Jinping, Asif Ali Zardari said in letter exchange">Pakistan’s first astronaut reaches China’s space station: What Xi Jinping, Asif Ali Zardari said in letter exchange</a>
+        <span class="badge badge-outlet">Mint</span>
+        
+      </span>
+      
+    </div>
+  </article>
+  
+  
+  
+
+  <article class="story-card level-corroborated">
+    <div class="meta-row">
+      <span class="badge badge-corroborated">Corroborated</span>
+      
+      <span class="source-count">3 independent sources</span>
+      <span class="sep">•</span>
+      <span class="score-pill">Score: 8.23</span>
+      
+      <span class="sep">•</span>
+      <time datetime="2026-11-25T19:15:52+00:00" class="story-date local-time">26 Nov 2026, 00:45 IST</time>
+      
+    </div>
+
+    <h2><a href="story_2057.html" class="headline-link">Yemen&#39;s Houthis say Saudi attack kills 17</a></h2>
+
+    
+    <div class="story-summary-omitted">
+      
+      <div class="empty-state-notice entailment-notice">
+        <span class="notice-badge">&#9432; Constrained to Verified Facts</span>
+        <p>AI narrative synthesis suppressed to prevent hallucination because reporting lacks sufficient multi-source consensus. View individual source claims on the story page.</p>
+        <a href="story_2057.html" class="view-claims-btn">View claims &rarr;</a>
+      </div>
+      
+    </div>
+    
+
+    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
+    <div class="sources-list">
+      <strong>Sources:</strong>
+      
+      <span class="source-item-chip">
+        <a href="https://www.channelnewsasia.com/world/yemen-houthis-saudi-strikes-kill-seventeen-6575956" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Yemen&#39;s Houthis say Saudi attack kills 17">Yemen&#39;s Houthis say Saudi attack kills 17</a>
+        <span class="badge badge-outlet">CNA – Asia</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.aljazeera.com/news/liveblog/2026/11/25/iran-war-live-houthis-threaten-saudi-ports-over-coalitions-hodeidah-order" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Iran war live: Houthis threaten Saudi ports over coalition’s Hodeidah order">Iran war live: Houthis threaten Saudi ports over coalition’s Hodeidah order</a>
+        <span class="badge badge-outlet">Al Jazeera – World</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.straitstimes.com/world/middle-east/yemens-houthis-say-they-attacked-saudi-oil-refinery-and-riyadh-financial-district" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Yemen&#39;s Houthis say they attacked Saudi Arabia&#39;s Ras Tanura refinery">Yemen&#39;s Houthis say they attacked Saudi Arabia&#39;s Ras Tanura refinery</a>
+        <span class="badge badge-outlet">The Straits Times – World</span>
+        
+      </span>
+      
+    </div>
+  </article>
   
   
   
@@ -538,6 +688,73 @@
   
   
   
+
+  <article class="story-card level-corroborated">
+    <div class="meta-row">
+      <span class="badge badge-corroborated">Corroborated</span>
+      
+      <span class="source-count">5 independent sources</span>
+      <span class="sep">•</span>
+      <span class="score-pill">Score: 8.32</span>
+      
+      <span class="sep">•</span>
+      <time datetime="2026-11-25T15:53:24+00:00" class="story-date local-time">25 Nov 2026, 21:23 IST</time>
+      
+    </div>
+
+    <h2><a href="story_2075.html" class="headline-link">Indian Ocean must connect nations, not divide them: NSA Ajit Doval at Colombo Security Conclave</a></h2>
+
+    
+    <div class="story-summary-omitted">
+      
+      <div class="empty-state-notice entailment-notice">
+        <span class="notice-badge">&#9432; Constrained to Verified Facts</span>
+        <p>AI narrative synthesis suppressed to prevent hallucination because reporting lacks sufficient multi-source consensus. View individual source claims on the story page.</p>
+        <a href="story_2075.html" class="view-claims-btn">View claims &rarr;</a>
+      </div>
+      
+    </div>
+    
+
+    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
+    <div class="sources-list">
+      <strong>Sources:</strong>
+      
+      <span class="source-item-chip">
+        <a href="https://www.dnaindia.com/india/report-india-urges-unsc-to-end-black-sea-shipping-attacks-restore-safe-navigation-amid-russia-ukraine-conflict-3224546" target="_blank" rel="noopener noreferrer" class="source-title-link" title="India urges UNSC to end Black Sea shipping attacks, restore safe navigation amid Russia-Ukraine conflict">India urges UNSC to end Black Sea shipping attacks, restore safe navigation amid Russia-Ukraine conflict</a>
+        <span class="badge badge-outlet">DNA India</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.hindustantimes.com/india-news/eu-calls-for-regional-cooperation-with-india-to-secure-indian-ocean-sea-lanes-101795529741940.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="EU calls for regional cooperation with India to secure Indian Ocean sea lanes">EU calls for regional cooperation with India to secure Indian Ocean sea lanes</a>
+        <span class="badge badge-outlet">Hindustan Times</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://economictimes.indiatimes.com/news/defence/eu-holds-first-high-level-maritime-security-meet-in-delhi-to-tackle-indian-ocean-threats/articleshow/136136770.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="EU holds 1st high-level India maritime security meet">EU holds 1st high-level India maritime security meet</a>
+        <span class="badge badge-outlet">Economic Times</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.news18.com/india/indian-ocean-must-connect-not-divide-nations-ajit-doval-at-colombo-security-conclave-in-maldives-ws-l-10440098.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="&#39;Indian Ocean Must Connect, Not Divide Nations&#39;: Ajit Doval At Colombo Security Conclave In Maldives">&#39;Indian Ocean Must Connect, Not Divide Nations&#39;: Ajit Doval At Colombo Security Conclave In Maldives</a>
+        <span class="badge badge-outlet">News18</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://indianexpress.com/article/india/nsa-ajit-doval-colombo-security-conclave-male-maldives-indian-ocean-security-mahasagar-iora-meeting-10978514/" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Serious security challenges, promise all help: NSA to Indian Ocean nations">Serious security challenges, promise all help: NSA to Indian Ocean nations</a>
+        <span class="badge badge-outlet">Indian Express</span>
+        
+      </span>
+      
+    </div>
+  </article>
+  
+  
+  
   
 
   <article class="story-card level-strongly">
@@ -592,211 +809,6 @@
       <span class="source-item-chip">
         <a href="https://www.channelnewsasia.com/east-asia/china-shanghai-loyalty-chen-jining-investigation-6579886" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Shanghai party pledges loyalty to Beijing as top official faces investigation">Shanghai party pledges loyalty to Beijing as top official faces investigation</a>
         <span class="badge badge-outlet">CNA – Asia</span>
-        
-      </span>
-      
-    </div>
-  </article>
-  
-  
-  
-  
-
-  <article class="story-card level-strongly">
-    <div class="meta-row">
-      <span class="badge badge-strongly">Strongly corroborated</span>
-      
-      <span class="source-count">7 independent sources</span>
-      <span class="sep">•</span>
-      <span class="score-pill">Score: 10.36</span>
-      
-      <span class="sep">•</span>
-      <time datetime="2026-11-24T23:27:54+00:00" class="story-date local-time">25 Nov 2026, 04:57 IST</time>
-      
-    </div>
-
-    <h2><a href="story_1852.html" class="headline-link">China&#39;s Huawei convicted in sprawling US criminal trial over Iran business</a></h2>
-
-    
-    <div class="story-summary-omitted">
-      
-      <div class="empty-state-notice entailment-notice">
-        <span class="notice-badge">&#9432; Constrained to Verified Facts</span>
-        <p>AI narrative synthesis suppressed to prevent hallucination because reporting lacks sufficient multi-source consensus. View individual source claims on the story page.</p>
-        <a href="story_1852.html" class="view-claims-btn">View claims &rarr;</a>
-      </div>
-      
-    </div>
-    
-
-    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
-    <div class="sources-list">
-      <strong>Sources:</strong>
-      
-      <span class="source-item-chip">
-        <a href="https://www.thehindu.com/sci-tech/technology/chinese-tech-giant-huawei-is-guilty-of-conspiracy-to-steal-trade-secrets-us-jury-finds/article71740060.ece" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Chinese tech giant Huawei is guilty of conspiracy to steal trade secrets, U.S. jury finds">Chinese tech giant Huawei is guilty of conspiracy to steal trade secrets, U.S. jury finds</a>
-        <span class="badge badge-outlet">The Hindu</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://timesofindia.indiatimes.com/world/us/us-jury-convicts-huawei-of-trade-secret-theft-bank-fraud-escapes-racketeering-charge/articleshow/136144323.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="US jury finds Huawei guilty of hiding Iran business, stealing trade secrets">US jury finds Huawei guilty of hiding Iran business, stealing trade secrets</a>
-        <span class="badge badge-outlet">Times of India</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://www.indiatoday.in/world/story/huawei-us-jury-conviction-10-counts-iran-trade-secrets-case-3046230-2026-11-25" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Huawei nailed in US court over Iran business, trade secrets theft">Huawei nailed in US court over Iran business, trade secrets theft</a>
-        <span class="badge badge-outlet">India Today</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://www.channelnewsasia.com/world/huawei-convicted-us-criminal-trial-iran-business-trade-secrets-6579566" target="_blank" rel="noopener noreferrer" class="source-title-link" title="China&#39;s Huawei convicted in sprawling US criminal trial over Iran business">China&#39;s Huawei convicted in sprawling US criminal trial over Iran business</a>
-        <span class="badge badge-outlet">CNA – Asia</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://www.straitstimes.com/world/united-states/chinas-huawei-convicted-at-us-criminal-trial-stemming-from-iran-business" target="_blank" rel="noopener noreferrer" class="source-title-link" title="China’s Huawei convicted at US criminal trial stemming from Iran business">China’s Huawei convicted at US criminal trial stemming from Iran business</a>
-        <span class="badge badge-outlet">The Straits Times – World</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://www.scmp.com/news/us/article/3375673/huawei-guilty-10-12-counts-after-2-month-battle-us-courtroom" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Huawei guilty on 10 of 12 counts after months-long battle in US courtroom">Huawei guilty on 10 of 12 counts after months-long battle in US courtroom</a>
-        <span class="badge badge-outlet">SCMP – World</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://www.aljazeera.com/economy/2026/11/24/chinese-tech-giant-huawei-found-guilty-of-conspiracy-to-steal-trade-secrets" target="_blank" rel="noopener noreferrer" class="source-title-link" title="China’s Huawei found guilty of trade secrets conspiracy, fraud in US trial">China’s Huawei found guilty of trade secrets conspiracy, fraud in US trial</a>
-        <span class="badge badge-outlet">Al Jazeera – World</span>
-        
-      </span>
-      
-    </div>
-  </article>
-  
-  
-  
-
-  <article class="story-card level-corroborated">
-    <div class="meta-row">
-      <span class="badge badge-corroborated">Corroborated</span>
-      
-      <span class="source-count">3 independent sources</span>
-      <span class="sep">•</span>
-      <span class="score-pill">Score: 8.57</span>
-      
-      <span class="sep">•</span>
-      <time datetime="2026-11-25T09:56:36+00:00" class="story-date local-time">25 Nov 2026, 15:26 IST</time>
-      
-    </div>
-
-    <h2><a href="story_1957.html" class="headline-link">UK police arrest two men after break-in at William and Kate&#39;s home</a></h2>
-
-    
-    <div class="story-summary-omitted">
-      
-      <div class="empty-state-notice entailment-notice">
-        <span class="notice-badge">&#9432; Constrained to Verified Facts</span>
-        <p>AI narrative synthesis suppressed to prevent hallucination because reporting lacks sufficient multi-source consensus. View individual source claims on the story page.</p>
-        <a href="story_1957.html" class="view-claims-btn">View claims &rarr;</a>
-      </div>
-      
-    </div>
-    
-
-    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
-    <div class="sources-list">
-      <strong>Sources:</strong>
-      
-      <span class="source-item-chip">
-        <a href="https://www.channelnewsasia.com/world/uk-police-arrest-two-men-after-break-in-william-and-kates-home-6579091" target="_blank" rel="noopener noreferrer" class="source-title-link" title="UK police arrest two men after break-in at William and Kate&#39;s home">UK police arrest two men after break-in at William and Kate&#39;s home</a>
-        <span class="badge badge-outlet">CNA – Asia</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://www.aljazeera.com/news/2026/11/24/police-arrest-two-after-break-in-at-prince-william-and-kates-country-home" target="_blank" rel="noopener noreferrer" class="source-title-link" title="UK police arrest two after break-in at Prince William’s country residence">UK police arrest two after break-in at Prince William’s country residence</a>
-        <span class="badge badge-outlet">Al Jazeera – World</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://www.straitstimes.com/world/europe/two-charged-with-burglary-after-break-in-at-country-home-of-prince-william-and-wife-kate" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Two charged with burglary after break-in at country home of Prince William and wife Kate">Two charged with burglary after break-in at country home of Prince William and wife Kate</a>
-        <span class="badge badge-outlet">The Straits Times – World</span>
-        
-      </span>
-      
-    </div>
-  </article>
-  
-  
-  
-  
-
-  <article class="story-card level-strongly">
-    <div class="meta-row">
-      <span class="badge badge-strongly">Strongly corroborated</span>
-      
-      <span class="source-count">5 independent sources</span>
-      <span class="sep">•</span>
-      <span class="score-pill">Score: 12.90</span>
-      
-      <span class="sep">•</span>
-      <time datetime="2026-11-24T05:23:08+00:00" class="story-date local-time">24 Nov 2026, 10:53 IST</time>
-      
-    </div>
-
-    <h2><a href="story_1653.html" class="headline-link">SpaceX and Tesla entrusts five directors for merger talks, FT reports</a></h2>
-
-    
-    <div class="story-summary-omitted">
-      
-      <div class="empty-state-notice entailment-notice">
-        <span class="notice-badge">&#9432; Constrained to Verified Facts</span>
-        <p>AI narrative synthesis suppressed to prevent hallucination because reporting lacks sufficient multi-source consensus. View individual source claims on the story page.</p>
-        <a href="story_1653.html" class="view-claims-btn">View claims &rarr;</a>
-      </div>
-      
-    </div>
-    
-
-    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
-    <div class="sources-list">
-      <strong>Sources:</strong>
-      
-      <span class="source-item-chip">
-        <a href="https://timesofindia.indiatimes.com/world/us/no-answers-no-funding-us-lawmaker-turns-up-heat-on-musk-over-ukraine-starshield-disruptions/articleshow/136058358.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="US lawmaker turns up heat on Musk over Ukraine Starshield disruptions">US lawmaker turns up heat on Musk over Ukraine Starshield disruptions</a>
-        <span class="badge badge-outlet">Times of India</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://www.straitstimes.com/world/europe/britain-says-spacex-restrictions-in-ukraine-dented-confidence-and-trust" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Britain says SpaceX restrictions in Ukraine &#39;dented confidence and trust&#39;">Britain says SpaceX restrictions in Ukraine &#39;dented confidence and trust&#39;</a>
-        <span class="badge badge-outlet">The Straits Times – World</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://www.aljazeera.com/economy/2026/11/23/us-states-sue-spacex-over-grok-ais-creation-of-child-sexual-abuse-material" target="_blank" rel="noopener noreferrer" class="source-title-link" title="US states sue SpaceX over Grok AI’s creation of child sexual abuse material">US states sue SpaceX over Grok AI’s creation of child sexual abuse material</a>
-        <span class="badge badge-outlet">Al Jazeera – World</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://www.thehindu.com/sci-tech/technology/elon-musks-companies-sued-by-us-states-over-flood-of-sexualised-images-made-with-grok-ai/article71737074.ece" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Elon Musk’s companies sued by U.S. states over flood of sexualised images made with Grok AI">Elon Musk’s companies sued by U.S. states over flood of sexualised images made with Grok AI</a>
-        <span class="badge badge-outlet">The Hindu</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://www.channelnewsasia.com/business/spacex-and-tesla-entrusts-five-directors-merger-talks-ft-reports-6577276" target="_blank" rel="noopener noreferrer" class="source-title-link" title="SpaceX and Tesla entrusts five directors for merger talks, FT reports">SpaceX and Tesla entrusts five directors for merger talks, FT reports</a>
-        <span class="badge badge-outlet">CNA – Asia</span>
-        
-        <span class="badge badge-wire">Reuters</span>
         
       </span>
       
@@ -862,6 +874,99 @@
             el.textContent = dateStr + ', ' + timeStr;
           }
         } catch(e) {}
+      });
+    });
+  </script>
+
+  <!-- Smart Hide-on-Scroll Navigation, Reading Progress & Back-to-Top -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var header = document.getElementById('siteHeader');
+      var progressBar = document.getElementById('readingProgress');
+      var backToTop = document.getElementById('backToTop');
+
+      var lastScrollY = window.pageYOffset || document.documentElement.scrollTop;
+      var ticking = false;
+      var scrollThreshold = 8;
+
+      function onScroll() {
+        var currentScrollY = window.pageYOffset || document.documentElement.scrollTop;
+        var maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+
+        // 1. Reading progress bar
+        if (progressBar && maxScroll > 0) {
+          var pct = Math.min(100, Math.max(0, (currentScrollY / maxScroll) * 100));
+          progressBar.style.width = pct + '%';
+        }
+
+        // 2. Back to top button
+        if (backToTop) {
+          if (currentScrollY > 400) {
+            backToTop.classList.add('visible');
+          } else {
+            backToTop.classList.remove('visible');
+          }
+        }
+
+        // 3. Smart Hide/Show Header
+        if (!header) {
+          ticking = false;
+          return;
+        }
+
+        // Always show and remove elevation at very top
+        if (currentScrollY <= 15) {
+          header.classList.remove('header--hidden');
+          header.classList.remove('header--scrolled');
+          lastScrollY = currentScrollY;
+          ticking = false;
+          return;
+        }
+
+        header.classList.add('header--scrolled');
+
+        var delta = currentScrollY - lastScrollY;
+
+        // Prevent hiding near bottom of page on mobile rubber-band bounce
+        if (maxScroll > 0 && currentScrollY >= maxScroll - 30) {
+          ticking = false;
+          return;
+        }
+
+        if (delta > scrollThreshold && currentScrollY > 60) {
+          // Scrolling DOWN -> Hide nav bar so full news occupies entire viewport
+          header.classList.add('header--hidden');
+        } else if (delta < -scrollThreshold) {
+          // Scrolling UP -> Reveal nav bar smoothly
+          header.classList.remove('header--hidden');
+        }
+
+        lastScrollY = currentScrollY;
+        ticking = false;
+      }
+
+      window.addEventListener('scroll', function() {
+        if (!ticking) {
+          window.requestAnimationFrame(onScroll);
+          ticking = true;
+        }
+      }, { passive: true });
+
+      if (backToTop) {
+        backToTop.addEventListener('click', function() {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+
+      // Active nav link highlight based on current path
+      var currentPath = window.location.pathname.split('/').pop() || 'index.html';
+      document.querySelectorAll('.nav-links a').forEach(function(link) {
+        var href = link.getAttribute('href');
+        if (href === currentPath || (currentPath === '' && href === 'index.html')) {
+          link.classList.add('active');
+        } else if (currentPath.indexOf('page_') === 0 && href === 'index.html') {
+          link.classList.add('active');
+        }
       });
     });
   </script>

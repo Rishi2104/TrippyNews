@@ -14,7 +14,7 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="TrippyNews">
   <meta property="og:title" content="वैश्विक सांख्यिकीय साझेदारियों को बढ़ावा देना: ज्ञान के आदान-प्रदान और संस्थागत सहयोग के लिए सांख्यिकी और कार्यक्रम कार्यान्वयन मंत्रालय(एमओएसपीआई) का विजन">
-  <meta property="og:description" content="Corroborated by 3 independent sources.">
+  <meta property="og:description" content="Corroborated by 2 independent sources.">
   <meta property="og:url" content="https://rishi2104.github.io/TrippyNews/">
   <meta property="og:image" content="https://rishi2104.github.io/TrippyNews/favicon.svg">
 
@@ -29,32 +29,53 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
+  <!-- Reading Progress Bar (stays subtle at the very top edge) -->
+  <div class="reading-progress-bar" id="readingProgress" aria-hidden="true"></div>
+
+  <header id="siteHeader">
     <div class="container">
       <div class="header-inner">
         <div class="site-brand">
           
           <div class="site-title">
-            <a href="index.html">TrippyNews</a>
+            <a href="index.html">
+              <span class="brand-icon" aria-hidden="true">⬡</span>
+              <span class="brand-name">TrippyNews</span>
+            </a>
           </div>
           
           <span class="site-tagline">Automated News Corroboration Pipeline</span>
         </div>
-        <div class="header-live">
-          <span class="live-dot"></span>
-          Last updated: <time datetime="2026-11-26T14:13:44.632597+00:00" class="local-time">26 Nov 2026, 19:43 IST</time>
+
+        <nav class="header-nav" aria-label="Main Navigation">
+          <ul class="nav-links">
+            <li><a href="index.html">Top Stories</a></li>
+            <li><a href="methodology.html">Methodology</a></li>
+            <li><a href="corrections.html">Corrections &amp; Changelog</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-live" title="Automated pipeline status">
+          <span class="live-dot-wrap">
+            <span class="live-dot-ping"></span>
+            <span class="live-dot"></span>
+          </span>
+          <span class="live-label">LIVE</span>
+          <span class="live-sep">•</span>
+          <span class="live-time"><time datetime="2026-11-26T14:43:30.958621+00:00" class="local-time">26 Nov, 20:13 IST</time></span>
         </div>
       </div>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html">Top Stories</a></li>
-          <li><a href="methodology.html">Methodology</a></li>
-          <li><a href="corrections.html">Corrections &amp; Changelog</a></li>
-          <li><a href="about.html">About</a></li>
-        </ul>
-      </nav>
     </div>
   </header>
+
+  <!-- Floating Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top" title="Scroll to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <line x1="12" y1="19" x2="12" y2="5"></line>
+      <polyline points="5 12 12 5 19 12"></polyline>
+    </svg>
+  </button>
 
   <main class="container">
     <div class="disclosure-banner">
@@ -76,7 +97,7 @@
     <div class="meta-row">
       <span class="badge badge-strongly">Strongly corroborated</span>
       
-      <span class="source-count">3 independent sources</span>
+      <span class="source-count">2 independent sources</span>
       <span class="sep">•</span>
       <span class="score-pill">Score: 12.52</span>
       
@@ -125,7 +146,7 @@
     <div class="claim-body">Per Hindustan Times: Between 2007 and 2013, he was the Press Trust of India correspondent in Pakistan, one of only two Indian journalists allowed to report from the country.</div>
     
     <div class="evidence">
-      "Between 2007 and 2013, he was the Press Trust of India correspondent in Pakistan, one of only two Indian journalists allowed to report from the..." &mdash; <a href="https://www.hindustantimes.com/india-news/culture-play-key-role-in-fostering-dialogue-pakistan-minister-malik-101795222929535.html" target="_blank" rel="noopener noreferrer"><strong>Hindustan Times</strong></a>
+      "Between 2007 and 2013, he was the Press Trust of India correspondent in Pakistan, one of only two Indian journalists allowed to report from the..." &mdash; <a href="#" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a>
     </div>
     
   </div>
@@ -150,7 +171,7 @@
     <div class="claim-body">Per The Hindu: Cultural connect is the biggest guarantee of global peace, Prime Minister Narendra Modi said on Friday.</div>
     
     <div class="evidence">
-      "Cultural connect is the biggest guarantee of global peace, Prime Minister Narendra Modi said on Friday." &mdash; <a href="https://www.thehindu.com/news/national/pm-modi-address-at-sco-civilisational-dialogue-forum/article71725120.ece" target="_blank" rel="noopener noreferrer"><strong>The Hindu</strong></a>
+      "Cultural connect is the biggest guarantee of global peace, Prime Minister Narendra Modi said on Friday." &mdash; <a href="#" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a>
     </div>
     
   </div>
@@ -159,7 +180,7 @@
     <div class="claim-body">Per The Hindu: Modi was speaking at the first civilisational dialogue forum of the 10 nation Shanghai Cooperation Organisation (SCO) grouping.</div>
     
     <div class="evidence">
-      "Modi was speaking at the first civilisational dialogue forum of the 10 nation Shanghai Cooperation Organisation (SCO) grouping." &mdash; <a href="https://www.thehindu.com/news/national/pm-modi-address-at-sco-civilisational-dialogue-forum/article71725120.ece" target="_blank" rel="noopener noreferrer"><strong>The Hindu</strong></a>
+      "Modi was speaking at the first civilisational dialogue forum of the 10 nation Shanghai Cooperation Organisation (SCO) grouping." &mdash; <a href="#" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a>
     </div>
     
   </div>
@@ -168,7 +189,7 @@
     <div class="claim-body">Per The Hindu: He said and it was important that at a time when war and unrest were dominating the world, India was holding a dialogue on shared civilisations.</div>
     
     <div class="evidence">
-      "He said and it was important that at a time when war and unrest were dominating the world, India was holding a dialogue on shared..." &mdash; <a href="https://www.thehindu.com/news/national/pm-modi-address-at-sco-civilisational-dialogue-forum/article71725120.ece" target="_blank" rel="noopener noreferrer"><strong>The Hindu</strong></a>
+      "He said and it was important that at a time when war and unrest were dominating the world, India was holding a dialogue on shared..." &mdash; <a href="#" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a>
     </div>
     
   </div>
@@ -177,7 +198,7 @@
     <div class="claim-body">Per The Hindu: The SCO forum is being attended by Pakistan for the first time since the four-day conflict between the two countries in May 2025.</div>
     
     <div class="evidence">
-      "The SCO forum is being attended by Pakistan for the first time since the four-day conflict between the two countries in May 2025." &mdash; <a href="https://www.thehindu.com/news/national/pm-modi-address-at-sco-civilisational-dialogue-forum/article71725120.ece" target="_blank" rel="noopener noreferrer"><strong>The Hindu</strong></a>
+      "The SCO forum is being attended by Pakistan for the first time since the four-day conflict between the two countries in May 2025." &mdash; <a href="#" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a>
     </div>
     
   </div>
@@ -186,7 +207,7 @@
     <div class="claim-body">Per The Hindu: Musadik Masood Malik, to lead its delegation to the event being held at the historic Purana Qila of the national capital from November 20 to 22.</div>
     
     <div class="evidence">
-      "Musadik Masood Malik, to lead its delegation to the event being held at the historic Purana Qila of the national capital from November 20 to..." &mdash; <a href="https://www.thehindu.com/news/national/pm-modi-address-at-sco-civilisational-dialogue-forum/article71725120.ece" target="_blank" rel="noopener noreferrer"><strong>The Hindu</strong></a>
+      "Musadik Masood Malik, to lead its delegation to the event being held at the historic Purana Qila of the national capital from November 20 to..." &mdash; <a href="#" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a>
     </div>
     
   </div>
@@ -195,7 +216,7 @@
     <div class="claim-body">Per The Hindu: Malik said, “It is a tremendous opportunity for us to have a multilateral dialogue about civilisation.</div>
     
     <div class="evidence">
-      "Malik said, “It is a tremendous opportunity for us to have a multilateral dialogue about civilisation." &mdash; <a href="https://www.thehindu.com/news/national/pm-modi-address-at-sco-civilisational-dialogue-forum/article71725120.ece" target="_blank" rel="noopener noreferrer"><strong>The Hindu</strong></a>
+      "Malik said, “It is a tremendous opportunity for us to have a multilateral dialogue about civilisation." &mdash; <a href="#" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a>
     </div>
     
   </div>
@@ -308,7 +329,7 @@ Speaking at the forum in Delhi, Malik said, “We have come here from different 
     <div class="claim-body">Per Hindustan Times: Rezaul Hasan Laskar is Foreign Editor with the Hindustan Times, which he joined in 2015.</div>
     
     <div class="evidence">
-      "Rezaul Hasan Laskar is Foreign Editor with the Hindustan Times, which he joined in 2015." &mdash; <a href="https://www.hindustantimes.com/india-news/culture-play-key-role-in-fostering-dialogue-pakistan-minister-malik-101795222929535.html" target="_blank" rel="noopener noreferrer"><strong>Hindustan Times</strong></a>
+      "Rezaul Hasan Laskar is Foreign Editor with the Hindustan Times, which he joined in 2015." &mdash; <a href="#" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a>
     </div>
     
   </div>
@@ -317,7 +338,7 @@ Speaking at the forum in Delhi, Malik said, “We have come here from different 
     <div class="claim-body">Per Hindustan Times: He moved to New Delhi in 1997 and initially focused on defence, national security, Jammu and Kashmir and the northeast, while also working of foreign policy and international relations.</div>
     
     <div class="evidence">
-      "He moved to New Delhi in 1997 and initially focused on defence, national security, Jammu and Kashmir and the northeast, while also working of foreign..." &mdash; <a href="https://www.hindustantimes.com/india-news/culture-play-key-role-in-fostering-dialogue-pakistan-minister-malik-101795222929535.html" target="_blank" rel="noopener noreferrer"><strong>Hindustan Times</strong></a>
+      "He moved to New Delhi in 1997 and initially focused on defence, national security, Jammu and Kashmir and the northeast, while also working of foreign..." &mdash; <a href="#" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a>
     </div>
     
   </div>
@@ -326,7 +347,7 @@ Speaking at the forum in Delhi, Malik said, “We have come here from different 
     <div class="claim-body">Per Hindustan Times: He has been part of the media delegation accompanying PMs on foreign visits and has reported from destinations ranging from Tibet to Ukraine.</div>
     
     <div class="evidence">
-      "He has been part of the media delegation accompanying PMs on foreign visits and has reported from destinations ranging from Tibet to Ukraine." &mdash; <a href="https://www.hindustantimes.com/india-news/culture-play-key-role-in-fostering-dialogue-pakistan-minister-malik-101795222929535.html" target="_blank" rel="noopener noreferrer"><strong>Hindustan Times</strong></a>
+      "He has been part of the media delegation accompanying PMs on foreign visits and has reported from destinations ranging from Tibet to Ukraine." &mdash; <a href="#" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a>
     </div>
     
   </div>
@@ -335,7 +356,7 @@ Speaking at the forum in Delhi, Malik said, “We have come here from different 
     <div class="claim-body">Per Hindustan Times: He extensively covered Pakistan’s domestic politics and the life of the common people, as well as the fallout of the 2008 Mumbai attacks on India-Pakistan relations and the subsequent trial in Pakistan of the suspects involved in the attack.</div>
     
     <div class="evidence">
-      "He extensively covered Pakistan’s domestic politics and the life of the common people, as well as the fallout of the 2008 Mumbai attacks on India-Pakistan..." &mdash; <a href="https://www.hindustantimes.com/india-news/culture-play-key-role-in-fostering-dialogue-pakistan-minister-malik-101795222929535.html" target="_blank" rel="noopener noreferrer"><strong>Hindustan Times</strong></a>
+      "He extensively covered Pakistan’s domestic politics and the life of the common people, as well as the fallout of the 2008 Mumbai attacks on India-Pakistan..." &mdash; <a href="#" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a>
     </div>
     
   </div>
@@ -345,7 +366,7 @@ Speaking at the forum in Delhi, Malik said, “We have come here from different 
 He said Pakistan would support efforts to advance peace and security, while stressing that the forum was focused on multilateral issues.</div>
     
     <div class="evidence">
-      "Culture play key role in fostering dialogue: Pakistan minister Malik He said Pakistan would support efforts to advance peace and security, while stressing that the..." &mdash; <a href="https://www.hindustantimes.com/india-news/culture-play-key-role-in-fostering-dialogue-pakistan-minister-malik-101795222929535.html" target="_blank" rel="noopener noreferrer"><strong>Hindustan Times</strong></a>
+      "Culture play key role in fostering dialogue: Pakistan minister Malik He said Pakistan would support efforts to advance peace and security, while stressing that the..." &mdash; <a href="#" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a>
     </div>
     
   </div>
@@ -436,7 +457,7 @@ He said Pakistan would support efforts to advance peace and security, while stre
 
   <!-- Source Links & Transparency Table (T2: Show outlet name instead of internal source ID) -->
   <div class="sources-table-wrap">
-    <h3>All Contributing Sources (4)</h3>
+    <h3>All Contributing Sources (2)</h3>
     
     <div class="source-item">
       <div>
@@ -445,32 +466,6 @@ He said Pakistan would support efforts to advance peace and security, while stre
           <span class="badge badge-outlet">Press Information Bureau</span>
           
           <span style="font-size: 0.75rem; color: var(--text-muted);">(pib.gov.in)</span>
-          
-          
-        </div>
-      </div>
-    </div>
-    
-    <div class="source-item">
-      <div>
-        <a href="https://www.thehindu.com/news/national/pm-modi-address-at-sco-civilisational-dialogue-forum/article71725120.ece" target="_blank" rel="noopener noreferrer">PM Modi says cultural connect can guarantee global peace</a>
-        <div class="source-meta" style="margin-top: 4px;">
-          <span class="badge badge-outlet">The Hindu</span>
-          
-          <span style="font-size: 0.75rem; color: var(--text-muted);">(thehindu.com)</span>
-          
-          
-        </div>
-      </div>
-    </div>
-    
-    <div class="source-item">
-      <div>
-        <a href="https://www.hindustantimes.com/india-news/culture-play-key-role-in-fostering-dialogue-pakistan-minister-malik-101795222929535.html" target="_blank" rel="noopener noreferrer">Culture play key role in fostering dialogue: Pakistan minister Malik</a>
-        <div class="source-meta" style="margin-top: 4px;">
-          <span class="badge badge-outlet">Hindustan Times</span>
-          
-          <span style="font-size: 0.75rem; color: var(--text-muted);">(hindustantimes.com)</span>
           
           
         </div>
@@ -531,6 +526,99 @@ He said Pakistan would support efforts to advance peace and security, while stre
             el.textContent = dateStr + ', ' + timeStr;
           }
         } catch(e) {}
+      });
+    });
+  </script>
+
+  <!-- Smart Hide-on-Scroll Navigation, Reading Progress & Back-to-Top -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var header = document.getElementById('siteHeader');
+      var progressBar = document.getElementById('readingProgress');
+      var backToTop = document.getElementById('backToTop');
+
+      var lastScrollY = window.pageYOffset || document.documentElement.scrollTop;
+      var ticking = false;
+      var scrollThreshold = 8;
+
+      function onScroll() {
+        var currentScrollY = window.pageYOffset || document.documentElement.scrollTop;
+        var maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+
+        // 1. Reading progress bar
+        if (progressBar && maxScroll > 0) {
+          var pct = Math.min(100, Math.max(0, (currentScrollY / maxScroll) * 100));
+          progressBar.style.width = pct + '%';
+        }
+
+        // 2. Back to top button
+        if (backToTop) {
+          if (currentScrollY > 400) {
+            backToTop.classList.add('visible');
+          } else {
+            backToTop.classList.remove('visible');
+          }
+        }
+
+        // 3. Smart Hide/Show Header
+        if (!header) {
+          ticking = false;
+          return;
+        }
+
+        // Always show and remove elevation at very top
+        if (currentScrollY <= 15) {
+          header.classList.remove('header--hidden');
+          header.classList.remove('header--scrolled');
+          lastScrollY = currentScrollY;
+          ticking = false;
+          return;
+        }
+
+        header.classList.add('header--scrolled');
+
+        var delta = currentScrollY - lastScrollY;
+
+        // Prevent hiding near bottom of page on mobile rubber-band bounce
+        if (maxScroll > 0 && currentScrollY >= maxScroll - 30) {
+          ticking = false;
+          return;
+        }
+
+        if (delta > scrollThreshold && currentScrollY > 60) {
+          // Scrolling DOWN -> Hide nav bar so full news occupies entire viewport
+          header.classList.add('header--hidden');
+        } else if (delta < -scrollThreshold) {
+          // Scrolling UP -> Reveal nav bar smoothly
+          header.classList.remove('header--hidden');
+        }
+
+        lastScrollY = currentScrollY;
+        ticking = false;
+      }
+
+      window.addEventListener('scroll', function() {
+        if (!ticking) {
+          window.requestAnimationFrame(onScroll);
+          ticking = true;
+        }
+      }, { passive: true });
+
+      if (backToTop) {
+        backToTop.addEventListener('click', function() {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+
+      // Active nav link highlight based on current path
+      var currentPath = window.location.pathname.split('/').pop() || 'index.html';
+      document.querySelectorAll('.nav-links a').forEach(function(link) {
+        var href = link.getAttribute('href');
+        if (href === currentPath || (currentPath === '' && href === 'index.html')) {
+          link.classList.add('active');
+        } else if (currentPath.indexOf('page_') === 0 && href === 'index.html') {
+          link.classList.add('active');
+        }
       });
     });
   </script>

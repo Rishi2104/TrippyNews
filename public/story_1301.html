@@ -29,32 +29,53 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
+  <!-- Reading Progress Bar (stays subtle at the very top edge) -->
+  <div class="reading-progress-bar" id="readingProgress" aria-hidden="true"></div>
+
+  <header id="siteHeader">
     <div class="container">
       <div class="header-inner">
         <div class="site-brand">
           
           <div class="site-title">
-            <a href="index.html">TrippyNews</a>
+            <a href="index.html">
+              <span class="brand-icon" aria-hidden="true">⬡</span>
+              <span class="brand-name">TrippyNews</span>
+            </a>
           </div>
           
           <span class="site-tagline">Automated News Corroboration Pipeline</span>
         </div>
-        <div class="header-live">
-          <span class="live-dot"></span>
-          Last updated: <time datetime="2026-11-26T14:13:44.632597+00:00" class="local-time">26 Nov 2026, 19:43 IST</time>
+
+        <nav class="header-nav" aria-label="Main Navigation">
+          <ul class="nav-links">
+            <li><a href="index.html">Top Stories</a></li>
+            <li><a href="methodology.html">Methodology</a></li>
+            <li><a href="corrections.html">Corrections &amp; Changelog</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-live" title="Automated pipeline status">
+          <span class="live-dot-wrap">
+            <span class="live-dot-ping"></span>
+            <span class="live-dot"></span>
+          </span>
+          <span class="live-label">LIVE</span>
+          <span class="live-sep">•</span>
+          <span class="live-time"><time datetime="2026-11-26T14:43:30.958621+00:00" class="local-time">26 Nov, 20:13 IST</time></span>
         </div>
       </div>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html">Top Stories</a></li>
-          <li><a href="methodology.html">Methodology</a></li>
-          <li><a href="corrections.html">Corrections &amp; Changelog</a></li>
-          <li><a href="about.html">About</a></li>
-        </ul>
-      </nav>
     </div>
   </header>
+
+  <!-- Floating Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top" title="Scroll to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <line x1="12" y1="19" x2="12" y2="5"></line>
+      <polyline points="5 12 12 5 19 12"></polyline>
+    </svg>
+  </button>
 
   <main class="container">
     <div class="disclosure-banner">
@@ -156,7 +177,7 @@ A Russian ship has been struck in a suspected drone attack while docked at Libya
 Two drones attack a cargo ship that Finnish authorities say has links to Russia’s armed forces.</div>
     
     <div class="evidence">
-      "Russian crew evacuating ship hit by drones off coast of Finland Two drones attack a cargo ship that Finnish authorities say has links to Russia’s..." &mdash; <a href="https://www.aljazeera.com/news/2026/11/21/russia-says-kaliningrad-bound-ship-struck-by-drones-in-gulf-of-finland" target="_blank" rel="noopener noreferrer"><strong>Al Jazeera – World</strong></a>
+      "Russian crew evacuating ship hit by drones off coast of Finland Two drones attack a cargo ship that Finnish authorities say has links to Russia’s..." &mdash; <a href="#" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a>
     </div>
     
   </div>
@@ -165,7 +186,7 @@ Two drones attack a cargo ship that Finnish authorities say has links to Russia�
     <div class="claim-body">The crew of a Russian ship in the Gulf of Finland, hit by drones likely launched by Ukraine, is being evacuated into life rafts and a rescue boat.</div>
     
     <div class="evidence">
-      "The crew of a Russian ship in the Gulf of Finland, hit by drones likely launched by Ukraine, is being evacuated into life rafts and..." &mdash; <a href="https://www.aljazeera.com/news/2026/11/21/russia-says-kaliningrad-bound-ship-struck-by-drones-in-gulf-of-finland" target="_blank" rel="noopener noreferrer"><strong>Al Jazeera – World</strong></a>
+      "The crew of a Russian ship in the Gulf of Finland, hit by drones likely launched by Ukraine, is being evacuated into life rafts and..." &mdash; <a href="#" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a>
     </div>
     
   </div>
@@ -174,7 +195,7 @@ Two drones attack a cargo ship that Finnish authorities say has links to Russia�
     <div class="claim-body">A restricted area has been set up around the site to ensure safety,” the Finnish Border Guard said in a statement, adding that it is in “close international cooperation” with neighbouring countries, including contact with Russia’s maritime rescue authorities.</div>
     
     <div class="evidence">
-      "A restricted area has been set up around the site to ensure safety,” the Finnish Border Guard said in a statement, adding that it is..." &mdash; <a href="https://www.aljazeera.com/news/2026/11/21/russia-says-kaliningrad-bound-ship-struck-by-drones-in-gulf-of-finland" target="_blank" rel="noopener noreferrer"><strong>Al Jazeera – World</strong></a>
+      "A restricted area has been set up around the site to ensure safety,” the Finnish Border Guard said in a statement, adding that it is..." &mdash; <a href="#" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a>
     </div>
     
   </div>
@@ -184,7 +205,7 @@ Two drones attack a cargo ship that Finnish authorities say has links to Russia�
 On Saturday morning, Finland’s Ministry of Defence said its forces detected a drone attack on a Russian vessel in international waters, with initial reports saying the ship had sustained damage.</div>
     
     <div class="evidence">
-      "How the attack unfolded On Saturday morning, Finland’s Ministry of Defence said its forces detected a drone attack on a Russian vessel in international waters,..." &mdash; <a href="https://www.aljazeera.com/news/2026/11/21/russia-says-kaliningrad-bound-ship-struck-by-drones-in-gulf-of-finland" target="_blank" rel="noopener noreferrer"><strong>Al Jazeera – World</strong></a>
+      "How the attack unfolded On Saturday morning, Finland’s Ministry of Defence said its forces detected a drone attack on a Russian vessel in international waters,..." &mdash; <a href="#" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a>
     </div>
     
   </div>
@@ -194,7 +215,7 @@ On Saturday morning, Finland’s Ministry of Defence said its forces detected a 
 “The suspected airspace violation is possibly related to rescue or tracking operations of a damaged cargo ship in the Gulf of Finland.</div>
     
     <div class="evidence">
-      "A Russian helicopter has since violated Finnish airspace, venturing more than 4km into Finnish territory. “The suspected airspace violation is possibly related to rescue or..." &mdash; <a href="https://www.aljazeera.com/news/2026/11/21/russia-says-kaliningrad-bound-ship-struck-by-drones-in-gulf-of-finland" target="_blank" rel="noopener noreferrer"><strong>Al Jazeera – World</strong></a>
+      "A Russian helicopter has since violated Finnish airspace, venturing more than 4km into Finnish territory. “The suspected airspace violation is possibly related to rescue or..." &mdash; <a href="#" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a>
     </div>
     
   </div>
@@ -203,7 +224,7 @@ On Saturday morning, Finland’s Ministry of Defence said its forces detected a 
     <div class="claim-body">The Defence Forces and the Border Guard are handling the situation in cooperation with other authorities,” said Minister of Defence Antti Hakkanen.</div>
     
     <div class="evidence">
-      "The Defence Forces and the Border Guard are handling the situation in cooperation with other authorities,” said Minister of Defence Antti Hakkanen." &mdash; <a href="https://www.aljazeera.com/news/2026/11/21/russia-says-kaliningrad-bound-ship-struck-by-drones-in-gulf-of-finland" target="_blank" rel="noopener noreferrer"><strong>Al Jazeera – World</strong></a>
+      "The Defence Forces and the Border Guard are handling the situation in cooperation with other authorities,” said Minister of Defence Antti Hakkanen." &mdash; <a href="#" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a>
     </div>
     
   </div>
@@ -378,7 +399,7 @@ HELSINKI: A Russian rescue vessel on Sunday (Nov 22) began towing a Russian-owne
 
   <!-- Source Links & Transparency Table (T2: Show outlet name instead of internal source ID) -->
   <div class="sources-table-wrap">
-    <h3>All Contributing Sources (7)</h3>
+    <h3>All Contributing Sources (6)</h3>
     
     <div class="source-item">
       <div>
@@ -387,19 +408,6 @@ HELSINKI: A Russian rescue vessel on Sunday (Nov 22) began towing a Russian-owne
           <span class="badge badge-outlet">Times of India</span>
           
           <span style="font-size: 0.75rem; color: var(--text-muted);">(timesofindia.indiatimes.com)</span>
-          
-          
-        </div>
-      </div>
-    </div>
-    
-    <div class="source-item">
-      <div>
-        <a href="https://www.aljazeera.com/news/2026/11/21/russia-says-kaliningrad-bound-ship-struck-by-drones-in-gulf-of-finland" target="_blank" rel="noopener noreferrer">Russian crew evacuating ship hit by drones off coast of Finland</a>
-        <div class="source-meta" style="margin-top: 4px;">
-          <span class="badge badge-outlet">Al Jazeera – World</span>
-          
-          <span style="font-size: 0.75rem; color: var(--text-muted);">(aljazeera.com)</span>
           
           
         </div>
@@ -512,6 +520,99 @@ HELSINKI: A Russian rescue vessel on Sunday (Nov 22) began towing a Russian-owne
             el.textContent = dateStr + ', ' + timeStr;
           }
         } catch(e) {}
+      });
+    });
+  </script>
+
+  <!-- Smart Hide-on-Scroll Navigation, Reading Progress & Back-to-Top -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var header = document.getElementById('siteHeader');
+      var progressBar = document.getElementById('readingProgress');
+      var backToTop = document.getElementById('backToTop');
+
+      var lastScrollY = window.pageYOffset || document.documentElement.scrollTop;
+      var ticking = false;
+      var scrollThreshold = 8;
+
+      function onScroll() {
+        var currentScrollY = window.pageYOffset || document.documentElement.scrollTop;
+        var maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+
+        // 1. Reading progress bar
+        if (progressBar && maxScroll > 0) {
+          var pct = Math.min(100, Math.max(0, (currentScrollY / maxScroll) * 100));
+          progressBar.style.width = pct + '%';
+        }
+
+        // 2. Back to top button
+        if (backToTop) {
+          if (currentScrollY > 400) {
+            backToTop.classList.add('visible');
+          } else {
+            backToTop.classList.remove('visible');
+          }
+        }
+
+        // 3. Smart Hide/Show Header
+        if (!header) {
+          ticking = false;
+          return;
+        }
+
+        // Always show and remove elevation at very top
+        if (currentScrollY <= 15) {
+          header.classList.remove('header--hidden');
+          header.classList.remove('header--scrolled');
+          lastScrollY = currentScrollY;
+          ticking = false;
+          return;
+        }
+
+        header.classList.add('header--scrolled');
+
+        var delta = currentScrollY - lastScrollY;
+
+        // Prevent hiding near bottom of page on mobile rubber-band bounce
+        if (maxScroll > 0 && currentScrollY >= maxScroll - 30) {
+          ticking = false;
+          return;
+        }
+
+        if (delta > scrollThreshold && currentScrollY > 60) {
+          // Scrolling DOWN -> Hide nav bar so full news occupies entire viewport
+          header.classList.add('header--hidden');
+        } else if (delta < -scrollThreshold) {
+          // Scrolling UP -> Reveal nav bar smoothly
+          header.classList.remove('header--hidden');
+        }
+
+        lastScrollY = currentScrollY;
+        ticking = false;
+      }
+
+      window.addEventListener('scroll', function() {
+        if (!ticking) {
+          window.requestAnimationFrame(onScroll);
+          ticking = true;
+        }
+      }, { passive: true });
+
+      if (backToTop) {
+        backToTop.addEventListener('click', function() {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+
+      // Active nav link highlight based on current path
+      var currentPath = window.location.pathname.split('/').pop() || 'index.html';
+      document.querySelectorAll('.nav-links a').forEach(function(link) {
+        var href = link.getAttribute('href');
+        if (href === currentPath || (currentPath === '' && href === 'index.html')) {
+          link.classList.add('active');
+        } else if (currentPath.indexOf('page_') === 0 && href === 'index.html') {
+          link.classList.add('active');
+        }
       });
     });
   </script>

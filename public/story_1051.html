@@ -29,32 +29,53 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
+  <!-- Reading Progress Bar (stays subtle at the very top edge) -->
+  <div class="reading-progress-bar" id="readingProgress" aria-hidden="true"></div>
+
+  <header id="siteHeader">
     <div class="container">
       <div class="header-inner">
         <div class="site-brand">
           
           <div class="site-title">
-            <a href="index.html">TrippyNews</a>
+            <a href="index.html">
+              <span class="brand-icon" aria-hidden="true">⬡</span>
+              <span class="brand-name">TrippyNews</span>
+            </a>
           </div>
           
           <span class="site-tagline">Automated News Corroboration Pipeline</span>
         </div>
-        <div class="header-live">
-          <span class="live-dot"></span>
-          Last updated: <time datetime="2026-11-26T14:13:44.632597+00:00" class="local-time">26 Nov 2026, 19:43 IST</time>
+
+        <nav class="header-nav" aria-label="Main Navigation">
+          <ul class="nav-links">
+            <li><a href="index.html">Top Stories</a></li>
+            <li><a href="methodology.html">Methodology</a></li>
+            <li><a href="corrections.html">Corrections &amp; Changelog</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-live" title="Automated pipeline status">
+          <span class="live-dot-wrap">
+            <span class="live-dot-ping"></span>
+            <span class="live-dot"></span>
+          </span>
+          <span class="live-label">LIVE</span>
+          <span class="live-sep">•</span>
+          <span class="live-time"><time datetime="2026-11-26T14:43:30.958621+00:00" class="local-time">26 Nov, 20:13 IST</time></span>
         </div>
       </div>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html">Top Stories</a></li>
-          <li><a href="methodology.html">Methodology</a></li>
-          <li><a href="corrections.html">Corrections &amp; Changelog</a></li>
-          <li><a href="about.html">About</a></li>
-        </ul>
-      </nav>
     </div>
   </header>
+
+  <!-- Floating Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top" title="Scroll to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <line x1="12" y1="19" x2="12" y2="5"></line>
+      <polyline points="5 12 12 5 19 12"></polyline>
+    </svg>
+  </button>
 
   <main class="container">
     <div class="disclosure-banner">
@@ -76,7 +97,7 @@
     <div class="meta-row">
       <span class="badge badge-strongly">Strongly corroborated</span>
       
-      <span class="source-count">5 independent sources</span>
+      <span class="source-count">1 independent source</span>
       <span class="sep">•</span>
       <span class="score-pill">Score: 12.56</span>
       
@@ -101,7 +122,7 @@
       <div class="claim-body">The Federal Bureau of Investigation (FBI) is investigating a suspected breach of its National Crime Information Center (NCIC), a nationwide database used by federal, state and local law enforcement agencies to share criminal justice information, CNN reported.</div>
       
       <div class="evidence">
-        "The Federal Bureau of Investigation (FBI) is investigating a suspected breach of its National Crime Information Center (NCIC), a nationwide database used by federal, state..." &mdash; <a href="https://www.livemint.com/news/us-news/hackers-target-fbi-again-second-breach-since-september-kash-patel-says-bureau-taking-on-cybercriminals-globally-11795233961169.html" target="_blank" rel="noopener noreferrer"><strong>Mint</strong></a>
+        "The Federal Bureau of Investigation (FBI) is investigating a suspected breach of its National Crime Information Center (NCIC), a nationwide database used by federal, state..." &mdash; <a href="#" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a>
       </div>
       
     </div>
@@ -111,7 +132,7 @@
       <div class="claim-body">The US Department of Agriculture (USDA) told employees that a system used to facilitate payments to farmers was targeted in a cyberattack, NBC reported on Nov 20, citing two former department officials.</div>
       
       <div class="evidence">
-        "The US Department of Agriculture (USDA) told employees that a system used to facilitate payments to farmers was targeted in a cyberattack, NBC reported on..." &mdash; <a href="https://www.straitstimes.com/world/united-states/fbis-criminal-information-database-hacked-cnn-reports" target="_blank" rel="noopener noreferrer"><strong>The Straits Times – World</strong></a>
+        "The US Department of Agriculture (USDA) told employees that a system used to facilitate payments to farmers was targeted in a cyberattack, NBC reported on..." &mdash; <a href="#" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a>
       </div>
       
     </div>
@@ -121,7 +142,7 @@
       <div class="claim-body">The FBI is investigating a suspected breach of a nationwide database used by federal, state and local law enforcement agencies to share criminal justice information, CNN reported on Friday (November 20, 2026), citing two people briefed on the investigation.</div>
       
       <div class="evidence">
-        "The FBI is investigating a suspected breach of a nationwide database used by federal, state and local law enforcement agencies to share criminal justice information,..." &mdash; <a href="https://www.thehindu.com/news/international/fbis-criminal-information-database-hacked-reports-say/article71727198.ece" target="_blank" rel="noopener noreferrer"><strong>The Hindu</strong></a>
+        "The FBI is investigating a suspected breach of a nationwide database used by federal, state and local law enforcement agencies to share criminal justice information,..." &mdash; <a href="#" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a>
       </div>
       
     </div>
@@ -149,7 +170,7 @@
     <div class="claim-body">The discovery of the intrusion in recent days marks the second reported breach involving an FBI system in recent months.</div>
     
     <div class="evidence">
-      "The discovery of the intrusion in recent days marks the second reported breach involving an FBI system in recent months." &mdash; <a href="https://www.livemint.com/news/us-news/hackers-target-fbi-again-second-breach-since-september-kash-patel-says-bureau-taking-on-cybercriminals-globally-11795233961169.html" target="_blank" rel="noopener noreferrer"><strong>Mint</strong></a>
+      "The discovery of the intrusion in recent days marks the second reported breach involving an FBI system in recent months." &mdash; <a href="#" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a>
     </div>
     
   </div>
@@ -158,7 +179,7 @@
     <div class="claim-body">These include a global outage affecting hundreds of millions of Microsoft users and a nationwide halt to air travel that disrupted more than 18,000 flights.</div>
     
     <div class="evidence">
-      "These include a global outage affecting hundreds of millions of Microsoft users and a nationwide halt to air travel that disrupted more than 18,000 flights." &mdash; <a href="https://www.livemint.com/news/us-news/hackers-target-fbi-again-second-breach-since-september-kash-patel-says-bureau-taking-on-cybercriminals-globally-11795233961169.html" target="_blank" rel="noopener noreferrer"><strong>Mint</strong></a>
+      "These include a global outage affecting hundreds of millions of Microsoft users and a nationwide halt to air travel that disrupted more than 18,000 flights." &mdash; <a href="#" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a>
     </div>
     
   </div>
@@ -167,7 +188,7 @@
     <div class="claim-body">CNN also reported that recent cybersecurity concerns have involved outages affecting banks, the National Security Agency and the Federal Aviation Administration&#39;s air traffic control system.</div>
     
     <div class="evidence">
-      "CNN also reported that recent cybersecurity concerns have involved outages affecting banks, the National Security Agency and the Federal Aviation Administration&#39;s air traffic control system." &mdash; <a href="https://www.livemint.com/news/us-news/hackers-target-fbi-again-second-breach-since-september-kash-patel-says-bureau-taking-on-cybercriminals-globally-11795233961169.html" target="_blank" rel="noopener noreferrer"><strong>Mint</strong></a>
+      "CNN also reported that recent cybersecurity concerns have involved outages affecting banks, the National Security Agency and the Federal Aviation Administration&#39;s air traffic control system." &mdash; <a href="#" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a>
     </div>
     
   </div>
@@ -177,7 +198,7 @@
 - Hackers breached US Agriculture Department and FBI databases.</div>
     
     <div class="evidence">
-      "Hackers hit FBI, US Agriculture Department as Trump tells Americans to ‘relax’ - Hackers breached US Agriculture Department and FBI databases." &mdash; <a href="https://www.straitstimes.com/world/united-states/fbis-criminal-information-database-hacked-cnn-reports" target="_blank" rel="noopener noreferrer"><strong>The Straits Times – World</strong></a>
+      "Hackers hit FBI, US Agriculture Department as Trump tells Americans to ‘relax’ - Hackers breached US Agriculture Department and FBI databases." &mdash; <a href="#" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a>
     </div>
     
   </div>
@@ -186,7 +207,7 @@
     <div class="claim-body">The incidents were first reported by NBC News and CNN, and it remained unclear whether they were related and who was responsible.</div>
     
     <div class="evidence">
-      "The incidents were first reported by NBC News and CNN, and it remained unclear whether they were related and who was responsible." &mdash; <a href="https://www.straitstimes.com/world/united-states/fbis-criminal-information-database-hacked-cnn-reports" target="_blank" rel="noopener noreferrer"><strong>The Straits Times – World</strong></a>
+      "The incidents were first reported by NBC News and CNN, and it remained unclear whether they were related and who was responsible." &mdash; <a href="#" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a>
     </div>
     
   </div>
@@ -195,7 +216,7 @@
     <div class="claim-body">US President Donald Trump has sought to calm the public and urged people to “relax”, while officials said the various outages were not linked to criminal activity.</div>
     
     <div class="evidence">
-      "US President Donald Trump has sought to calm the public and urged people to “relax”, while officials said the various outages were not linked to..." &mdash; <a href="https://www.straitstimes.com/world/united-states/fbis-criminal-information-database-hacked-cnn-reports" target="_blank" rel="noopener noreferrer"><strong>The Straits Times – World</strong></a>
+      "US President Donald Trump has sought to calm the public and urged people to “relax”, while officials said the various outages were not linked to..." &mdash; <a href="#" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a>
     </div>
     
   </div>
@@ -204,7 +225,7 @@
     <div class="claim-body">CNN said separately on Nov 20 that the FBI was hacked for the second time since September.</div>
     
     <div class="evidence">
-      "CNN said separately on Nov 20 that the FBI was hacked for the second time since September." &mdash; <a href="https://www.straitstimes.com/world/united-states/fbis-criminal-information-database-hacked-cnn-reports" target="_blank" rel="noopener noreferrer"><strong>The Straits Times – World</strong></a>
+      "CNN said separately on Nov 20 that the FBI was hacked for the second time since September." &mdash; <a href="#" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a>
     </div>
     
   </div>
@@ -213,7 +234,7 @@
     <div class="claim-body">The federal agency was investigating an intrusion of the National Crime Information Center (NCIC) by apparent hackers, CNN reported, citing two people briefed on the probe.</div>
     
     <div class="evidence">
-      "The federal agency was investigating an intrusion of the National Crime Information Center (NCIC) by apparent hackers, CNN reported, citing two people briefed on the..." &mdash; <a href="https://www.straitstimes.com/world/united-states/fbis-criminal-information-database-hacked-cnn-reports" target="_blank" rel="noopener noreferrer"><strong>The Straits Times – World</strong></a>
+      "The federal agency was investigating an intrusion of the National Crime Information Center (NCIC) by apparent hackers, CNN reported, citing two people briefed on the..." &mdash; <a href="#" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a>
     </div>
     
   </div>
@@ -222,7 +243,7 @@
     <div class="claim-body">profile cyber disruptions over the past week have included a global outage affecting hundreds of millions of Microsoft users and a nationwide halt to air travel that disrupted more than 18,000 flights.</div>
     
     <div class="evidence">
-      "Previous high-profile cyber disruptions over the past week have included a global outage affecting hundreds of millions of Microsoft users and a nationwide halt to..." &mdash; <a href="https://www.thehindu.com/news/international/fbis-criminal-information-database-hacked-reports-say/article71727198.ece" target="_blank" rel="noopener noreferrer"><strong>The Hindu</strong></a>
+      "Previous high-profile cyber disruptions over the past week have included a global outage affecting hundreds of millions of Microsoft users and a nationwide halt to..." &mdash; <a href="#" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a>
     </div>
     
   </div>
@@ -231,7 +252,7 @@
     <div class="claim-body">November 21, 2026 08:59 am IST</div>
     
     <div class="evidence">
-      "Published - November 21, 2026 08:59 am IST" &mdash; <a href="https://www.thehindu.com/news/international/fbis-criminal-information-database-hacked-reports-say/article71727198.ece" target="_blank" rel="noopener noreferrer"><strong>The Hindu</strong></a>
+      "Published - November 21, 2026 08:59 am IST" &mdash; <a href="#" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a>
     </div>
     
   </div>
@@ -296,7 +317,7 @@ Nov 20 : Hackers this week breached a system that the US Department of Agricultu
     <div class="claim-body">His warning comes amid growing concerns over cybersecurity and digital infrastructure resilience in the US, following a cyberattack targeting third-party service providers associated with JPMorgan Chase that may have exposed personal information belonging to around 16,000 customers.</div>
     
     <div class="evidence">
-      "His warning comes amid growing concerns over cybersecurity and digital infrastructure resilience in the US, following a cyberattack targeting third-party service providers associated with JPMorgan..." &mdash; <a href="https://timesofindia.indiatimes.com/world/us/if-you-target-americans-justice-will-find-you-fbi-chief-kash-patel-warns-cyber-criminals-amid-jpmorgan-data-breach-tech-outages/articleshow/136042592.cms" target="_blank" rel="noopener noreferrer"><strong>Times of India</strong></a>
+      "His warning comes amid growing concerns over cybersecurity and digital infrastructure resilience in the US, following a cyberattack targeting third-party service providers associated with JPMorgan..." &mdash; <a href="#" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a>
     </div>
     
   </div>
@@ -305,7 +326,7 @@ Nov 20 : Hackers this week breached a system that the US Department of Agricultu
     <div class="claim-body">Based on our investigation so far, we believe the attackers accessed certain marketing data held by those vendors, which may include some customer names and email addresses,” the bank said in its statement.</div>
     
     <div class="evidence">
-      "Based on our investigation so far, we believe the attackers accessed certain marketing data held by those vendors, which may include some customer names and..." &mdash; <a href="https://timesofindia.indiatimes.com/world/us/if-you-target-americans-justice-will-find-you-fbi-chief-kash-patel-warns-cyber-criminals-amid-jpmorgan-data-breach-tech-outages/articleshow/136042592.cms" target="_blank" rel="noopener noreferrer"><strong>Times of India</strong></a>
+      "Based on our investigation so far, we believe the attackers accessed certain marketing data held by those vendors, which may include some customer names and..." &mdash; <a href="#" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a>
     </div>
     
   </div>
@@ -314,7 +335,7 @@ Nov 20 : Hackers this week breached a system that the US Department of Agricultu
     <div class="claim-body">The leaked information was reportedly linked to JPMorgan Chase&#39;s Reserve programme, an invitation-only Visa credit card generally requiring customers to have more than USD 10 million in assets under management.</div>
     
     <div class="evidence">
-      "The leaked information was reportedly linked to JPMorgan Chase&#39;s Reserve programme, an invitation-only Visa credit card generally requiring customers to have more than USD 10..." &mdash; <a href="https://timesofindia.indiatimes.com/world/us/if-you-target-americans-justice-will-find-you-fbi-chief-kash-patel-warns-cyber-criminals-amid-jpmorgan-data-breach-tech-outages/articleshow/136042592.cms" target="_blank" rel="noopener noreferrer"><strong>Times of India</strong></a>
+      "The leaked information was reportedly linked to JPMorgan Chase&#39;s Reserve programme, an invitation-only Visa credit card generally requiring customers to have more than USD 10..." &mdash; <a href="#" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a>
     </div>
     
   </div>
@@ -324,7 +345,7 @@ Nov 20 : Hackers this week breached a system that the US Department of Agricultu
 “There is no disruption to our services.</div>
     
     <div class="evidence">
-      "Reassuring customers, the bank said the breach was unrelated to a separate service disruption experienced earlier in the week and that affected customers would be..." &mdash; <a href="https://timesofindia.indiatimes.com/world/us/if-you-target-americans-justice-will-find-you-fbi-chief-kash-patel-warns-cyber-criminals-amid-jpmorgan-data-breach-tech-outages/articleshow/136042592.cms" target="_blank" rel="noopener noreferrer"><strong>Times of India</strong></a>
+      "Reassuring customers, the bank said the breach was unrelated to a separate service disruption experienced earlier in the week and that affected customers would be..." &mdash; <a href="#" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a>
     </div>
     
   </div>
@@ -333,7 +354,7 @@ Nov 20 : Hackers this week breached a system that the US Department of Agricultu
     <div class="claim-body">Cairncross had overseen federal cybersecurity policy and strategy since August 2025.</div>
     
     <div class="evidence">
-      "Cairncross had overseen federal cybersecurity policy and strategy since August 2025." &mdash; <a href="https://timesofindia.indiatimes.com/world/us/if-you-target-americans-justice-will-find-you-fbi-chief-kash-patel-warns-cyber-criminals-amid-jpmorgan-data-breach-tech-outages/articleshow/136042592.cms" target="_blank" rel="noopener noreferrer"><strong>Times of India</strong></a>
+      "Cairncross had overseen federal cybersecurity policy and strategy since August 2025." &mdash; <a href="#" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a>
     </div>
     
   </div>
@@ -342,7 +363,7 @@ Nov 20 : Hackers this week breached a system that the US Department of Agricultu
     <div class="claim-body">Recent reports have also pointed to malware being inserted into around 180 major websites, adding to concerns over the security of digital platforms.</div>
     
     <div class="evidence">
-      "Recent reports have also pointed to malware being inserted into around 180 major websites, adding to concerns over the security of digital platforms." &mdash; <a href="https://timesofindia.indiatimes.com/world/us/if-you-target-americans-justice-will-find-you-fbi-chief-kash-patel-warns-cyber-criminals-amid-jpmorgan-data-breach-tech-outages/articleshow/136042592.cms" target="_blank" rel="noopener noreferrer"><strong>Times of India</strong></a>
+      "Recent reports have also pointed to malware being inserted into around 180 major websites, adding to concerns over the security of digital platforms." &mdash; <a href="#" target="_blank" rel="noopener noreferrer"><strong>Source</strong></a>
     </div>
     
   </div>
@@ -351,59 +372,7 @@ Nov 20 : Hackers this week breached a system that the US Department of Agricultu
 
   <!-- Source Links & Transparency Table (T2: Show outlet name instead of internal source ID) -->
   <div class="sources-table-wrap">
-    <h3>All Contributing Sources (5)</h3>
-    
-    <div class="source-item">
-      <div>
-        <a href="https://www.thehindu.com/news/international/fbis-criminal-information-database-hacked-reports-say/article71727198.ece" target="_blank" rel="noopener noreferrer">FBI&#39;s criminal information database hacked, reports say</a>
-        <div class="source-meta" style="margin-top: 4px;">
-          <span class="badge badge-outlet">The Hindu</span>
-          
-          <span style="font-size: 0.75rem; color: var(--text-muted);">(thehindu.com)</span>
-          
-          
-        </div>
-      </div>
-    </div>
-    
-    <div class="source-item">
-      <div>
-        <a href="https://timesofindia.indiatimes.com/world/us/if-you-target-americans-justice-will-find-you-fbi-chief-kash-patel-warns-cyber-criminals-amid-jpmorgan-data-breach-tech-outages/articleshow/136042592.cms" target="_blank" rel="noopener noreferrer">&#39;If you target Americans, justice will find you&#39;: FBI chief warns cyber criminals</a>
-        <div class="source-meta" style="margin-top: 4px;">
-          <span class="badge badge-outlet">Times of India</span>
-          
-          <span style="font-size: 0.75rem; color: var(--text-muted);">(timesofindia.indiatimes.com)</span>
-          
-          
-        </div>
-      </div>
-    </div>
-    
-    <div class="source-item">
-      <div>
-        <a href="https://www.livemint.com/news/us-news/hackers-target-fbi-again-second-breach-since-september-kash-patel-says-bureau-taking-on-cybercriminals-globally-11795233961169.html" target="_blank" rel="noopener noreferrer">Hackers target FBI again, second breach since September; Kash Patel says bureau taking on cybercriminals globally</a>
-        <div class="source-meta" style="margin-top: 4px;">
-          <span class="badge badge-outlet">Mint</span>
-          
-          <span style="font-size: 0.75rem; color: var(--text-muted);">(livemint.com)</span>
-          
-          
-        </div>
-      </div>
-    </div>
-    
-    <div class="source-item">
-      <div>
-        <a href="https://www.straitstimes.com/world/united-states/fbis-criminal-information-database-hacked-cnn-reports" target="_blank" rel="noopener noreferrer">Hackers hit FBI, US Agriculture Department as Trump tells Americans to ‘relax’</a>
-        <div class="source-meta" style="margin-top: 4px;">
-          <span class="badge badge-outlet">The Straits Times – World</span>
-          
-          <span style="font-size: 0.75rem; color: var(--text-muted);">(straitstimes.com)</span>
-          
-          
-        </div>
-      </div>
-    </div>
+    <h3>All Contributing Sources (1)</h3>
     
     <div class="source-item">
       <div>
@@ -459,6 +428,99 @@ Nov 20 : Hackers this week breached a system that the US Department of Agricultu
             el.textContent = dateStr + ', ' + timeStr;
           }
         } catch(e) {}
+      });
+    });
+  </script>
+
+  <!-- Smart Hide-on-Scroll Navigation, Reading Progress & Back-to-Top -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var header = document.getElementById('siteHeader');
+      var progressBar = document.getElementById('readingProgress');
+      var backToTop = document.getElementById('backToTop');
+
+      var lastScrollY = window.pageYOffset || document.documentElement.scrollTop;
+      var ticking = false;
+      var scrollThreshold = 8;
+
+      function onScroll() {
+        var currentScrollY = window.pageYOffset || document.documentElement.scrollTop;
+        var maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+
+        // 1. Reading progress bar
+        if (progressBar && maxScroll > 0) {
+          var pct = Math.min(100, Math.max(0, (currentScrollY / maxScroll) * 100));
+          progressBar.style.width = pct + '%';
+        }
+
+        // 2. Back to top button
+        if (backToTop) {
+          if (currentScrollY > 400) {
+            backToTop.classList.add('visible');
+          } else {
+            backToTop.classList.remove('visible');
+          }
+        }
+
+        // 3. Smart Hide/Show Header
+        if (!header) {
+          ticking = false;
+          return;
+        }
+
+        // Always show and remove elevation at very top
+        if (currentScrollY <= 15) {
+          header.classList.remove('header--hidden');
+          header.classList.remove('header--scrolled');
+          lastScrollY = currentScrollY;
+          ticking = false;
+          return;
+        }
+
+        header.classList.add('header--scrolled');
+
+        var delta = currentScrollY - lastScrollY;
+
+        // Prevent hiding near bottom of page on mobile rubber-band bounce
+        if (maxScroll > 0 && currentScrollY >= maxScroll - 30) {
+          ticking = false;
+          return;
+        }
+
+        if (delta > scrollThreshold && currentScrollY > 60) {
+          // Scrolling DOWN -> Hide nav bar so full news occupies entire viewport
+          header.classList.add('header--hidden');
+        } else if (delta < -scrollThreshold) {
+          // Scrolling UP -> Reveal nav bar smoothly
+          header.classList.remove('header--hidden');
+        }
+
+        lastScrollY = currentScrollY;
+        ticking = false;
+      }
+
+      window.addEventListener('scroll', function() {
+        if (!ticking) {
+          window.requestAnimationFrame(onScroll);
+          ticking = true;
+        }
+      }, { passive: true });
+
+      if (backToTop) {
+        backToTop.addEventListener('click', function() {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+
+      // Active nav link highlight based on current path
+      var currentPath = window.location.pathname.split('/').pop() || 'index.html';
+      document.querySelectorAll('.nav-links a').forEach(function(link) {
+        var href = link.getAttribute('href');
+        if (href === currentPath || (currentPath === '' && href === 'index.html')) {
+          link.classList.add('active');
+        } else if (currentPath.indexOf('page_') === 0 && href === 'index.html') {
+          link.classList.add('active');
+        }
       });
     });
   </script>

@@ -29,32 +29,53 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
+  <!-- Reading Progress Bar (stays subtle at the very top edge) -->
+  <div class="reading-progress-bar" id="readingProgress" aria-hidden="true"></div>
+
+  <header id="siteHeader">
     <div class="container">
       <div class="header-inner">
         <div class="site-brand">
           
           <div class="site-title">
-            <a href="index.html">TrippyNews</a>
+            <a href="index.html">
+              <span class="brand-icon" aria-hidden="true">⬡</span>
+              <span class="brand-name">TrippyNews</span>
+            </a>
           </div>
           
           <span class="site-tagline">Automated News Corroboration Pipeline</span>
         </div>
-        <div class="header-live">
-          <span class="live-dot"></span>
-          Last updated: <time datetime="2026-11-26T14:13:44.632597+00:00" class="local-time">26 Nov 2026, 19:43 IST</time>
+
+        <nav class="header-nav" aria-label="Main Navigation">
+          <ul class="nav-links">
+            <li><a href="index.html">Top Stories</a></li>
+            <li><a href="methodology.html">Methodology</a></li>
+            <li><a href="corrections.html">Corrections &amp; Changelog</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-live" title="Automated pipeline status">
+          <span class="live-dot-wrap">
+            <span class="live-dot-ping"></span>
+            <span class="live-dot"></span>
+          </span>
+          <span class="live-label">LIVE</span>
+          <span class="live-sep">•</span>
+          <span class="live-time"><time datetime="2026-11-26T14:43:30.958621+00:00" class="local-time">26 Nov, 20:13 IST</time></span>
         </div>
       </div>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html">Top Stories</a></li>
-          <li><a href="methodology.html">Methodology</a></li>
-          <li><a href="corrections.html">Corrections &amp; Changelog</a></li>
-          <li><a href="about.html">About</a></li>
-        </ul>
-      </nav>
     </div>
   </header>
+
+  <!-- Floating Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top" title="Scroll to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <line x1="12" y1="19" x2="12" y2="5"></line>
+      <polyline points="5 12 12 5 19 12"></polyline>
+    </svg>
+  </button>
 
   <main class="container">
     <div class="disclosure-banner">
@@ -90,17 +111,25 @@
       
       <span class="source-count">4 independent sources</span>
       <span class="sep">•</span>
-      <span class="score-pill">Score: 10.04</span>
+      <span class="score-pill">Score: 10.23</span>
       
       <span class="sep">•</span>
-      <time datetime="2026-11-22T19:10:00+00:00" class="story-date local-time">23 Nov 2026, 00:40 IST</time>
+      <time datetime="2026-11-22T21:10:29+00:00" class="story-date local-time">23 Nov 2026, 02:40 IST</time>
       
     </div>
 
-    <h2><a href="story_1377.html" class="headline-link">Washington governor, union denounce ICE arrests of travellers at Seattle airport</a></h2>
+    <h2><a href="story_1354.html" class="headline-link">Alcaraz charges past world number one Zverev to clinch ATP Finals title</a></h2>
 
     
-    <p class="story-summary">Additional verified reporting highlights that alaska Airlines said ICE officers per reporting, gave them no advance notice from the operation. Additional verified reporting highlights that washington governor, union denounce ICE per reporting, arrests of travelers at Seattle airport per reporting, Nov 21 - The governor of per reporting, Washington state denounced federal immigration authorities recently for arresting two people on a per reporting, jetway at a Seattle-area airport. While core facts align, sources present differing accounts regarding whether The Port of Seattle said it was “outraged” by the incident, which involved ICE and two passengers or Alaska Airlines said in an emailed statement that it had no advance notice of the enforcement action and was working to determine whether proper protocols were followed.</p>
+    <div class="story-summary-omitted">
+      
+      <div class="empty-state-notice entailment-notice">
+        <span class="notice-badge">&#9432; Constrained to Verified Facts</span>
+        <p>AI narrative synthesis suppressed to prevent hallucination because reporting lacks sufficient multi-source consensus. View individual source claims on the story page.</p>
+        <a href="story_1354.html" class="view-claims-btn">View claims &rarr;</a>
+      </div>
+      
+    </div>
     
 
     <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
@@ -108,269 +137,25 @@
       <strong>Sources:</strong>
       
       <span class="source-item-chip">
-        <a href="https://timesofindia.indiatimes.com/world/us/watch-masked-ice-agents-drag-away-two-at-us-seattle-airport-spark-chaos-during-boarding/articleshow/136065874.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Watch: Masked ICE agents drag away two flyers at US airport during boarding">Watch: Masked ICE agents drag away two flyers at US airport during boarding</a>
-        <span class="badge badge-outlet">Times of India</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://www.straitstimes.com/world/washington-governor-union-denounce-ice-arrests-of-travelers-at-seattle-airport" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Washington governor, union denounce ICE arrests of travelers at Seattle airport">Washington governor, union denounce ICE arrests of travelers at Seattle airport</a>
-        <span class="badge badge-outlet">The Straits Times – World</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://www.channelnewsasia.com/world/washington-protest-ice-arrests-travellers-seattle-airport-6572721" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Washington governor, union denounce ICE arrests of travellers at Seattle airport">Washington governor, union denounce ICE arrests of travellers at Seattle airport</a>
+        <a href="https://www.channelnewsasia.com/sport/alcaraz-digs-deep-beat-shelton-and-reach-final-6571906" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Alcaraz digs deep to beat Shelton and reach final">Alcaraz digs deep to beat Shelton and reach final</a>
         <span class="badge badge-outlet">CNA – Asia</span>
         
       </span><span class="source-sep"> &bull; </span>
       
       <span class="source-item-chip">
-        <a href="https://www.aljazeera.com/video/newsfeed/2026/11/22/ice-agents-detain-two-people-at-seattle-airport" target="_blank" rel="noopener noreferrer" class="source-title-link" title="ICE agents detain two people at Seattle airport">ICE agents detain two people at Seattle airport</a>
-        <span class="badge badge-outlet">Al Jazeera – World</span>
-        
-      </span>
-      
-    </div>
-  </article>
-  
-  
-  
-
-  <article class="story-card level-corroborated">
-    <div class="meta-row">
-      <span class="badge badge-corroborated">Corroborated</span>
-      
-      <span class="source-count">6 independent sources</span>
-      <span class="sep">•</span>
-      <span class="score-pill">Score: 10.33</span>
-      
-      <span class="sep">•</span>
-      <time datetime="2026-11-22T14:33:26+00:00" class="story-date local-time">22 Nov 2026, 20:03 IST</time>
-      
-    </div>
-
-    <h2><a href="story_1256.html" class="headline-link">Interactive: How Mexico captured El Chapo Isidro, FBI’s most wanted cartel boss</a></h2>
-
-    
-    <div class="story-summary-omitted">
-      
-      <div class="empty-state-notice sensitive-notice">
-        <span class="notice-badge">&#9888; Sensitive Topic Safeguard</span>
-        <p>Narrative generation suppressed under legal and defamation safeguards (court proceedings or private individuals). Only structured claims from named outlets are published.</p>
-        <a href="story_1256.html" class="view-claims-btn">Inspect claims &rarr;</a>
-      </div>
-      
-    </div>
-    
-
-    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
-    <div class="sources-list">
-      <strong>Sources:</strong>
-      
-      <span class="source-item-chip">
-        <a href="https://www.indiatoday.in/world/story/el-chapo-isidro-arrest-how-fbi-fugitive-captured-in-mexico-chaotic-military-operation-3044004-2026-11-21" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Mexico captures FBI&#39;s most-wanted drug lord Chapo Isidro in chaotic military op">Mexico captures FBI&#39;s most-wanted drug lord Chapo Isidro in chaotic military op</a>
-        <span class="badge badge-outlet">India Today</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://www.straitstimes.com/world/mexico-captures-top-drug-lord-el-chapo-isidro-latest-in-string-of-captures" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Mexico captures top drug lord ‘El Chapo Isidro’, latest in string of captures">Mexico captures top drug lord ‘El Chapo Isidro’, latest in string of captures</a>
-        <span class="badge badge-outlet">The Straits Times – World</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://www.aljazeera.com/news/2026/11/21/who-is-el-chapo-isidro-the-alleged-cartel-boss-arrested-in-mexico" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Who is El Chapo Isidro, the alleged cartel boss arrested in Mexico?">Who is El Chapo Isidro, the alleged cartel boss arrested in Mexico?</a>
-        <span class="badge badge-outlet">Al Jazeera – World</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://indianexpress.com/article/world/el-chapo-isidro-arrest-mexico-drug-cartel-fbi-most-wanted-10973097/" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Interactive: How Mexico captured El Chapo Isidro, FBI’s most wanted cartel boss">Interactive: How Mexico captured El Chapo Isidro, FBI’s most wanted cartel boss</a>
+        <a href="https://indianexpress.com/article/sports/tennis/carlos-alcaraz-beats-ben-shelton-atp-finals-turin-semifinal-10973103/" target="_blank" rel="noopener noreferrer" class="source-title-link" title="I’m just happy to play great tennis in the tie-break when it matters: Alcaraz after beating Shelton">I’m just happy to play great tennis in the tie-break when it matters: Alcaraz after beating Shelton</a>
         <span class="badge badge-outlet">Indian Express</span>
         
       </span><span class="source-sep"> &bull; </span>
       
       <span class="source-item-chip">
-        <a href="https://timesofindia.indiatimes.com/world/rest-of-world/mexico-drug-cartel-leaders-arrest-sparks-deadly-violence-in-sinaloa-11-killed/articleshow/136062726.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Mexico drug cartel leader&#39;s arrest sparks deadly violence in Sinaloa; 11 killed">Mexico drug cartel leader&#39;s arrest sparks deadly violence in Sinaloa; 11 killed</a>
+        <a href="https://timesofindia.indiatimes.com/sports/tennis/top-stories/alexander-zverev-gets-his-chance-to-silence-critics-against-carlos-alcaraz-in-atp-finals-final/articleshow/136063178.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="ATP Finals final: Zverev gets his chance to silence critics against Alcaraz">ATP Finals final: Zverev gets his chance to silence critics against Alcaraz</a>
         <span class="badge badge-outlet">Times of India</span>
         
       </span><span class="source-sep"> &bull; </span>
       
       <span class="source-item-chip">
-        <a href="https://www.livemint.com/news/world/who-is-el-chapo-isidro-fbis-most-wanted-drug-lord-captured-in-mexico-sparks-deadly-sinaloa-violence-11795309770768.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Who is ‘El Chapo Isidro’? FBI&#39;s most-wanted drug lord captured in Mexico; sparks deadly Sinaloa violence">Who is ‘El Chapo Isidro’? FBI&#39;s most-wanted drug lord captured in Mexico; sparks deadly Sinaloa violence</a>
-        <span class="badge badge-outlet">Mint</span>
-        
-      </span>
-      
-    </div>
-  </article>
-  
-  
-  
-
-  <article class="story-card level-corroborated">
-    <div class="meta-row">
-      <span class="badge badge-corroborated">Corroborated</span>
-      
-      <span class="source-count">3 independent sources</span>
-      <span class="sep">•</span>
-      <span class="score-pill">Score: 8.64</span>
-      
-      <span class="sep">•</span>
-      <time datetime="2026-11-23T09:45:25+00:00" class="story-date local-time">23 Nov 2026, 15:15 IST</time>
-      
-    </div>
-
-    <h2><a href="story_1461.html" class="headline-link">Brazil storm death toll rises to 5</a></h2>
-
-    
-    <div class="story-summary-omitted">
-      
-      <div class="empty-state-notice entailment-notice">
-        <span class="notice-badge">&#9432; Constrained to Verified Facts</span>
-        <p>AI narrative synthesis suppressed to prevent hallucination because reporting lacks sufficient multi-source consensus. View individual source claims on the story page.</p>
-        <a href="story_1461.html" class="view-claims-btn">View claims &rarr;</a>
-      </div>
-      
-    </div>
-    
-
-    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
-    <div class="sources-list">
-      <strong>Sources:</strong>
-      
-      <span class="source-item-chip">
-        <a href="https://www.straitstimes.com/world/town-in-southern-brazil-left-reeling-by-supercell-storm" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Town in southern Brazil left reeling by supercell storm">Town in southern Brazil left reeling by supercell storm</a>
-        <span class="badge badge-outlet">The Straits Times – World</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://www.channelnewsasia.com/world/brazil-storm-death-toll-rises-5-6573261" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Brazil storm death toll rises to 5">Brazil storm death toll rises to 5</a>
-        <span class="badge badge-outlet">CNA – Asia</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://www.aljazeera.com/video/newsfeed/2026/11/23/thousands-displaced-after-deadly-storm-hits-brazil-town" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Thousands displaced after deadly storm hits Brazil town">Thousands displaced after deadly storm hits Brazil town</a>
-        <span class="badge badge-outlet">Al Jazeera – World</span>
-        
-      </span>
-      
-    </div>
-  </article>
-  
-  
-  
-
-  <article class="story-card level-corroborated">
-    <div class="meta-row">
-      <span class="badge badge-corroborated">Corroborated</span>
-      
-      <span class="source-count">2 independent sources</span>
-      <span class="sep">•</span>
-      <span class="score-pill">Score: 12.67</span>
-      
-      <span class="sep">•</span>
-      <time datetime="2026-11-21T10:31:46+00:00" class="story-date local-time">21 Nov 2026, 16:01 IST</time>
-      
-    </div>
-
-    <h2><a href="story_758.html" class="headline-link">Uttar Pradesh CM Yogi Adityanath&#39;s mother Savitri Devi passes away at 91 in Uttarakhand</a></h2>
-
-    
-    <div class="story-summary-omitted">
-      
-      <div class="empty-state-notice entailment-notice">
-        <span class="notice-badge">&#9432; Constrained to Verified Facts</span>
-        <p>AI narrative synthesis suppressed to prevent hallucination because reporting lacks sufficient multi-source consensus. View individual source claims on the story page.</p>
-        <a href="story_758.html" class="view-claims-btn">View claims &rarr;</a>
-      </div>
-      
-    </div>
-    
-
-    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
-    <div class="sources-list">
-      <strong>Sources:</strong>
-      
-      <span class="source-item-chip">
-        <a href="https://indianexpress.com/article/cities/lucknow/gorakhpur-jcb-death-five-arrested-yogi-adityanath-akhilesh-yadav-10972241/" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Gorakhpur boy’s death: Police arrest five, Yogi says ‘Such anarchy will not be tolerated’">Gorakhpur boy’s death: Police arrest five, Yogi says ‘Such anarchy will not be tolerated’</a>
-        <span class="badge badge-outlet">Indian Express</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://www.hindustantimes.com/india-news/yogi-adityanath-s-mother-last-rites-performed-in-haridwar-s-chandi-ghat-leaders-pay-tribute-101795257107179.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Last rites for Yogi Adityanath’s mother performed in Haridwar’s Chandi Ghat; leaders pay tribute">Last rites for Yogi Adityanath’s mother performed in Haridwar’s Chandi Ghat; leaders pay tribute</a>
-        <span class="badge badge-outlet">Hindustan Times</span>
-        
-      </span>
-      
-    </div>
-  </article>
-  
-  
-  
-
-  <article class="story-card level-corroborated">
-    <div class="meta-row">
-      <span class="badge badge-corroborated">Corroborated</span>
-      
-      <span class="source-count">5 independent sources</span>
-      <span class="sep">•</span>
-      <span class="score-pill">Score: 8.61</span>
-      
-      <span class="sep">•</span>
-      <time datetime="2026-11-23T09:29:57+00:00" class="story-date local-time">23 Nov 2026, 14:59 IST</time>
-      
-    </div>
-
-    <h2><a href="story_1462.html" class="headline-link">Balen Shah India visit LIVE: Nepal PM arrives in India; Delhi and Kathmandu to explore new areas of cooperation</a></h2>
-
-    
-    <div class="story-summary-omitted">
-      
-      <div class="empty-state-notice entailment-notice">
-        <span class="notice-badge">&#9432; Constrained to Verified Facts</span>
-        <p>AI narrative synthesis suppressed to prevent hallucination because reporting lacks sufficient multi-source consensus. View individual source claims on the story page.</p>
-        <a href="story_1462.html" class="view-claims-btn">View claims &rarr;</a>
-      </div>
-      
-    </div>
-    
-
-    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
-    <div class="sources-list">
-      <strong>Sources:</strong>
-      
-      <span class="source-item-chip">
-        <a href="https://www.news18.com/india/nepal-pm-balendra-shah-india-visit-begins-on-sunday-meeting-with-pm-modi-key-agenda-details-10435494.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Nepal PM Balendra Shah&#39;s First State Visit To India: What Will He Discuss With PM Modi?">Nepal PM Balendra Shah&#39;s First State Visit To India: What Will He Discuss With PM Modi?</a>
-        <span class="badge badge-outlet">News18</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://www.hindustantimes.com/india-news/nepal-pm-balen-shah-india-visit-live-updates-pm-narendra-modi-meeting-new-delhi-bilateral-talks-agenda-101795338320016.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Balen Shah India visit LIVE: Nepal PM arrives in India; Delhi and Kathmandu to explore new areas of cooperation">Balen Shah India visit LIVE: Nepal PM arrives in India; Delhi and Kathmandu to explore new areas of cooperation</a>
-        <span class="badge badge-outlet">Hindustan Times</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://timesofindia.indiatimes.com/india/nepal-pm-balen-shah-arrives-in-india-for-first-visit-talks-with-pm-modi-on-monday-top-developments/articleshow/136070546.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Nepal PM Balen Shah arrives in India for first visit; talks with PM Modi on Monday">Nepal PM Balen Shah arrives in India for first visit; talks with PM Modi on Monday</a>
-        <span class="badge badge-outlet">Times of India</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://www.dnaindia.com/india/report-nepal-pm-balen-shah-arrives-in-delhi-on-first-official-visit-to-meet-pm-modi-know-what-s-on-the-agenda-3224488" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Nepal PM Balen Shah arrives in Delhi on first official visit, to meet PM Modi; know what&#39;s on the agenda">Nepal PM Balen Shah arrives in Delhi on first official visit, to meet PM Modi; know what&#39;s on the agenda</a>
-        <span class="badge badge-outlet">DNA India</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://www.thehindu.com/news/national/pm-modi-holds-bilateral-talks-with-nepal-prime-minister-balendra-shah-trade-investment-connectivity-on-agenda/article71733786.ece" target="_blank" rel="noopener noreferrer" class="source-title-link" title="PM Modi holds bilateral talks with Nepal Prime Minister Balendra Shah; trade, investment, connectivity on agenda">PM Modi holds bilateral talks with Nepal Prime Minister Balendra Shah; trade, investment, connectivity on agenda</a>
+        <a href="https://www.thehindu.com/sport/tennis/alcaraz-charges-past-world-number-onezverev-to-clinch-atp-finals-title/article71732439.ece" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Alcaraz charges past world number one Zverev to clinch ATP Finals title">Alcaraz charges past world number one Zverev to clinch ATP Finals title</a>
         <span class="badge badge-outlet">The Hindu</span>
         
       </span>
@@ -388,14 +173,14 @@
       
       <span class="source-count">5 independent sources</span>
       <span class="sep">•</span>
-      <span class="score-pill">Score: 8.95</span>
+      <span class="score-pill">Score: 9.36</span>
       
       <span class="sep">•</span>
-      <time datetime="2026-11-23T05:20:46+00:00" class="story-date local-time">23 Nov 2026, 10:50 IST</time>
+      <time datetime="2026-11-23T06:15:40+00:00" class="story-date local-time">23 Nov 2026, 11:45 IST</time>
       
     </div>
 
-    <h2><a href="story_1555.html" class="headline-link">Alice Huang in touch with Chinese spy agency during affair with Nvidia CEO: Report</a></h2>
+    <h2><a href="story_1566.html" class="headline-link">Alcaraz charges past world number one Zverev to clinch ATP Finals title</a></h2>
 
     
     <div class="story-summary-omitted">
@@ -403,7 +188,7 @@
       <div class="empty-state-notice entailment-notice">
         <span class="notice-badge">&#9432; Constrained to Verified Facts</span>
         <p>AI narrative synthesis suppressed to prevent hallucination because reporting lacks sufficient multi-source consensus. View individual source claims on the story page.</p>
-        <a href="story_1555.html" class="view-claims-btn">View claims &rarr;</a>
+        <a href="story_1566.html" class="view-claims-btn">View claims &rarr;</a>
       </div>
       
     </div>
@@ -414,31 +199,127 @@
       <strong>Sources:</strong>
       
       <span class="source-item-chip">
-        <a href="https://timesofindia.indiatimes.com/business/international-business/nvidia-chip-case-how-chinese-man-in-megaspeed-built-network-serving-china-with-alice-huang/articleshow/136072827.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Nvidia chip case: How Chinese man in Megaspeed built network serving China with Alice Huang">Nvidia chip case: How Chinese man in Megaspeed built network serving China with Alice Huang</a>
+        <a href="https://www.channelnewsasia.com/sport/alcaraz-digs-deep-beat-shelton-and-reach-final-6571906" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Alcaraz digs deep to beat Shelton and reach final">Alcaraz digs deep to beat Shelton and reach final</a>
+        <span class="badge badge-outlet">CNA – Asia</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://indianexpress.com/article/sports/tennis/carlos-alcaraz-beats-ben-shelton-atp-finals-turin-semifinal-10973103/" target="_blank" rel="noopener noreferrer" class="source-title-link" title="I’m just happy to play great tennis in the tie-break when it matters: Alcaraz after beating Shelton">I’m just happy to play great tennis in the tie-break when it matters: Alcaraz after beating Shelton</a>
+        <span class="badge badge-outlet">Indian Express</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://timesofindia.indiatimes.com/sports/tennis/top-stories/alexander-zverev-gets-his-chance-to-silence-critics-against-carlos-alcaraz-in-atp-finals-final/articleshow/136063178.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="ATP Finals final: Zverev gets his chance to silence critics against Alcaraz">ATP Finals final: Zverev gets his chance to silence critics against Alcaraz</a>
         <span class="badge badge-outlet">Times of India</span>
         
       </span><span class="source-sep"> &bull; </span>
       
       <span class="source-item-chip">
-        <a href="https://www.indiatoday.in/world/story/alice-huang-singapore-megaspeed-li-ming-nvidia-ai-chip-smuggling-network-exposed-wsj-us-export-ban-china-jensen-huang-3044354-2026-11-22" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Alice Huang just a front? Chinese businessman ran Nvidia chip smuggling network">Alice Huang just a front? Chinese businessman ran Nvidia chip smuggling network</a>
+        <a href="https://www.thehindu.com/sport/tennis/alcaraz-charges-past-world-number-onezverev-to-clinch-atp-finals-title/article71732439.ece" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Alcaraz charges past world number one Zverev to clinch ATP Finals title">Alcaraz charges past world number one Zverev to clinch ATP Finals title</a>
+        <span class="badge badge-outlet">The Hindu</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.aljazeera.com/sports/2026/11/23/carlos-alcaraz-atp-finals-2026-title-alexander-zverev-tennis" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Alcaraz storms past world number one Zverev to win maiden ATP Finals title">Alcaraz storms past world number one Zverev to win maiden ATP Finals title</a>
+        <span class="badge badge-outlet">Al Jazeera – World</span>
+        
+      </span>
+      
+    </div>
+  </article>
+  
+  
+  
+  
+
+  <article class="story-card level-strongly">
+    <div class="meta-row">
+      <span class="badge badge-strongly">Strongly corroborated</span>
+      
+      <span class="source-count">1 independent source</span>
+      <span class="sep">•</span>
+      <span class="score-pill">Score: 12.56</span>
+      
+      <span class="sep">•</span>
+      <time datetime="2026-11-21T18:19:10+00:00" class="story-date local-time">21 Nov 2026, 23:49 IST</time>
+      
+    </div>
+
+    <h2><a href="story_1051.html" class="headline-link">Hackers breached US Department of Agriculture, NBC News reports</a></h2>
+
+    
+    <p class="story-summary">Independent corroboration across reporting outlets indicates that the Federal Bureau of Investigation (FBI) per reporting, is investigating a suspected breach of per reporting, its National Crime Information Center (NCIC), per reporting, a nationwide database used by federal, state as well as local law enforcement agencies to per reporting, share criminal justice information, CNN reported. Consensus reporting also confirms that the US Department of per reporting, Agriculture (USDA) told employees that per reporting, a system used to facilitate per reporting, payments to farmers was targeted within a cyberattack, NBC reported on Nov per reporting, 20, citing two former department officials. Contributing sources further noted that the FBI is investigating a suspected breach per reporting, of a nationwide database per reporting, used by federal, state as well as local law enforcement agencies to per reporting, share criminal justice information, CNN reported recently (November 20, 2026), citing two per reporting, people briefed on the investigation.</p>
+    
+
+    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
+    <div class="sources-list">
+      <strong>Sources:</strong>
+      
+      <span class="source-item-chip">
+        <a href="https://www.aljazeera.com/news/2026/11/21/fbi-national-crime-database-suffers-suspected-breach-reports" target="_blank" rel="noopener noreferrer" class="source-title-link" title="FBI national crime database suffers suspected breach: Reports">FBI national crime database suffers suspected breach: Reports</a>
+        <span class="badge badge-outlet">Al Jazeera – World</span>
+        
+      </span>
+      
+    </div>
+  </article>
+  
+  
+  
+  
+
+  <article class="story-card level-strongly">
+    <div class="meta-row">
+      <span class="badge badge-strongly">Strongly corroborated</span>
+      
+      <span class="source-count">5 independent sources</span>
+      <span class="sep">•</span>
+      <span class="score-pill">Score: 10.71</span>
+      
+      <span class="sep">•</span>
+      <time datetime="2026-11-22T14:37:58+00:00" class="story-date local-time">22 Nov 2026, 20:07 IST</time>
+      
+    </div>
+
+    <h2><a href="story_1254.html" class="headline-link">Netanyahu and Eisenkot parties resume talks to form Israel government</a></h2>
+
+    
+    <p class="story-summary">Additional verified reporting highlights that gadi Eisenkot, who is tasked with forming per reporting, the next Israeli government, per reporting, has invited the right-per reporting, wing Likud party of caretaker Prime Minister per reporting, Benjamin Netanyahu for coalition per reporting, talks, his party said recently (November 21, 2026). Additional verified reporting highlights that netanyahu as well as Eisenkot parties resume talks per reporting, to form Israel government Gadi per reporting, Eisenkot has until Dec per reporting, 6 to form a government, alongside the possibility of a 14-day extension. While core facts align, sources present differing accounts regarding whether The talks are scheduled to begin on Sunday, November 22, as Eisenkot faces a December deadline to secure enough support in parliament to replace Netanyahu or The October 27 election produced a fractured parliament, with no political bloc securing the 61 seats needed for a majority in Israel&#39;s 120-member Knesset.</p>
+    
+
+    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
+    <div class="sources-list">
+      <strong>Sources:</strong>
+      
+      <span class="source-item-chip">
+        <a href="https://timesofindia.indiatimes.com/world/middle-east/israel-government-formation-eisenkot-invites-netanyahus-likud-party-for-coalition-talks/articleshow/136062828.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Israel govt formation: Eisenkot invites Netanyahu&#39;s Likud party for coalition talks">Israel govt formation: Eisenkot invites Netanyahu&#39;s Likud party for coalition talks</a>
+        <span class="badge badge-outlet">Times of India</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.indiatoday.in/world/story/ex-israeli-pm-naftali-bennett-backs-gadi-eisenkot-for-pm-says-he-will-not-serve-under-netanyahu-3044205-2026-11-22" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Ex-Israeli PM backs Gadi Eisenkot for PM, says he won&#39;t serve under Netanyahu">Ex-Israeli PM backs Gadi Eisenkot for PM, says he won&#39;t serve under Netanyahu</a>
         <span class="badge badge-outlet">India Today</span>
         
       </span><span class="source-sep"> &bull; </span>
       
       <span class="source-item-chip">
-        <a href="https://economictimes.indiatimes.com/news/international/world-news/chinas-spies-set-sights-on-ai-chips-years-before-nvidia-scandal-report/articleshow/136071430.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Chinese spies set sights on AI chips yrs before Nvidia">Chinese spies set sights on AI chips yrs before Nvidia</a>
-        <span class="badge badge-outlet">Economic Times</span>
+        <a href="https://www.thehindu.com/news/international/eisenkot-invites-netanyahus-party-for-israeli-coalition-talks/article71729470.ece" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Eisenkot invites Netanyahu’s party for Israeli coalition talks">Eisenkot invites Netanyahu’s party for Israeli coalition talks</a>
+        <span class="badge badge-outlet">The Hindu</span>
         
       </span><span class="source-sep"> &bull; </span>
       
       <span class="source-item-chip">
-        <a href="https://www.straitstimes.com/world/united-states/spy-chief-says-us-probing-alleged-spy-tied-to-former-nvidia-ceo" target="_blank" rel="noopener noreferrer" class="source-title-link" title="US probing alleged Chinese spy tied to former Nvidia CEO, says intelligence chief">US probing alleged Chinese spy tied to former Nvidia CEO, says intelligence chief</a>
+        <a href="https://www.straitstimes.com/world/middle-east/gadi-eisenkot-invites-netanyahus-party-for-israeli-coalition-talks" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Gadi Eisenkot invites Netanyahu’s party for Israeli coalition talks">Gadi Eisenkot invites Netanyahu’s party for Israeli coalition talks</a>
         <span class="badge badge-outlet">The Straits Times – World</span>
         
       </span><span class="source-sep"> &bull; </span>
       
       <span class="source-item-chip">
-        <a href="https://www.channelnewsasia.com/world/alice-huang-chinese-spy-nvidia-affair-6573671" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Alice Huang in touch with Chinese spy agency during affair with Nvidia CEO: Report">Alice Huang in touch with Chinese spy agency during affair with Nvidia CEO: Report</a>
+        <a href="https://www.channelnewsasia.com/world/netanyahu-and-eisenkot-parties-resume-talks-form-israel-government-6573061" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Netanyahu and Eisenkot parties resume talks to form Israel government">Netanyahu and Eisenkot parties resume talks to form Israel government</a>
         <span class="badge badge-outlet">CNA – Asia</span>
         
       </span>
@@ -456,14 +337,14 @@
       
       <span class="source-count">2 independent sources</span>
       <span class="sep">•</span>
-      <span class="score-pill">Score: 13.38</span>
+      <span class="score-pill">Score: 12.52</span>
       
       <span class="sep">•</span>
-      <time datetime="2026-11-21T00:59:53+00:00" class="story-date local-time">21 Nov 2026, 06:29 IST</time>
+      <time datetime="2026-11-21T17:42:14+00:00" class="story-date local-time">21 Nov 2026, 23:12 IST</time>
       
     </div>
 
-    <h2><a href="story_751.html" class="headline-link">Indian man sentenced to 19-plus years in plot to assassinate US-based Sikh separatist leader</a></h2>
+    <h2><a href="story_853.html" class="headline-link">वैश्विक सांख्यिकीय साझेदारियों को बढ़ावा देना: ज्ञान के आदान-प्रदान और संस्थागत सहयोग के लिए सांख्यिकी और कार्यक्रम कार्यान्वयन मंत्रालय(एमओएसपीआई) का विजन</a></h2>
 
     
     <div class="story-summary-omitted">
@@ -471,57 +352,7 @@
       <div class="empty-state-notice entailment-notice">
         <span class="notice-badge">&#9432; Constrained to Verified Facts</span>
         <p>AI narrative synthesis suppressed to prevent hallucination because reporting lacks sufficient multi-source consensus. View individual source claims on the story page.</p>
-        <a href="story_751.html" class="view-claims-btn">View claims &rarr;</a>
-      </div>
-      
-    </div>
-    
-
-    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
-    <div class="sources-list">
-      <strong>Sources:</strong>
-      
-      <span class="source-item-chip">
-        <a href="https://www.thehindu.com/news/national/us-court-sentences-indian-national-nikhil-gupta-to-235-months-in-jail-in-murder-for-hire-plot/article71725795.ece" target="_blank" rel="noopener noreferrer" class="source-title-link" title="U.S. court sentences Indian national Nikhil Gupta to 235 months in jail in Pannun murder plot">U.S. court sentences Indian national Nikhil Gupta to 235 months in jail in Pannun murder plot</a>
-        <span class="badge badge-outlet">The Hindu</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://www.livemint.com/news/us-news/nikhil-gupta-sentenced-to-over-19-years-in-us-prison-for-plot-to-kill-khalistani-separatist-pannun-11795222312694.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Nikhil Gupta sentenced to over 19 years in US prison for plot to kill Khalistani separatist Pannun">Nikhil Gupta sentenced to over 19 years in US prison for plot to kill Khalistani separatist Pannun</a>
-        <span class="badge badge-outlet">Mint</span>
-        
-      </span>
-      
-    </div>
-  </article>
-  
-  
-  
-  
-
-  <article class="story-card level-strongly">
-    <div class="meta-row">
-      <span class="badge badge-strongly">Strongly corroborated</span>
-      
-      <span class="source-count">4 independent sources</span>
-      <span class="sep">•</span>
-      <span class="score-pill">Score: 10.53</span>
-      
-      <span class="sep">•</span>
-      <time datetime="2026-11-22T09:57:34+00:00" class="story-date local-time">22 Nov 2026, 15:27 IST</time>
-      
-    </div>
-
-    <h2><a href="story_1257.html" class="headline-link">वैश्विक सांख्यिकीय साझेदारियों को बढ़ावा देना: ज्ञान के आदान-प्रदान और संस्थागत सहयोग के लिए सांख्यिकी और कार्यक्रम कार्यान्वयन मंत्रालय(एमओएसपीआई) का विजन</a></h2>
-
-    
-    <div class="story-summary-omitted">
-      
-      <div class="empty-state-notice entailment-notice">
-        <span class="notice-badge">&#9432; Constrained to Verified Facts</span>
-        <p>AI narrative synthesis suppressed to prevent hallucination because reporting lacks sufficient multi-source consensus. View individual source claims on the story page.</p>
-        <a href="story_1257.html" class="view-claims-btn">View claims &rarr;</a>
+        <a href="story_853.html" class="view-claims-btn">View claims &rarr;</a>
       </div>
       
     </div>
@@ -538,20 +369,145 @@
       </span><span class="source-sep"> &bull; </span>
       
       <span class="source-item-chip">
-        <a href="https://www.thehindu.com/news/national/pm-modi-address-at-sco-civilisational-dialogue-forum/article71725120.ece" target="_blank" rel="noopener noreferrer" class="source-title-link" title="PM Modi says cultural connect can guarantee global peace">PM Modi says cultural connect can guarantee global peace</a>
+        <a href="https://www.thehindu.com/news/national/shared-civilisational-knowledge-should-be-harnessed-by-nations-shekhawat/article71729205.ece" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Shared civilisational knowledge should be harnessed by nations: Shekhawat">Shared civilisational knowledge should be harnessed by nations: Shekhawat</a>
         <span class="badge badge-outlet">The Hindu</span>
         
-      </span><span class="source-sep"> &bull; </span>
+      </span>
+      
+    </div>
+  </article>
+  
+  
+  
+
+  <article class="story-card level-corroborated">
+    <div class="meta-row">
+      <span class="badge badge-corroborated">Corroborated</span>
+      
+      <span class="source-count">2 independent sources</span>
+      <span class="sep">•</span>
+      <span class="score-pill">Score: 8.18</span>
+      
+      <span class="sep">•</span>
+      <time datetime="2026-11-23T18:27:38+00:00" class="story-date local-time">23 Nov 2026, 23:57 IST</time>
+      
+    </div>
+
+    <h2><a href="story_1562.html" class="headline-link">Israeli strikes kill at least three in Gaza, including worker with UN Palestinian agency</a></h2>
+
+    
+    <div class="story-summary-omitted">
+      
+      <div class="empty-state-notice sensitive-notice">
+        <span class="notice-badge">&#9888; Sensitive Topic Safeguard</span>
+        <p>Narrative generation suppressed under legal and defamation safeguards (court proceedings or private individuals). Only structured claims from named outlets are published.</p>
+        <a href="story_1562.html" class="view-claims-btn">Inspect claims &rarr;</a>
+      </div>
+      
+    </div>
+    
+
+    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
+    <div class="sources-list">
+      <strong>Sources:</strong>
       
       <span class="source-item-chip">
-        <a href="https://www.hindustantimes.com/india-news/culture-play-key-role-in-fostering-dialogue-pakistan-minister-malik-101795222929535.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Culture play key role in fostering dialogue: Pakistan minister Malik">Culture play key role in fostering dialogue: Pakistan minister Malik</a>
-        <span class="badge badge-outlet">Hindustan Times</span>
+        <a href="https://www.aljazeera.com/video/newsfeed/2026/11/21/21-11-sv-israel-targets-gaza-food-truck" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Israeli strike hits food aid vehicle in Gaza, killing three">Israeli strike hits food aid vehicle in Gaza, killing three</a>
+        <span class="badge badge-outlet">Al Jazeera – World</span>
         
       </span><span class="source-sep"> &bull; </span>
       
       <span class="source-item-chip">
-        <a href="https://www.news18.com/world/dialogue-among-civilisations-is-essential-pakistan-minister-musadik-malik-at-sco-forum-in-delhi-10436152.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="&#39;Dialogue Among Civilisations Is Essential&#39;: Pakistan Minister Musadik Malik At SCO Forum In Delhi">&#39;Dialogue Among Civilisations Is Essential&#39;: Pakistan Minister Musadik Malik At SCO Forum In Delhi</a>
-        <span class="badge badge-outlet">News18</span>
+        <a href="https://www.channelnewsasia.com/world/israeli-strikes-kill-least-three-in-gaza-including-worker-un-palestinian-agency-6575821" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Israeli strikes kill at least three in Gaza, including worker with UN Palestinian agency">Israeli strikes kill at least three in Gaza, including worker with UN Palestinian agency</a>
+        <span class="badge badge-outlet">CNA – Asia</span>
+        
+      </span>
+      
+    </div>
+  </article>
+  
+  
+  
+  
+
+  <article class="story-card level-strongly">
+    <div class="meta-row">
+      <span class="badge badge-strongly">Strongly corroborated</span>
+      
+      <span class="source-count">1 independent source</span>
+      <span class="sep">•</span>
+      <span class="score-pill">Score: 12.59</span>
+      
+      <span class="sep">•</span>
+      <time datetime="2026-11-21T16:14:01+00:00" class="story-date local-time">21 Nov 2026, 21:44 IST</time>
+      
+    </div>
+
+    <h2><a href="story_852.html" class="headline-link">Meta&#39;s India offices hit by opposition protests over account removals</a></h2>
+
+    
+    <div class="story-summary-omitted">
+      
+      <div class="empty-state-notice entailment-notice">
+        <span class="notice-badge">&#9432; Constrained to Verified Facts</span>
+        <p>AI narrative synthesis suppressed to prevent hallucination because reporting lacks sufficient multi-source consensus. View individual source claims on the story page.</p>
+        <a href="story_852.html" class="view-claims-btn">View claims &rarr;</a>
+      </div>
+      
+    </div>
+    
+
+    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
+    <div class="sources-list">
+      <strong>Sources:</strong>
+      
+      <span class="source-item-chip">
+        <a href="https://www.aljazeera.com/news/2026/11/21/indias-opposition-stages-protests-against-meta-over-account-removals" target="_blank" rel="noopener noreferrer" class="source-title-link" title="India’s opposition stages protests against Meta over account removals">India’s opposition stages protests against Meta over account removals</a>
+        <span class="badge badge-outlet">Al Jazeera – World</span>
+        
+      </span>
+      
+    </div>
+  </article>
+  
+  
+  
+  
+
+  <article class="story-card level-strongly">
+    <div class="meta-row">
+      <span class="badge badge-strongly">Strongly corroborated</span>
+      
+      <span class="source-count">1 independent source</span>
+      <span class="sep">•</span>
+      <span class="score-pill">Score: 10.37</span>
+      
+      <span class="sep">•</span>
+      <time datetime="2026-11-22T16:47:22+00:00" class="story-date local-time">22 Nov 2026, 22:17 IST</time>
+      
+    </div>
+
+    <h2><a href="story_1259.html" class="headline-link">Zelenskyy says Putin a &#39;killer&#39; after Trump calls him his &#39;friend&#39;</a></h2>
+
+    
+    <div class="story-summary-omitted">
+      
+      <div class="empty-state-notice entailment-notice">
+        <span class="notice-badge">&#9432; Constrained to Verified Facts</span>
+        <p>AI narrative synthesis suppressed to prevent hallucination because reporting lacks sufficient multi-source consensus. View individual source claims on the story page.</p>
+        <a href="story_1259.html" class="view-claims-btn">View claims &rarr;</a>
+      </div>
+      
+    </div>
+    
+
+    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
+    <div class="sources-list">
+      <strong>Sources:</strong>
+      
+      <span class="source-item-chip">
+        <a href="https://www.straitstimes.com/world/united-states/us-intelligence-chief-says-putin-is-not-americas-friend-in-ukraine" target="_blank" rel="noopener noreferrer" class="source-title-link" title="US intelligence chief says Putin is &#39;not America&#39;s friend in Ukraine&#39;">US intelligence chief says Putin is &#39;not America&#39;s friend in Ukraine&#39;</a>
+        <span class="badge badge-outlet">The Straits Times – World</span>
         
       </span>
       
@@ -567,25 +523,17 @@
       
       <span class="source-count">6 independent sources</span>
       <span class="sep">•</span>
-      <span class="score-pill">Score: 9.78</span>
+      <span class="score-pill">Score: 10.82</span>
       
       <span class="sep">•</span>
-      <time datetime="2026-11-22T18:17:08+00:00" class="story-date local-time">22 Nov 2026, 23:47 IST</time>
+      <time datetime="2026-11-22T11:18:51+00:00" class="story-date local-time">22 Nov 2026, 16:48 IST</time>
       
     </div>
 
-    <h2><a href="story_1258.html" class="headline-link">Hyderabad on high alert after LeT email threatens 26/11-style terror attack</a></h2>
+    <h2><a href="story_1154.html" class="headline-link">Thanks to PM Modi, gold price drops  ₹65 lakh per kg: CTI writes open letter, ‘Your advice helped protect savings’</a></h2>
 
     
-    <div class="story-summary-omitted">
-      
-      <div class="empty-state-notice entailment-notice">
-        <span class="notice-badge">&#9432; Constrained to Verified Facts</span>
-        <p>AI narrative synthesis suppressed to prevent hallucination because reporting lacks sufficient multi-source consensus. View individual source claims on the story page.</p>
-        <a href="story_1258.html" class="view-claims-btn">View claims &rarr;</a>
-      </div>
-      
-    </div>
+    <p class="story-summary">Independent corroboration across reporting outlets indicates that he said people told him per reporting, that they had saved money following following his May appeal. Consensus reporting also confirms that INDIA PM Modi confirmed that many people had per reporting, told him they were per reporting, able to save money per reporting, by following his advice.</p>
     
 
     <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
@@ -593,38 +541,38 @@
       <strong>Sources:</strong>
       
       <span class="source-item-chip">
-        <a href="https://www.thehindu.com/news/cities/Hyderabad/hyderabad-police-issue-alert-over-terror-threat-email-security-checks-conducted-at-key-locations/article71731583.ece" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Hyderabad Police issue alert over terror threat email; security checks conducted at key locations">Hyderabad Police issue alert over terror threat email; security checks conducted at key locations</a>
-        <span class="badge badge-outlet">The Hindu</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://www.hindustantimes.com/india-news/hyderabad-gets-terror-threat-from-let-named-email-in-retaliation-for-lateef-bhat-s-killing-101795361107231.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Hyderabad on high alert after email from ‘LeT operatives’ warns of terror attacks">Hyderabad on high alert after email from ‘LeT operatives’ warns of terror attacks</a>
+        <a href="https://www.hindustantimes.com/india-news/pm-modi-says-people-bought-less-gold-on-his-advice-invokes-lal-bahadur-shastri-india-still-has-same-character-101795271137688.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="PM Modi says people bought less gold on his advice, invokes Lal Bahadur Shastri: ‘India still has same character’">PM Modi says people bought less gold on his advice, invokes Lal Bahadur Shastri: ‘India still has same character’</a>
         <span class="badge badge-outlet">Hindustan Times</span>
         
       </span><span class="source-sep"> &bull; </span>
       
       <span class="source-item-chip">
-        <a href="https://timesofindia.indiatimes.com/city/hyderabad/hyderabad-police-step-up-security-after-email-threatens-26/11-style-terror-attack-at-hotel-railway-station/articleshow/136080025.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Hyderabad on alert after email threatens to avenge terrorist Lateef Bhat&#39;s killing">Hyderabad on alert after email threatens to avenge terrorist Lateef Bhat&#39;s killing</a>
-        <span class="badge badge-outlet">Times of India</span>
+        <a href="https://www.dnaindia.com/india/report-pm-modi-credits-his-gold-appeal-for-fall-in-prices-brahmos-missile-troubled-enemies-3224469" target="_blank" rel="noopener noreferrer" class="source-title-link" title="PM Modi credits his gold appeal for fall in prices; BrahMos Missile troubled enemies">PM Modi credits his gold appeal for fall in prices; BrahMos Missile troubled enemies</a>
+        <span class="badge badge-outlet">DNA India</span>
         
       </span><span class="source-sep"> &bull; </span>
       
       <span class="source-item-chip">
-        <a href="https://www.indiatoday.in/cities/hyderabad/story/hyderabad-terror-threat-let-email-kachiguda-hotel-railway-station-3044572-2026-11-22" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Hyderabad on high alert after LeT email threatens 26/11-style terror attack">Hyderabad on high alert after LeT email threatens 26/11-style terror attack</a>
-        <span class="badge badge-outlet">India Today</span>
+        <a href="https://indianexpress.com/article/cities/lucknow/people-heeded-my-call-to-not-buy-gold-saved-money-after-prices-crashed-says-modi-10973187/" target="_blank" rel="noopener noreferrer" class="source-title-link" title="People heeded my call to not buy gold, saved money after prices crashed, says Modi">People heeded my call to not buy gold, saved money after prices crashed, says Modi</a>
+        <span class="badge badge-outlet">Indian Express</span>
         
       </span><span class="source-sep"> &bull; </span>
       
       <span class="source-item-chip">
-        <a href="https://www.news18.com/india/hyderabad-on-alert-after-let-letter-warns-of-26-11-style-mumbai-terror-attack-to-avenge-lashkar-terrorist-lateef-bhat-killing-10436331.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Hyderabad On Alert After LeT Letter Threatens Of 26/11-Style Attack To Avenge Lateef Bhat&#39;s Killing">Hyderabad On Alert After LeT Letter Threatens Of 26/11-Style Attack To Avenge Lateef Bhat&#39;s Killing</a>
+        <a href="https://www.news18.com/india/modi-ji-saved-lakhs-from-debt-traders-body-thanks-pm-for-appeal-to-citizens-to-buy-less-gold-ws-l-10435873.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="&#39;Modi Ji Saved Lakhs From Debt&#39;: Traders&#39; Body Thanks PM For Appeal To Citizens To Buy Less Gold">&#39;Modi Ji Saved Lakhs From Debt&#39;: Traders&#39; Body Thanks PM For Appeal To Citizens To Buy Less Gold</a>
         <span class="badge badge-outlet">News18</span>
         
       </span><span class="source-sep"> &bull; </span>
       
       <span class="source-item-chip">
-        <a href="https://www.dnaindia.com/india/report-2611-style-attack-on-hyderabad-fresh-let-email-triggers-panic-in-city-claims-mumbai-like-strike-warns-of-300-casualties-3224495" target="_blank" rel="noopener noreferrer" class="source-title-link" title="26/11-Style Attack on Hyderabad? Fresh LeT email triggers panic in city, claims Mumbai-like strike, warns of 300 casualties">26/11-Style Attack on Hyderabad? Fresh LeT email triggers panic in city, claims Mumbai-like strike, warns of 300 casualties</a>
-        <span class="badge badge-outlet">DNA India</span>
+        <a href="https://www.thehindu.com/news/national/people-bought-less-gold-prices-fell-modi-recalls-year-old-appeal/article71731156.ece" target="_blank" rel="noopener noreferrer" class="source-title-link" title="‘People bought less gold, prices fell’: Modi recalls year-old appeal">‘People bought less gold, prices fell’: Modi recalls year-old appeal</a>
+        <span class="badge badge-outlet">The Hindu</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.livemint.com/news/india/thanks-to-pm-modi-gold-price-drops-65-lakh-per-kg-cti-written-open-letter-your-advice-helped-protect-savings-11795330409616.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Thanks to PM Modi, gold price drops  ₹65 lakh per kg: CTI writes open letter, ‘Your advice helped protect savings’">Thanks to PM Modi, gold price drops  ₹65 lakh per kg: CTI writes open letter, ‘Your advice helped protect savings’</a>
+        <span class="badge badge-outlet">Mint</span>
         
       </span>
       
@@ -638,16 +586,16 @@
     <div class="meta-row">
       <span class="badge badge-corroborated">Corroborated</span>
       
-      <span class="source-count">3 independent sources</span>
+      <span class="source-count">2 independent sources</span>
       <span class="sep">•</span>
-      <span class="score-pill">Score: 8.61</span>
+      <span class="score-pill">Score: 8.22</span>
       
       <span class="sep">•</span>
-      <time datetime="2026-11-23T07:30:43+00:00" class="story-date local-time">23 Nov 2026, 13:00 IST</time>
+      <time datetime="2026-11-23T16:50:00+00:00" class="story-date local-time">23 Nov 2026, 22:20 IST</time>
       
     </div>
 
-    <h2><a href="story_1465.html" class="headline-link">India&#39;s Gill wants bowler-friendly pitch for 2nd test after draw in Wellington</a></h2>
+    <h2><a href="story_1564.html" class="headline-link">Democrats turn sights to 2028 after US midterms triumph</a></h2>
 
     
     <div class="story-summary-omitted">
@@ -655,7 +603,7 @@
       <div class="empty-state-notice entailment-notice">
         <span class="notice-badge">&#9432; Constrained to Verified Facts</span>
         <p>AI narrative synthesis suppressed to prevent hallucination because reporting lacks sufficient multi-source consensus. View individual source claims on the story page.</p>
-        <a href="story_1465.html" class="view-claims-btn">View claims &rarr;</a>
+        <a href="story_1564.html" class="view-claims-btn">View claims &rarr;</a>
       </div>
       
     </div>
@@ -666,19 +614,13 @@
       <strong>Sources:</strong>
       
       <span class="source-item-chip">
-        <a href="https://www.indiatoday.in/sports/cricket/story/nz-vs-ind-1st-test-shubman-gill-gautam-gambhir-chat-declaration-wellington-3044843-2026-11-23" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Shubman Gill opens up on declaration call, says keeping bowlers fresh was priority">Shubman Gill opens up on declaration call, says keeping bowlers fresh was priority</a>
-        <span class="badge badge-outlet">India Today</span>
+        <a href="https://www.aljazeera.com/news/2026/11/21/us-midterms-2026-what-happens-before-the-new-congress-takes-office" target="_blank" rel="noopener noreferrer" class="source-title-link" title="US midterms 2026: What happens before the new Congress takes office?">US midterms 2026: What happens before the new Congress takes office?</a>
+        <span class="badge badge-outlet">Al Jazeera – World</span>
         
       </span><span class="source-sep"> &bull; </span>
       
       <span class="source-item-chip">
-        <a href="https://economictimes.indiatimes.com/news/sports/cricket/gill-wants-icc-to-revisit-saliva-ban-questions-quality-of-kookaburra-ball/articleshow/136093287.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Gill questions saliva ban, quality of Kookaburra ball">Gill questions saliva ban, quality of Kookaburra ball</a>
-        <span class="badge badge-outlet">Economic Times</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://www.channelnewsasia.com/sport/indias-gill-wants-bowler-friendly-pitch-2nd-test-after-draw-in-wellington-6574106" target="_blank" rel="noopener noreferrer" class="source-title-link" title="India&#39;s Gill wants bowler-friendly pitch for 2nd test after draw in Wellington">India&#39;s Gill wants bowler-friendly pitch for 2nd test after draw in Wellington</a>
+        <a href="https://www.channelnewsasia.com/world/democrats-midterms-election-us-debate-trump-6575661" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Democrats turn sights to 2028 after US midterms triumph">Democrats turn sights to 2028 after US midterms triumph</a>
         <span class="badge badge-outlet">CNA – Asia</span>
         
       </span>
@@ -733,6 +675,99 @@
             el.textContent = dateStr + ', ' + timeStr;
           }
         } catch(e) {}
+      });
+    });
+  </script>
+
+  <!-- Smart Hide-on-Scroll Navigation, Reading Progress & Back-to-Top -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var header = document.getElementById('siteHeader');
+      var progressBar = document.getElementById('readingProgress');
+      var backToTop = document.getElementById('backToTop');
+
+      var lastScrollY = window.pageYOffset || document.documentElement.scrollTop;
+      var ticking = false;
+      var scrollThreshold = 8;
+
+      function onScroll() {
+        var currentScrollY = window.pageYOffset || document.documentElement.scrollTop;
+        var maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+
+        // 1. Reading progress bar
+        if (progressBar && maxScroll > 0) {
+          var pct = Math.min(100, Math.max(0, (currentScrollY / maxScroll) * 100));
+          progressBar.style.width = pct + '%';
+        }
+
+        // 2. Back to top button
+        if (backToTop) {
+          if (currentScrollY > 400) {
+            backToTop.classList.add('visible');
+          } else {
+            backToTop.classList.remove('visible');
+          }
+        }
+
+        // 3. Smart Hide/Show Header
+        if (!header) {
+          ticking = false;
+          return;
+        }
+
+        // Always show and remove elevation at very top
+        if (currentScrollY <= 15) {
+          header.classList.remove('header--hidden');
+          header.classList.remove('header--scrolled');
+          lastScrollY = currentScrollY;
+          ticking = false;
+          return;
+        }
+
+        header.classList.add('header--scrolled');
+
+        var delta = currentScrollY - lastScrollY;
+
+        // Prevent hiding near bottom of page on mobile rubber-band bounce
+        if (maxScroll > 0 && currentScrollY >= maxScroll - 30) {
+          ticking = false;
+          return;
+        }
+
+        if (delta > scrollThreshold && currentScrollY > 60) {
+          // Scrolling DOWN -> Hide nav bar so full news occupies entire viewport
+          header.classList.add('header--hidden');
+        } else if (delta < -scrollThreshold) {
+          // Scrolling UP -> Reveal nav bar smoothly
+          header.classList.remove('header--hidden');
+        }
+
+        lastScrollY = currentScrollY;
+        ticking = false;
+      }
+
+      window.addEventListener('scroll', function() {
+        if (!ticking) {
+          window.requestAnimationFrame(onScroll);
+          ticking = true;
+        }
+      }, { passive: true });
+
+      if (backToTop) {
+        backToTop.addEventListener('click', function() {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+
+      // Active nav link highlight based on current path
+      var currentPath = window.location.pathname.split('/').pop() || 'index.html';
+      document.querySelectorAll('.nav-links a').forEach(function(link) {
+        var href = link.getAttribute('href');
+        if (href === currentPath || (currentPath === '' && href === 'index.html')) {
+          link.classList.add('active');
+        } else if (currentPath.indexOf('page_') === 0 && href === 'index.html') {
+          link.classList.add('active');
+        }
       });
     });
   </script>

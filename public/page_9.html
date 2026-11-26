@@ -29,32 +29,53 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
+  <!-- Reading Progress Bar (stays subtle at the very top edge) -->
+  <div class="reading-progress-bar" id="readingProgress" aria-hidden="true"></div>
+
+  <header id="siteHeader">
     <div class="container">
       <div class="header-inner">
         <div class="site-brand">
           
           <div class="site-title">
-            <a href="index.html">TrippyNews</a>
+            <a href="index.html">
+              <span class="brand-icon" aria-hidden="true">⬡</span>
+              <span class="brand-name">TrippyNews</span>
+            </a>
           </div>
           
           <span class="site-tagline">Automated News Corroboration Pipeline</span>
         </div>
-        <div class="header-live">
-          <span class="live-dot"></span>
-          Last updated: <time datetime="2026-11-26T14:13:44.632597+00:00" class="local-time">26 Nov 2026, 19:43 IST</time>
+
+        <nav class="header-nav" aria-label="Main Navigation">
+          <ul class="nav-links">
+            <li><a href="index.html">Top Stories</a></li>
+            <li><a href="methodology.html">Methodology</a></li>
+            <li><a href="corrections.html">Corrections &amp; Changelog</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-live" title="Automated pipeline status">
+          <span class="live-dot-wrap">
+            <span class="live-dot-ping"></span>
+            <span class="live-dot"></span>
+          </span>
+          <span class="live-label">LIVE</span>
+          <span class="live-sep">•</span>
+          <span class="live-time"><time datetime="2026-11-26T14:43:30.958621+00:00" class="local-time">26 Nov, 20:13 IST</time></span>
         </div>
       </div>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html">Top Stories</a></li>
-          <li><a href="methodology.html">Methodology</a></li>
-          <li><a href="corrections.html">Corrections &amp; Changelog</a></li>
-          <li><a href="about.html">About</a></li>
-        </ul>
-      </nav>
     </div>
   </header>
+
+  <!-- Floating Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top" title="Scroll to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <line x1="12" y1="19" x2="12" y2="5"></line>
+      <polyline points="5 12 12 5 19 12"></polyline>
+    </svg>
+  </button>
 
   <main class="container">
     <div class="disclosure-banner">
@@ -88,147 +109,19 @@
     <div class="meta-row">
       <span class="badge badge-strongly">Strongly corroborated</span>
       
-      <span class="source-count">5 independent sources</span>
+      <span class="source-count">6 independent sources</span>
       <span class="sep">•</span>
-      <span class="score-pill">Score: 9.36</span>
+      <span class="score-pill">Score: 10.90</span>
       
       <span class="sep">•</span>
-      <time datetime="2026-11-23T06:15:40+00:00" class="story-date local-time">23 Nov 2026, 11:45 IST</time>
+      <time datetime="2026-11-22T21:33:11+00:00" class="story-date local-time">23 Nov 2026, 03:03 IST</time>
       
     </div>
 
-    <h2><a href="story_1566.html" class="headline-link">Alcaraz charges past world number one Zverev to clinch ATP Finals title</a></h2>
+    <h2><a href="story_1454.html" class="headline-link">Netanyahu and Eisenkot parties resume talks to form Israel government</a></h2>
 
     
-    <div class="story-summary-omitted">
-      
-      <div class="empty-state-notice entailment-notice">
-        <span class="notice-badge">&#9432; Constrained to Verified Facts</span>
-        <p>AI narrative synthesis suppressed to prevent hallucination because reporting lacks sufficient multi-source consensus. View individual source claims on the story page.</p>
-        <a href="story_1566.html" class="view-claims-btn">View claims &rarr;</a>
-      </div>
-      
-    </div>
-    
-
-    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
-    <div class="sources-list">
-      <strong>Sources:</strong>
-      
-      <span class="source-item-chip">
-        <a href="https://www.channelnewsasia.com/sport/alcaraz-digs-deep-beat-shelton-and-reach-final-6571906" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Alcaraz digs deep to beat Shelton and reach final">Alcaraz digs deep to beat Shelton and reach final</a>
-        <span class="badge badge-outlet">CNA – Asia</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://indianexpress.com/article/sports/tennis/carlos-alcaraz-beats-ben-shelton-atp-finals-turin-semifinal-10973103/" target="_blank" rel="noopener noreferrer" class="source-title-link" title="I’m just happy to play great tennis in the tie-break when it matters: Alcaraz after beating Shelton">I’m just happy to play great tennis in the tie-break when it matters: Alcaraz after beating Shelton</a>
-        <span class="badge badge-outlet">Indian Express</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://timesofindia.indiatimes.com/sports/tennis/top-stories/alexander-zverev-gets-his-chance-to-silence-critics-against-carlos-alcaraz-in-atp-finals-final/articleshow/136063178.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="ATP Finals final: Zverev gets his chance to silence critics against Alcaraz">ATP Finals final: Zverev gets his chance to silence critics against Alcaraz</a>
-        <span class="badge badge-outlet">Times of India</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://www.thehindu.com/sport/tennis/alcaraz-charges-past-world-number-onezverev-to-clinch-atp-finals-title/article71732439.ece" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Alcaraz charges past world number one Zverev to clinch ATP Finals title">Alcaraz charges past world number one Zverev to clinch ATP Finals title</a>
-        <span class="badge badge-outlet">The Hindu</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://www.aljazeera.com/sports/2026/11/23/carlos-alcaraz-atp-finals-2026-title-alexander-zverev-tennis" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Alcaraz storms past world number one Zverev to win maiden ATP Finals title">Alcaraz storms past world number one Zverev to win maiden ATP Finals title</a>
-        <span class="badge badge-outlet">Al Jazeera – World</span>
-        
-      </span>
-      
-    </div>
-  </article>
-  
-  
-  
-  
-
-  <article class="story-card level-strongly">
-    <div class="meta-row">
-      <span class="badge badge-strongly">Strongly corroborated</span>
-      
-      <span class="source-count">5 independent sources</span>
-      <span class="sep">•</span>
-      <span class="score-pill">Score: 12.56</span>
-      
-      <span class="sep">•</span>
-      <time datetime="2026-11-21T18:19:10+00:00" class="story-date local-time">21 Nov 2026, 23:49 IST</time>
-      
-    </div>
-
-    <h2><a href="story_1051.html" class="headline-link">Hackers breached US Department of Agriculture, NBC News reports</a></h2>
-
-    
-    <p class="story-summary">Independent corroboration across reporting outlets indicates that the Federal Bureau of Investigation (FBI) per reporting, is investigating a suspected breach of per reporting, its National Crime Information Center (NCIC), per reporting, a nationwide database used by federal, state as well as local law enforcement agencies to per reporting, share criminal justice information, CNN reported. Consensus reporting also confirms that the US Department of per reporting, Agriculture (USDA) told employees that per reporting, a system used to facilitate per reporting, payments to farmers was targeted within a cyberattack, NBC reported on Nov per reporting, 20, citing two former department officials. Contributing sources further noted that the FBI is investigating a suspected breach per reporting, of a nationwide database per reporting, used by federal, state as well as local law enforcement agencies to per reporting, share criminal justice information, CNN reported recently (November 20, 2026), citing two per reporting, people briefed on the investigation.</p>
-    
-
-    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
-    <div class="sources-list">
-      <strong>Sources:</strong>
-      
-      <span class="source-item-chip">
-        <a href="https://www.thehindu.com/news/international/fbis-criminal-information-database-hacked-reports-say/article71727198.ece" target="_blank" rel="noopener noreferrer" class="source-title-link" title="FBI&#39;s criminal information database hacked, reports say">FBI&#39;s criminal information database hacked, reports say</a>
-        <span class="badge badge-outlet">The Hindu</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://timesofindia.indiatimes.com/world/us/if-you-target-americans-justice-will-find-you-fbi-chief-kash-patel-warns-cyber-criminals-amid-jpmorgan-data-breach-tech-outages/articleshow/136042592.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="&#39;If you target Americans, justice will find you&#39;: FBI chief warns cyber criminals">&#39;If you target Americans, justice will find you&#39;: FBI chief warns cyber criminals</a>
-        <span class="badge badge-outlet">Times of India</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://www.livemint.com/news/us-news/hackers-target-fbi-again-second-breach-since-september-kash-patel-says-bureau-taking-on-cybercriminals-globally-11795233961169.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Hackers target FBI again, second breach since September; Kash Patel says bureau taking on cybercriminals globally">Hackers target FBI again, second breach since September; Kash Patel says bureau taking on cybercriminals globally</a>
-        <span class="badge badge-outlet">Mint</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://www.straitstimes.com/world/united-states/fbis-criminal-information-database-hacked-cnn-reports" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Hackers hit FBI, US Agriculture Department as Trump tells Americans to ‘relax’">Hackers hit FBI, US Agriculture Department as Trump tells Americans to ‘relax’</a>
-        <span class="badge badge-outlet">The Straits Times – World</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://www.aljazeera.com/news/2026/11/21/fbi-national-crime-database-suffers-suspected-breach-reports" target="_blank" rel="noopener noreferrer" class="source-title-link" title="FBI national crime database suffers suspected breach: Reports">FBI national crime database suffers suspected breach: Reports</a>
-        <span class="badge badge-outlet">Al Jazeera – World</span>
-        
-      </span>
-      
-    </div>
-  </article>
-  
-  
-  
-  
-
-  <article class="story-card level-strongly">
-    <div class="meta-row">
-      <span class="badge badge-strongly">Strongly corroborated</span>
-      
-      <span class="source-count">5 independent sources</span>
-      <span class="sep">•</span>
-      <span class="score-pill">Score: 10.71</span>
-      
-      <span class="sep">•</span>
-      <time datetime="2026-11-22T14:37:58+00:00" class="story-date local-time">22 Nov 2026, 20:07 IST</time>
-      
-    </div>
-
-    <h2><a href="story_1254.html" class="headline-link">Netanyahu and Eisenkot parties resume talks to form Israel government</a></h2>
-
-    
-    <p class="story-summary">Additional verified reporting highlights that gadi Eisenkot, who is tasked with forming per reporting, the next Israeli government, per reporting, has invited the right-per reporting, wing Likud party of caretaker Prime Minister per reporting, Benjamin Netanyahu for coalition per reporting, talks, his party said recently (November 21, 2026). Additional verified reporting highlights that netanyahu as well as Eisenkot parties resume talks per reporting, to form Israel government Gadi per reporting, Eisenkot has until Dec per reporting, 6 to form a government, alongside the possibility of a 14-day extension. While core facts align, sources present differing accounts regarding whether The talks are scheduled to begin on Sunday, November 22, as Eisenkot faces a December deadline to secure enough support in parliament to replace Netanyahu or The October 27 election produced a fractured parliament, with no political bloc securing the 61 seats needed for a majority in Israel&#39;s 120-member Knesset.</p>
+    <p class="story-summary">Additional verified reporting highlights that netanyahu as well as Eisenkot parties resume talks per reporting, to form Israel government Gadi per reporting, Eisenkot has until Dec per reporting, 6 to form a government, alongside the possibility of a 14-day extension. Additional verified reporting highlights that HERZLIYA, Israel: The parties of per reporting, caretaker Israeli Prime Minister Benjamin Netanyahu as well as his rival Gadi Eisenkot launched per reporting, a new round of talks recently (Nov 22) over whether to form a coalition government, per reporting, with Netanyahu&#39;s party insisting per reporting, on keeping his main policies. Additional verified reporting highlights that the parties of caretaker per reporting, Israeli Prime Minister Benjamin Netanyahu as well as his rival Gadi Eisenkot concluded per reporting, a new round of talks recently (November 22, 2026) without reaching an agreement on a per reporting, possible coalition government, which would per reporting, require concessions from both sides. Additional verified reporting highlights that AI generated JERUSALEM - Gadi per reporting, Eisenkot, who is tasked with per reporting, forming the next Israeli per reporting, government, has invited the right-per reporting, wing Likud party of caretaker prime minister Benjamin Netanyahu per reporting, for coalition talks, his party said on Nov 21. While core facts align, sources present differing accounts regarding whether The talks are scheduled to begin on Sunday, November 22, as Eisenkot faces a December deadline to secure enough support in parliament to replace Netanyahu or The October 27 election produced a fractured parliament, with no political bloc securing the 61 seats needed for a majority in Israel&#39;s 120-member Knesset.</p>
     
 
     <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
@@ -242,14 +135,14 @@
       </span><span class="source-sep"> &bull; </span>
       
       <span class="source-item-chip">
-        <a href="https://www.indiatoday.in/world/story/ex-israeli-pm-naftali-bennett-backs-gadi-eisenkot-for-pm-says-he-will-not-serve-under-netanyahu-3044205-2026-11-22" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Ex-Israeli PM backs Gadi Eisenkot for PM, says he won&#39;t serve under Netanyahu">Ex-Israeli PM backs Gadi Eisenkot for PM, says he won&#39;t serve under Netanyahu</a>
-        <span class="badge badge-outlet">India Today</span>
+        <a href="https://www.thehindu.com/news/international/eisenkot-invites-netanyahus-party-for-israeli-coalition-talks/article71729470.ece" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Eisenkot invites Netanyahu’s party for Israeli coalition talks">Eisenkot invites Netanyahu’s party for Israeli coalition talks</a>
+        <span class="badge badge-outlet">The Hindu</span>
         
       </span><span class="source-sep"> &bull; </span>
       
       <span class="source-item-chip">
-        <a href="https://www.thehindu.com/news/international/eisenkot-invites-netanyahus-party-for-israeli-coalition-talks/article71729470.ece" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Eisenkot invites Netanyahu’s party for Israeli coalition talks">Eisenkot invites Netanyahu’s party for Israeli coalition talks</a>
-        <span class="badge badge-outlet">The Hindu</span>
+        <a href="https://www.indiatoday.in/world/story/eisenkot-turns-to-netanyahus-likud-in-fresh-bid-to-form-israel-government-3044216-2026-11-22" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Eisenkot invites Netanyahu&#39;s Likud for talks in fresh bid to form Israel government">Eisenkot invites Netanyahu&#39;s Likud for talks in fresh bid to form Israel government</a>
+        <span class="badge badge-outlet">India Today</span>
         
       </span><span class="source-sep"> &bull; </span>
       
@@ -263,6 +156,12 @@
         <a href="https://www.channelnewsasia.com/world/netanyahu-and-eisenkot-parties-resume-talks-form-israel-government-6573061" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Netanyahu and Eisenkot parties resume talks to form Israel government">Netanyahu and Eisenkot parties resume talks to form Israel government</a>
         <span class="badge badge-outlet">CNA – Asia</span>
         
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.aljazeera.com/news/2026/11/22/netanyahus-likud-eisenkots-yashar-end-coalition-talks-without-deal" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Netanyahu’s Likud, Eisenkot’s Yashar end coalition talks without deal">Netanyahu’s Likud, Eisenkot’s Yashar end coalition talks without deal</a>
+        <span class="badge badge-outlet">Al Jazeera – World</span>
+        
       </span>
       
     </div>
@@ -270,22 +169,21 @@
   
   
   
-  
 
-  <article class="story-card level-strongly">
+  <article class="story-card level-corroborated">
     <div class="meta-row">
-      <span class="badge badge-strongly">Strongly corroborated</span>
+      <span class="badge badge-corroborated">Corroborated</span>
       
-      <span class="source-count">3 independent sources</span>
+      <span class="source-count">2 independent sources</span>
       <span class="sep">•</span>
-      <span class="score-pill">Score: 12.52</span>
+      <span class="score-pill">Score: 8.22</span>
       
       <span class="sep">•</span>
-      <time datetime="2026-11-21T17:42:14+00:00" class="story-date local-time">21 Nov 2026, 23:12 IST</time>
+      <time datetime="2026-11-24T00:39:22+00:00" class="story-date local-time">24 Nov 2026, 06:09 IST</time>
       
     </div>
 
-    <h2><a href="story_853.html" class="headline-link">वैश्विक सांख्यिकीय साझेदारियों को बढ़ावा देना: ज्ञान के आदान-प्रदान और संस्थागत सहयोग के लिए सांख्यिकी और कार्यक्रम कार्यान्वयन मंत्रालय(एमओएसपीआई) का विजन</a></h2>
+    <h2><a href="story_1658.html" class="headline-link">Democrats turn sights to 2028 after US midterms triumph</a></h2>
 
     
     <div class="story-summary-omitted">
@@ -293,7 +191,7 @@
       <div class="empty-state-notice entailment-notice">
         <span class="notice-badge">&#9432; Constrained to Verified Facts</span>
         <p>AI narrative synthesis suppressed to prevent hallucination because reporting lacks sufficient multi-source consensus. View individual source claims on the story page.</p>
-        <a href="story_853.html" class="view-claims-btn">View claims &rarr;</a>
+        <a href="story_1658.html" class="view-claims-btn">View claims &rarr;</a>
       </div>
       
     </div>
@@ -304,77 +202,69 @@
       <strong>Sources:</strong>
       
       <span class="source-item-chip">
-        <a href="https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2338768" target="_blank" rel="noopener noreferrer" class="source-title-link" title="वैश्विक सांख्यिकीय साझेदारियों को बढ़ावा देना: ज्ञान के आदान-प्रदान और संस्थागत सहयोग के लिए सांख्यिकी और कार्यक्रम कार्यान्वयन मंत्रालय(एमओएसपीआई) का विजन">वैश्विक सांख्यिकीय साझेदारियों को बढ़ावा देना: ज्ञान के आदान-प्रदान और संस्थागत सहयोग के लिए सांख्यिकी और कार्यक्रम कार्यान्वयन मंत्रालय(एमओएसपीआई) का विजन</a>
-        <span class="badge badge-outlet">Press Information Bureau</span>
+        <a href="https://www.aljazeera.com/news/2026/11/21/us-midterms-2026-what-happens-before-the-new-congress-takes-office" target="_blank" rel="noopener noreferrer" class="source-title-link" title="US midterms 2026: What happens before the new Congress takes office?">US midterms 2026: What happens before the new Congress takes office?</a>
+        <span class="badge badge-outlet">Al Jazeera – World</span>
         
       </span><span class="source-sep"> &bull; </span>
       
       <span class="source-item-chip">
-        <a href="https://www.thehindu.com/news/national/pm-modi-address-at-sco-civilisational-dialogue-forum/article71725120.ece" target="_blank" rel="noopener noreferrer" class="source-title-link" title="PM Modi says cultural connect can guarantee global peace">PM Modi says cultural connect can guarantee global peace</a>
-        <span class="badge badge-outlet">The Hindu</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://www.hindustantimes.com/india-news/culture-play-key-role-in-fostering-dialogue-pakistan-minister-malik-101795222929535.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Culture play key role in fostering dialogue: Pakistan minister Malik">Culture play key role in fostering dialogue: Pakistan minister Malik</a>
-        <span class="badge badge-outlet">Hindustan Times</span>
-        
-      </span>
-      
-    </div>
-  </article>
-  
-  
-  
-  
-
-  <article class="story-card level-strongly">
-    <div class="meta-row">
-      <span class="badge badge-strongly">Strongly corroborated</span>
-      
-      <span class="source-count">3 independent sources</span>
-      <span class="sep">•</span>
-      <span class="score-pill">Score: 13.80</span>
-      
-      <span class="sep">•</span>
-      <time datetime="2026-11-21T02:56:21+00:00" class="story-date local-time">21 Nov 2026, 08:26 IST</time>
-      
-    </div>
-
-    <h2><a href="story_652.html" class="headline-link">Trump calls for Nvidia&#39;s Huang to be given &#39;second chance&#39;</a></h2>
-
-    
-    <div class="story-summary-omitted">
-      
-      <div class="empty-state-notice entailment-notice">
-        <span class="notice-badge">&#9432; Constrained to Verified Facts</span>
-        <p>AI narrative synthesis suppressed to prevent hallucination because reporting lacks sufficient multi-source consensus. View individual source claims on the story page.</p>
-        <a href="story_652.html" class="view-claims-btn">View claims &rarr;</a>
-      </div>
-      
-    </div>
-    
-
-    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
-    <div class="sources-list">
-      <strong>Sources:</strong>
-      
-      <span class="source-item-chip">
-        <a href="https://www.livemint.com/news/us-news/trump-backs-huangs-return-as-nvidia-ceo-says-xi-jinping-called-him-brilliant-as-us-maintains-china-chip-policy-11795229406386.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Trump backs Huang&#39;s return as Nvidia CEO, says Xi Jinping called him &#39;brilliant&#39; as US maintains China chip policy">Trump backs Huang&#39;s return as Nvidia CEO, says Xi Jinping called him &#39;brilliant&#39; as US maintains China chip policy</a>
-        <span class="badge badge-outlet">Mint</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://www.channelnewsasia.com/world/nvidia-jensen-huang-affair-espionage-donald-trump-6570976" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Trump calls for Nvidia&#39;s Huang to be given &#39;second chance&#39;">Trump calls for Nvidia&#39;s Huang to be given &#39;second chance&#39;</a>
+        <a href="https://www.channelnewsasia.com/world/democrats-midterms-election-us-debate-trump-6575661" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Democrats turn sights to 2028 after US midterms triumph">Democrats turn sights to 2028 after US midterms triumph</a>
         <span class="badge badge-outlet">CNA – Asia</span>
         
+      </span>
+      
+    </div>
+  </article>
+  
+  
+  
+  
+
+  <article class="story-card level-strongly">
+    <div class="meta-row">
+      <span class="badge badge-strongly">Strongly corroborated</span>
+      
+      <span class="source-count">4 independent sources</span>
+      <span class="sep">•</span>
+      <span class="score-pill">Score: 11.01</span>
+      
+      <span class="sep">•</span>
+      <time datetime="2026-11-22T19:10:00+00:00" class="story-date local-time">23 Nov 2026, 00:40 IST</time>
+      
+    </div>
+
+    <h2><a href="story_1276.html" class="headline-link">Washington governor, union denounce ICE arrests of travellers at Seattle airport</a></h2>
+
+    
+    <p class="story-summary">Additional verified reporting highlights that alaska Airlines said ICE officers per reporting, gave them no advance notice from the operation. Additional verified reporting highlights that washington governor, union denounce ICE per reporting, arrests of travelers at Seattle airport per reporting, Nov 21 - The governor of per reporting, Washington state denounced federal immigration authorities recently for arresting two people on a per reporting, jetway at a Seattle-area airport. While core facts align, sources present differing accounts regarding whether The Port of Seattle said it was “outraged” by the incident, which involved ICE and two passengers or Alaska Airlines said in an emailed statement that it had no advance notice of the enforcement action and was working to determine whether proper protocols were followed.</p>
+    
+
+    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
+    <div class="sources-list">
+      <strong>Sources:</strong>
+      
+      <span class="source-item-chip">
+        <a href="https://timesofindia.indiatimes.com/world/us/watch-masked-ice-agents-drag-away-two-at-us-seattle-airport-spark-chaos-during-boarding/articleshow/136065874.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Watch: Masked ICE agents drag away two flyers at US airport during boarding">Watch: Masked ICE agents drag away two flyers at US airport during boarding</a>
+        <span class="badge badge-outlet">Times of India</span>
+        
       </span><span class="source-sep"> &bull; </span>
       
       <span class="source-item-chip">
-        <a href="https://www.straitstimes.com/world/united-states/threats-insults-settlements-how-nvidias-ex-ceo-jensen-huang-made-humiliation-routine" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Threats, insults, settlements: How Nvidia’s ex-CEO Jensen Huang made humiliation routine">Threats, insults, settlements: How Nvidia’s ex-CEO Jensen Huang made humiliation routine</a>
+        <a href="https://www.straitstimes.com/world/washington-governor-union-denounce-ice-arrests-of-travelers-at-seattle-airport" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Washington governor, union denounce ICE arrests of travelers at Seattle airport">Washington governor, union denounce ICE arrests of travelers at Seattle airport</a>
         <span class="badge badge-outlet">The Straits Times – World</span>
         
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.channelnewsasia.com/world/washington-protest-ice-arrests-travellers-seattle-airport-6572721" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Washington governor, union denounce ICE arrests of travellers at Seattle airport">Washington governor, union denounce ICE arrests of travellers at Seattle airport</a>
+        <span class="badge badge-outlet">CNA – Asia</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.aljazeera.com/video/newsfeed/2026/11/22/ice-agents-detain-two-people-at-seattle-airport" target="_blank" rel="noopener noreferrer" class="source-title-link" title="ICE agents detain two people at Seattle airport">ICE agents detain two people at Seattle airport</a>
+        <span class="badge badge-outlet">Al Jazeera – World</span>
+        
       </span>
       
     </div>
@@ -388,16 +278,16 @@
     <div class="meta-row">
       <span class="badge badge-strongly">Strongly corroborated</span>
       
-      <span class="source-count">5 independent sources</span>
+      <span class="source-count">4 independent sources</span>
       <span class="sep">•</span>
-      <span class="score-pill">Score: 13.09</span>
+      <span class="score-pill">Score: 10.89</span>
       
       <span class="sep">•</span>
-      <time datetime="2026-11-21T10:40:40+00:00" class="story-date local-time">21 Nov 2026, 16:10 IST</time>
+      <time datetime="2026-11-22T19:36:00+00:00" class="story-date local-time">23 Nov 2026, 01:06 IST</time>
       
     </div>
 
-    <h2><a href="story_752.html" class="headline-link">Meta&#39;s India offices hit by opposition protests over account removals</a></h2>
+    <h2><a href="story_1301.html" class="headline-link">Russia starts towing ship hit by drones in Baltic, Finland says</a></h2>
 
     
     <div class="story-summary-omitted">
@@ -405,7 +295,7 @@
       <div class="empty-state-notice entailment-notice">
         <span class="notice-badge">&#9432; Constrained to Verified Facts</span>
         <p>AI narrative synthesis suppressed to prevent hallucination because reporting lacks sufficient multi-source consensus. View individual source claims on the story page.</p>
-        <a href="story_752.html" class="view-claims-btn">View claims &rarr;</a>
+        <a href="story_1301.html" class="view-claims-btn">View claims &rarr;</a>
       </div>
       
     </div>
@@ -416,32 +306,26 @@
       <strong>Sources:</strong>
       
       <span class="source-item-chip">
-        <a href="https://www.livemint.com/news/india/meta-offices-in-gurugram-hyderabad-mumbai-see-protests-from-congresss-youth-wing-heres-why-11795254533372.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Meta offices in Gurugram, Hyderabad, Mumbai see protests from Congress&#39;s youth wing: Here&#39;s why">Meta offices in Gurugram, Hyderabad, Mumbai see protests from Congress&#39;s youth wing: Here&#39;s why</a>
-        <span class="badge badge-outlet">Mint</span>
+        <a href="https://timesofindia.indiatimes.com/world/europe/russian-cargo-vessel-linked-to-defence-ministry-comes-under-drone-attack-near-finland/articleshow/136060025.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Russian cargo vessel linked to defence ministry comes under drone attack near Finland">Russian cargo vessel linked to defence ministry comes under drone attack near Finland</a>
+        <span class="badge badge-outlet">Times of India</span>
         
       </span><span class="source-sep"> &bull; </span>
       
       <span class="source-item-chip">
-        <a href="https://www.news18.com/india/youth-congress-workers-vandalise-metas-hyderabad-office-over-suspended-accounts-video-ws-l-10435040.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Youth Congress Workers Vandalise Meta&#39;s Hyderabad Office Over Suspended Accounts | Video">Youth Congress Workers Vandalise Meta&#39;s Hyderabad Office Over Suspended Accounts | Video</a>
-        <span class="badge badge-outlet">News18</span>
+        <a href="https://www.aljazeera.com/video/newsfeed/2026/11/22/russian-ship-attacked-by-drone-in-baltic-sea-off-finland" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Russian ship attacked by drone in Baltic Sea off Finland">Russian ship attacked by drone in Baltic Sea off Finland</a>
+        <span class="badge badge-outlet">Al Jazeera – World</span>
         
       </span><span class="source-sep"> &bull; </span>
       
       <span class="source-item-chip">
-        <a href="https://economictimes.indiatimes.com/news/politics-and-nation/youth-congress-vandalises-meta-offices-in-hyderabad-and-mumbai-over-suspension-of-social-media-accounts/articleshow/136048468.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Youth Congress vandalises Meta offices in Hyd, Bom">Youth Congress vandalises Meta offices in Hyd, Bom</a>
-        <span class="badge badge-outlet">Economic Times</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://www.dnaindia.com/india/report-youth-congress-workers-vandalise-meta-office-in-hyderabad-over-restricted-accounts-3224440" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Youth Congress workers vandalise Meta office in Hyderabad over restricted accounts">Youth Congress workers vandalise Meta office in Hyderabad over restricted accounts</a>
-        <span class="badge badge-outlet">DNA India</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://www.channelnewsasia.com/asia/india-congress-party-meta-protests-censorship-6571316" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Meta&#39;s India offices hit by opposition protests over account removals">Meta&#39;s India offices hit by opposition protests over account removals</a>
+        <a href="https://www.channelnewsasia.com/world/russia-starts-towing-ship-hit-drones-in-baltic-finland-says-6573286" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Russia starts towing ship hit by drones in Baltic, Finland says">Russia starts towing ship hit by drones in Baltic, Finland says</a>
         <span class="badge badge-outlet">CNA – Asia</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.straitstimes.com/world/europe/libyas-eastern-government-suspects-drone-attack-caused-explosion-on-russian-ship-at-benghazi-port" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Suspected Ukrainian sea drones hit Russian warship at Benghazi naval base, Libyan officials say">Suspected Ukrainian sea drones hit Russian warship at Benghazi naval base, Libyan officials say</a>
+        <span class="badge badge-outlet">The Straits Times – World</span>
         
       </span>
       
@@ -458,14 +342,14 @@
       
       <span class="source-count">6 independent sources</span>
       <span class="sep">•</span>
-      <span class="score-pill">Score: 12.59</span>
+      <span class="score-pill">Score: 8.78</span>
       
       <span class="sep">•</span>
-      <time datetime="2026-11-21T16:14:01+00:00" class="story-date local-time">21 Nov 2026, 21:44 IST</time>
+      <time datetime="2026-11-23T16:38:30+00:00" class="story-date local-time">23 Nov 2026, 22:08 IST</time>
       
     </div>
 
-    <h2><a href="story_852.html" class="headline-link">Meta&#39;s India offices hit by opposition protests over account removals</a></h2>
+    <h2><a href="story_1761.html" class="headline-link">COP31 climate talks collapse as EU and others reject deal</a></h2>
 
     
     <div class="story-summary-omitted">
@@ -473,7 +357,7 @@
       <div class="empty-state-notice entailment-notice">
         <span class="notice-badge">&#9432; Constrained to Verified Facts</span>
         <p>AI narrative synthesis suppressed to prevent hallucination because reporting lacks sufficient multi-source consensus. View individual source claims on the story page.</p>
-        <a href="story_852.html" class="view-claims-btn">View claims &rarr;</a>
+        <a href="story_1761.html" class="view-claims-btn">View claims &rarr;</a>
       </div>
       
     </div>
@@ -484,37 +368,209 @@
       <strong>Sources:</strong>
       
       <span class="source-item-chip">
-        <a href="https://www.livemint.com/news/india/meta-offices-in-gurugram-hyderabad-mumbai-see-protests-from-congresss-youth-wing-heres-why-11795254533372.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Meta offices in Gurugram, Hyderabad, Mumbai see protests from Congress&#39;s youth wing: Here&#39;s why">Meta offices in Gurugram, Hyderabad, Mumbai see protests from Congress&#39;s youth wing: Here&#39;s why</a>
-        <span class="badge badge-outlet">Mint</span>
+        <a href="https://www.straitstimes.com/world/europe/cop31-climate-deal-in-the-balance-after-fractious-talks" target="_blank" rel="noopener noreferrer" class="source-title-link" title="COP31 climate talks see no consensus as EU, others reject deal">COP31 climate talks see no consensus as EU, others reject deal</a>
+        <span class="badge badge-outlet">The Straits Times – World</span>
         
       </span><span class="source-sep"> &bull; </span>
       
       <span class="source-item-chip">
-        <a href="https://www.news18.com/india/youth-congress-workers-vandalise-metas-hyderabad-office-over-suspended-accounts-video-ws-l-10435040.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Youth Congress Workers Vandalise Meta&#39;s Hyderabad Office Over Suspended Accounts | Video">Youth Congress Workers Vandalise Meta&#39;s Hyderabad Office Over Suspended Accounts | Video</a>
-        <span class="badge badge-outlet">News18</span>
+        <a href="https://www.thehindu.com/news/international/cop31-fails-to-agree-on-climate-deal-in-chaotic-finale/article71731651.ece" target="_blank" rel="noopener noreferrer" class="source-title-link" title="COP31 talks fail as EU, others reject any climate deal without language on a fossil fuel phase-out">COP31 talks fail as EU, others reject any climate deal without language on a fossil fuel phase-out</a>
+        <span class="badge badge-outlet">The Hindu</span>
         
       </span><span class="source-sep"> &bull; </span>
       
       <span class="source-item-chip">
-        <a href="https://economictimes.indiatimes.com/news/politics-and-nation/youth-congress-vandalises-meta-offices-in-hyderabad-and-mumbai-over-suspension-of-social-media-accounts/articleshow/136048468.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Youth Congress vandalises Meta offices in Hyd, Bom">Youth Congress vandalises Meta offices in Hyd, Bom</a>
-        <span class="badge badge-outlet">Economic Times</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://www.dnaindia.com/india/report-youth-congress-workers-vandalise-meta-office-in-hyderabad-over-restricted-accounts-3224440" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Youth Congress workers vandalise Meta office in Hyderabad over restricted accounts">Youth Congress workers vandalise Meta office in Hyderabad over restricted accounts</a>
-        <span class="badge badge-outlet">DNA India</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://www.channelnewsasia.com/asia/india-congress-party-meta-protests-censorship-6571316" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Meta&#39;s India offices hit by opposition protests over account removals">Meta&#39;s India offices hit by opposition protests over account removals</a>
+        <a href="https://www.channelnewsasia.com/world/cop31-climate-talk-collapse-eu-final-draft-political-deal-6572946" target="_blank" rel="noopener noreferrer" class="source-title-link" title="COP31 climate talks collapse as EU and others reject deal">COP31 climate talks collapse as EU and others reject deal</a>
         <span class="badge badge-outlet">CNA – Asia</span>
         
       </span><span class="source-sep"> &bull; </span>
       
       <span class="source-item-chip">
-        <a href="https://www.aljazeera.com/news/2026/11/21/indias-opposition-stages-protests-against-meta-over-account-removals" target="_blank" rel="noopener noreferrer" class="source-title-link" title="India’s opposition stages protests against Meta over account removals">India’s opposition stages protests against Meta over account removals</a>
+        <a href="https://www.aljazeera.com/video/inside-story/2026/11/22/why-has-the-cop31-climate-summit-failed-to-reach-agreement" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Why has the COP31 climate summit failed to reach agreement?">Why has the COP31 climate summit failed to reach agreement?</a>
+        <span class="badge badge-outlet">Al Jazeera – World</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://timesofindia.indiatimes.com/world/rest-of-world/a-handful-of-petrostates-a-missing-word-how-cop31-collapsed-over-fossil-fuels-and-why-it-matters/articleshow/136088055.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="COP31 climate talks collapse: What Saudi, Iran &amp;amp; Russia opposed &amp;amp; why it matters">COP31 climate talks collapse: What Saudi, Iran &amp;amp; Russia opposed &amp;amp; why it matters</a>
+        <span class="badge badge-outlet">Times of India</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.news18.com/world/big-disappointment-nations-fail-to-reach-deal-at-cop31-even-as-climate-crisis-deepens-ws-l-10436866.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="‘Big Disappointment’: Nations Fail To Reach Deal At COP31 Even As Climate Crisis Deepens">‘Big Disappointment’: Nations Fail To Reach Deal At COP31 Even As Climate Crisis Deepens</a>
+        <span class="badge badge-outlet">News18</span>
+        
+      </span>
+      
+    </div>
+  </article>
+  
+  
+  
+
+  <article class="story-card level-corroborated">
+    <div class="meta-row">
+      <span class="badge badge-corroborated">Corroborated</span>
+      
+      <span class="source-count">3 independent sources</span>
+      <span class="sep">•</span>
+      <span class="score-pill">Score: 8.27</span>
+      
+      <span class="sep">•</span>
+      <time datetime="2026-11-23T21:08:40+00:00" class="story-date local-time">24 Nov 2026, 02:38 IST</time>
+      
+    </div>
+
+    <h2><a href="story_1557.html" class="headline-link">Iran lashes singer dozens of times over concert: reports</a></h2>
+
+    
+    <div class="story-summary-omitted">
+      
+      <div class="empty-state-notice entailment-notice">
+        <span class="notice-badge">&#9432; Constrained to Verified Facts</span>
+        <p>AI narrative synthesis suppressed to prevent hallucination because reporting lacks sufficient multi-source consensus. View individual source claims on the story page.</p>
+        <a href="story_1557.html" class="view-claims-btn">View claims &rarr;</a>
+      </div>
+      
+    </div>
+    
+
+    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
+    <div class="sources-list">
+      <strong>Sources:</strong>
+      
+      <span class="source-item-chip">
+        <a href="https://www.channelnewsasia.com/world/iran-singer-lashes-ahmadi-hijab-concert-video-6576006" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Iran lashes singer dozens of times over concert: reports">Iran lashes singer dozens of times over concert: reports</a>
+        <span class="badge badge-outlet">CNA – Asia</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.straitstimes.com/world/middle-east/iran-carries-out-flogging-of-singer-and-her-team-iranian-website-says" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Iran carries out flogging of singer and her team, Iranian website says">Iran carries out flogging of singer and her team, Iranian website says</a>
+        <span class="badge badge-outlet">The Straits Times – World</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.aljazeera.com/news/2026/11/23/iran-flogs-singer-parastoo-ahmadi-for-performing-without-headscarf" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Iran flogs singer Parastoo Ahmadi for performing without headscarf">Iran flogs singer Parastoo Ahmadi for performing without headscarf</a>
+        <span class="badge badge-outlet">Al Jazeera – World</span>
+        
+      </span>
+      
+    </div>
+  </article>
+  
+  
+  
+  
+
+  <article class="story-card level-strongly">
+    <div class="meta-row">
+      <span class="badge badge-strongly">Strongly corroborated</span>
+      
+      <span class="source-count">4 independent sources</span>
+      <span class="sep">•</span>
+      <span class="score-pill">Score: 10.59</span>
+      
+      <span class="sep">•</span>
+      <time datetime="2026-11-22T19:35:46+00:00" class="story-date local-time">23 Nov 2026, 01:05 IST</time>
+      
+    </div>
+
+    <h2><a href="story_1255.html" class="headline-link">COP31 climate talks collapse as EU and others reject deal</a></h2>
+
+    
+    <div class="story-summary-omitted">
+      
+      <div class="empty-state-notice entailment-notice">
+        <span class="notice-badge">&#9432; Constrained to Verified Facts</span>
+        <p>AI narrative synthesis suppressed to prevent hallucination because reporting lacks sufficient multi-source consensus. View individual source claims on the story page.</p>
+        <a href="story_1255.html" class="view-claims-btn">View claims &rarr;</a>
+      </div>
+      
+    </div>
+    
+
+    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
+    <div class="sources-list">
+      <strong>Sources:</strong>
+      
+      <span class="source-item-chip">
+        <a href="https://www.straitstimes.com/world/europe/cop31-climate-deal-in-the-balance-after-fractious-talks" target="_blank" rel="noopener noreferrer" class="source-title-link" title="COP31 climate talks see no consensus as EU, others reject deal">COP31 climate talks see no consensus as EU, others reject deal</a>
+        <span class="badge badge-outlet">The Straits Times – World</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.aljazeera.com/news/2026/11/22/fossil-fuel-impasse-pushes-cop31-climate-talks-into-second-day-of-overtime" target="_blank" rel="noopener noreferrer" class="source-title-link" title="COP31 climate talks on the brink as new draft deal faces scrutiny">COP31 climate talks on the brink as new draft deal faces scrutiny</a>
+        <span class="badge badge-outlet">Al Jazeera – World</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.thehindu.com/news/international/cop31-fails-to-agree-on-climate-deal-in-chaotic-finale/article71731651.ece" target="_blank" rel="noopener noreferrer" class="source-title-link" title="COP31 talks fail as EU, others reject any climate deal without language on a fossil fuel phase-out">COP31 talks fail as EU, others reject any climate deal without language on a fossil fuel phase-out</a>
+        <span class="badge badge-outlet">The Hindu</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.channelnewsasia.com/world/cop31-climate-talk-collapse-eu-final-draft-political-deal-6572946" target="_blank" rel="noopener noreferrer" class="source-title-link" title="COP31 climate talks collapse as EU and others reject deal">COP31 climate talks collapse as EU and others reject deal</a>
+        <span class="badge badge-outlet">CNA – Asia</span>
+        
+      </span>
+      
+    </div>
+  </article>
+  
+  
+  
+
+  <article class="story-card level-corroborated">
+    <div class="meta-row">
+      <span class="badge badge-corroborated">Corroborated</span>
+      
+      <span class="source-count">3 independent sources</span>
+      <span class="sep">•</span>
+      <span class="score-pill">Score: 8.43</span>
+      
+      <span class="sep">•</span>
+      <time datetime="2026-11-23T18:12:55+00:00" class="story-date local-time">23 Nov 2026, 23:42 IST</time>
+      
+    </div>
+
+    <h2><a href="story_1563.html" class="headline-link">India pledges $1.6bn to Nepal in reset of ties</a></h2>
+
+    
+    <div class="story-summary-omitted">
+      
+      <div class="empty-state-notice entailment-notice">
+        <span class="notice-badge">&#9432; Constrained to Verified Facts</span>
+        <p>AI narrative synthesis suppressed to prevent hallucination because reporting lacks sufficient multi-source consensus. View individual source claims on the story page.</p>
+        <a href="story_1563.html" class="view-claims-btn">View claims &rarr;</a>
+      </div>
+      
+    </div>
+    
+
+    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
+    <div class="sources-list">
+      <strong>Sources:</strong>
+      
+      <span class="source-item-chip">
+        <a href="https://www.livemint.com/news/india/pm-modi-meets-nepal-pm-balendra-shah-announces-1-6-billion-aid-package-for-himalayan-nations-flood-recovery-11795425668391.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="PM Modi meets Nepal PM Balendra Shah, announces $1.6 billion aid package for Himalayan nation&#39;s flood recovery">PM Modi meets Nepal PM Balendra Shah, announces $1.6 billion aid package for Himalayan nation&#39;s flood recovery</a>
+        <span class="badge badge-outlet">Mint</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.bbc.co.uk/news/articles/cwx2ervemj4ko?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" class="source-title-link" title="India pledges $1.6bn to Nepal in reset of ties">India pledges $1.6bn to Nepal in reset of ties</a>
+        <span class="badge badge-outlet">BBC News – India</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.aljazeera.com/news/2026/11/23/india-pledges-1-6bn-in-flood-relief-for-nepal" target="_blank" rel="noopener noreferrer" class="source-title-link" title="India pledges $1.6bn in flood relief for Nepal as Balendra Shah visits Modi">India pledges $1.6bn in flood relief for Nepal as Balendra Shah visits Modi</a>
         <span class="badge badge-outlet">Al Jazeera – World</span>
         
       </span>
@@ -532,22 +588,64 @@
       
       <span class="source-count">2 independent sources</span>
       <span class="sep">•</span>
-      <span class="score-pill">Score: 10.37</span>
+      <span class="score-pill">Score: 11.24</span>
       
       <span class="sep">•</span>
-      <time datetime="2026-11-22T16:47:22+00:00" class="story-date local-time">22 Nov 2026, 22:17 IST</time>
+      <time datetime="2026-11-22T10:21:12+00:00" class="story-date local-time">22 Nov 2026, 15:51 IST</time>
       
     </div>
 
-    <h2><a href="story_1259.html" class="headline-link">Zelenskyy says Putin a &#39;killer&#39; after Trump calls him his &#39;friend&#39;</a></h2>
+    <h2><a href="story_1352.html" class="headline-link">Hackers breached US Department of Agriculture, NBC News reports</a></h2>
+
+    
+    <p class="story-summary">Independent corroboration across reporting outlets indicates that the Federal Bureau of Investigation (FBI) per reporting, is investigating a suspected breach of per reporting, its National Crime Information Center (NCIC), per reporting, a nationwide database used by federal, state as well as local law enforcement agencies to per reporting, share criminal justice information, CNN reported. Contributing sources further noted that the US Department of per reporting, Agriculture (USDA) told employees that per reporting, a system used to facilitate per reporting, payments to farmers was targeted within a cyberattack, NBC reported on Nov per reporting, 20, citing two former department officials. Additional verified reporting highlights that the FBI is investigating a suspected breach per reporting, of a nationwide database per reporting, used by federal, state as well as local law enforcement agencies to per reporting, share criminal justice information, CNN reported recently (November 20, 2026), citing two per reporting, people briefed on the investigation.</p>
+    
+
+    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
+    <div class="sources-list">
+      <strong>Sources:</strong>
+      
+      <span class="source-item-chip">
+        <a href="https://www.aljazeera.com/news/2026/11/21/fbi-national-crime-database-suffers-suspected-breach-reports" target="_blank" rel="noopener noreferrer" class="source-title-link" title="FBI national crime database suffers suspected breach: Reports">FBI national crime database suffers suspected breach: Reports</a>
+        <span class="badge badge-outlet">Al Jazeera – World</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://timesofindia.indiatimes.com/world/us/the-us-tech-slump-fbi-breach-corporate-outages-expose-vulnerabilities-in-americas-digital-systems/articleshow/136071741.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="How FBI breach, corporate outages expose vulnerabilities in US digital systems">How FBI breach, corporate outages expose vulnerabilities in US digital systems</a>
+        <span class="badge badge-outlet">Times of India</span>
+        
+      </span>
+      
+    </div>
+  </article>
+  
+  
+  
+  
+
+  <article class="story-card level-strongly">
+    <div class="meta-row">
+      <span class="badge badge-strongly">Strongly corroborated</span>
+      
+      <span class="source-count">1 independent source</span>
+      <span class="sep">•</span>
+      <span class="score-pill">Score: 11.98</span>
+      
+      <span class="sep">•</span>
+      <time datetime="2026-11-22T02:01:02+00:00" class="story-date local-time">22 Nov 2026, 07:31 IST</time>
+      
+    </div>
+
+    <h2><a href="story_1081.html" class="headline-link">Rohingya in Bangladesh welcome UN court’s genocide verdict but say they want to go home to Myanmar</a></h2>
 
     
     <div class="story-summary-omitted">
       
-      <div class="empty-state-notice entailment-notice">
-        <span class="notice-badge">&#9432; Constrained to Verified Facts</span>
-        <p>AI narrative synthesis suppressed to prevent hallucination because reporting lacks sufficient multi-source consensus. View individual source claims on the story page.</p>
-        <a href="story_1259.html" class="view-claims-btn">View claims &rarr;</a>
+      <div class="empty-state-notice sensitive-notice">
+        <span class="notice-badge">&#9888; Sensitive Topic Safeguard</span>
+        <p>Narrative generation suppressed under legal and defamation safeguards (court proceedings or private individuals). Only structured claims from named outlets are published.</p>
+        <a href="story_1081.html" class="view-claims-btn">Inspect claims &rarr;</a>
       </div>
       
     </div>
@@ -558,134 +656,8 @@
       <strong>Sources:</strong>
       
       <span class="source-item-chip">
-        <a href="https://www.channelnewsasia.com/world/ukraine-russia-volodymyr-zelenskyy-vladimir-putin-6571101" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Zelenskyy says Putin a &#39;killer&#39; after Trump calls him his &#39;friend&#39;">Zelenskyy says Putin a &#39;killer&#39; after Trump calls him his &#39;friend&#39;</a>
-        <span class="badge badge-outlet">CNA – Asia</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://www.straitstimes.com/world/europe/hes-a-killer-zelensky-on-putin-after-trump-calls-russian-leader-a-friend" target="_blank" rel="noopener noreferrer" class="source-title-link" title="‘He’s a killer’: Zelensky on Putin after Trump calls Russian leader a ‘friend’">‘He’s a killer’: Zelensky on Putin after Trump calls Russian leader a ‘friend’</a>
-        <span class="badge badge-outlet">The Straits Times – World</span>
-        
-      </span>
-      
-    </div>
-  </article>
-  
-  
-  
-
-  <article class="story-card level-corroborated">
-    <div class="meta-row">
-      <span class="badge badge-corroborated">Corroborated</span>
-      
-      <span class="source-count">6 independent sources</span>
-      <span class="sep">•</span>
-      <span class="score-pill">Score: 10.82</span>
-      
-      <span class="sep">•</span>
-      <time datetime="2026-11-22T11:18:51+00:00" class="story-date local-time">22 Nov 2026, 16:48 IST</time>
-      
-    </div>
-
-    <h2><a href="story_1154.html" class="headline-link">Thanks to PM Modi, gold price drops  ₹65 lakh per kg: CTI writes open letter, ‘Your advice helped protect savings’</a></h2>
-
-    
-    <p class="story-summary">Independent corroboration across reporting outlets indicates that he said people told him per reporting, that they had saved money following following his May appeal. Consensus reporting also confirms that INDIA PM Modi confirmed that many people had per reporting, told him they were per reporting, able to save money per reporting, by following his advice.</p>
-    
-
-    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
-    <div class="sources-list">
-      <strong>Sources:</strong>
-      
-      <span class="source-item-chip">
-        <a href="https://www.hindustantimes.com/india-news/pm-modi-says-people-bought-less-gold-on-his-advice-invokes-lal-bahadur-shastri-india-still-has-same-character-101795271137688.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="PM Modi says people bought less gold on his advice, invokes Lal Bahadur Shastri: ‘India still has same character’">PM Modi says people bought less gold on his advice, invokes Lal Bahadur Shastri: ‘India still has same character’</a>
-        <span class="badge badge-outlet">Hindustan Times</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://www.news18.com/india/pm-modi-says-his-appeal-to-buy-less-gold-helped-bring-prices-down-lal-bahadur-shastri-skip-one-meal-request-10435594.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="&#39;An Ordinary Person Like Me...&#39;: PM Modi Says His Appeal To Buy Less Gold Helped Bring Prices Down">&#39;An Ordinary Person Like Me...&#39;: PM Modi Says His Appeal To Buy Less Gold Helped Bring Prices Down</a>
-        <span class="badge badge-outlet">News18</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://www.dnaindia.com/india/report-pm-modi-credits-his-gold-appeal-for-fall-in-prices-brahmos-missile-troubled-enemies-3224469" target="_blank" rel="noopener noreferrer" class="source-title-link" title="PM Modi credits his gold appeal for fall in prices; BrahMos Missile troubled enemies">PM Modi credits his gold appeal for fall in prices; BrahMos Missile troubled enemies</a>
-        <span class="badge badge-outlet">DNA India</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://indianexpress.com/article/cities/lucknow/people-heeded-my-call-to-not-buy-gold-saved-money-after-prices-crashed-says-modi-10973187/" target="_blank" rel="noopener noreferrer" class="source-title-link" title="People heeded my call to not buy gold, saved money after prices crashed, says Modi">People heeded my call to not buy gold, saved money after prices crashed, says Modi</a>
-        <span class="badge badge-outlet">Indian Express</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://www.thehindu.com/news/national/people-bought-less-gold-prices-fell-modi-recalls-year-old-appeal/article71731156.ece" target="_blank" rel="noopener noreferrer" class="source-title-link" title="‘People bought less gold, prices fell’: Modi recalls year-old appeal">‘People bought less gold, prices fell’: Modi recalls year-old appeal</a>
+        <a href="https://www.thehindu.com/news/international/the-rohingya-vindication-for-a-persecuted-people/article71729370.ece" target="_blank" rel="noopener noreferrer" class="source-title-link" title="The Rohingya | Vindication for a persecuted people">The Rohingya | Vindication for a persecuted people</a>
         <span class="badge badge-outlet">The Hindu</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://www.livemint.com/news/india/thanks-to-pm-modi-gold-price-drops-65-lakh-per-kg-cti-written-open-letter-your-advice-helped-protect-savings-11795330409616.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Thanks to PM Modi, gold price drops  ₹65 lakh per kg: CTI writes open letter, ‘Your advice helped protect savings’">Thanks to PM Modi, gold price drops  ₹65 lakh per kg: CTI writes open letter, ‘Your advice helped protect savings’</a>
-        <span class="badge badge-outlet">Mint</span>
-        
-      </span>
-      
-    </div>
-  </article>
-  
-  
-  
-
-  <article class="story-card level-corroborated">
-    <div class="meta-row">
-      <span class="badge badge-corroborated">Corroborated</span>
-      
-      <span class="source-count">3 independent sources</span>
-      <span class="sep">•</span>
-      <span class="score-pill">Score: 12.43</span>
-      
-      <span class="sep">•</span>
-      <time datetime="2026-11-21T15:55:55+00:00" class="story-date local-time">21 Nov 2026, 21:25 IST</time>
-      
-    </div>
-
-    <h2><a href="story_854.html" class="headline-link">Uttar Pradesh CM Yogi Adityanath&#39;s mother Savitri Devi passes away at 91 in Uttarakhand</a></h2>
-
-    
-    <div class="story-summary-omitted">
-      
-      <div class="empty-state-notice entailment-notice">
-        <span class="notice-badge">&#9432; Constrained to Verified Facts</span>
-        <p>AI narrative synthesis suppressed to prevent hallucination because reporting lacks sufficient multi-source consensus. View individual source claims on the story page.</p>
-        <a href="story_854.html" class="view-claims-btn">View claims &rarr;</a>
-      </div>
-      
-    </div>
-    
-
-    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
-    <div class="sources-list">
-      <strong>Sources:</strong>
-      
-      <span class="source-item-chip">
-        <a href="https://indianexpress.com/article/cities/lucknow/gorakhpur-jcb-death-five-arrested-yogi-adityanath-akhilesh-yadav-10972241/" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Gorakhpur boy’s death: Police arrest five, Yogi says ‘Such anarchy will not be tolerated’">Gorakhpur boy’s death: Police arrest five, Yogi says ‘Such anarchy will not be tolerated’</a>
-        <span class="badge badge-outlet">Indian Express</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://www.hindustantimes.com/india-news/yogi-adityanath-s-mother-last-rites-performed-in-haridwar-s-chandi-ghat-leaders-pay-tribute-101795257107179.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Last rites for Yogi Adityanath’s mother performed in Haridwar’s Chandi Ghat; leaders pay tribute">Last rites for Yogi Adityanath’s mother performed in Haridwar’s Chandi Ghat; leaders pay tribute</a>
-        <span class="badge badge-outlet">Hindustan Times</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://www.news18.com/india/dedication-to-duty-jayant-chaudhary-praises-yogi-adityanath-for-attending-event-after-mothers-funeral-10435659.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="‘Dedication To Duty’: Jayant Chaudhary Praises Yogi Adityanath For Attending Event After Mother’s Funeral">‘Dedication To Duty’: Jayant Chaudhary Praises Yogi Adityanath For Attending Event After Mother’s Funeral</a>
-        <span class="badge badge-outlet">News18</span>
         
       </span>
       
@@ -751,6 +723,99 @@
             el.textContent = dateStr + ', ' + timeStr;
           }
         } catch(e) {}
+      });
+    });
+  </script>
+
+  <!-- Smart Hide-on-Scroll Navigation, Reading Progress & Back-to-Top -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var header = document.getElementById('siteHeader');
+      var progressBar = document.getElementById('readingProgress');
+      var backToTop = document.getElementById('backToTop');
+
+      var lastScrollY = window.pageYOffset || document.documentElement.scrollTop;
+      var ticking = false;
+      var scrollThreshold = 8;
+
+      function onScroll() {
+        var currentScrollY = window.pageYOffset || document.documentElement.scrollTop;
+        var maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+
+        // 1. Reading progress bar
+        if (progressBar && maxScroll > 0) {
+          var pct = Math.min(100, Math.max(0, (currentScrollY / maxScroll) * 100));
+          progressBar.style.width = pct + '%';
+        }
+
+        // 2. Back to top button
+        if (backToTop) {
+          if (currentScrollY > 400) {
+            backToTop.classList.add('visible');
+          } else {
+            backToTop.classList.remove('visible');
+          }
+        }
+
+        // 3. Smart Hide/Show Header
+        if (!header) {
+          ticking = false;
+          return;
+        }
+
+        // Always show and remove elevation at very top
+        if (currentScrollY <= 15) {
+          header.classList.remove('header--hidden');
+          header.classList.remove('header--scrolled');
+          lastScrollY = currentScrollY;
+          ticking = false;
+          return;
+        }
+
+        header.classList.add('header--scrolled');
+
+        var delta = currentScrollY - lastScrollY;
+
+        // Prevent hiding near bottom of page on mobile rubber-band bounce
+        if (maxScroll > 0 && currentScrollY >= maxScroll - 30) {
+          ticking = false;
+          return;
+        }
+
+        if (delta > scrollThreshold && currentScrollY > 60) {
+          // Scrolling DOWN -> Hide nav bar so full news occupies entire viewport
+          header.classList.add('header--hidden');
+        } else if (delta < -scrollThreshold) {
+          // Scrolling UP -> Reveal nav bar smoothly
+          header.classList.remove('header--hidden');
+        }
+
+        lastScrollY = currentScrollY;
+        ticking = false;
+      }
+
+      window.addEventListener('scroll', function() {
+        if (!ticking) {
+          window.requestAnimationFrame(onScroll);
+          ticking = true;
+        }
+      }, { passive: true });
+
+      if (backToTop) {
+        backToTop.addEventListener('click', function() {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+
+      // Active nav link highlight based on current path
+      var currentPath = window.location.pathname.split('/').pop() || 'index.html';
+      document.querySelectorAll('.nav-links a').forEach(function(link) {
+        var href = link.getAttribute('href');
+        if (href === currentPath || (currentPath === '' && href === 'index.html')) {
+          link.classList.add('active');
+        } else if (currentPath.indexOf('page_') === 0 && href === 'index.html') {
+          link.classList.add('active');
+        }
       });
     });
   </script>

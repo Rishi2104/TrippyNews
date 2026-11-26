@@ -29,32 +29,53 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
+  <!-- Reading Progress Bar (stays subtle at the very top edge) -->
+  <div class="reading-progress-bar" id="readingProgress" aria-hidden="true"></div>
+
+  <header id="siteHeader">
     <div class="container">
       <div class="header-inner">
         <div class="site-brand">
           
           <div class="site-title">
-            <a href="index.html">TrippyNews</a>
+            <a href="index.html">
+              <span class="brand-icon" aria-hidden="true">⬡</span>
+              <span class="brand-name">TrippyNews</span>
+            </a>
           </div>
           
           <span class="site-tagline">Automated News Corroboration Pipeline</span>
         </div>
-        <div class="header-live">
-          <span class="live-dot"></span>
-          Last updated: <time datetime="2026-11-26T14:13:44.632597+00:00" class="local-time">26 Nov 2026, 19:43 IST</time>
+
+        <nav class="header-nav" aria-label="Main Navigation">
+          <ul class="nav-links">
+            <li><a href="index.html">Top Stories</a></li>
+            <li><a href="methodology.html">Methodology</a></li>
+            <li><a href="corrections.html">Corrections &amp; Changelog</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-live" title="Automated pipeline status">
+          <span class="live-dot-wrap">
+            <span class="live-dot-ping"></span>
+            <span class="live-dot"></span>
+          </span>
+          <span class="live-label">LIVE</span>
+          <span class="live-sep">•</span>
+          <span class="live-time"><time datetime="2026-11-26T14:43:30.958621+00:00" class="local-time">26 Nov, 20:13 IST</time></span>
         </div>
       </div>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html">Top Stories</a></li>
-          <li><a href="methodology.html">Methodology</a></li>
-          <li><a href="corrections.html">Corrections &amp; Changelog</a></li>
-          <li><a href="about.html">About</a></li>
-        </ul>
-      </nav>
     </div>
   </header>
+
+  <!-- Floating Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top" title="Scroll to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <line x1="12" y1="19" x2="12" y2="5"></line>
+      <polyline points="5 12 12 5 19 12"></polyline>
+    </svg>
+  </button>
 
   <main class="container">
     <div class="disclosure-banner">
@@ -82,12 +103,525 @@
   
   
   
+  
+
+  <article class="story-card level-strongly">
+    <div class="meta-row">
+      <span class="badge badge-strongly">Strongly corroborated</span>
+      
+      <span class="source-count">2 independent sources</span>
+      <span class="sep">•</span>
+      <span class="score-pill">Score: 14.52</span>
+      
+      <span class="sep">•</span>
+      <time datetime="2026-11-22T10:21:12+00:00" class="story-date local-time">22 Nov 2026, 15:51 IST</time>
+      
+    </div>
+
+    <h2><a href="story_1152.html" class="headline-link">Hackers breached US Department of Agriculture, NBC News reports</a></h2>
+
+    
+    <p class="story-summary">Independent corroboration across reporting outlets indicates that the Federal Bureau of Investigation (FBI) per reporting, is investigating a suspected breach of per reporting, its National Crime Information Center (NCIC), per reporting, a nationwide database used by federal, state as well as local law enforcement agencies to per reporting, share criminal justice information, CNN reported. Contributing sources further noted that the US Department of per reporting, Agriculture (USDA) told employees that per reporting, a system used to facilitate per reporting, payments to farmers was targeted within a cyberattack, NBC reported on Nov per reporting, 20, citing two former department officials. Additional verified reporting highlights that the FBI is investigating a suspected breach per reporting, of a nationwide database per reporting, used by federal, state as well as local law enforcement agencies to per reporting, share criminal justice information, CNN reported recently (November 20, 2026), citing two per reporting, people briefed on the investigation.</p>
+    
+
+    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
+    <div class="sources-list">
+      <strong>Sources:</strong>
+      
+      <span class="source-item-chip">
+        <a href="https://www.aljazeera.com/news/2026/11/21/fbi-national-crime-database-suffers-suspected-breach-reports" target="_blank" rel="noopener noreferrer" class="source-title-link" title="FBI national crime database suffers suspected breach: Reports">FBI national crime database suffers suspected breach: Reports</a>
+        <span class="badge badge-outlet">Al Jazeera – World</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://timesofindia.indiatimes.com/world/us/the-us-tech-slump-fbi-breach-corporate-outages-expose-vulnerabilities-in-americas-digital-systems/articleshow/136071741.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="How FBI breach, corporate outages expose vulnerabilities in US digital systems">How FBI breach, corporate outages expose vulnerabilities in US digital systems</a>
+        <span class="badge badge-outlet">Times of India</span>
+        
+      </span>
+      
+    </div>
+  </article>
+  
+  
+  
 
   <article class="story-card level-corroborated">
     <div class="meta-row">
       <span class="badge badge-corroborated">Corroborated</span>
       
       <span class="source-count">5 independent sources</span>
+      <span class="sep">•</span>
+      <span class="score-pill">Score: 9.24</span>
+      
+      <span class="sep">•</span>
+      <time datetime="2026-11-24T06:45:36+00:00" class="story-date local-time">24 Nov 2026, 12:15 IST</time>
+      
+    </div>
+
+    <h2><a href="story_1758.html" class="headline-link">Demonetisation was kind of grand theft: Shashi Tharoor takes dig while playing GTA 6</a></h2>
+
+    
+    <div class="story-summary-omitted">
+      
+      <div class="empty-state-notice entailment-notice">
+        <span class="notice-badge">&#9432; Constrained to Verified Facts</span>
+        <p>AI narrative synthesis suppressed to prevent hallucination because reporting lacks sufficient multi-source consensus. View individual source claims on the story page.</p>
+        <a href="story_1758.html" class="view-claims-btn">View claims &rarr;</a>
+      </div>
+      
+    </div>
+    
+
+    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
+    <div class="sources-list">
+      <strong>Sources:</strong>
+      
+      <span class="source-item-chip">
+        <a href="https://www.indiatoday.in/india/story/shashi-tharoor-demonetisation-joke-gta-6-game-congress-3044472-2026-11-22" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Demonetisation was kind of grand theft: Shashi Tharoor takes dig while playing GTA 6">Demonetisation was kind of grand theft: Shashi Tharoor takes dig while playing GTA 6</a>
+        <span class="badge badge-outlet">India Today</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.news18.com/india/video-shashi-tharoor-tries-his-hand-at-gta-6-struggles-with-game-controls-just-trying-to-stay-alive-10436233.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="&#39;I&#39;m Just Trying To Stay Alive&#39;: Shashi Tharoor Tries His Hand At GTA 6, Struggles With Controls | Video">&#39;I&#39;m Just Trying To Stay Alive&#39;: Shashi Tharoor Tries His Hand At GTA 6, Struggles With Controls | Video</a>
+        <span class="badge badge-outlet">News18</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.livemint.com/news/trends/gta-6-story-explained-who-are-jason-and-lucia-and-what-role-do-they-play-in-the-world-of-grand-theft-auto-11795360856201.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="GTA 6 story explained: Who are Jason and Lucia, and what role do they play in the world of Grand Theft Auto">GTA 6 story explained: Who are Jason and Lucia, and what role do they play in the world of Grand Theft Auto</a>
+        <span class="badge badge-outlet">Mint</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://economictimes.indiatimes.com/news/new-updates/mom-i-sold-my-gta-account-for-rs-5-lakh-11-year-old-leaves-mother-stunned-over-tea-then-melts-her-heart-with-his-next-words/articleshow/136118787.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="&#39;11-year-old player sells GTA account for Rs 5 lakh&#39;">&#39;11-year-old player sells GTA account for Rs 5 lakh&#39;</a>
+        <span class="badge badge-outlet">Economic Times</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://timesofindia.indiatimes.com/technology/tech-news/neuralink-trial-participant-ditches-mouth-joystick-to-play-gta-6-elon-musk-responds-says-playing-gta-with-/articleshow/136122223.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Neuralink trial participant ditches mouth joystick to play GTA 6; Elon Musk responds">Neuralink trial participant ditches mouth joystick to play GTA 6; Elon Musk responds</a>
+        <span class="badge badge-outlet">Times of India</span>
+        
+      </span>
+      
+    </div>
+  </article>
+  
+  
+  
+  
+
+  <article class="story-card level-strongly">
+    <div class="meta-row">
+      <span class="badge badge-strongly">Strongly corroborated</span>
+      
+      <span class="source-count">6 independent sources</span>
+      <span class="sep">•</span>
+      <span class="score-pill">Score: 9.47</span>
+      
+      <span class="sep">•</span>
+      <time datetime="2026-11-24T04:34:27+00:00" class="story-date local-time">24 Nov 2026, 10:04 IST</time>
+      
+    </div>
+
+    <h2><a href="story_1755.html" class="headline-link">India to test all bottled water brands after Bisleri sample found unsafe</a></h2>
+
+    
+    <div class="story-summary-omitted">
+      
+      <div class="empty-state-notice entailment-notice">
+        <span class="notice-badge">&#9432; Constrained to Verified Facts</span>
+        <p>AI narrative synthesis suppressed to prevent hallucination because reporting lacks sufficient multi-source consensus. View individual source claims on the story page.</p>
+        <a href="story_1755.html" class="view-claims-btn">View claims &rarr;</a>
+      </div>
+      
+    </div>
+    
+
+    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
+    <div class="sources-list">
+      <strong>Sources:</strong>
+      
+      <span class="source-item-chip">
+        <a href="https://www.livemint.com/news/india/bisleri-water-sample-fails-fssai-test-what-did-inspectors-find-what-action-was-taken-what-we-know-11795364658664.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Bisleri water sample fails FSSAI test: What did inspectors find? What action was taken? What we know">Bisleri water sample fails FSSAI test: What did inspectors find? What action was taken? What we know</a>
+        <span class="badge badge-outlet">Mint</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.indiatoday.in/business/story/bisleri-packaged-drinking-water-declared-unsafe-fssai-prosecution-food-safety-violations-3044632-2026-11-22" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Bisleri water sample fails safety tests twice, FSSAI sanctions prosecution">Bisleri water sample fails safety tests twice, FSSAI sanctions prosecution</a>
+        <span class="badge badge-outlet">India Today</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.news18.com/india/bisleri-drinking-water-fssai-collects-packaged-drinking-water-samples-for-testing-ws-l-10437074.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="After Bisleri Row, FSSAI Collects Packaged Drinking Water Samples From Other Brands; Inspections To Continue">After Bisleri Row, FSSAI Collects Packaged Drinking Water Samples From Other Brands; Inspections To Continue</a>
+        <span class="badge badge-outlet">News18</span>
+        
+        <span class="badge badge-wire">ANI</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.dnaindia.com/india/report-bisleri-under-scanner-fssai-sanctions-prosecution-over-unsafe-packaged-drinking-water-3224501" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Bisleri Under Scanner: FSSAI sanctions prosecution over &#39;unsafe&#39; packaged drinking water">Bisleri Under Scanner: FSSAI sanctions prosecution over &#39;unsafe&#39; packaged drinking water</a>
+        <span class="badge badge-outlet">DNA India</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.channelnewsasia.com/asia/india-test-all-bottled-water-brands-bisleri-sample-unsafe-6573131" target="_blank" rel="noopener noreferrer" class="source-title-link" title="India to test all bottled water brands after Bisleri sample found unsafe">India to test all bottled water brands after Bisleri sample found unsafe</a>
+        <span class="badge badge-outlet">CNA – Asia</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.thehindu.com/news/national/bisleri-controversy-goa-fda-steps-up-surveillance-of-packaged-water-brands/article71737184.ece" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Bisleri controversy: Goa FDA steps up surveillance of packaged water brands">Bisleri controversy: Goa FDA steps up surveillance of packaged water brands</a>
+        <span class="badge badge-outlet">The Hindu</span>
+        
+      </span>
+      
+    </div>
+  </article>
+  
+  
+  
+  
+
+  <article class="story-card level-strongly">
+    <div class="meta-row">
+      <span class="badge badge-strongly">Strongly corroborated</span>
+      
+      <span class="source-count">6 independent sources</span>
+      <span class="sep">•</span>
+      <span class="score-pill">Score: 12.92</span>
+      
+      <span class="sep">•</span>
+      <time datetime="2026-11-22T21:33:11+00:00" class="story-date local-time">23 Nov 2026, 03:03 IST</time>
+      
+    </div>
+
+    <h2><a href="story_1351.html" class="headline-link">Netanyahu and Eisenkot parties resume talks to form Israel government</a></h2>
+
+    
+    <p class="story-summary">Additional verified reporting highlights that netanyahu as well as Eisenkot parties resume talks per reporting, to form Israel government Gadi per reporting, Eisenkot has until Dec per reporting, 6 to form a government, alongside the possibility of a 14-day extension. Additional verified reporting highlights that HERZLIYA, Israel: The parties of per reporting, caretaker Israeli Prime Minister Benjamin Netanyahu as well as his rival Gadi Eisenkot launched per reporting, a new round of talks recently (Nov 22) over whether to form a coalition government, per reporting, with Netanyahu&#39;s party insisting per reporting, on keeping his main policies. Additional verified reporting highlights that the parties of caretaker per reporting, Israeli Prime Minister Benjamin Netanyahu as well as his rival Gadi Eisenkot concluded per reporting, a new round of talks recently (November 22, 2026) without reaching an agreement on a per reporting, possible coalition government, which would per reporting, require concessions from both sides. Additional verified reporting highlights that AI generated JERUSALEM - Gadi per reporting, Eisenkot, who is tasked with per reporting, forming the next Israeli per reporting, government, has invited the right-per reporting, wing Likud party of caretaker prime minister Benjamin Netanyahu per reporting, for coalition talks, his party said on Nov 21. While core facts align, sources present differing accounts regarding whether The talks are scheduled to begin on Sunday, November 22, as Eisenkot faces a December deadline to secure enough support in parliament to replace Netanyahu or The October 27 election produced a fractured parliament, with no political bloc securing the 61 seats needed for a majority in Israel&#39;s 120-member Knesset.</p>
+    
+
+    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
+    <div class="sources-list">
+      <strong>Sources:</strong>
+      
+      <span class="source-item-chip">
+        <a href="https://timesofindia.indiatimes.com/world/middle-east/israel-government-formation-eisenkot-invites-netanyahus-likud-party-for-coalition-talks/articleshow/136062828.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Israel govt formation: Eisenkot invites Netanyahu&#39;s Likud party for coalition talks">Israel govt formation: Eisenkot invites Netanyahu&#39;s Likud party for coalition talks</a>
+        <span class="badge badge-outlet">Times of India</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.thehindu.com/news/international/eisenkot-invites-netanyahus-party-for-israeli-coalition-talks/article71729470.ece" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Eisenkot invites Netanyahu’s party for Israeli coalition talks">Eisenkot invites Netanyahu’s party for Israeli coalition talks</a>
+        <span class="badge badge-outlet">The Hindu</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.indiatoday.in/world/story/eisenkot-turns-to-netanyahus-likud-in-fresh-bid-to-form-israel-government-3044216-2026-11-22" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Eisenkot invites Netanyahu&#39;s Likud for talks in fresh bid to form Israel government">Eisenkot invites Netanyahu&#39;s Likud for talks in fresh bid to form Israel government</a>
+        <span class="badge badge-outlet">India Today</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.straitstimes.com/world/middle-east/gadi-eisenkot-invites-netanyahus-party-for-israeli-coalition-talks" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Gadi Eisenkot invites Netanyahu’s party for Israeli coalition talks">Gadi Eisenkot invites Netanyahu’s party for Israeli coalition talks</a>
+        <span class="badge badge-outlet">The Straits Times – World</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.channelnewsasia.com/world/netanyahu-and-eisenkot-parties-resume-talks-form-israel-government-6573061" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Netanyahu and Eisenkot parties resume talks to form Israel government">Netanyahu and Eisenkot parties resume talks to form Israel government</a>
+        <span class="badge badge-outlet">CNA – Asia</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.aljazeera.com/news/2026/11/22/netanyahus-likud-eisenkots-yashar-end-coalition-talks-without-deal" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Netanyahu’s Likud, Eisenkot’s Yashar end coalition talks without deal">Netanyahu’s Likud, Eisenkot’s Yashar end coalition talks without deal</a>
+        <span class="badge badge-outlet">Al Jazeera – World</span>
+        
+      </span>
+      
+    </div>
+  </article>
+  
+  
+  
+  
+
+  <article class="story-card level-strongly">
+    <div class="meta-row">
+      <span class="badge badge-strongly">Strongly corroborated</span>
+      
+      <span class="source-count">5 independent sources</span>
+      <span class="sep">•</span>
+      <span class="score-pill">Score: 11.88</span>
+      
+      <span class="sep">•</span>
+      <time datetime="2026-11-23T06:15:40+00:00" class="story-date local-time">23 Nov 2026, 11:45 IST</time>
+      
+    </div>
+
+    <h2><a href="story_1456.html" class="headline-link">Alcaraz charges past world number one Zverev to clinch ATP Finals title</a></h2>
+
+    
+    <div class="story-summary-omitted">
+      
+      <div class="empty-state-notice entailment-notice">
+        <span class="notice-badge">&#9432; Constrained to Verified Facts</span>
+        <p>AI narrative synthesis suppressed to prevent hallucination because reporting lacks sufficient multi-source consensus. View individual source claims on the story page.</p>
+        <a href="story_1456.html" class="view-claims-btn">View claims &rarr;</a>
+      </div>
+      
+    </div>
+    
+
+    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
+    <div class="sources-list">
+      <strong>Sources:</strong>
+      
+      <span class="source-item-chip">
+        <a href="https://www.channelnewsasia.com/sport/alcaraz-digs-deep-beat-shelton-and-reach-final-6571906" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Alcaraz digs deep to beat Shelton and reach final">Alcaraz digs deep to beat Shelton and reach final</a>
+        <span class="badge badge-outlet">CNA – Asia</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://indianexpress.com/article/sports/tennis/carlos-alcaraz-beats-ben-shelton-atp-finals-turin-semifinal-10973103/" target="_blank" rel="noopener noreferrer" class="source-title-link" title="I’m just happy to play great tennis in the tie-break when it matters: Alcaraz after beating Shelton">I’m just happy to play great tennis in the tie-break when it matters: Alcaraz after beating Shelton</a>
+        <span class="badge badge-outlet">Indian Express</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://timesofindia.indiatimes.com/sports/tennis/top-stories/alexander-zverev-gets-his-chance-to-silence-critics-against-carlos-alcaraz-in-atp-finals-final/articleshow/136063178.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="ATP Finals final: Zverev gets his chance to silence critics against Alcaraz">ATP Finals final: Zverev gets his chance to silence critics against Alcaraz</a>
+        <span class="badge badge-outlet">Times of India</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.thehindu.com/sport/tennis/alcaraz-charges-past-world-number-onezverev-to-clinch-atp-finals-title/article71732439.ece" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Alcaraz charges past world number one Zverev to clinch ATP Finals title">Alcaraz charges past world number one Zverev to clinch ATP Finals title</a>
+        <span class="badge badge-outlet">The Hindu</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.aljazeera.com/sports/2026/11/23/carlos-alcaraz-atp-finals-2026-title-alexander-zverev-tennis" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Alcaraz storms past world number one Zverev to win maiden ATP Finals title">Alcaraz storms past world number one Zverev to win maiden ATP Finals title</a>
+        <span class="badge badge-outlet">Al Jazeera – World</span>
+        
+      </span>
+      
+    </div>
+  </article>
+  
+  
+  
+  
+
+  <article class="story-card level-strongly">
+    <div class="meta-row">
+      <span class="badge badge-strongly">Strongly corroborated</span>
+      
+      <span class="source-count">7 independent sources</span>
+      <span class="sep">•</span>
+      <span class="score-pill">Score: 9.28</span>
+      
+      <span class="sep">•</span>
+      <time datetime="2026-11-24T04:34:27+00:00" class="story-date local-time">24 Nov 2026, 10:04 IST</time>
+      
+    </div>
+
+    <h2><a href="story_1857.html" class="headline-link">India to test all bottled water brands after Bisleri sample found unsafe</a></h2>
+
+    
+    <div class="story-summary-omitted">
+      
+      <div class="empty-state-notice entailment-notice">
+        <span class="notice-badge">&#9432; Constrained to Verified Facts</span>
+        <p>AI narrative synthesis suppressed to prevent hallucination because reporting lacks sufficient multi-source consensus. View individual source claims on the story page.</p>
+        <a href="story_1857.html" class="view-claims-btn">View claims &rarr;</a>
+      </div>
+      
+    </div>
+    
+
+    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
+    <div class="sources-list">
+      <strong>Sources:</strong>
+      
+      <span class="source-item-chip">
+        <a href="https://www.livemint.com/news/india/bisleri-water-sample-fails-fssai-test-what-did-inspectors-find-what-action-was-taken-what-we-know-11795364658664.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Bisleri water sample fails FSSAI test: What did inspectors find? What action was taken? What we know">Bisleri water sample fails FSSAI test: What did inspectors find? What action was taken? What we know</a>
+        <span class="badge badge-outlet">Mint</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.indiatoday.in/business/story/bisleri-packaged-drinking-water-declared-unsafe-fssai-prosecution-food-safety-violations-3044632-2026-11-22" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Bisleri water sample fails safety tests twice, FSSAI sanctions prosecution">Bisleri water sample fails safety tests twice, FSSAI sanctions prosecution</a>
+        <span class="badge badge-outlet">India Today</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.news18.com/india/bisleri-drinking-water-fssai-collects-packaged-drinking-water-samples-for-testing-ws-l-10437074.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="After Bisleri Row, FSSAI Collects Packaged Drinking Water Samples From Other Brands; Inspections To Continue">After Bisleri Row, FSSAI Collects Packaged Drinking Water Samples From Other Brands; Inspections To Continue</a>
+        <span class="badge badge-outlet">News18</span>
+        
+        <span class="badge badge-wire">ANI</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://economictimes.indiatimes.com/industry/cons-products/fmcg/bisleri-says-goa-water-sample-met-safety-limits-in-independent-tests-after-fssai-flags-violations/articleshow/136088640.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Bisleri water safe to drink? The results are mixed">Bisleri water safe to drink? The results are mixed</a>
+        <span class="badge badge-outlet">Economic Times</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.channelnewsasia.com/asia/india-test-all-bottled-water-brands-bisleri-sample-unsafe-6573131" target="_blank" rel="noopener noreferrer" class="source-title-link" title="India to test all bottled water brands after Bisleri sample found unsafe">India to test all bottled water brands after Bisleri sample found unsafe</a>
+        <span class="badge badge-outlet">CNA – Asia</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.dnaindia.com/india/report-fssai-clarifies-bisleri-water-safety-issue-says-only-one-batch-from-goa-plant-found-non-compliant-3224537" target="_blank" rel="noopener noreferrer" class="source-title-link" title="FSSAI clarifies Bisleri water safety issue, says only one batch from Goa plant found non-compliant">FSSAI clarifies Bisleri water safety issue, says only one batch from Goa plant found non-compliant</a>
+        <span class="badge badge-outlet">DNA India</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.thehindu.com/news/national/bisleri-controversy-goa-fda-steps-up-surveillance-of-packaged-water-brands/article71737184.ece" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Bisleri controversy: Goa FDA steps up surveillance of packaged water brands">Bisleri controversy: Goa FDA steps up surveillance of packaged water brands</a>
+        <span class="badge badge-outlet">The Hindu</span>
+        
+      </span>
+      
+    </div>
+  </article>
+  
+  
+  
+  
+
+  <article class="story-card level-strongly">
+    <div class="meta-row">
+      <span class="badge badge-strongly">Strongly corroborated</span>
+      
+      <span class="source-count">1 independent source</span>
+      <span class="sep">•</span>
+      <span class="score-pill">Score: 15.04</span>
+      
+      <span class="sep">•</span>
+      <time datetime="2026-11-21T23:46:29+00:00" class="story-date local-time">22 Nov 2026, 05:16 IST</time>
+      
+    </div>
+
+    <h2><a href="story_1060.html" class="headline-link">Chinese tech firms fear AI hits from US curbs after Nvidia fallout</a></h2>
+
+    
+    <div class="story-summary-omitted">
+      
+      <div class="empty-state-notice entailment-notice">
+        <span class="notice-badge">&#9432; Constrained to Verified Facts</span>
+        <p>AI narrative synthesis suppressed to prevent hallucination because reporting lacks sufficient multi-source consensus. View individual source claims on the story page.</p>
+        <a href="story_1060.html" class="view-claims-btn">View claims &rarr;</a>
+      </div>
+      
+    </div>
+    
+
+    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
+    <div class="sources-list">
+      <strong>Sources:</strong>
+      
+      <span class="source-item-chip">
+        <a href="https://www.thehindu.com/sci-tech/technology/how-us-controls-flow-of-advanced-tech-chip-and-compute-to-china-explained/article71721133.ece" target="_blank" rel="noopener noreferrer" class="source-title-link" title="How U.S. controls flow of advanced tech, chip, and compute to China | Explained">How U.S. controls flow of advanced tech, chip, and compute to China | Explained</a>
+        <span class="badge badge-outlet">The Hindu</span>
+        
+      </span>
+      
+    </div>
+  </article>
+  
+  
+  
+  
+
+  <article class="story-card level-strongly">
+    <div class="meta-row">
+      <span class="badge badge-strongly">Strongly corroborated</span>
+      
+      <span class="source-count">5 independent sources</span>
+      <span class="sep">•</span>
+      <span class="score-pill">Score: 11.41</span>
+      
+      <span class="sep">•</span>
+      <time datetime="2026-11-23T05:20:46+00:00" class="story-date local-time">23 Nov 2026, 10:50 IST</time>
+      
+    </div>
+
+    <h2><a href="story_1453.html" class="headline-link">Alice Huang in touch with Chinese spy agency during affair with Nvidia CEO: Report</a></h2>
+
+    
+    <div class="story-summary-omitted">
+      
+      <div class="empty-state-notice entailment-notice">
+        <span class="notice-badge">&#9432; Constrained to Verified Facts</span>
+        <p>AI narrative synthesis suppressed to prevent hallucination because reporting lacks sufficient multi-source consensus. View individual source claims on the story page.</p>
+        <a href="story_1453.html" class="view-claims-btn">View claims &rarr;</a>
+      </div>
+      
+    </div>
+    
+
+    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
+    <div class="sources-list">
+      <strong>Sources:</strong>
+      
+      <span class="source-item-chip">
+        <a href="https://timesofindia.indiatimes.com/business/international-business/nvidia-chip-case-how-chinese-man-in-megaspeed-built-network-serving-china-with-alice-huang/articleshow/136072827.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Nvidia chip case: How Chinese man in Megaspeed built network serving China with Alice Huang">Nvidia chip case: How Chinese man in Megaspeed built network serving China with Alice Huang</a>
+        <span class="badge badge-outlet">Times of India</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.indiatoday.in/world/story/alice-huang-singapore-megaspeed-li-ming-nvidia-ai-chip-smuggling-network-exposed-wsj-us-export-ban-china-jensen-huang-3044354-2026-11-22" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Alice Huang just a front? Chinese businessman ran Nvidia chip smuggling network">Alice Huang just a front? Chinese businessman ran Nvidia chip smuggling network</a>
+        <span class="badge badge-outlet">India Today</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://economictimes.indiatimes.com/news/international/world-news/chinas-spies-set-sights-on-ai-chips-years-before-nvidia-scandal-report/articleshow/136071430.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Chinese spies set sights on AI chips yrs before Nvidia">Chinese spies set sights on AI chips yrs before Nvidia</a>
+        <span class="badge badge-outlet">Economic Times</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.straitstimes.com/world/united-states/spy-chief-says-us-probing-alleged-spy-tied-to-former-nvidia-ceo" target="_blank" rel="noopener noreferrer" class="source-title-link" title="US probing alleged Chinese spy tied to former Nvidia CEO, says intelligence chief">US probing alleged Chinese spy tied to former Nvidia CEO, says intelligence chief</a>
+        <span class="badge badge-outlet">The Straits Times – World</span>
+        
+      </span><span class="source-sep"> &bull; </span>
+      
+      <span class="source-item-chip">
+        <a href="https://www.channelnewsasia.com/world/alice-huang-chinese-spy-nvidia-affair-6573671" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Alice Huang in touch with Chinese spy agency during affair with Nvidia CEO: Report">Alice Huang in touch with Chinese spy agency during affair with Nvidia CEO: Report</a>
+        <span class="badge badge-outlet">CNA – Asia</span>
+        
+      </span>
+      
+    </div>
+  </article>
+  
+  
+  
+
+  <article class="story-card level-corroborated">
+    <div class="meta-row">
+      <span class="badge badge-corroborated">Corroborated</span>
+      
+      <span class="source-count">4 independent sources</span>
       <span class="sep">•</span>
       <span class="score-pill">Score: 8.83</span>
       
@@ -113,12 +647,6 @@
     <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
     <div class="sources-list">
       <strong>Sources:</strong>
-      
-      <span class="source-item-chip">
-        <a href="https://www.aljazeera.com/video/by-the-numbers-3/2026/11/21/why-is-gta-vi-so-expensive-to-play" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Why is GTA VI so expensive to play?">Why is GTA VI so expensive to play?</a>
-        <span class="badge badge-outlet">Al Jazeera – World</span>
-        
-      </span><span class="source-sep"> &bull; </span>
       
       <span class="source-item-chip">
         <a href="https://www.indiatoday.in/india/story/shashi-tharoor-demonetisation-joke-gta-6-game-congress-3044472-2026-11-22" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Demonetisation was kind of grand theft: Shashi Tharoor takes dig while playing GTA 6">Demonetisation was kind of grand theft: Shashi Tharoor takes dig while playing GTA 6</a>
@@ -215,496 +743,6 @@
     </div>
   </article>
   
-  
-  
-  
-
-  <article class="story-card level-strongly">
-    <div class="meta-row">
-      <span class="badge badge-strongly">Strongly corroborated</span>
-      
-      <span class="source-count">2 independent sources</span>
-      <span class="sep">•</span>
-      <span class="score-pill">Score: 12.81</span>
-      
-      <span class="sep">•</span>
-      <time datetime="2026-11-22T12:30:07+00:00" class="story-date local-time">22 Nov 2026, 18:00 IST</time>
-      
-    </div>
-
-    <h2><a href="story_1251.html" class="headline-link">What historic Xi-Trump-Putin trilateral summit signals for global diplomacy</a></h2>
-
-    
-    <div class="story-summary-omitted">
-      
-      <div class="empty-state-notice entailment-notice">
-        <span class="notice-badge">&#9432; Constrained to Verified Facts</span>
-        <p>AI narrative synthesis suppressed to prevent hallucination because reporting lacks sufficient multi-source consensus. View individual source claims on the story page.</p>
-        <a href="story_1251.html" class="view-claims-btn">View claims &rarr;</a>
-      </div>
-      
-    </div>
-    
-
-    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
-    <div class="sources-list">
-      <strong>Sources:</strong>
-      
-      <span class="source-item-chip">
-        <a href="https://www.thehindu.com/opinion/editorial/three-to-tango-on-trump-xi-putin-trilateral-summit/article71725845.ece" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Three to tango: On Trump, Xi, Putin trilateral summit">Three to tango: On Trump, Xi, Putin trilateral summit</a>
-        <span class="badge badge-outlet">The Hindu</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://www.scmp.com/opinion/china-opinion/article/3375166/no-grand-bargain-xi-trump-putin-meeting-was-never-point" target="_blank" rel="noopener noreferrer" class="source-title-link" title="No grand bargain at Xi-Trump-Putin meeting? That was never the point">No grand bargain at Xi-Trump-Putin meeting? That was never the point</a>
-        <span class="badge badge-outlet">SCMP – World</span>
-        
-      </span>
-      
-    </div>
-  </article>
-  
-  
-  
-  
-
-  <article class="story-card level-strongly">
-    <div class="meta-row">
-      <span class="badge badge-strongly">Strongly corroborated</span>
-      
-      <span class="source-count">5 independent sources</span>
-      <span class="sep">•</span>
-      <span class="score-pill">Score: 12.54</span>
-      
-      <span class="sep">•</span>
-      <time datetime="2026-11-22T10:21:12+00:00" class="story-date local-time">22 Nov 2026, 15:51 IST</time>
-      
-    </div>
-
-    <h2><a href="story_1252.html" class="headline-link">Hackers breached US Department of Agriculture, NBC News reports</a></h2>
-
-    
-    <p class="story-summary">Independent corroboration across reporting outlets indicates that the Federal Bureau of Investigation (FBI) per reporting, is investigating a suspected breach of per reporting, its National Crime Information Center (NCIC), per reporting, a nationwide database used by federal, state as well as local law enforcement agencies to per reporting, share criminal justice information, CNN reported. Contributing sources further noted that the US Department of per reporting, Agriculture (USDA) told employees that per reporting, a system used to facilitate per reporting, payments to farmers was targeted within a cyberattack, NBC reported on Nov per reporting, 20, citing two former department officials. Additional verified reporting highlights that the FBI is investigating a suspected breach per reporting, of a nationwide database per reporting, used by federal, state as well as local law enforcement agencies to per reporting, share criminal justice information, CNN reported recently (November 20, 2026), citing two per reporting, people briefed on the investigation.</p>
-    
-
-    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
-    <div class="sources-list">
-      <strong>Sources:</strong>
-      
-      <span class="source-item-chip">
-        <a href="https://www.thehindu.com/news/international/fbis-criminal-information-database-hacked-reports-say/article71727198.ece" target="_blank" rel="noopener noreferrer" class="source-title-link" title="FBI&#39;s criminal information database hacked, reports say">FBI&#39;s criminal information database hacked, reports say</a>
-        <span class="badge badge-outlet">The Hindu</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://timesofindia.indiatimes.com/world/us/if-you-target-americans-justice-will-find-you-fbi-chief-kash-patel-warns-cyber-criminals-amid-jpmorgan-data-breach-tech-outages/articleshow/136042592.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="&#39;If you target Americans, justice will find you&#39;: FBI chief warns cyber criminals">&#39;If you target Americans, justice will find you&#39;: FBI chief warns cyber criminals</a>
-        <span class="badge badge-outlet">Times of India</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://www.livemint.com/news/us-news/hackers-target-fbi-again-second-breach-since-september-kash-patel-says-bureau-taking-on-cybercriminals-globally-11795233961169.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Hackers target FBI again, second breach since September; Kash Patel says bureau taking on cybercriminals globally">Hackers target FBI again, second breach since September; Kash Patel says bureau taking on cybercriminals globally</a>
-        <span class="badge badge-outlet">Mint</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://www.straitstimes.com/world/united-states/fbis-criminal-information-database-hacked-cnn-reports" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Hackers hit FBI, US Agriculture Department as Trump tells Americans to ‘relax’">Hackers hit FBI, US Agriculture Department as Trump tells Americans to ‘relax’</a>
-        <span class="badge badge-outlet">The Straits Times – World</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://www.aljazeera.com/news/2026/11/21/fbi-national-crime-database-suffers-suspected-breach-reports" target="_blank" rel="noopener noreferrer" class="source-title-link" title="FBI national crime database suffers suspected breach: Reports">FBI national crime database suffers suspected breach: Reports</a>
-        <span class="badge badge-outlet">Al Jazeera – World</span>
-        
-      </span>
-      
-    </div>
-  </article>
-  
-  
-  
-  
-
-  <article class="story-card level-strongly">
-    <div class="meta-row">
-      <span class="badge badge-strongly">Strongly corroborated</span>
-      
-      <span class="source-count">5 independent sources</span>
-      <span class="sep">•</span>
-      <span class="score-pill">Score: 10.21</span>
-      
-      <span class="sep">•</span>
-      <time datetime="2026-11-23T08:26:05+00:00" class="story-date local-time">23 Nov 2026, 13:56 IST</time>
-      
-    </div>
-
-    <h2><a href="story_1552.html" class="headline-link">Rohingya in Bangladesh welcome UN court’s genocide verdict but say they want to go home to Myanmar</a></h2>
-
-    
-    <div class="story-summary-omitted">
-      
-      <div class="empty-state-notice entailment-notice">
-        <span class="notice-badge">&#9432; Constrained to Verified Facts</span>
-        <p>AI narrative synthesis suppressed to prevent hallucination because reporting lacks sufficient multi-source consensus. View individual source claims on the story page.</p>
-        <a href="story_1552.html" class="view-claims-btn">View claims &rarr;</a>
-      </div>
-      
-    </div>
-    
-
-    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
-    <div class="sources-list">
-      <strong>Sources:</strong>
-      
-      <span class="source-item-chip">
-        <a href="https://www.hindustantimes.com/india-news/want-to-return-but-can-t-without-safety-rohingyas-in-india-react-to-icj-ruling-on-myanmar-genocide-101795227147137.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="‘Want to return, but can’t without safety’: Rohingyas in India react to ICJ ruling on Myanmar genocide">‘Want to return, but can’t without safety’: Rohingyas in India react to ICJ ruling on Myanmar genocide</a>
-        <span class="badge badge-outlet">Hindustan Times</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://timesofindia.indiatimes.com/world/south-asia/justice-at-last-rohingya-refugees-welcome-un-court-action-against-myanmar/articleshow/136043229.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="‘Justice at last’: Rohingya refugees welcome UN court action against Myanmar">‘Justice at last’: Rohingya refugees welcome UN court action against Myanmar</a>
-        <span class="badge badge-outlet">Times of India</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://www.channelnewsasia.com/asia/rohingya-bangladesh-myanmar-genocide-verdict-6571141" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Rohingya in Bangladesh welcome UN court’s genocide verdict but say they want to go home to Myanmar">Rohingya in Bangladesh welcome UN court’s genocide verdict but say they want to go home to Myanmar</a>
-        <span class="badge badge-outlet">CNA – Asia</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://www.thehindu.com/news/international/news-in-frames-living-withthe-wounds-of-displacement/article71730570.ece" target="_blank" rel="noopener noreferrer" class="source-title-link" title="News in Frames | Living with the wounds of displacement">News in Frames | Living with the wounds of displacement</a>
-        <span class="badge badge-outlet">The Hindu</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://www.scmp.com/news/china/diplomacy/article/3375454/how-will-chinas-ties-myanmar-change-icjs-genocide-ruling" target="_blank" rel="noopener noreferrer" class="source-title-link" title="How will China’s ties with Myanmar change with the ICJ’s genocide ruling?">How will China’s ties with Myanmar change with the ICJ’s genocide ruling?</a>
-        <span class="badge badge-outlet">SCMP – World</span>
-        
-      </span>
-      
-    </div>
-  </article>
-  
-  
-  
-  
-
-  <article class="story-card level-strongly">
-    <div class="meta-row">
-      <span class="badge badge-strongly">Strongly corroborated</span>
-      
-      <span class="source-count">2 independent sources</span>
-      <span class="sep">•</span>
-      <span class="score-pill">Score: 15.64</span>
-      
-      <span class="sep">•</span>
-      <time datetime="2026-11-21T00:59:53+00:00" class="story-date local-time">21 Nov 2026, 06:29 IST</time>
-      
-    </div>
-
-    <h2><a href="story_651.html" class="headline-link">Indian man jailed over US murder plot against Sikh separatist</a></h2>
-
-    
-    <div class="story-summary-omitted">
-      
-      <div class="empty-state-notice entailment-notice">
-        <span class="notice-badge">&#9432; Constrained to Verified Facts</span>
-        <p>AI narrative synthesis suppressed to prevent hallucination because reporting lacks sufficient multi-source consensus. View individual source claims on the story page.</p>
-        <a href="story_651.html" class="view-claims-btn">View claims &rarr;</a>
-      </div>
-      
-    </div>
-    
-
-    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
-    <div class="sources-list">
-      <strong>Sources:</strong>
-      
-      <span class="source-item-chip">
-        <a href="https://www.thehindu.com/news/national/us-court-sentences-indian-national-nikhil-gupta-to-235-months-in-jail-in-murder-for-hire-plot/article71725795.ece" target="_blank" rel="noopener noreferrer" class="source-title-link" title="U.S. court sentences Indian national Nikhil Gupta to 235 months in jail in Pannun murder plot">U.S. court sentences Indian national Nikhil Gupta to 235 months in jail in Pannun murder plot</a>
-        <span class="badge badge-outlet">The Hindu</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://www.livemint.com/news/us-news/nikhil-gupta-sentenced-to-over-19-years-in-us-prison-for-plot-to-kill-khalistani-separatist-pannun-11795222312694.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Nikhil Gupta sentenced to over 19 years in US prison for plot to kill Khalistani separatist Pannun">Nikhil Gupta sentenced to over 19 years in US prison for plot to kill Khalistani separatist Pannun</a>
-        <span class="badge badge-outlet">Mint</span>
-        
-      </span>
-      
-    </div>
-  </article>
-  
-  
-  
-
-  <article class="story-card level-corroborated">
-    <div class="meta-row">
-      <span class="badge badge-corroborated">Corroborated</span>
-      
-      <span class="source-count">6 independent sources</span>
-      <span class="sep">•</span>
-      <span class="score-pill">Score: 9.97</span>
-      
-      <span class="sep">•</span>
-      <time datetime="2026-11-23T09:21:00+00:00" class="story-date local-time">23 Nov 2026, 14:51 IST</time>
-      
-    </div>
-
-    <h2><a href="story_1455.html" class="headline-link">Hyderabad on high alert after LeT email threatens 26/11-style terror attack</a></h2>
-
-    
-    <div class="story-summary-omitted">
-      
-      <div class="empty-state-notice entailment-notice">
-        <span class="notice-badge">&#9432; Constrained to Verified Facts</span>
-        <p>AI narrative synthesis suppressed to prevent hallucination because reporting lacks sufficient multi-source consensus. View individual source claims on the story page.</p>
-        <a href="story_1455.html" class="view-claims-btn">View claims &rarr;</a>
-      </div>
-      
-    </div>
-    
-
-    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
-    <div class="sources-list">
-      <strong>Sources:</strong>
-      
-      <span class="source-item-chip">
-        <a href="https://www.thehindu.com/news/cities/Hyderabad/hyderabad-police-issue-alert-over-terror-threat-email-security-checks-conducted-at-key-locations/article71731583.ece" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Hyderabad Police issue alert over terror threat email; security checks conducted at key locations">Hyderabad Police issue alert over terror threat email; security checks conducted at key locations</a>
-        <span class="badge badge-outlet">The Hindu</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://www.hindustantimes.com/india-news/hyderabad-gets-terror-threat-from-let-named-email-in-retaliation-for-lateef-bhat-s-killing-101795361107231.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Hyderabad on high alert after email from ‘LeT operatives’ warns of terror attacks">Hyderabad on high alert after email from ‘LeT operatives’ warns of terror attacks</a>
-        <span class="badge badge-outlet">Hindustan Times</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://timesofindia.indiatimes.com/city/hyderabad/hyderabad-police-step-up-security-after-email-threatens-26/11-style-terror-attack-at-hotel-railway-station/articleshow/136080025.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Hyderabad on alert after email threatens to avenge terrorist Lateef Bhat&#39;s killing">Hyderabad on alert after email threatens to avenge terrorist Lateef Bhat&#39;s killing</a>
-        <span class="badge badge-outlet">Times of India</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://www.indiatoday.in/cities/hyderabad/story/hyderabad-terror-threat-let-email-kachiguda-hotel-railway-station-3044572-2026-11-22" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Hyderabad on high alert after LeT email threatens 26/11-style terror attack">Hyderabad on high alert after LeT email threatens 26/11-style terror attack</a>
-        <span class="badge badge-outlet">India Today</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://www.news18.com/india/hyderabad-on-alert-after-let-letter-warns-of-26-11-style-mumbai-terror-attack-to-avenge-lashkar-terrorist-lateef-bhat-killing-10436331.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Hyderabad On Alert After LeT Letter Threatens Of 26/11-Style Attack To Avenge Lateef Bhat&#39;s Killing">Hyderabad On Alert After LeT Letter Threatens Of 26/11-Style Attack To Avenge Lateef Bhat&#39;s Killing</a>
-        <span class="badge badge-outlet">News18</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://www.dnaindia.com/india/report-2611-style-attack-on-hyderabad-fresh-let-email-triggers-panic-in-city-claims-mumbai-like-strike-warns-of-300-casualties-3224495" target="_blank" rel="noopener noreferrer" class="source-title-link" title="26/11-Style Attack on Hyderabad? Fresh LeT email triggers panic in city, claims Mumbai-like strike, warns of 300 casualties">26/11-Style Attack on Hyderabad? Fresh LeT email triggers panic in city, claims Mumbai-like strike, warns of 300 casualties</a>
-        <span class="badge badge-outlet">DNA India</span>
-        
-      </span>
-      
-    </div>
-  </article>
-  
-  
-  
-  
-
-  <article class="story-card level-strongly">
-    <div class="meta-row">
-      <span class="badge badge-strongly">Strongly corroborated</span>
-      
-      <span class="source-count">4 independent sources</span>
-      <span class="sep">•</span>
-      <span class="score-pill">Score: 12.21</span>
-      
-      <span class="sep">•</span>
-      <time datetime="2026-11-22T09:57:34+00:00" class="story-date local-time">22 Nov 2026, 15:27 IST</time>
-      
-    </div>
-
-    <h2><a href="story_1153.html" class="headline-link">वैश्विक सांख्यिकीय साझेदारियों को बढ़ावा देना: ज्ञान के आदान-प्रदान और संस्थागत सहयोग के लिए सांख्यिकी और कार्यक्रम कार्यान्वयन मंत्रालय(एमओएसपीआई) का विजन</a></h2>
-
-    
-    <div class="story-summary-omitted">
-      
-      <div class="empty-state-notice entailment-notice">
-        <span class="notice-badge">&#9432; Constrained to Verified Facts</span>
-        <p>AI narrative synthesis suppressed to prevent hallucination because reporting lacks sufficient multi-source consensus. View individual source claims on the story page.</p>
-        <a href="story_1153.html" class="view-claims-btn">View claims &rarr;</a>
-      </div>
-      
-    </div>
-    
-
-    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
-    <div class="sources-list">
-      <strong>Sources:</strong>
-      
-      <span class="source-item-chip">
-        <a href="https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2338768" target="_blank" rel="noopener noreferrer" class="source-title-link" title="वैश्विक सांख्यिकीय साझेदारियों को बढ़ावा देना: ज्ञान के आदान-प्रदान और संस्थागत सहयोग के लिए सांख्यिकी और कार्यक्रम कार्यान्वयन मंत्रालय(एमओएसपीआई) का विजन">वैश्विक सांख्यिकीय साझेदारियों को बढ़ावा देना: ज्ञान के आदान-प्रदान और संस्थागत सहयोग के लिए सांख्यिकी और कार्यक्रम कार्यान्वयन मंत्रालय(एमओएसपीआई) का विजन</a>
-        <span class="badge badge-outlet">Press Information Bureau</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://www.thehindu.com/news/national/pm-modi-address-at-sco-civilisational-dialogue-forum/article71725120.ece" target="_blank" rel="noopener noreferrer" class="source-title-link" title="PM Modi says cultural connect can guarantee global peace">PM Modi says cultural connect can guarantee global peace</a>
-        <span class="badge badge-outlet">The Hindu</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://www.hindustantimes.com/india-news/culture-play-key-role-in-fostering-dialogue-pakistan-minister-malik-101795222929535.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Culture play key role in fostering dialogue: Pakistan minister Malik">Culture play key role in fostering dialogue: Pakistan minister Malik</a>
-        <span class="badge badge-outlet">Hindustan Times</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://www.news18.com/world/dialogue-among-civilisations-is-essential-pakistan-minister-musadik-malik-at-sco-forum-in-delhi-10436152.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="&#39;Dialogue Among Civilisations Is Essential&#39;: Pakistan Minister Musadik Malik At SCO Forum In Delhi">&#39;Dialogue Among Civilisations Is Essential&#39;: Pakistan Minister Musadik Malik At SCO Forum In Delhi</a>
-        <span class="badge badge-outlet">News18</span>
-        
-      </span>
-      
-    </div>
-  </article>
-  
-  
-  
-
-  <article class="story-card level-corroborated">
-    <div class="meta-row">
-      <span class="badge badge-corroborated">Corroborated</span>
-      
-      <span class="source-count">5 independent sources</span>
-      <span class="sep">•</span>
-      <span class="score-pill">Score: 9.85</span>
-      
-      <span class="sep">•</span>
-      <time datetime="2026-11-23T09:15:47+00:00" class="story-date local-time">23 Nov 2026, 14:45 IST</time>
-      
-    </div>
-
-    <h2><a href="story_1457.html" class="headline-link">China&#39;s Pakistan Backing In Op Sindoor Part Of Wider Bid To Suppress India&#39;s Rise, Says US Commission</a></h2>
-
-    
-    <div class="story-summary-omitted">
-      
-      <div class="empty-state-notice entailment-notice">
-        <span class="notice-badge">&#9432; Constrained to Verified Facts</span>
-        <p>AI narrative synthesis suppressed to prevent hallucination because reporting lacks sufficient multi-source consensus. View individual source claims on the story page.</p>
-        <a href="story_1457.html" class="view-claims-btn">View claims &rarr;</a>
-      </div>
-      
-    </div>
-    
-
-    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
-    <div class="sources-list">
-      <strong>Sources:</strong>
-      
-      <span class="source-item-chip">
-        <a href="https://www.indiatoday.in/india/story/china-restrict-india-rise-pakistan-support-operation-sindoor-us-panel-congress-3043868-2026-11-21" target="_blank" rel="noopener noreferrer" class="source-title-link" title="China&#39;s Pak backing during Sindoor part of bid to curb India&#39;s rise: US panel">China&#39;s Pak backing during Sindoor part of bid to curb India&#39;s rise: US panel</a>
-        <span class="badge badge-outlet">India Today</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://www.news18.com/india/china-pakistan-operation-sindoor-wider-bid-suppress-india-rise-us-commission-report-ws-l-10435044.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="China&#39;s Pakistan Backing In Op Sindoor Part Of Wider Bid To Suppress India&#39;s Rise, Says US Commission">China&#39;s Pakistan Backing In Op Sindoor Part Of Wider Bid To Suppress India&#39;s Rise, Says US Commission</a>
-        <span class="badge badge-outlet">News18</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://economictimes.indiatimes.com/news/defence/china-using-pakistan-supply-chains-to-constrain-indias-rise-us-panel/articleshow/136042992.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="US panel warns China&#39;s Pak ploy to block India&#39;s rise">US panel warns China&#39;s Pak ploy to block India&#39;s rise</a>
-        <span class="badge badge-outlet">Economic Times</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://www.hindustantimes.com/india-news/china-working-to-suppress-india-s-rise-backed-pakistan-after-operation-sindoor-us-panel-s-report-101795272505336.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="‘China working to suppress India’s rise, backed Pakistan after Operation Sindoor’: US panel’s report">‘China working to suppress India’s rise, backed Pakistan after Operation Sindoor’: US panel’s report</a>
-        <span class="badge badge-outlet">Hindustan Times</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://timesofindia.indiatimes.com/india/working-to-suppress-indias-rise-us-panel-report-flags-chinas-support-to-pakistan-during-operation-sindoor/articleshow/136056716.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="&#39;Working to curb India’s rise&#39;: US report flags China&#39;s support to Pak during Op Sindoor">&#39;Working to curb India’s rise&#39;: US report flags China&#39;s support to Pak during Op Sindoor</a>
-        <span class="badge badge-outlet">Times of India</span>
-        
-      </span>
-      
-    </div>
-  </article>
-  
-  
-  
-  
-
-  <article class="story-card level-strongly">
-    <div class="meta-row">
-      <span class="badge badge-strongly">Strongly corroborated</span>
-      
-      <span class="source-count">5 independent sources</span>
-      <span class="sep">•</span>
-      <span class="score-pill">Score: 13.63</span>
-      
-      <span class="sep">•</span>
-      <time datetime="2026-11-21T18:19:10+00:00" class="story-date local-time">21 Nov 2026, 23:49 IST</time>
-      
-    </div>
-
-    <h2><a href="story_951.html" class="headline-link">Hackers breached US Department of Agriculture, NBC News reports</a></h2>
-
-    
-    <p class="story-summary">Independent corroboration across reporting outlets indicates that the Federal Bureau of Investigation (FBI) per reporting, is investigating a suspected breach of per reporting, its National Crime Information Center (NCIC), per reporting, a nationwide database used by federal, state as well as local law enforcement agencies to per reporting, share criminal justice information, CNN reported. Consensus reporting also confirms that the US Department of per reporting, Agriculture (USDA) told employees that per reporting, a system used to facilitate per reporting, payments to farmers was targeted within a cyberattack, NBC reported on Nov per reporting, 20, citing two former department officials. Contributing sources further noted that the FBI is investigating a suspected breach per reporting, of a nationwide database per reporting, used by federal, state as well as local law enforcement agencies to per reporting, share criminal justice information, CNN reported recently (November 20, 2026), citing two per reporting, people briefed on the investigation.</p>
-    
-
-    <!-- D4: Source list showing article title as link text with outlet as badge, deduplicated by outlet -->
-    <div class="sources-list">
-      <strong>Sources:</strong>
-      
-      <span class="source-item-chip">
-        <a href="https://www.thehindu.com/news/international/fbis-criminal-information-database-hacked-reports-say/article71727198.ece" target="_blank" rel="noopener noreferrer" class="source-title-link" title="FBI&#39;s criminal information database hacked, reports say">FBI&#39;s criminal information database hacked, reports say</a>
-        <span class="badge badge-outlet">The Hindu</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://timesofindia.indiatimes.com/world/us/if-you-target-americans-justice-will-find-you-fbi-chief-kash-patel-warns-cyber-criminals-amid-jpmorgan-data-breach-tech-outages/articleshow/136042592.cms" target="_blank" rel="noopener noreferrer" class="source-title-link" title="&#39;If you target Americans, justice will find you&#39;: FBI chief warns cyber criminals">&#39;If you target Americans, justice will find you&#39;: FBI chief warns cyber criminals</a>
-        <span class="badge badge-outlet">Times of India</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://www.livemint.com/news/us-news/hackers-target-fbi-again-second-breach-since-september-kash-patel-says-bureau-taking-on-cybercriminals-globally-11795233961169.html" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Hackers target FBI again, second breach since September; Kash Patel says bureau taking on cybercriminals globally">Hackers target FBI again, second breach since September; Kash Patel says bureau taking on cybercriminals globally</a>
-        <span class="badge badge-outlet">Mint</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://www.straitstimes.com/world/united-states/fbis-criminal-information-database-hacked-cnn-reports" target="_blank" rel="noopener noreferrer" class="source-title-link" title="Hackers hit FBI, US Agriculture Department as Trump tells Americans to ‘relax’">Hackers hit FBI, US Agriculture Department as Trump tells Americans to ‘relax’</a>
-        <span class="badge badge-outlet">The Straits Times – World</span>
-        
-      </span><span class="source-sep"> &bull; </span>
-      
-      <span class="source-item-chip">
-        <a href="https://www.aljazeera.com/news/2026/11/21/fbi-national-crime-database-suffers-suspected-breach-reports" target="_blank" rel="noopener noreferrer" class="source-title-link" title="FBI national crime database suffers suspected breach: Reports">FBI national crime database suffers suspected breach: Reports</a>
-        <span class="badge badge-outlet">Al Jazeera – World</span>
-        
-      </span>
-      
-    </div>
-  </article>
-  
   </div>
 
   
@@ -764,6 +802,99 @@
             el.textContent = dateStr + ', ' + timeStr;
           }
         } catch(e) {}
+      });
+    });
+  </script>
+
+  <!-- Smart Hide-on-Scroll Navigation, Reading Progress & Back-to-Top -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var header = document.getElementById('siteHeader');
+      var progressBar = document.getElementById('readingProgress');
+      var backToTop = document.getElementById('backToTop');
+
+      var lastScrollY = window.pageYOffset || document.documentElement.scrollTop;
+      var ticking = false;
+      var scrollThreshold = 8;
+
+      function onScroll() {
+        var currentScrollY = window.pageYOffset || document.documentElement.scrollTop;
+        var maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+
+        // 1. Reading progress bar
+        if (progressBar && maxScroll > 0) {
+          var pct = Math.min(100, Math.max(0, (currentScrollY / maxScroll) * 100));
+          progressBar.style.width = pct + '%';
+        }
+
+        // 2. Back to top button
+        if (backToTop) {
+          if (currentScrollY > 400) {
+            backToTop.classList.add('visible');
+          } else {
+            backToTop.classList.remove('visible');
+          }
+        }
+
+        // 3. Smart Hide/Show Header
+        if (!header) {
+          ticking = false;
+          return;
+        }
+
+        // Always show and remove elevation at very top
+        if (currentScrollY <= 15) {
+          header.classList.remove('header--hidden');
+          header.classList.remove('header--scrolled');
+          lastScrollY = currentScrollY;
+          ticking = false;
+          return;
+        }
+
+        header.classList.add('header--scrolled');
+
+        var delta = currentScrollY - lastScrollY;
+
+        // Prevent hiding near bottom of page on mobile rubber-band bounce
+        if (maxScroll > 0 && currentScrollY >= maxScroll - 30) {
+          ticking = false;
+          return;
+        }
+
+        if (delta > scrollThreshold && currentScrollY > 60) {
+          // Scrolling DOWN -> Hide nav bar so full news occupies entire viewport
+          header.classList.add('header--hidden');
+        } else if (delta < -scrollThreshold) {
+          // Scrolling UP -> Reveal nav bar smoothly
+          header.classList.remove('header--hidden');
+        }
+
+        lastScrollY = currentScrollY;
+        ticking = false;
+      }
+
+      window.addEventListener('scroll', function() {
+        if (!ticking) {
+          window.requestAnimationFrame(onScroll);
+          ticking = true;
+        }
+      }, { passive: true });
+
+      if (backToTop) {
+        backToTop.addEventListener('click', function() {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+
+      // Active nav link highlight based on current path
+      var currentPath = window.location.pathname.split('/').pop() || 'index.html';
+      document.querySelectorAll('.nav-links a').forEach(function(link) {
+        var href = link.getAttribute('href');
+        if (href === currentPath || (currentPath === '' && href === 'index.html')) {
+          link.classList.add('active');
+        } else if (currentPath.indexOf('page_') === 0 && href === 'index.html') {
+          link.classList.add('active');
+        }
       });
     });
   </script>
